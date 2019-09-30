@@ -1,0 +1,62 @@
+html, body {
+ margin: 0;
+ padding: 0;
+ }
+
+body {
+ background-color: #282c34  ;
+ font-family: 'Oswald', sans-serif;
+ }
+
+ .header {
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+   border: red solid 2px;
+ }
+
+ .header a{
+   color : white;
+   text-decoration: none;
+   font-size: 24px;
+   border: blue solid 2px;
+ }
+
+ .header img{
+   border: blue solid 2px;
+ }
+
+ .logo {
+   width: 15%;
+   margin: auto;
+   margin-left: 0;
+   border: red solid 2px;
+ }
+
+ .logo a {
+
+ }
+
+ .navbar {
+   width: 40%;
+   margin: auto;
+   display: flex;
+   justify-content: space-around;
+   border: red solid 2px;
+ }
+
+ .navbar div, a {
+   margin-right: 0;
+ }
+
+ .connexion {
+   width: 15%;
+   margin-top: auto;
+   margin-bottom: auto;
+   margin-right: 0;
+   border: red solid 2px;
+ }
+
+ .connexion a {
+
+ }
