@@ -16,7 +16,6 @@ echo 'En travaux';
     <br>
     <a href="<?php echo $loginaddr;?>"><?php echo $login;?></a>
 
-
 <?php
 
 end_page();
