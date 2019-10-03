@@ -1,0 +1,148 @@
+@import "compass/css3";
+
+body{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Bebas, GeoSansLight, Agency FB, sans-serif;
+    font-size: 20px;
+    color: white;
+    background-color: #282c34;
+    position: absolute;
+    display: block;
+
+}
+
+.overlay {
+    display: none;
+}
+
+.span {
+    display: none;
+}
+
+.Title {
+    width: 15%;
+    height: auto;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    /*border: 1px solid blue;*/
+}
+
+.Title div{
+
+    margin: auto;
+    /*border: 1px solid blue;*/
+}
+
+.Title a{
+    margin-left: 10px;
+    color: white;
+}
+
+.Title a:hover{
+    color: #7294E9;
+    transition: 0.6s;
+}
+
+.FreeNote a, .log-in-animation a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 10px 10px 10px;
+    position: relative;
+    z-index: 0;
+    cursor: pointer;
+    font-family: Bebas, GeoSansLight;
+    font-size: 48px;
+    text-decoration: none;
+    transition: color 1.2s;
+}
+
+div.highlightTextIn a:before
+{
+    position: absolute;
+    color: white;
+    top: 0px;
+    left: 0px;
+    padding: 10px;
+    overflow: hidden;
+    content: attr(alt);
+    transition: all 1.2s;
+    transform: scale(1.2);
+    opacity: 0;
+}
+
+div.highlightTextIn a:hover:after
+{
+    position: absolute;
+    color: white;
+    top: 0px;
+    left: 0px;
+    padding: 10px;
+    overflow: hidden;
+    content: attr(alt);
+    transition: all 1.2s;
+    transform: scale(1.2);
+    opacity: 0;
+}
+
+div.highlightTextIn a:hover:before
+{
+    transform: scale(1.08);
+    opacity: 1;
+}
+
+/* Highlight text in  */
+div.highlightTextIn a
+{
+    color: rgba(255, 255, 255, 1);
+}
+
+div.highlightTextIn a:before
+{
+    transform: scale(1.6);
+}
+
+h1 {
+    font-size: 30px;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.container-form {
+    width: 35%;
+    margin-top: 40px;
+    margin-left: 32.5%;
+    position: relative;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 8px;
+}
+
+.form {
+    width: 90%;
+    font-size: calibri;
+    color: #282c34;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #E2E5EC;
+    border: white 1px solid;
+    border-radius: 8px;
+}
+
+.bouton {
+    width: 90%;
+    height: 40px;
+}
+
+.form p {
+    width: 90%;
+}
+.form, p, input {
+    margin-left: 5%;
+}
