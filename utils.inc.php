@@ -1,5 +1,14 @@
 <?php
 
+$index='index';
+$indexaddr='index.php';
+$incription='inscription';
+$incriptionaddr='test.php';
+$login='Login';
+$loginaddr='login.php';
+
+
+
 
 function start_page($title)
 {
@@ -10,6 +19,8 @@ function start_page($title)
 </head>
 <body>'.PHP_EOL;
 };
+
+
 
 
 function end_page()
