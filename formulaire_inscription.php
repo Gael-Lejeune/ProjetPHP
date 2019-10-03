@@ -26,3 +26,4 @@ start_page('Inscription');
 end_page();
 
 ?>
+

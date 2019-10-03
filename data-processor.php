@@ -17,6 +17,7 @@ if (isset($_POST['name']))
 }
 else{
     $name=" ";
+
 }
 
 //vérif de la civilité
