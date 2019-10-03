@@ -1,14 +1,20 @@
 @import "compass/css3";
 
 body{
+    width: 100%;
     margin: 0;
     padding: 0;
-    font-family: GeoSansLight, Agency FB, sans-serif;
+    font-family: Agency FB, sans-serif;
     font-size: 20px;
     color: white;
     position: absolute;
     display: block;
-    background-color: #282c34;
+    background:url("images/fond.jpg");
+    height: 100%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover
+
 }
 
 .overlay {
@@ -19,15 +25,25 @@ body{
     display: none;
 }
 
+.background-header {
+    width: 100%;
+    height: 91px;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 1000;
+    background-color: #282c34;
+    /*border: 1px solid white;*/
+}
+
 .header {
     width: 94%;
-    height: auto;
+    height: 90px;
     margin-left: 3%;
     position: fixed;
     display: flex;
     top: 0;
     justify-content: space-between;
-    z-index: 1000;
     background-color: /*#1B1D22*/#282c34;
     border-bottom: 1px solid white;
 }
@@ -180,7 +196,7 @@ div.highlightTextIn a:before
 }
 
 */
-div.borderXwidth a:before, div.borderXwidth a:after
+/*div.borderXwidth a:before, div.borderXwidth a:after
 {
     position: absolute;
     opacity: 0;
@@ -207,7 +223,7 @@ div.borderXwidth a:hover:before, div.borderXwidth a:hover:after
 {
     opacity: 1;
     width: 100%;
-}
+}*/
 
 .log-in {
     width: auto;
@@ -242,23 +258,41 @@ div.borderXwidth a:hover:before, div.borderXwidth a:hover:after
     margin-left: auto;
     margin-right: auto;
     position: relative;
+    display: block;
+    z-index: 1;
+    background-color: #282c34;
     /*box-shadow: 2px 2px 1px 1px rgba(255, 255, 255, 0.2);*/
-    /*border: 1px solid white;*/
+    border: 1px solid white;
+    border-radius: 5px;
 }
 
 .description-subtitle {
-    width: auto;
+    width: 240px;
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
     font-size: 30px;
     font-family: Bebas;
-    /*border: 1px solid white;*/
+    padding-bottom: 6px;
+    border-bottom: 1px solid white;
 }
 
-.description-FreeNote, p {
+
+.description-FreeNote {
+    width: auto;
     margin-top: 20px;
     margin-left: 10px;
     margin-right: 10px;
     margin-bottom: 10px;
     font-family: calibri;
-    /*border: 1px solid white;*/
+
 }
+
+.description-FreeNote > p {
+    margin-top: 60px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: justify;
+
+}
+
