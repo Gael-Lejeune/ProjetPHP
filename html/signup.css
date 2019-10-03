@@ -21,6 +21,12 @@ body{
     display: none;
 }
 
+.arrow {
+    margin-top: 20px;
+    margin-left: 20px;
+    position: fixed;
+}
+
 .Title {
     width: 15%;
     height: auto;
@@ -116,6 +122,7 @@ h1 {
     width: 35%;
     margin-top: 40px;
     margin-left: 32.5%;
+    margin-bottom: 40px;
     position: relative;
     background-color: white;
     border: 1px solid white;
@@ -145,4 +152,22 @@ h1 {
 }
 .form, p, input {
     margin-left: 5%;
+}
+
+.submit {
+    width: 30%;
+    height: 70px;
+    color: white;
+    font-family: Bebas;
+    font-size: 20px;
+    margin-left: 35%;
+    background-color: #282c34;
+}
+
+.connexion {
+    color: #282c34;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
