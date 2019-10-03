@@ -1,9 +1,9 @@
 <?php
 
-$index='index';
+$index='Index';
 $indexaddr='index.php';
-$incription='inscription';
-$incriptionaddr='test.php';
+$inscription='Inscription';
+$inscriptionaddr='formulaire_inscription.php';
 $login='Login';
 $loginaddr='login.php';
 
