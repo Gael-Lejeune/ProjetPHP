@@ -5,38 +5,26 @@ function start_page()
     echo ' <!DOCTYPE html> 
             <html lang="fr">
                 <head>
-                    <title><strong>Formulaire d\'Inscription</strong></title>
+                    <title>Formulaire d\'Inscription</title>
                 </head>
-                <body>
-                 <hr/><br/><strong>Welcome</strong><br/><hr/>
-                 <form action="base.php" method="post">
-                 <p> Identifiant </p>
-                 <input type="text" name="identifiant" value="1212"/>
+                <p>
+                 <hr/><br/><strong>Formulaire d\'Inscription</strong><br/><hr/>
+                 <br action="data-processor.php" method="post">
+                 <p> Votre Nom </p>
+                 <input type="text" name="name"/>
                  <p> Civilité (sexe) </p>
-                 <br><input type="radio" name="sexe" value="Homme"/> Homme <br/>
-                 <br><input type="radio" name="sexe" value="Femme"/> Femme <br/>
-                 <br><input type="radio" name="sexe" value="Vous hésitez"/>  <br/>
+                 <input type="radio" name="civilite"/> Homme <br/>
+                 <br><input type="radio" name="civilite"/> Femme <br/>
                  <p> Email </p>
-                 <input type="text" name="email" value="email@mail.fr"/>
+                 <input type="text" name="email"/>
                  <p> Mot de Passe </p>
-                 <input type="password" name="motdepasse" value="password"/>
+                 <input type="password" name="password"/>
                  <p> Confirmation Mot de Passe </p>
-                 <input type="password" name="motdepasse" value="password"/>
-                 <p> Téléphone </p>
-                 <input type="text" name="telephone" value="0606060606"/>
-                 <p> Pays </p>
-                 <select name="pays">
-                    <option value="" name="pays"> Sélectionner le pays <option/>
-                    <option value="france"> France <option/>
-                    <option value="allemagne"> Allemagne <option/>
-                    <option value="irlande"> Irlande <option/>
-                    <option value="royaume-uni"> Royaume-Uni <option/>
-                 <select/>
-                 <p> Conditions générales </p>
-                 <input type="checkbox" name="conditionsgenerales"/>
+                 <input type="password" name="password"/></br></br>
+                 <p>Conditions générales <input type="checkbox" name="conditions"/></p>
                  <input type="submit" name="action" value="OK"/>
-                 '; //end of line
-}
+                 ';
+}//start_page()
 
 start_page();
 ?>
