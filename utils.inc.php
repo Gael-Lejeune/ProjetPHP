@@ -10,6 +10,7 @@ $loginaddr='login.php';
 
 
 
+
 function start_page($title)
 {
     echo'<!DOCTYPE html> 
