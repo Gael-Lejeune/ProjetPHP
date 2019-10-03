@@ -6,6 +6,7 @@ start_page("login");
 
 session_start();
 
+
 $step=$_GET['step'];
 echo $step, '<br/>';
 
