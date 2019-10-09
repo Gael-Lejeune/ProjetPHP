@@ -28,7 +28,7 @@ body{
 }
 
 .Title {
-    width: 15%;
+    width:15%;
     height: auto;
     margin-top: 50px;
     margin-bottom: 10px;
@@ -137,9 +137,21 @@ h1 {
     margin-bottom: 40px;
     margin-left: auto;
     margin-right: auto;
-    background-color: #E2E5EC;
+    background-color: red;
     border: white 1px solid;
     border-radius: 8px;
+}
+
+.fond-gris > p {
+    padding-top: 20px;
+}
+
+.checkbox {
+    margin-bottom: 20px;
+}
+
+.fond-gris {
+    background-color: #E2E5EC;
 }
 
 .bouton {
@@ -152,6 +164,10 @@ h1 {
 }
 .form, p, input {
     margin-left: 5%;
+}
+
+.conditions {
+    margin-bottom: 20px;
 }
 
 .submit {
@@ -171,3 +187,30 @@ h1 {
     margin-top: 20px;
     margin-bottom: 20px;
 }
+
+.informations_personnelles p {
+    color: #282c34;
+    border: red 1px solid;
+}
+
+/*@media screen and (max-width: 768px)*/
+/*{*/
+
+/*    .Title img {*/
+/*        width: 128px;*/
+/*        height: auto;*/
+/*    }*/
+/*    .FreeNote a {*/
+/*        font-size: 100px;*/
+/*    }*/
+
+/*    .container-form {*/
+/*        width: 90%;*/
+/*        margin-left: 5%;*/
+
+/*    }*/
+
+/*    .form {*/
+/*        width: 90%;*/
+/*    }*/
+/*}*/

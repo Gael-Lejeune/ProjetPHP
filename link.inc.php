@@ -17,11 +17,12 @@ $logoutaddr='logout.php';
 $logoutcss='html/css/signup.css';
 
 $myprofile='myProfile';
-$myprofileaddr='myprofile.php';
+$myprofileaddr='account.php';
 $myprofilecss='html/css/myprofile.css';
 
 $data_processor='data-processor.php';
 $login_processing='login-processing.php';
+$account_processing='myprofile.php';
 
 $fond='"../images/fond.jpg"';
 $logo='html/images/login.png';

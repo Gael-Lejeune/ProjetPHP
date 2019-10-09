@@ -56,7 +56,6 @@ $passwordconf = $_POST['passwordconf'];
 $conditions = $_POST['conditions'];
 $action = $_POST['action'];
 
-
 if ($conditions == 'ok') {
     if ($password == $passwordconf) {
         //insertion dans BD

@@ -2,7 +2,7 @@
 include "utils.inc.php";
 include "link.inc.php";
 
-start_page("login", $inscriptioncss, "stylesheet", "fonts.googleapis.com/css?family=Oswald&display=swap", "stylesheet");
+start_page("login", "html/css/signup.css", "stylesheet", "fonts.googleapis.com/css?family=Oswald&display=swap", "stylesheet");
 
 $step=$_GET['step'];
 if ($step == 'ERROR_mdp') {
@@ -33,10 +33,10 @@ if ($step == 'ERROR_mdp') {
             <p> Mot de Passe </p>
             <input class="bouton" type="password" name="password"/>
             <p> Confirmation Mot de Passe </p>
-            <input class="bouton" type="password" name="password"/></br></br>
-            <p>Conditions générales <input type="checkbox" name="conditions"/></p>
+            <input class="bouton" type="password" name="passwordconf"/></br></br>
+            <p>Conditions générales <input type="checkbox" name="conditions" value="ok"/></p>
+            <button class ="submit" type="submit" name="action" value="ok"/>Créer un Compte</button>
         </form>
-        <input class ="submit" type="submit" name="action" value="Créer un compte"/>
         <div class="connexion">
             <a href="<?php echo $loginaddr ?>"> Déjà inscrit(e) ? Se connecter</a>
         </div>

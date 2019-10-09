@@ -1,9 +1,6 @@
 <?php
 include "utils.inc.php";
 
-
-start_page("login");
-
 session_start();
 
 //ouverture connexion serveur BD
@@ -37,7 +34,7 @@ if($email == $dbRow['email'] &&  $password == $dbRow['password'])
 {
     $_SESSION['login']='true';
     $_SESSION['email']=$email;
-    $_SESSION['passsword']=$password;
+    $_SESSION['password']=$password;
 
     header('Location:indexlogin.php');
 

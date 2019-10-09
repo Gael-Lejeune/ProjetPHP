@@ -74,23 +74,23 @@ if ($_SESSION['login']){
         </div>
 
 
-        <form id="form" action="<?php echo $account_processing ?>" method="post">
+        <form id="DoChangeId" action="<?php echo $account_processing ?>" method="post">
             <p>
                 Nouvel identifiant :
-                <input class="bouton" id="DoChangeLogin" autocomplete="off" name="DoChangeLogin" type="text"></br>
+                <input class="bouton" id="DoChangeLogin" autocomplete="off" name="DoChangeLogin" type="text"/></br>
                 Mot de passe actuel:
-                <input class="bouton" id="Password" autocomplete="off" autocapitalize="off" name="Password" type="password"></br>
-                <button id="SendChangeLogin" type="submit"> Changer mon Identifiant </button>
+                <input class="bouton" id="Password" autocomplete="off" autocapitalize="off" name="Password" type="password"/></br>
+                <button id="SendChangeLogin" type="submit" value="login" name="submit"> Changer mon Identifiant </button>
             </p>
         </form>
 
-        <form id="DoChangePassword" action="account_processing.php" method="post">
+        <form id="DoChangePassword" action="<?php echo $account_processing ?>" method="post">
             <p>
                 Nouveau Mot de passe :
-                <input class="bouton" id="DoChangePassword" autocomplete="off" name="DoChangePassword" type="text"></br>
+                <input class="bouton" id="DoChangePassword" autocomplete="off" name="DoChangePassword" type="text"/></br>
                 Ancien Mot de passe:
-                <input class="bouton" id="Password" autocomplete="off" autocapitalize="off" name="Password" type="password"></br>
-                <button id="SendChangePassword" type="submit"> Changer mon Mot de passe </button>
+                <input class="bouton" id="Password" autocomplete="off" autocapitalize="off" name="Password" type="password"/></br>
+                <button id="SendChangePassword" type="submit" value="password" name="submit"> Changer mon Mot de passe </button>
             </p>
         </form>
     </div>
