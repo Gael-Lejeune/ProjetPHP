@@ -35,8 +35,8 @@ if ($step == 'ERROR_mdp') {
             <p> Confirmation Mot de Passe </p>
             <input class="bouton" type="password" name="password"/></br></br>
             <p>Conditions générales <input type="checkbox" name="conditions"/></p>
+            <input class ="submit" type="submit" name="action" value="ok"/>
         </form>
-        <input class ="submit" type="submit" name="action" value="Créer un compte"/>
         <div class="connexion">
             <a href="<?php echo $loginaddr ?>"> Déjà inscrit(e) ? Se connecter</a>
         </div>

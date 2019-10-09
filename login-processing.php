@@ -41,16 +41,6 @@ if($email == $dbRow['email'] &&  $password == $dbRow['password'])
 
     header('Location:'.$indexaddr);
 
-    /*
-    $nbc = "SELECT connection_number FROM user WHERE id = $email";
-    $nbc = mysqli_query($dbLink, $nbc);
-    $nbc = mysqli_fetch_assoc($nbc);
-    $nbc = $nbc['connection_number'];
-    $nbc = $nbc+1;
-    $nbc = "UPDATE user SET connection_number = $nbc  WHERE id = $email";
-    mysqli_query($dbLink, $nbc);
-    */
-
 }
 
 else

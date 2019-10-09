@@ -41,7 +41,7 @@ else{
 //vérif du mot de passe
 if (isset($_POST['password']))
 {
-    $password= md5($_POST['password']);
+    $password=$_POST['password'];
 }
 else{
     $password=" ";
@@ -56,10 +56,10 @@ $passwordconf = $_POST['passwordconf'];
 $conditions = $_POST['conditions'];
 $action = $_POST['action'];
 
-
 if ($conditions == 'ok') {
     if ($password == $passwordconf) {
         //insertion dans BD
+        $password = md5($password);
         $query='INSERT INTO user(name, civilite, email, password)VALUES(';
         $query.='"'.$name.'",';
         $query.='"'.$civilite.'",';
