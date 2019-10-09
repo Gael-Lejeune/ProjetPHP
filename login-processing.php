@@ -8,11 +8,11 @@ session_start();
 
 //ouverture connexion serveur BD
 $dbLink=mysqli_connect("mysql-latableronde.alwaysdata.net","191121","tableronde")
-or die('Erreurdeconnexionauserveur:'.mysqli_connect_error());
+or die('Erreur de connexion au serveur:'.mysqli_connect_error());
 
 //sélection BD
 mysqli_select_db($dbLink,"latableronde_dtb")
-or die('Erreurdanslasélectiondelabase:'.mysqli_error($dbLink));
+or die('Erreur dans la sélection de la base:'.mysqli_error($dbLink));
 
 //Recuperation des variables en post
 $email=$_POST['email'];
@@ -35,11 +35,11 @@ if(!($dbResult=mysqli_query($dbLink, $query)))
 $dbRow=mysqli_fetch_assoc($dbResult);
 if($email == $dbRow['email'] &&  $password == $dbRow['password'])
 {
-    $_SESSION['login']='ok';
+    $_SESSION['login']='true';
     $_SESSION['email']=$email;
     $_SESSION['passsword']=$password;
 
-    header('Location:index.php');
+    header('Location:indexlogin.php');
 
     /*
     $nbc = "SELECT connection_number FROM user WHERE id = $email";
@@ -55,5 +55,5 @@ if($email == $dbRow['email'] &&  $password == $dbRow['password'])
 
 else
 {
-    header('Location:login.php?step=ERROR');
+    header('Location:login.php?error=ERROR');
 }

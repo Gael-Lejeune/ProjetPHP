@@ -1,12 +1,13 @@
 <?php
 
 include "utils.inc.php";
+include "link.inc.php";
 
 
 start_page("login");
 
-$step=$_GET['step'];
-echo $step, '<br/>';
+$error=$_GET['error'];
+echo $error, '<br/>';
 
 
 //Formulaire de login

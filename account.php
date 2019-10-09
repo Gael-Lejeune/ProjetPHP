@@ -1,4 +1,10 @@
 <?php
+include "utils.inc.php";
+include "link.inc.php";
+
+start_page("login", $inscriptioncss, "stylesheet", "fonts.googleapis.com/css?family=Oswald&display=swap", "stylesheet");
+
+session_start();
 
 //ouverture connexion serveur BD
 $dbLink=mysqli_connect("mysql-latableronde.alwaysdata.net","191121","tableronde")
@@ -8,7 +14,7 @@ or die('Erreur de connexion au serveur:'.mysqli_connect_error());
 mysqli_select_db($dbLink,"latableronde_dtb")
 or die('Erreur dans la sélection de la base:'.mysqli_error($dbLink));
 
-if ($_SESSION['login'] == 'true'){
+if ($_SESSION['login']){
 
     $email=$_SESSION['email'];
     $password=$_SESSION['password'];
@@ -44,28 +50,36 @@ if ($_SESSION['login'] == 'true'){
 
     ?>
 
-    //Affichage des informations de l'utilisateur
+    <a class="arrow" href="<?php echo $indexaddr ?>"><img src="<?php echo $arrow ?>"></a>
 
-    <div>
-
-        <h1> Informations personelles : </h1>
-
-        <p> Nom : <?php echo $name ?> </p></br>
-        <p> email : <?php echo $email ?> </p></br>
-        <p> Mot de passe actuel: <?php echo $password ?> </p></br>
-        <p> Civilité : <?php echo $civ ?> </p></br>
-
+    <div class='Title'>
+        <div> <img alt="Logo" src="<?php echo $logo ?>"> </div>
+        <div class="FreeNote highlightTextIn"> <a alt="FreeNote" href="index.php"> FreeNote </a> </div>
     </div>
 
-    //Formulaires de changement d'informations
+    <h1> Informations Personnelles </h1>
 
-    <div>
-        <form id="DoChangeLogin" action="account_processing.php" method="post">
+    <!--Formulaires de changement d'informations-->
+
+    <div class="container-form">
+        //Affichage des informations de l'utilisateur
+
+        <div class="informations_personnelles">
+
+            <p> Nom : <?php echo $name ?> </p></br>
+            <p> email : <?php echo $email ?> </p></br>
+            <p> Mot de passe actuel: <?php echo $password ?> </p></br>
+            <p> Civilité : <?php echo $civ ?> </p></br>
+
+        </div>
+
+
+        <form id="form" action="<?php echo $account_processing ?>" method="post">
             <p>
                 Nouvel identifiant :
-                <input id="DoChangeLogin" autocomplete="off" name="DoChangeLogin" type="text"></br>
+                <input class="bouton" id="DoChangeLogin" autocomplete="off" name="DoChangeLogin" type="text"></br>
                 Mot de passe actuel:
-                <input id="Password" autocomplete="off" autocapitalize="off" name="Password" type="password"></br>
+                <input class="bouton" id="Password" autocomplete="off" autocapitalize="off" name="Password" type="password"></br>
                 <button id="SendChangeLogin" type="submit"> Changer mon Identifiant </button>
             </p>
         </form>
@@ -73,9 +87,9 @@ if ($_SESSION['login'] == 'true'){
         <form id="DoChangePassword" action="account_processing.php" method="post">
             <p>
                 Nouveau Mot de passe :
-                <input id="DoChangePassword" autocomplete="off" name="DoChangePassword" type="text"></br>
+                <input class="bouton" id="DoChangePassword" autocomplete="off" name="DoChangePassword" type="text"></br>
                 Ancien Mot de passe:
-                <input id="Password" autocomplete="off" autocapitalize="off" name="Password" type="password"></br>
+                <input class="bouton" id="Password" autocomplete="off" autocapitalize="off" name="Password" type="password"></br>
                 <button id="SendChangePassword" type="submit"> Changer mon Mot de passe </button>
             </p>
         </form>
