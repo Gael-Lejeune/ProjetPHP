@@ -2,7 +2,7 @@
 include "utils.inc.php";
 include "link.inc.php";
 
-start_page("login", "html/css/signup.css", "stylesheet", "fonts.googleapis.com/css?family=Oswald&display=swap", "stylesheet");
+start_page("login", "html/css/myprofile.css", "stylesheet", "fonts.googleapis.com/css?family=Oswald&display=swap", "stylesheet");
 
 $step=$_GET['step'];
 echo $step, '<br/>';
@@ -17,7 +17,7 @@ echo $step, '<br/>';
     <div class="FreeNote highlightTextIn"> <a alt="FreeNote" href="index.php"> FreeNote </a> </div>
 </div>
 
-<h1> Se Connecter </h1>
+<h1> Informations Personnelles </h1>
 
 <div class="container-form">
     <form class="form" action="login-processing.php" method="post">
