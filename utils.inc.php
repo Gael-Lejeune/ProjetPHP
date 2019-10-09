@@ -1,6 +1,5 @@
 <?php
 
-<<<<<<< .merge_file_OwOIjK
 $index='Index';
 $indexaddr='index.php';
 $indexcss='html/css/index.css';
@@ -27,9 +26,6 @@ $arrow='https://img.icons8.com/nolan/50/000000/up-left.png';
 
 
 function start_page($title, $lien1, $rel1, $lien2, $rel2)
-=======
-function start_page($title)
->>>>>>> .merge_file_DXNxxD
 {
     echo'<!DOCTYPE html> 
 <html lang="fr">

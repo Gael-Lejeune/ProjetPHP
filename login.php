@@ -1,5 +1,4 @@
 <?php
-<<<<<<< .merge_file_USptEh
 include "utils.inc.php";
 include "link.inc.php";
 
@@ -38,7 +37,6 @@ echo $step, '<br/>';
 end_page();
 ?>
 
-=======
 
 include "utils.inc.php";
 
@@ -60,4 +58,3 @@ echo $error, '<br/>';
     <br>
     <button type="submit" name="ok" value="mailer">OK</button>
 <form/>
->>>>>>> .merge_file_RQ6uxm
