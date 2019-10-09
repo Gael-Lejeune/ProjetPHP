@@ -21,11 +21,13 @@ echo $step, '<br/>';
 
 <div class="container-form">
     <form class="form" action="<?php echo $login_processing ?>" method="post">
+        <div class="fond-gris">
         <p> Email </p>
         <input class="bouton" type="text" name="email" required />
         <p> Mot de Passe </p>
         <input class="bouton" type="password" name="password" title="password" autocomplete="off" maxlength="30" style="margin-bottom: 20px; required"/>
-        <input class ="submit" type="submit" name="action" value="Se connecter"/>
+        </div>
+        <input class ="submit" type="submit" name="action" value="Se connecter" style="margin-bottom: 20px;"/>
     </form>
     <div class="connexion">
         <a href="<?php echo $indexaddr ?>"> Mot de passe oublié ? S'inscrire</a>
