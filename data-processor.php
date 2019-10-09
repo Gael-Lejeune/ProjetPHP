@@ -41,7 +41,7 @@ else{
 //vérif du mot de passe
 if (isset($_POST['password']))
 {
-    $password=$_POST['password'];
+    $password= md5($_POST['password']);
 }
 else{
     $password=" ";

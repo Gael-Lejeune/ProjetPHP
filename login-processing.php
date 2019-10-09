@@ -16,7 +16,7 @@ or die('Erreurdanslasélectiondelabase:'.mysqli_error($dbLink));
 
 //Recuperation des variables en post
 $email=$_POST['email'];
-$password=$_POST['password'];
+$password=md5($_POST['password']);
 //Definition de la requete mySql
 $query="SELECT email,password,connection_number FROM user WHERE email = '$email' AND password = '$password'";
 
