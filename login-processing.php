@@ -35,7 +35,11 @@ if(!($dbResult=mysqli_query($dbLink, $query)))
 $dbRow=mysqli_fetch_assoc($dbResult);
 if($email == $dbRow['email'] &&  $password == $dbRow['password'])
 {
+<<<<<<< .merge_file_Mcz5lH
     $_SESSION['login']='true';
+=======
+    $_SESSION['login']='ok';
+>>>>>>> .merge_file_GlXXHM
     $_SESSION['email']=$email;
     $_SESSION['passsword']=$password;
 
