@@ -22,8 +22,7 @@ if ($step == 'ERROR_mdp') {
     <h1> Inscription </h1>
 
     <div class="container-form">
-        <div class="form" action="<?php echo $data_processor ?>" method="post">
-            <div class="fond-gris">
+        <form class="form" action="<?php echo $data_processor ?>" method="post">
             <p> Votre Nom </p>
             <input class="bouton" type="text" name="name"/>
             <p> Civilité (sexe) </p>
@@ -35,9 +34,8 @@ if ($step == 'ERROR_mdp') {
             <input class="bouton" type="password" name="password"/>
             <p> Confirmation Mot de Passe </p>
             <input class="bouton" type="password" name="password"/></br></br>
-            <p>Conditions générales <input type="checkbox" name="conditions"/></p>
-        </div>
-            <input class ="submit" type="submit" name="action" value="Créer un compte" style="margin-bottom: 20px;"/>
+            <p>Conditions générales <input class="conditions" type="checkbox" name="conditions"/></p>
+            <input class ="submit" type="submit" name="action" value="Créer un compte"/>
         </form>
         <div class="connexion">
             <a href="<?php echo $loginaddr ?>"> Déjà inscrit(e) ? Se connecter</a>

@@ -28,14 +28,14 @@ body{
 }
 
 .Title {
-    width: 40%;
+    width: 16%;
     height: auto;
     margin-top: 50px;
     margin-bottom: 10px;
     margin-left: auto;
     margin-right: auto;
     display: flex;
-    border: 1px solid blue;
+    /*border: 1px solid blue;*/
 }
 
 .Title div{
@@ -121,6 +121,7 @@ h1 {
 .container-form {
     width: 35%;
     margin-top: 40px;
+    margin-left: 32.5%;
     margin-bottom: 40px;
     position: relative;
     background-color: white;
@@ -136,12 +137,13 @@ h1 {
     margin-bottom: 40px;
     margin-left: auto;
     margin-right: auto;
+    background-color: #E2E5EC;
     border: white 1px solid;
     border-radius: 8px;
 }
 
-.fond-gris {
-    background-color: #E2E5EC;
+.checkbox {
+    margin-bottom: 20px;
 }
 
 .bouton {
@@ -156,13 +158,19 @@ h1 {
     margin-left: 5%;
 }
 
+.conditions {
+    margin-bottom: 20px;
+}
+
 .submit {
-    width: 30%;
+    width: 50%;
     height: 70px;
     color: white;
     font-family: Bebas;
     font-size: 20px;
-    margin-left: 35%;
+    margin-top: 30px;
+    margin-left: 25%;
+    margin-bottom: 30px;
     background-color: #282c34;
 }
 
@@ -170,8 +178,8 @@ h1 {
     color: #282c34;
     font-size: 20px;
     text-align: center;
-    margin-top: 20px;
     margin-bottom: 20px;
+
 }
 
 .informations_personnelles p {
@@ -179,24 +187,24 @@ h1 {
     border: red 1px solid;
 }
 
-@media screen and (max-width: 768px)
-{
+/*@media screen and (max-width: 768px)*/
+/*{*/
 
-    .Title img {
-        width: 128px;
-        height: auto;
-    }
-    .FreeNote a {
-        font-size: 100px;
-    }
+/*    .Title img {*/
+/*        width: 128px;*/
+/*        height: auto;*/
+/*    }*/
+/*    .FreeNote a {*/
+/*        font-size: 100px;*/
+/*    }*/
 
-    .container-form {
-        width: 90%;
-        margin-left: 5%;
+/*    .container-form {*/
+/*        width: 90%;*/
+/*        margin-left: 5%;*/
 
-    }
+/*    }*/
 
-    .form {
-        width: 90%;
-    }
-}
+/*    .form {*/
+/*        width: 90%;*/
+/*    }*/
+/*}*/

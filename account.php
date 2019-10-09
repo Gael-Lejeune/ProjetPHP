@@ -62,36 +62,31 @@ if ($_SESSION['login']){
     <!--Formulaires de changement d'informations-->
 
     <div class="container-form">
-        //Affichage des informations de l'utilisateur
+    <div class="form">
+        <p> Nom : <?php echo $name ?> </p></br>
+        <p> Email : <?php echo $email ?> </p></br>
+        <p> Mot de passe actuel: <?php echo $password ?> </p></br>
+        <p> Civilité : <?php echo $civ ?> </p></br>
+    </div>
+    </div>
 
-        <div class="informations_personnelles">
+    <div class="container-form">
+    <form class="form" action="<?php echo $account_processing ?>" method="post">
+        <p> Votre Nom </p>
+            <input class="bouton" type="text" name="DoChangeLogin"/>
+        <p> Mot de Passe </p>
+            <input class="bouton" type="password" name="Password"/>
+        <button id="SendChangeLogin" type="submit" value="login" name="submit" class="submit" style="margin-bottom: 20px;"> Changer mon Identifiant </button>
+    </form>
+    </div>
 
-            <p> Nom : <?php echo $name ?> </p></br>
-            <p> email : <?php echo $email ?> </p></br>
-            <p> Mot de passe actuel: <?php echo $password ?> </p></br>
-            <p> Civilité : <?php echo $civ ?> </p></br>
-
-        </div>
-
-
-        <form id="form" action="<?php echo $account_processing ?>" method="post">
-            <p>
-                Nouvel identifiant :
-                <input class="bouton" id="DoChangeLogin" autocomplete="off" name="DoChangeLogin" type="text"></br>
-                Mot de passe actuel:
-                <input class="bouton" id="Password" autocomplete="off" autocapitalize="off" name="Password" type="password"></br>
-                <button id="SendChangeLogin" type="submit"> Changer mon Identifiant </button>
-            </p>
-        </form>
-
-        <form id="DoChangePassword" action="account_processing.php" method="post">
-            <p>
-                Nouveau Mot de passe :
+    <div class="container-form">
+        <form class="form" action="<?php echo $account_processing ?>" method="post">
+            <p> Nouveau Mot de passe : </p>
                 <input class="bouton" id="DoChangePassword" autocomplete="off" name="DoChangePassword" type="text"></br>
-                Ancien Mot de passe:
+            <p> Ancien Mot de passe: </p>
                 <input class="bouton" id="Password" autocomplete="off" autocapitalize="off" name="Password" type="password"></br>
-                <button id="SendChangePassword" type="submit"> Changer mon Mot de passe </button>
-            </p>
+            <button id="SendChangePassword" type="submit" value="password" name="submit" class="submit" style="margin-bottom: 20px;"> Changer mon Mot de passe </button>
         </form>
     </div>
 
