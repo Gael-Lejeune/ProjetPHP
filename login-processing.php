@@ -1,8 +1,8 @@
 <?php
 include "utils.inc.php";
+include "link.inc.php";
 
-
-start_page("login");
+start_page1("login");
 
 session_start();
 
@@ -35,11 +35,11 @@ if(!($dbResult=mysqli_query($dbLink, $query)))
 $dbRow=mysqli_fetch_assoc($dbResult);
 if($email == $dbRow['email'] &&  $password == $dbRow['password'])
 {
-    $_SESSION['login']='ok';
+    $_SESSION['login']=true;
     $_SESSION['email']=$email;
     $_SESSION['passsword']=$password;
 
-    header('Location:index.php');
+    header('Location:'.$indexaddr);
 
     /*
     $nbc = "SELECT connection_number FROM user WHERE id = $email";
