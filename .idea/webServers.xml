@@ -2,7 +2,7 @@
 <project version="4">
   <component name="WebServers">
     <option name="servers">
-      <webServer id="5c79c2b9-dc21-40ee-b5f8-23e753682d89" name="alwaysdataproject" url="http://ssh-lejeune.alwaysdata.net/projet">
+      <webServer id="5c79c2b9-dc21-40ee-b5f8-23e753682d89" name="alwaysdataproject" url="http://lejeune.alwaysdata.net/projet">
         <fileTransfer host="ssh-latableronde.alwaysdata.net" port="22" rootFolder="/home/latableronde" accessType="SFTP">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />

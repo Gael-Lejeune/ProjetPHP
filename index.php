@@ -17,6 +17,7 @@ session_start();
                 <div class="FreeNote highlightTextIn"> <a alt="FreeNote" href="<?php echo $indexaddr ?>"> FreeNote </a> </div>
             </div>
             <!-- Création du bloc pour s'inscrire ou consulter son profile en fonction de si l'on est connecter à notre compte ou non -->
+
             <div class='sign-up'>
                 <div> <img alt="sign-up" src="<?php echo $logo ?>"> </div>
                 <?php if ($_SESSION['login'])

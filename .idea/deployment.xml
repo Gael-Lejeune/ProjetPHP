@@ -5,7 +5,7 @@
       <paths name="alwaysdataproject">
         <serverdata>
           <mappings>
-            <mapping deploy="www/projetphp" local="$PROJECT_DIR$" web="/" />
+            <mapping deploy="/www/projetphp" local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>

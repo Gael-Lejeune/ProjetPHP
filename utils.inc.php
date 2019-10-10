@@ -22,7 +22,6 @@ function start_page1($title)
 <body>'.PHP_EOL;
 };
 
-
 function end_page()
 {
     echo'</body></html>';
