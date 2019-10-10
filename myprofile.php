@@ -2,6 +2,7 @@
 include "utils.inc.php";
 include "link.inc.php";
 
+
 //Demarrage de la page
 
 start_page("login", "html/css/myprofile.css", "stylesheet", "fonts.googleapis.com/css?family=Oswald&display=swap", "stylesheet");

@@ -2,6 +2,7 @@
 include "utils.inc.php";
 include "link.inc.php";
 
+
 //Demarrage de la page
 
 start_page("login", $inscriptioncss, "stylesheet", "fonts.googleapis.com/css?family=Oswald&display=swap", "stylesheet");
@@ -15,6 +16,7 @@ or die('Erreur de connexion au serveur:'.mysqli_connect_error());
 //sélection BD
 mysqli_select_db($dbLink,"latableronde_dtb")
 or die('Erreur dans la sélection de la base:'.mysqli_error($dbLink));
+
 
 //Si la personne est connecte
 if ($_SESSION['login']){
@@ -38,6 +40,7 @@ if ($_SESSION['login']){
     }
 
     $name=mysqli_fetch_assoc($dbResult);
+
 
     //Requete pour recupere la civilite
     $query_civ="SELECT civilite FROM user WHERE email = '$email' AND password = '$password'";
@@ -72,6 +75,7 @@ if ($_SESSION['login']){
     <h1> Informations Personnelles </h1>
 
     <!--Formulaires de changement d'informations-->
+
 
     <!-- division qui affiche les informations de l'utilisateur -->
     <div class="container-form">
@@ -109,6 +113,7 @@ if ($_SESSION['login']){
     </div>
 
 <?php
+
 
     //Si la personne n'est pas connecte
 } else {

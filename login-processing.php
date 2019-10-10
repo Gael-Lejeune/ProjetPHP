@@ -2,6 +2,7 @@
 include "utils.inc.php";
 include 'link.inc.php';
 
+
 session_start();
 
 //ouverture connexion serveur BD
@@ -34,6 +35,7 @@ $dbRow=mysqli_fetch_assoc($dbResult);
 //Si le mot de passe et l'email correspondent
 if($email == $dbRow['email'] &&  $password == $dbRow['password'])
 {
+
     //On demarre la session
     $_SESSION['login']='true';
     $_SESSION['email']=$email;
