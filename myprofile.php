@@ -2,16 +2,18 @@
 include "utils.inc.php";
 include "link.inc.php";
 
+//Création de l'en tête et de l'include du css sur la page
 start_page("login", $myprofilecss, "stylesheet", "fonts.googleapis.com/css?family=Oswald&display=swap", "stylesheet");
 
 $step=$_GET['step'];
 echo $step, '<br/>';
 
-
-//Formulaire de login
 ?>
+
+<!-- Création de la flèche de retour à la page d'accueil -->
 <a class="arrow" href="<?php echo $indexaddr ?>"><img src="<?php echo $arrow ?>"></a>
 
+<!-- Création du Titre du site avec le logo -->
 <div class='Title'>
     <div> <img alt="Logo" src="<?php echo $logo ?>"> </div>
     <div class="FreeNote highlightTextIn"> <a alt="FreeNote" href="index.php"> FreeNote </a> </div>
@@ -19,6 +21,7 @@ echo $step, '<br/>';
 
 <h1> Informations Personnelles </h1>
 
+<!-- Création du bloc qui contient le formulaire de connection -->
 <div class="container-form">
     <form class="form" action="<?php echo $login_processing ?>" method="post">
         <p> Email </p>
@@ -34,6 +37,7 @@ echo $step, '<br/>';
 
 <?php
 
+// Création de la fin du fichier
 end_page();
 ?>
 

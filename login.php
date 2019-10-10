@@ -24,10 +24,14 @@ echo $step, '<br/>';
 <!-- Création du bloc qui contient le formulaire de connection -->
 <div class="container-form">
     <form class="form" action="<?php echo $login_processing ?>" method="post">
-        <p> Email </p>
-        <input class="bouton" type="text" name="email" required />
-        <p> Mot de Passe </p>
-        <input class="bouton" type="password" name="password" title="password" autocomplete="off" maxlength="30" required"/>
+        <div>
+            <p> Email </p>
+            <input class="bouton" type="text" name="email" required />
+        </div>
+        <div>
+            <p> Mot de Passe </p>
+            <input class="bouton" type="password" name="password" title="password" autocomplete="off" maxlength="30" required"/>
+        </div>
         <input class="submit" type="submit" name="action" value="Se connecter"/>
     </form>
     <div class="connexion">
