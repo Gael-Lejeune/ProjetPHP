@@ -5,8 +5,8 @@ include "link.inc.php";
 //Création de l'en tête et de l'include du css sur la page
 start_page("login", $logincss, "stylesheet", "fonts.googleapis.com/css?family=Oswald&display=swap", "stylesheet");
 
-$step=$_GET['step'];
-echo $step, '<br/>';
+$error=$_GET['error'];
+echo $error, '<br/>';
 
 //Formulaire de login
 ?>

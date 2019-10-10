@@ -2,38 +2,62 @@
 include "utils.inc.php";
 include "link.inc.php";
 
-start_page("login", $myprofilecss, "stylesheet", "fonts.googleapis.com/css?family=Oswald&display=swap", "stylesheet");
 
-$step=$_GET['step'];
-echo $step, '<br/>';
+//Demarrage de la page
 
+start_page("login", "html/css/myprofile.css", "stylesheet", "fonts.googleapis.com/css?family=Oswald&display=swap", "stylesheet");
 
-//Formulaire de login
-?>
-<a class="arrow" href="<?php echo $indexaddr ?>"><img src="<?php echo $arrow ?>"></a>
+session_start();
 
-<div class='Title'>
-    <div> <img alt="Logo" src="<?php echo $logo ?>"> </div>
-    <div class="FreeNote highlightTextIn"> <a alt="FreeNote" href="index.php"> FreeNote </a> </div>
-</div>
+//ouverture connexion serveur BD
+$dbLink=mysqli_connect("mysql-latableronde.alwaysdata.net","191121","tableronde")
+or die('Erreur de connexion au serveur:'.mysqli_connect_error());
 
-<h1> Informations Personnelles </h1>
+//sélection BD
+mysqli_select_db($dbLink,"latableronde_dtb")
+or die('Erreur dans la sélection de la base:'.mysqli_error($dbLink));
 
-<div class="container-form">
-    <form class="form" action="<?php echo $login_processing ?>" method="post">
-        <p> Email </p>
-        <input class="bouton" type="text" name="email" required />
-        <p> Mot de Passe </p>
-        <input class="bouton" type="password" name="password" required title="password" autocomplete="off" maxlength="30" style="margin-bottom: 20px;"/>
-    </form>
-    <input class ="submit" type="submit" name="action" value="Se connecter"/>
-    <div class="connexion">
-        <a href="<?php echo $inscriptionaddr ?>p"> Mot de passe oublié ? S'inscrire</a>
-    </div>
-</div>
+//Recuperation du mot de passe entrer dans le formulaire (pour confirmation de l'identite) et du mot de passe enregistre de l'utilisateur (que ce soit pour changer le nom ou le mot de passe
 
-<?php
+$real_password=$_SESSION['password'];
+$enter_password=$_POST['Password'];
 
-end_page();
-?>
+//Si les deux mots de passe correspondent
+if($real_password == $enter_password) {
 
+    //On recupere la valeur renvoye par le bouton submit
+    $action=$_POST['submit'];
+
+    //Si la variable action vaut 'password' c'est que l'utilisateur veux changer son mot de passe
+    if ($action == 'password') {
+
+        //On recupere alors son nouveau mot de passe et son email
+        $new_password=$_POST['DoChangePassword'];
+        $email=$_SESSION['email'];
+
+        //On update le password dans la table user pour la personne qui a l'email de la session ouverte
+        $query="UPDATE user SET user.password='$new_password' WHERE email='$email' and password='$real_password'";
+
+        //Verification de la viabilité de la requete
+        if(!($dbResult=mysqli_query($dbLink, $query))) {
+            echo 'Erreurderequête<br/>';
+            //Affichele type d'erreur.
+            echo 'Erreur:' . mysqli_error($dbLink) . '<br/>';
+            //Affiche la requête envoyée.
+            echo 'Requête:' . $query . '<br/>';
+            exit();
+        } else {
+            header('Location:'.$indexaddr);
+        }
+
+        //Si la variable action vaut 'login' c'est que la personne veux changer son nom
+    } elseif ($action == 'login') {
+
+    } else {
+
+    }
+
+    //Si les deux mots de passe ne correspondent pas
+} else {
+    header('Location:account.php?error=ERROR');
+}

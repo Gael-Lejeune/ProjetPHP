@@ -5,6 +5,7 @@ include "link.inc.php";
 //Création de l'en tête et de l'include du css sur la page
 start_page("login", $inscriptioncss, "stylesheet", "fonts.googleapis.com/css?family=Oswald&display=swap", "stylesheet");
 
+
 //Vérification du mot de passe et de la validation des conditions générales d'utilisation
 $step=$_GET['step'];
 if ($step == 'ERROR_mdp') {
@@ -46,6 +47,7 @@ if ($step == 'ERROR_mdp') {
             <a href="<?php echo $loginaddr ?>"> Déjà inscrit(e) ? Se connecter</a>
         </div>
     </div>
+
 
 <?php
 
