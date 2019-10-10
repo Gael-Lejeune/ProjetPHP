@@ -7,8 +7,12 @@ start_page("login", $inscriptioncss, "stylesheet", "fonts.googleapis.com/css?fam
 
 session_start();
 
+//Si la session est ouverte
+
 if ($_SESSION['login']) {
+    //On la ferme
     session_destroy();
+    //On revient sur l'index qui devrait changer vu qu'on est deconnecte
     header('Location:' . $indexaddr);
 }
 

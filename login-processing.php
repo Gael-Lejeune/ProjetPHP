@@ -1,5 +1,6 @@
 <?php
 include "utils.inc.php";
+include 'link.inc.php';
 
 session_start();
 
@@ -30,8 +31,10 @@ if(!($dbResult=mysqli_query($dbLink, $query)))
 
 
 $dbRow=mysqli_fetch_assoc($dbResult);
+//Si le mot de passe et l'email correspondent
 if($email == $dbRow['email'] &&  $password == $dbRow['password'])
 {
+    //On demarre la session
     $_SESSION['login']='true';
     $_SESSION['email']=$email;
     $_SESSION['password']=$password;
@@ -50,6 +53,7 @@ if($email == $dbRow['email'] &&  $password == $dbRow['password'])
 
 }
 
+//Si les mots de passe et/ou email ne correspondent pas on retourne sur login en renvoyant une erreur
 else
 {
     header('Location:login.php?error=ERROR');
