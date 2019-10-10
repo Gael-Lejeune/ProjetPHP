@@ -14,7 +14,7 @@ or die('Erreur dans la sélection de la base:'.mysqli_error($dbLink));
 
 //Recuperation des variables en post
 $email=$_POST['email'];
-$password=$_POST['password'];
+$password=md5($_POST['password']);
 //Definition de la requete mySql
 $query="SELECT email,password,connection_number FROM user WHERE email = '$email' AND password = '$password'";
 
@@ -30,7 +30,10 @@ if(!($dbResult=mysqli_query($dbLink, $query)))
 }
 
 
+
 $dbRow=mysqli_fetch_assoc($dbResult);
+
+
 //Si le mot de passe et l'email correspondent
 if($email == $dbRow['email'] &&  $password == $dbRow['password'])
 {

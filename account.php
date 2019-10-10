@@ -37,7 +37,8 @@ if ($_SESSION['login']){
         exit();
     }
 
-    $name=mysqli_fetch_assoc($dbResult);
+    $dbRow=mysqli_fetch_assoc($dbResult);
+    $name=$dbRow['name'];
 
     //Requete pour recupere la civilite
     $query_civ="SELECT civilite FROM user WHERE email = '$email' AND password = '$password'";
@@ -53,7 +54,8 @@ if ($_SESSION['login']){
         exit();
     }
 
-    $civ=mysqli_fetch_assoc($dbResult);
+    $dbRow=mysqli_fetch_assoc($dbResult);
+    $civ=$dbRow['civilite'];
 
     ?>
 
@@ -80,7 +82,6 @@ if ($_SESSION['login']){
             <!-- On affiche les variables definies au dessus -->
             <p> Nom : <?php echo $name ?> </p></br>
             <p> email : <?php echo $email ?> </p></br>
-            <p> Mot de passe actuel: <?php echo $password ?> </p></br>
             <p> Civilité : <?php echo $civ ?> </p></br>
 
         </div>
@@ -99,10 +100,10 @@ if ($_SESSION['login']){
         <!--Formulaire pour changer le mot de passe -->
         <form id="DoChangePassword" action="<?php echo $account_processing ?>" method="post">
             <p>
-                Nouveau Mot de passe :
-                <input class="bouton" id="DoChangePassword" autocomplete="off" name="DoChangePassword" type="text"/></br>
                 Ancien Mot de passe:
                 <input class="bouton" id="Password" autocomplete="off" autocapitalize="off" name="Password" type="password"/></br>
+                Nouveau Mot de passe :
+                <input class="bouton" id="DoChangePassword" autocomplete="off" name="DoChangePassword" type="text"/></br>
                 <button id="SendChangePassword" type="submit" value="password" name="submit"> Changer mon Mot de passe </button>
             </p>
         </form>
