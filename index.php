@@ -1,6 +1,8 @@
 <?php
 include "utils.inc.php";
 include "link.inc.php";
+include 'model/dtb.inc.php';
+
 
 start_page("login", $indexcss, "stylesheet", "fonts.googleapis.com/css?family=Oswald&display=swap", "stylesheet");
 
