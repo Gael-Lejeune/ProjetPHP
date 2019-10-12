@@ -1,18 +1,16 @@
 <?php
 include "utils.inc.php";
-include "link.inc.php";
 
-start_page1("login");
+include 'link.inc.php';
+include 'model/dtb.inc.php';
+
+
 
 session_start();
 
 //ouverture connexion serveur BD
-$dbLink=mysqli_connect("mysql-latableronde.alwaysdata.net","191121","tableronde")
-or die('Erreurdeconnexionauserveur:'.mysqli_connect_error());
+$dbLink = dtbconnect();
 
-//sélection BD
-mysqli_select_db($dbLink,"latableronde_dtb")
-or die('Erreurdanslasélectiondelabase:'.mysqli_error($dbLink));
 
 //Recuperation des variables en post
 $email=$_POST['email'];
@@ -32,18 +30,35 @@ if(!($dbResult=mysqli_query($dbLink, $query)))
 }
 
 
+
 $dbRow=mysqli_fetch_assoc($dbResult);
+
+
+//Si le mot de passe et l'email correspondent
 if($email == $dbRow['email'] &&  $password == $dbRow['password'])
 {
+    //On demarre la session
     $_SESSION['login']=true;
     $_SESSION['email']=$email;
-    $_SESSION['passsword']=$password;
+    $_SESSION['password']=$password;
 
     header('Location:'.$indexaddr);
 
+    /*
+    $nbc = "SELECT connection_number FROM user WHERE id = $email";
+    $nbc = mysqli_query($dbLink, $nbc);
+    $nbc = mysqli_fetch_assoc($nbc);
+    $nbc = $nbc['connection_number'];
+    $nbc = $nbc+1;
+    $nbc = "UPDATE user SET connection_number = $nbc  WHERE id = $email";
+    mysqli_query($dbLink, $nbc);
+    */
+
 }
 
+
+//Si les mots de passe et/ou email ne correspondent pas on retourne sur login en renvoyant une erreur
 else
 {
-    header('Location:login.php?step=ERROR');
+    header('Location:login.php?error=ERROR');
 }
