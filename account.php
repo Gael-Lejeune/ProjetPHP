@@ -4,7 +4,6 @@ include "link.inc.php";
 include 'model/dtb.inc.php';
 
 
-
 //Demarrage de la page
 
 start_page("login", $inscriptioncss, "stylesheet", "fonts.googleapis.com/css?family=Oswald&display=swap", "stylesheet");
@@ -12,7 +11,6 @@ start_page("login", $inscriptioncss, "stylesheet", "fonts.googleapis.com/css?fam
 session_start();
 
 $dbLink = dtbconnect();
-
 
 
 //Si la personne est connecte
@@ -36,8 +34,8 @@ if ($_SESSION['login']){
         exit();
     }
 
-    $name=mysqli_fetch_assoc($dbResult);
-
+    $dbRow=mysqli_fetch_assoc($dbResult);
+    $name=$dbRow['name'];
 
     //Requete pour recupere la civilite
     $query_civ="SELECT civilite FROM user WHERE email = '$email' AND password = '$password'";
@@ -53,7 +51,8 @@ if ($_SESSION['login']){
         exit();
     }
 
-    $civ=mysqli_fetch_assoc($dbResult);
+    $dbRow=mysqli_fetch_assoc($dbResult);
+    $civ=$dbRow['civilite'];
 
     ?>
 
@@ -73,7 +72,6 @@ if ($_SESSION['login']){
 
     <!--Formulaires de changement d'informations-->
 
-
     <!-- division qui affiche les informations de l'utilisateur -->
     <div class="container-form">
         <!--Affichage des informations de l'utilisateur -->
@@ -81,36 +79,42 @@ if ($_SESSION['login']){
             <!-- On affiche les variables definies au dessus -->
             <p> Nom : <?php echo $name ?> </p></br>
             <p> email : <?php echo $email ?> </p></br>
-            <p> Mot de passe actuel: <?php echo $password ?> </p></br>
             <p> Civilité : <?php echo $civ ?> </p></br>
 
         </div>
+    </div>
 
+    <div class="container-form">
         <!--Formulaire pour changer le nom de l'utilisateur -->
-        <form id="DoChangeId" action="<?php echo $account_processing ?>" method="post">
-            <p>
-                Nouvel identifiant :
-                <input class="bouton" id="DoChangeLogin" autocomplete="off" name="DoChangeLogin" type="text"/></br>
-                Mot de passe actuel:
-                <input class="bouton" id="Password" autocomplete="off" autocapitalize="off" name="Password" type="password"/></br>
-                <button id="SendChangeLogin" type="submit" value="login" name="submit"> Changer mon Identifiant </button>
-            </p>
+        <form class="form" action="<?php echo $account_processing ?>" method="post">
+            <div>
+            <p> Nouvel identifiant : </p>
+                <input class="bouton" autocomplete="off" name="DoChangeLogin" type="text"/></br>
+            </div>
+            <div>
+                <p> Mot de passe actuel: </p>
+                <input class="bouton" autocomplete="off" autocapitalize="off" name="Password" type="password"/></br>
+            </div>
+            <button class="submit" type="submit" value="login" name="submit"> Changer mon Identifiant </button>
         </form>
+    </div>
 
+    <div class="container-form">
         <!--Formulaire pour changer le mot de passe -->
-        <form id="DoChangePassword" action="<?php echo $account_processing ?>" method="post">
-            <p>
-                Nouveau Mot de passe :
-                <input class="bouton" id="DoChangePassword" autocomplete="off" name="DoChangePassword" type="text"/></br>
-                Ancien Mot de passe:
-                <input class="bouton" id="Password" autocomplete="off" autocapitalize="off" name="Password" type="password"/></br>
-                <button id="SendChangePassword" type="submit" value="password" name="submit"> Changer mon Mot de passe </button>
-            </p>
+        <form class="form" action="<?php echo $account_processing ?>" method="post">
+            <div>
+            <p> Ancien Mot de passe: </p>
+                <input class="bouton" autocomplete="off" autocapitalize="off" name="Password" type="password"/></br>
+            </div>
+            <div>
+            <p> Nouveau Mot de passe : </p>
+                <input class="bouton" autocomplete="off" name="DoChangePassword" type="text"/></br>
+                <button class="submit" type="submit" value="password" name="submit"> Changer mon Mot de passe </button>
+            </div>
         </form>
     </div>
 
 <?php
-
 
     //Si la personne n'est pas connecte
 } else {

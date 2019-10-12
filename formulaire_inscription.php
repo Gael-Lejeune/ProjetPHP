@@ -32,19 +32,33 @@ if ($step == 'ERROR_mdp') {
 <!-- Création du bloc qui contient le formulaire d'inscription -->
 <div class="container-form">
     <form class="form" action="<?php echo $data_processor ?>" method="post">
+        <div>
         <p> Votre Nom </p>
             <input class="bouton" type="text" name="name"/>
-        <p> Civilité (sexe) </p>
-            <input type="radio" name="civilite" value="M"/> Homme <br/><br/>>
+        </div>
+
+        <div>
+            <p> Civilité (sexe) </p>
+            <input type="radio" name="civilite" value="M"/> Homme <br/><br/>
             <input type="radio" name="civilite" value="F"/> Femme <br/>
-        <p> Email </p>
+        </div>
+
+        <div>
+            <p> Email </p>
             <input class="bouton" type="text" name="email"/>
-        <p> Mot de Passe </p>
+        </div>
+        <div>
+            <p> Mot de Passe </p>
             <input class="bouton" type="password" name="password"/>
-        <p> Confirmation Mot de Passe </p>
+        </div>
+        <div>
+            <p> Confirmation Mot de Passe </p>
             <input class="bouton" type="password" name="password"/></br></br>
-        <p>Conditions générales <input class="conditions" type="checkbox" name="conditions"/></p>
+        </div>
+        <div>
+            <p>Conditions générales <input class="conditions" type="checkbox" name="conditions"/></p>
             <input class ="submit" type="submit" name="action" value="Créer un compte"/>
+        </div>
         </form>
         <div class="connexion">
             <a href="<?php echo $loginaddr ?>"> Déjà inscrit(e) ? Se connecter</a>

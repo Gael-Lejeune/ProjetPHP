@@ -22,11 +22,14 @@ $step=$_GET['step'];
 
 <div class="container-form">
     <form class="form" action="<?php echo $login_processing ?>" method="post">
-        <p> Email </p>
-        <input class="bouton" type="text" name="email" required />
-        <p> Mot de Passe </p>
+        <div>
+            <p> Email </p>
+            <input class="bouton" type="text" name="email" required />
+        </div>
+        <div>
+            <p> Mot de Passe </p>
+            <input class="bouton" type="password" name="password" title="password" autocomplete="off" maxlength="30" required"/>
 
-        <input class="bouton" type="password" name="password" title="password" autocomplete="off" maxlength="30" required"/>
         <input class="submit" type="submit" name="action" value="Se connecter"/>
     </form>
     <div class="connexion">
