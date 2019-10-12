@@ -48,8 +48,8 @@ else{
 $name = $_POST['name'];
 $civilite = $_POST['civilite'];
 $email = $_POST['email'];
-$password = $_POST['password'];
-$passwordconf = $_POST['passwordconf'];
+$password = md5($_POST['password']);
+$passwordconf = md5($_POST['passwordconf']);
 $conditions = $_POST['conditions'];
 $action = $_POST['action'];
 

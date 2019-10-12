@@ -101,16 +101,15 @@ if ($_SESSION['login']){
 
     <div class="container-form">
         <!--Formulaire pour changer le mot de passe -->
-        <form class="form" action="<?php echo $account_processing ?>" method="post">
-            <div>
-            <p> Ancien Mot de passe: </p>
-                <input class="bouton" autocomplete="off" autocapitalize="off" name="Password" type="password"/></br>
-            </div>
-            <div>
-            <p> Nouveau Mot de passe : </p>
-                <input class="bouton" autocomplete="off" name="DoChangePassword" type="text"/></br>
-                <button class="submit" type="submit" value="password" name="submit"> Changer mon Mot de passe </button>
-            </div>
+        <form id="DoChangePassword" action="<?php echo $account_processing ?>" method="post">
+            <p>
+                Ancien Mot de passe:
+                <input class="bouton" id="Password" autocomplete="off" autocapitalize="off" name="Password" type="password"/></br>
+                Nouveau Mot de passe :
+                <input class="bouton" id="DoChangePassword" autocomplete="off" name="DoChangePassword" type="text"/></br>
+                <button id="SendChangePassword" type="submit" value="password" name="submit"> Changer mon Mot de passe </button>
+            </p>
+
         </form>
     </div>
 

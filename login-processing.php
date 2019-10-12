@@ -31,7 +31,6 @@ if(!($dbResult=mysqli_query($dbLink, $query)))
 
 
 
-
 $dbRow=mysqli_fetch_assoc($dbResult);
 
 
