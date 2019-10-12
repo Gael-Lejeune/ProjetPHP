@@ -1,8 +1,8 @@
 <?php
 
-include "utils.inc.php";
-include "link.inc.php";
-include 'model/dtb.inc.php';
+include "../model/utils.inc.php";
+include "../model/link.inc.php";
+include '../model/dtb.inc.php';
 
 
 start_page("login", $inscriptioncss, "stylesheet", "fonts.googleapis.com/css?family=Oswald&display=swap", "stylesheet");

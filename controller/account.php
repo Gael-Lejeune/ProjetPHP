@@ -1,6 +1,6 @@
 <?php
-include "utils.inc.php";
-include "link.inc.php";
+include "model/utils.inc.php";
+include "model/link.inc.php";
 include 'model/dtb.inc.php';
 
 
@@ -24,15 +24,8 @@ if ($_SESSION['login']){
     $query_name="SELECT name FROM user WHERE email = '$email' AND password = '$password'";
 
     //Verification de la viabilité de la requete
-    if(!($dbResult=mysqli_query($dbLink, $query_name)))
-    {
-        echo'Erreurderequête<br/>';
-    //Affichele type d'erreur.
-        echo'Erreur:'.mysqli_error($dbLink).'<br/>';
-    //Affiche la requête envoyée.
-        echo'Requête:'.$query_name.'<br/>';
-        exit();
-    }
+    $dbResult = querycheck($dbLink, $query_name, 'Requete viable');
+
 
     $dbRow=mysqli_fetch_assoc($dbResult);
     $name=$dbRow['name'];
@@ -41,15 +34,8 @@ if ($_SESSION['login']){
     $query_civ="SELECT civilite FROM user WHERE email = '$email' AND password = '$password'";
 
     //Verification de la viabilité de la requete
-    if(!($dbResult=mysqli_query($dbLink, $query_civ)))
-    {
-        echo'Erreurderequête<br/>';
-        //Affichele type d'erreur.
-        echo'Erreur:'.mysqli_error($dbLink).'<br/>';
-        //Affiche la requête envoyée.
-        echo'Requête:'.$query_civ.'<br/>';
-        exit();
-    }
+    $dbResult = querycheck($dbLink, $query_civ, 'Requete viable');
+
 
     $dbRow=mysqli_fetch_assoc($dbResult);
     $civ=$dbRow['civilite'];

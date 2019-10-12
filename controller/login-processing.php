@@ -1,8 +1,7 @@
 <?php
-include "utils.inc.php";
-
+include 'utils.inc.php';
 include 'link.inc.php';
-include 'model/dtb.inc.php';
+include 'dtb.inc.php';
 
 
 
@@ -19,15 +18,7 @@ $password=md5($_POST['password']);
 $query="SELECT email,password,connection_number FROM user WHERE email = '$email' AND password = '$password'";
 
 //Verification de la viabilité de la requete
-if(!($dbResult=mysqli_query($dbLink, $query)))
-{
-    echo'Erreurderequête<br/>';
-//Affichele type d'erreur.
-    echo'Erreur:'.mysqli_error($dbLink).'<br/>';
-//Affiche la requête envoyée.
-    echo'Requête:'.$query.'<br/>';
-    exit();
-}
+$dbResult = querycheck($dbLink, $query, 'Requete viable');
 
 
 

@@ -1,7 +1,7 @@
 <?php
 
-include "utils.inc.php";
-include "link.inc.php";
+include "model/utils.inc.php";
+include "model/link.inc.php";
 include 'model/dtb.inc.php';
 
 
@@ -14,22 +14,22 @@ if ($_SESSION['login']) {
     <head>
         <meta charset="utf-8">
         <title>FreeNote</title>
-        <link rel="stylesheet" href="html/index.css">
+        <link rel="stylesheet" href="../html/index.css">
         <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
     </head>
     <body>
 
     <div class="header">
         <div class='subtitle1'>
-            <div><img alt="Logo" src="html/images/login.png"></div>
+            <div><img alt="Logo" src="../html/images/login.png"></div>
             <div class="FreeNote highlightTextIn"><a alt="FreeNote" href="indexlogin.php"> FreeNote </a></div>
         </div>
         <div class='sign-up'>
-            <div><img alt="sign-up" src="html/images/login.png"></div>
+            <div><img alt="sign-up" src="../html/images/login.png"></div>
             <div class="FreeNote highlightTextIn"><a alt="Account" href="account.php"> Account </a></div>
         </div>
         <div class="log-in">
-            <div class="log-in-logo"><img alt="login" src="html/images/login.png"></div>
+            <div class="log-in-logo"><img alt="login" src="../html/images/login.png"></div>
             <div class="FreeNote highlightTextIn"><a alt="Log Out" href="index.php"> Log out </a></div>
         </div>
     </div>

@@ -1,7 +1,7 @@
 <?php
 
-include 'utils.inc.php';
-include 'link.inc.php';
+include 'model/utils.inc.php';
+include 'model/link.inc.php';
 include 'model/dtb.inc.php';
 
 
@@ -65,8 +65,7 @@ if ($conditions == 'ok') {
         $query.='"'.$email.'",';
         $query.='"'.$password.'")';
 
-        $successmessage = 'Inscription reussie';
-        $dbResult = querycheck($dbLink, $query, $successmessage);
+       $dbResult = querycheck($dbLink, $query, 'Inscription reussie');
 
 
         //affichage après validation du formulaire

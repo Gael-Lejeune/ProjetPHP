@@ -1,6 +1,6 @@
 <?php
-include "utils.inc.php";
-include "link.inc.php";
+include "model/utils.inc.php";
+include "model/link.inc.php";
 include 'model/dtb.inc.php';
 
 
@@ -61,16 +61,8 @@ if($real_password == $enter_password) {
         echo 'test';
 
         //Verification de la viabilité de la requete
-        if(!($dbResult=mysqli_query($dbLink, $query))) {
-            echo 'Erreurderequête<br/>';
-            //Affichele type d'erreur.
-            echo 'Erreur:' . mysqli_error($dbLink) . '<br/>';
-            //Affiche la requête envoyée.
-            echo 'Requête:' . $query . '<br/>';
-            exit();
-        } else {
-            header('Location:'.$indexaddr);
-        }
+        $dbResult = querycheck($dbLink, $query, 'Requete viable');
+
     }
 
     header('Location:account.php?error=ERROR');
