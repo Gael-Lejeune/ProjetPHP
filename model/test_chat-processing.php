@@ -1,7 +1,8 @@
 <?php
 
-include 'model/utils.inc.php';
-include 'model/dtb.inc.php';
+include "../model/utils.inc.php";
+include "../model/link.inc.php";
+include '../model/dtb.inc.php';
 
 session_start();
 

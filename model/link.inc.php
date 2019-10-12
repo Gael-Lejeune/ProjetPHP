@@ -21,7 +21,7 @@ $myprofileaddr='/projetphp/controller/account.php';
 $myprofilecss='/html/css/myprofile.css';
 
 $data_processor='data-processor.php';
-$login_processing='/projetphp/model/login-processing.php';
+$login_processing='/projetphp/controller/login-processing.php';
 $account_processing='myprofile.php';
 
 

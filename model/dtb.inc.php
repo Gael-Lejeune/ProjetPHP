@@ -11,7 +11,7 @@ function dtbconnect(){
 }
 
 
-function querycheck($dbLink, $query, $successmessage)
+function querycheck($dbLink, $query)
 {
 //Verification de la viabilite de la requete
     if (!($dbResult = mysqli_query($dbLink, $query))) {
@@ -23,7 +23,22 @@ function querycheck($dbLink, $query, $successmessage)
         exit();
     }
     else {
-        echo $successmessage;
+        return $dbResult;
     }
-    return $dbResult;
+}
+
+
+function loginckeck($email,$password)
+{
+    $dbLink = dtbconnect();
+    $query="SELECT email,password,connection_number FROM user WHERE email = '$email' AND password = '$password'";
+
+//Verification de la viabilité de la requete
+    $dbResult = querycheck($dbLink, $query);
+    $dbRow=mysqli_fetch_assoc($dbResult);
+//Si le mot de passe et l'email correspondent
+    if ($email != $dbRow['email'] || $password != $dbRow['password']) {
+        //On demarre la session
+        header('Location:login.php?error=ERROR');
+    }
 }
