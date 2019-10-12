@@ -1,28 +1,47 @@
 <?php
 
 $index='Index';
-$indexaddr='/projetphp/controller/index.php';
+$indexcontroller='/projetphp/controller/index.php';
 $indexcss='/projetphp/html/css/index.css';
+$indexview='/projetphp/view/indexview.php';
+$indexmodel='/projetphp/model/indexmodel.php';
 
 $inscription='Inscription';
-$inscriptionaddr='/projetphp/controller/formulaire_inscription.php';
-$inscriptioncss='/projetphp/html/css/signup.css';
+$inscriptioncontroller='/projetphp/controller/formulaire_inscription.php';
+$inscriptioncss='/projetphp/controller/signup.css';
+$inscriptionview='/projetphp/controller/inscriptionview.php';
+$inscriptionmodel='/projetphp/controller/inscriptionmodel.php';
+
 
 $login='Login';
-$loginaddr='/projetphp/controller/login.php';
-$logincss='/projetphp/html/css/signup.css';
+$logincontroller='/projetphp/login/.php';
+$logincss='/projetphp/controller/login.css';
+$loginview='/projetphp/controller/loginview.php';
+$loginmodel='/projetphp/controller/loginmodel.php';
 
 $logout='Logout';
-$logoutaddr='/projetphp/controller/logout.php';
-$logoutcss='/projetphp/html/css/signup.css';
+$logoutcontroller='/projetphp/login/logout.php';
+$logoutcss='/projetphp/controller/logout.css';
+$logoutview='/projetphp/controller/logoutview.php';
+$logoutmodel='/projetphp/controller/logoutmodel.php';
 
-$myprofile='myProfile';
-$myprofileaddr='/projetphp/controller/account.php';
-$myprofilecss='/html/css/myprofile.css';
 
-$data_processor='data-processor.php';
-$login_processing='/projetphp/controller/login-processing.php';
-$account_processing='myprofile.php';
+$myprofile='myprofile';
+$myprofilecontroller='/projetphp/controller/myprofile.php';
+$myprofilecss='/projetphp/html/css/myprofile.css';
+$myprofileview='/projetphp/view/myprofileview.php';
+$myprofilemodel='/projetphp/model/myprofilemodel.php';
+
+//$='';
+//$controller='/projetphp/controller/.php';
+//$css='/projetphp/html/css/.css';
+//$view='/projetphp/view/view.php';
+//$model='/projetphp/model/model.php';
+
+
+$data_processor='/projetphp/model/data-processor.php';
+$login_processing='/projetphp/model/login-processing.php';
+$account_processing='/projetphp/model/myprofile.php';
 
 
 $fond='/projetphp/html/images/fond.jpg';

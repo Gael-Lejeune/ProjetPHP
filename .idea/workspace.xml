@@ -1,27 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="227c4fe5-873d-4ee2-aaf3-461033efdf6b" name="Default Changelist" comment="Modification de l'index pour la prise en compte de la session actuelle">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/accountview.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/inscriptionview.php" afterDir="false" />
+    <list default="true" id="227c4fe5-873d-4ee2-aaf3-461033efdf6b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/account.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/account.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/data-processor.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/data-processor.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/formulaire_inscription.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/formulaire_inscription.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/indexlogin.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/login-processing.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/login-processing.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/myprofile.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/myprofile.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/test_chat-processing.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/test_chat-processing.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/test_chat.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/test_chat.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dtb.inc.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/formulaire.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/formulaire.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/link.inc.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/dtb.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/dtb.inc.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/link.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/link.inc.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/loginview.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/loginview.php" afterDir="false" />
     </list>
     <list id="5504e2fa-2ce0-416c-a015-9e96628cc8cf" name="Revert &quot;Modification de l'index pour la prise en compte de la session actuelle.&quot;" comment="Revert &quot;Modification de l'index pour la prise en compte de la session actuelle.&quot;&#10;&#10;This reverts commit fbcc00a2" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -126,8 +108,8 @@
       <recent name="D:\IUT\ProjetPHP\view" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\IUT\ProjetPHP\controller" />
       <recent name="D:\IUT\ProjetPHP\model" />
+      <recent name="D:\IUT\ProjetPHP\controller" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/html/images" />
       <recent name="$PROJECT_DIR$/html" />
@@ -334,7 +316,14 @@
       <option name="project" value="LOCAL" />
       <updated>1570877808440</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Reorganisation du projet afin de respecter la strucure mvc">
+      <created>1570883719111</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1570883719111</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -368,6 +357,7 @@
     <MESSAGE value="Creation du dossier controller" />
     <MESSAGE value="creation du dossier model" />
     <MESSAGE value="creation du dossier view" />
-    <option name="LAST_COMMIT_MESSAGE" value="creation du dossier view" />
+    <MESSAGE value="Reorganisation du projet afin de respecter la strucure mvc" />
+    <option name="LAST_COMMIT_MESSAGE" value="Reorganisation du projet afin de respecter la strucure mvc" />
   </component>
 </project>
