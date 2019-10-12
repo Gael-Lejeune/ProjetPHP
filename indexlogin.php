@@ -2,6 +2,8 @@
 
 include "utils.inc.php";
 include "link.inc.php";
+include 'model/dtb.inc.php';
+
 
 if ($_SESSION['login']) {
 

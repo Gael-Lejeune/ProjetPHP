@@ -1,16 +1,16 @@
 <?php
 include "utils.inc.php";
+
 include 'link.inc.php';
+include 'model/dtb.inc.php';
+
+
 
 session_start();
 
 //ouverture connexion serveur BD
-$dbLink=mysqli_connect("mysql-latableronde.alwaysdata.net","191121","tableronde")
-or die('Erreur de connexion au serveur:'.mysqli_connect_error());
+$dbLink = dtbconnect();
 
-//sélection BD
-mysqli_select_db($dbLink,"latableronde_dtb")
-or die('Erreur dans la sélection de la base:'.mysqli_error($dbLink));
 
 //Recuperation des variables en post
 $email=$_POST['email'];
@@ -38,11 +38,11 @@ $dbRow=mysqli_fetch_assoc($dbResult);
 if($email == $dbRow['email'] &&  $password == $dbRow['password'])
 {
     //On demarre la session
-    $_SESSION['login']='true';
+    $_SESSION['login']=true;
     $_SESSION['email']=$email;
     $_SESSION['password']=$password;
 
-    header('Location:indexlogin.php');
+    header('Location:'.$indexaddr);
 
     /*
     $nbc = "SELECT connection_number FROM user WHERE id = $email";
@@ -55,6 +55,7 @@ if($email == $dbRow['email'] &&  $password == $dbRow['password'])
     */
 
 }
+
 
 //Si les mots de passe et/ou email ne correspondent pas on retourne sur login en renvoyant une erreur
 else

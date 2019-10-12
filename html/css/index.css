@@ -1,5 +1,6 @@
 @import "compass/css3";
 
+/* Mise en page du fond du site */
 body{
     width: 100%;
     margin: 0;
@@ -25,6 +26,7 @@ body{
     display: none;
 }
 
+/* Mise en page du background header */
 .background-header {
     width: 100%;
     height: 91px;
@@ -36,6 +38,7 @@ body{
     /*border: 1px solid white;*/
 }
 
+/* Mise en page du header contenant l'en tête du site */
 .header {
     width: 94%;
     height: 90px;
@@ -48,6 +51,7 @@ body{
     border-bottom: 1px solid white;
 }
 
+/* Mise en page du bloc contenant le logo et le titre du site */
 .subtitle1 {
     width: auto;
     height: auto;
@@ -58,22 +62,26 @@ body{
     /*border: 1px solid blue;*/
 }
 
+/* Centrage verticale des div du bloc subtitle1 */
 .subtitle1 div{
     margin-top: auto;
     margin-bottom: auto;
     /*border: 1px solid blue;*/
 }
 
+/* Lien du bloc en blanc */
 .subtitle1 a{
     margin-left: 10px;
     color: white;
 }
 
+/* Changement de la couleur du lien au passage de la souris */
 .subtitle1 a:hover{
     color: #7294E9;
     transition: 0.6s;
 }
 
+/* Mise en place de l'animation des titres du site */
 .FreeNote a, .log-in-animation a {
     color: white;
     text-decoration: none;
@@ -87,6 +95,7 @@ body{
     transition: color 1.2s;
 }
 
+/* Mise en place des titres avant des blocs le passage de la souris */
 div.highlightTextIn a:before
 {
     position: absolute;
@@ -101,6 +110,7 @@ div.highlightTextIn a:before
     opacity: 0;
 }
 
+/* Mise en place des titres des blocs après le passage de la souris */
 div.highlightTextIn a:hover:after
 {
     position: absolute;

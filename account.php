@@ -1,6 +1,8 @@
 <?php
 include "utils.inc.php";
 include "link.inc.php";
+include 'model/dtb.inc.php';
+
 
 //Demarrage de la page
 
@@ -8,13 +10,8 @@ start_page("login", $inscriptioncss, "stylesheet", "fonts.googleapis.com/css?fam
 
 session_start();
 
-//ouverture connexion serveur BD
-$dbLink=mysqli_connect("mysql-latableronde.alwaysdata.net","191121","tableronde")
-or die('Erreur de connexion au serveur:'.mysqli_connect_error());
+$dbLink = dtbconnect();
 
-//sélection BD
-mysqli_select_db($dbLink,"latableronde_dtb")
-or die('Erreur dans la sélection de la base:'.mysqli_error($dbLink));
 
 //Si la personne est connecte
 if ($_SESSION['login']){
@@ -85,18 +82,24 @@ if ($_SESSION['login']){
             <p> Civilité : <?php echo $civ ?> </p></br>
 
         </div>
+    </div>
 
+    <div class="container-form">
         <!--Formulaire pour changer le nom de l'utilisateur -->
-        <form id="DoChangeId" action="<?php echo $account_processing ?>" method="post">
-            <p>
-                Nouvel identifiant :
-                <input class="bouton" id="DoChangeLogin" autocomplete="off" name="DoChangeLogin" type="text"/></br>
-                Mot de passe actuel:
-                <input class="bouton" id="Password" autocomplete="off" autocapitalize="off" name="Password" type="password"/></br>
-                <button id="SendChangeLogin" type="submit" value="login" name="submit"> Changer mon Identifiant </button>
-            </p>
+        <form class="form" action="<?php echo $account_processing ?>" method="post">
+            <div>
+            <p> Nouvel identifiant : </p>
+                <input class="bouton" autocomplete="off" name="DoChangeLogin" type="text"/></br>
+            </div>
+            <div>
+                <p> Mot de passe actuel: </p>
+                <input class="bouton" autocomplete="off" autocapitalize="off" name="Password" type="password"/></br>
+            </div>
+            <button class="submit" type="submit" value="login" name="submit"> Changer mon Identifiant </button>
         </form>
+    </div>
 
+    <div class="container-form">
         <!--Formulaire pour changer le mot de passe -->
         <form id="DoChangePassword" action="<?php echo $account_processing ?>" method="post">
             <p>
@@ -106,6 +109,7 @@ if ($_SESSION['login']){
                 <input class="bouton" id="DoChangePassword" autocomplete="off" name="DoChangePassword" type="text"/></br>
                 <button id="SendChangePassword" type="submit" value="password" name="submit"> Changer mon Mot de passe </button>
             </p>
+
         </form>
     </div>
 

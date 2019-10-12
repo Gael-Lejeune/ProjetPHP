@@ -28,7 +28,7 @@ body{
 }
 
 .Title {
-    width:15%;
+    width: 300px;
     height: auto;
     margin-top: 50px;
     margin-bottom: 10px;
@@ -36,6 +36,13 @@ body{
     margin-right: auto;
     display: flex;
     /*border: 1px solid blue;*/
+}
+
+
+h1 {
+    font-size: 30px;
+    margin-top: 40px;
+    text-align: center;
 }
 
 .Title div{
@@ -112,12 +119,6 @@ div.highlightTextIn a:before
     transform: scale(1.6);
 }
 
-h1 {
-    font-size: 30px;
-    margin-top: 40px;
-    text-align: center;
-}
-
 .container-form {
     width: 35%;
     margin-top: 40px;
@@ -137,33 +138,25 @@ h1 {
     margin-bottom: 40px;
     margin-left: auto;
     margin-right: auto;
-    background-color: red;
+    background-color: #E2E5EC;
     border: white 1px solid;
     border-radius: 8px;
-}
-
-.fond-gris > p {
-    padding-top: 20px;
 }
 
 .checkbox {
     margin-bottom: 20px;
 }
 
-.fond-gris {
-    background-color: #E2E5EC;
-}
-
 .bouton {
-    width: 90%;
+    width: 99%;
     height: 40px;
+    /*border: blue 1px solid;*/
 }
 
-.form p {
+.form div {
     width: 90%;
-}
-.form, p, input {
-    margin-left: 5%;
+    margin-left: 4%;
+    /*border: red 1px solid;*/
 }
 
 .conditions {
@@ -171,46 +164,40 @@ h1 {
 }
 
 .submit {
-    width: 30%;
+    width: 50%;
     height: 70px;
     color: white;
     font-family: Bebas;
     font-size: 20px;
-    margin-left: 35%;
+    margin-top: 30px;
+    margin-left: 25%;
+    margin-bottom: 30px;
     background-color: #282c34;
+    border-radius: 5px;
 }
 
 .connexion {
     color: #282c34;
     font-size: 20px;
     text-align: center;
-    margin-top: 20px;
     margin-bottom: 20px;
 }
 
 .informations_personnelles p {
     color: #282c34;
-    border: red 1px solid;
+    margin-left: 10px;
+    /*border: red 1px solid;*/
 }
 
-/*@media screen and (max-width: 768px)*/
-/*{*/
+@media all and (max-width: 768px) {
 
-/*    .Title img {*/
-/*        width: 128px;*/
-/*        height: auto;*/
-/*    }*/
-/*    .FreeNote a {*/
-/*        font-size: 100px;*/
-/*    }*/
+    .container-form {
+        width: 90%;
+        margin-left: 5%;
+    }
 
-/*    .container-form {*/
-/*        width: 90%;*/
-/*        margin-left: 5%;*/
+    FreeNote a {
+        font-size: 100px;
+    }
+}
 
-/*    }*/
-
-/*    .form {*/
-/*        width: 90%;*/
-/*    }*/
-/*}*/
