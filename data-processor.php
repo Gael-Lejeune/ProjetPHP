@@ -2,14 +2,10 @@
 
 include 'utils.inc.php';
 include 'link.inc.php';
+include 'model/dtb.inc.php';
 
-//ouverture connexion serveur BD
-$dbLink = mysqli_connect('mysql-latableronde.alwaysdata.net', '191121', 'tableronde')
-or die('Erreur de connexion au serveur : ' . mysqli_connect_error());
 
-//sélection BD
-mysqli_select_db($dbLink , 'latableronde_dtb')
-or die('Erreur dans la sélection de la base : ' . mysqli_error($dbLink));
+$dbLink = dtbconnect();
 
 //vérif du nom
 if (isset($_POST['name']))
@@ -69,20 +65,9 @@ if ($conditions == 'ok') {
         $query.='"'.$email.'",';
         $query.='"'.$password.'")';
 
-        //Verification de la viabilite de la requete
-        if(!($dbResult = mysqli_query($dbLink, $query)))
-        {
-            echo 'Erreur de requête<br/>';
-            // type d'erreur
-            echo 'Erreur : ' . mysqli_error($dbLink) . '<br/><br/>';
-            // requête envoyée
-            echo 'Requête : ' . $query . '<br/>';
-            exit();
-        }
-        else
-        {
-            echo 'Inscription enregistrée !' . '<br/>';
-        }
+        $successmessage = 'Inscription reussie';
+        $dbResult = querycheck($dbLink, $query, $successmessage);
+
 
         //affichage après validation du formulaire
         if ($action == 'OK')
@@ -100,11 +85,13 @@ if ($conditions == 'ok') {
             echo '<br/><em>Bouton non géré !</em><br/>';
         }
 
+
         //Si les mots de passes ne correspondent pas on retourne sur la page d'inscription en renvoyant une erreur
     } else {
         header ('Location:formulaire_inscription.php?step=ERROR_mdp');
 
     }
+
     //Si les conditions generales d'utilisation ne sont pas coches on retourne sur la page d'inscription en renvoyant une erreur
 } else {
     header ('Location:formulaire_inscription.php?step=ERROR_cond');

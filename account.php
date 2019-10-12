@@ -1,6 +1,8 @@
 <?php
 include "utils.inc.php";
 include "link.inc.php";
+include 'model/dtb.inc.php';
+
 
 //Demarrage de la page
 
@@ -8,13 +10,8 @@ start_page("login", $inscriptioncss, "stylesheet", "fonts.googleapis.com/css?fam
 
 session_start();
 
-//ouverture connexion serveur BD
-$dbLink=mysqli_connect("mysql-latableronde.alwaysdata.net","191121","tableronde")
-or die('Erreur de connexion au serveur:'.mysqli_connect_error());
+$dbLink = dtbconnect();
 
-//sélection BD
-mysqli_select_db($dbLink,"latableronde_dtb")
-or die('Erreur dans la sélection de la base:'.mysqli_error($dbLink));
 
 //Si la personne est connecte
 if ($_SESSION['login']){
