@@ -1,16 +1,12 @@
 <?php
 
-function dtbconnect()
-{
-
+function dtbconnect(){
 //ouverture connexion serveur BD
     $dbLink = mysqli_connect('mysql-latableronde.alwaysdata.net', '191121', 'tableronde')
     or die('Erreur de connexion au serveur : ' . mysqli_connect_error());
-
 //sélection BD
     mysqli_select_db($dbLink, 'latableronde_dtb')
     or die('Erreur dans la sélection de la base : ' . mysqli_error($dbLink));
-
     return $dbLink;
 }
 
@@ -26,10 +22,8 @@ function querycheck($dbLink, $query, $successmessage)
         echo 'Requête : ' . $query . '<br/>';
         exit();
     }
-    else
-    {
+    else {
         echo $successmessage;
     }
-
     return $dbResult;
 }
