@@ -3,7 +3,6 @@ include "utils.inc.php";
 include "link.inc.php";
 include 'model/dtb.inc.php';
 
-
 start_page("login", $indexcss, "stylesheet", "fonts.googleapis.com/css?family=Oswald&display=swap", "stylesheet");
 
 session_start();
@@ -18,9 +17,9 @@ session_start();
                 <div> <img alt="Logo" src="<?php echo $logo ?>"> </div>
                 <div class="FreeNote highlightTextIn"> <a alt="FreeNote" href="<?php echo $indexaddr ?>"> FreeNote </a> </div>
             </div>
-            <!-- Création du bloc pour s'inscrire ou consulter son profile en fonction de si l'on est connecter à notre compte ou non -->
 
-            <div class='sign-up'>
+            <!-- Création du bloc pour s'inscrire ou consulter son profile en fonction de si l'on est connecter à notre compte ou non -->
+             <div class='sign-up'>
                 <div> <img alt="sign-up" src="<?php echo $logo ?>"> </div>
                 <?php if ($_SESSION['login'])
                         echo '<div class="FreeNote highlightTextIn"> <a alt="My Profile" href="'.$myprofileaddr.'"> My Profile </a> </div>';
@@ -28,6 +27,7 @@ session_start();
                          echo'<div class="FreeNote highlightTextIn"> <a alt="Sign Up" href="'.$inscriptionaddr.'"> Sign up </a> </div>';
                     ?>
             </div>
+
             <!-- Création du bloc pour se connecter ou se déconnecte en fonction de si l'on est connecter à notre compte ou non -->
             <div class="log-in">
                 <div class="log-in-logo"> <img alt="login" src="<?php echo $logo ?>"> </div>

@@ -85,11 +85,13 @@ if ($conditions == 'ok') {
             echo '<br/><em>Bouton non géré !</em><br/>';
         }
 
+
         //Si les mots de passes ne correspondent pas on retourne sur la page d'inscription en renvoyant une erreur
     } else {
         header ('Location:formulaire_inscription.php?step=ERROR_mdp');
 
     }
+
     //Si les conditions generales d'utilisation ne sont pas coches on retourne sur la page d'inscription en renvoyant une erreur
 } else {
     header ('Location:formulaire_inscription.php?step=ERROR_cond');

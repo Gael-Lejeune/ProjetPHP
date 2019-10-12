@@ -1,6 +1,7 @@
 <?php
 include "utils.inc.php";
 include "link.inc.php";
+
 include 'model/dtb.inc.php';
 
 
@@ -16,7 +17,7 @@ if ($step == 'ERROR_mdp') {
     echo 'Vous devez valider les conditions d\'utilisations'.'<br/>';
 }
 
-?>
+
 <!-- Création de la flèche de retour à la page d'accueil -->
 <a class="arrow" href="<?php echo $indexaddr ?>"><img src="<?php echo $arrow?>"></a>
 

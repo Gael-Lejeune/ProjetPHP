@@ -1,13 +1,13 @@
 <?php
 include "utils.inc.php";
 include "link.inc.php";
+
 include 'model/dtb.inc.php';
 
 
 start_page("login", $logincss, "stylesheet", "fonts.googleapis.com/css?family=Oswald&display=swap", "stylesheet");
 
 $step=$_GET['step'];
-echo $step, '<br/>';
 
 //Formulaire de login
 ?>
@@ -25,6 +25,7 @@ echo $step, '<br/>';
         <p> Email </p>
         <input class="bouton" type="text" name="email" required />
         <p> Mot de Passe </p>
+
         <input class="bouton" type="password" name="password" title="password" autocomplete="off" maxlength="30" required"/>
         <input class="submit" type="submit" name="action" value="Se connecter"/>
     </form>
