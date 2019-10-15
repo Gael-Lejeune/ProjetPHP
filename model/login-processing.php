@@ -3,8 +3,6 @@ include "../model/utils.inc.php";
 include "../model/link.inc.php";
 include '../model/dtb.inc.php';
 
-
-
 session_start();
 
 //ouverture connexion serveur BD
@@ -24,7 +22,7 @@ $dbRow=mysqli_fetch_assoc($dbResult);
 //Si le mot de passe et l'email correspondent
 if ($email != $dbRow['email'] || $password != $dbRow['password']) {
     //On demarre la session
-    header('Location:login.php?error=ERROR');
+    header("Location:$logincontroller?error=ERROR");
 }
 else {
     //On demarre la session
@@ -32,5 +30,5 @@ else {
     $_SESSION['email']=$email;
     $_SESSION['password']=$password;
 
-    header('Location:index.php');
+    header("Location:$indexcontroller");
 }

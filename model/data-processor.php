@@ -77,7 +77,7 @@ if ($conditions == 'ok') {
 
 
         //affichage après validation du formulaire
-        header('Location:index.php');
+        header("location:$indexcontroller");
 
 
         //Si les mots de passes ne correspondent pas on retourne sur la page d'inscription en renvoyant une erreur

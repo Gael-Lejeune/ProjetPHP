@@ -15,7 +15,7 @@ if ($_SESSION['login']) {
     //On la ferme
     session_destroy();
     //On revient sur l'index qui devrait changer vu qu'on est deconnecte
-    header('Location:' . $indexaddr);
+    header('Location:' . $indexcontroller);
 }
 
 end_page();

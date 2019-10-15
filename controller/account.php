@@ -37,7 +37,7 @@ if ($_SESSION['login']){
     $dbRow=mysqli_fetch_assoc($dbResult);
     $civ=$dbRow['civilite'];
 
-    require "../view/accountview.php";
+    require $myprofileview;
 
     //Si la personne n'est pas connecte
 } else {

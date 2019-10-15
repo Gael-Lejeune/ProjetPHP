@@ -1,7 +1,7 @@
 <!-- HTML de la page -->
 
 <!--Fleche retour -->
-<a class="arrow" href="<?php echo $indexaddr ?>"><img src="<?php echo $arrow ?>"></a>
+<a class="arrow" href="<?php echo $indexcontroller ?>"><img src="<?php echo $arrow ?>"></a>
 
 <!--En tete de la page -->
 <div class='Title'>
