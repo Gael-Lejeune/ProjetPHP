@@ -19,7 +19,7 @@ $texte=($_POST['texte']);
 $query="INSERT INTO message (texte) VALUES ('$texte')";
 
 //Verification de la viabilité de la requete
-$dbResult = querycheck($dbLink, $query, 'Requete viable');
+$dbResult = querycheck($dbLink, $query);
 
 //lit le résultat de la requête dans un tableau associatif
 $dbRow=mysqli_fetch_assoc($dbResult);
@@ -27,6 +27,6 @@ echo $dbRow;
 
 //redirection HTTP vers test_chat.php
 
-header('Location: test_chat.php?step=ERROR_mdp');
+header("Location: $test_chat?step=ERROR_mdp");
 
 ?>
