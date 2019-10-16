@@ -1,7 +1,7 @@
 <?php
-include "utils.inc.php";
-include "link.inc.php";
-include 'model/dtb.inc.php';
+include "../model/utils.inc.php";
+include "../model/link.inc.php";
+include '../model/dtb.inc.php';
 
 
 
@@ -37,19 +37,11 @@ if($real_password == $enter_password) {
         $query="UPDATE user SET user.password='$new_password' WHERE email='$email' and password='$real_password'";
 
         //Verification de la viabilité de la requete
-        if(!($dbResult=mysqli_query($dbLink, $query))) {
-            echo 'Erreurderequête<br/>';
-            //Affichele type d'erreur.
-            echo 'Erreur:' . mysqli_error($dbLink) . '<br/>';
-            //Affiche la requête envoyée.
-            echo 'Requête:' . $query . '<br/>';
-            exit();
-        } else {
-            header('Location:'.$indexaddr);
-        }
+        querycheck($dbLink,$query);
 
         //Si la variable action vaut 'login' c'est que la personne veux changer son nom
-    } elseif ($action == 'login') {
+    }
+    elseif ($action == 'login') {
 
         //On recupere le nouveau nom et l'email
         $new_name=$_POST['DoChangeLogin'];
@@ -61,18 +53,9 @@ if($real_password == $enter_password) {
         echo 'test';
 
         //Verification de la viabilité de la requete
-        if(!($dbResult=mysqli_query($dbLink, $query))) {
-            echo 'Erreurderequête<br/>';
-            //Affichele type d'erreur.
-            echo 'Erreur:' . mysqli_error($dbLink) . '<br/>';
-            //Affiche la requête envoyée.
-            echo 'Requête:' . $query . '<br/>';
-            exit();
-        } else {
-            header('Location:'.$indexaddr);
-        }
-    }
+        $dbResult = querycheck($dbLink, $query);
 
+    }
     header('Location:account.php?error=ERROR');
 
     //Si les deux mots de passe ne correspondent pas

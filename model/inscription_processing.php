@@ -1,8 +1,8 @@
 <?php
 
-include 'utils.inc.php';
-include 'link.inc.php';
-include 'model/dtb.inc.php';
+include "../model/utils.inc.php";
+include "../model/link.inc.php";
+include '../model/dtb.inc.php';
 
 
 $dbLink = dtbconnect();
@@ -14,7 +14,6 @@ if (isset($_POST['name']))
 }
 else{
     $name=" ";
-
 }
 
 //vérif de la civilité
@@ -44,6 +43,15 @@ else{
     $password=" ";
 }
 
+//vérif du mot de passe
+if (isset($_POST['passwordconf']))
+{
+    $passwordconf=$_POST['passwordconf'];
+}
+else{
+    $passwordconf=" ";
+}
+
 //récup variables en POST
 $name = $_POST['name'];
 $civilite = $_POST['civilite'];
@@ -65,25 +73,11 @@ if ($conditions == 'ok') {
         $query.='"'.$email.'",';
         $query.='"'.$password.'")';
 
-        $successmessage = 'Inscription reussie';
-        $dbResult = querycheck($dbLink, $query, $successmessage);
+       $dbResult = querycheck($dbLink, $query);
 
 
         //affichage après validation du formulaire
-        if ($action == 'OK')
-        {
-            $message1 = '<p>' . 'Félicitations ! Vous êtes maintenant inscrit !' . '</p>' . '</br>';
-            echo $message1;
-            $message2 = 'Votre email : ' . PHP_EOL . $email . '<br/>';
-            echo $message2;
-            $message3 = 'Votre mot de passe : ' . PHP_EOL . $password;
-            echo $message3;
-            mail($email, 'Votre Inscription', $message1, $message2,$message3);
-        }
-        else
-        {
-            echo '<br/><em>Bouton non géré !</em><br/>';
-        }
+        header("location:$indexcontroller");
 
 
         //Si les mots de passes ne correspondent pas on retourne sur la page d'inscription en renvoyant une erreur
@@ -97,8 +91,5 @@ if ($conditions == 'ok') {
     header ('Location:formulaire_inscription.php?step=ERROR_cond');
 }
 
-
-
-?>
 
 

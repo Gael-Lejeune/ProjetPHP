@@ -1,7 +1,8 @@
 <?php
 
-include 'utils.inc.php';
-include 'model/dtb.inc.php';
+include "../model/utils.inc.php";
+include "../model/link.inc.php";
+include '../model/dtb.inc.php';
 
 session_start();
 
@@ -18,15 +19,8 @@ $texte=($_POST['texte']);
 $query="INSERT INTO message (texte) VALUES ('$texte')";
 
 //Verification de la viabilité de la requete
-if(!($dbResult=mysqli_query($dbLink, $query)))
-{
-    echo'Erreurderequête<br/>';
-//Affichele type d'erreur.
-    echo'Erreur:'.mysqli_error($dbLink).'<br/>';
-//Affiche la requête envoyée.
-    echo'Requête:'.$query.'<br/>';
-    exit();
-}
+$dbResult = querycheck($dbLink, $query, 'Requete viable');
+
 //lit le résultat de la requête dans un tableau associatif
 $dbRow=mysqli_fetch_assoc($dbResult);
 echo $dbRow;
