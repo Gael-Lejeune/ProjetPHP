@@ -1,10 +1,10 @@
 <!-- Création de la flèche de retour à la page d'accueil -->
-<a class="arrow" href="<?php echo $indexaddr ?>"><img src="<?php echo $arrow?>"></a>
+<a class="arrow" href="<?php echo $indexcontroller ?>"><img src="<?php echo $arrow?>"></a>
 
 <!-- Création du Titre du site avec le logo -->
 <div class='Title'>
     <div> <img alt="Logo" src="<?php echo $logo ?>"> </div>
-    <div class="FreeNote highlightTextIn"> <a alt="FreeNote" href="<?php echo $indexaddr?>"> FreeNote </a> </div>
+    <div class="FreeNote highlightTextIn"> <a alt="FreeNote" href="<?php echo $indexcontroller?>"> FreeNote </a> </div>
 </div>
 
 <h1> Inscription </h1>
@@ -41,6 +41,6 @@
         </div>
     </form>
     <div class="connexion">
-        <a href="<?php echo $loginaddr ?>"> Déjà inscrit(e) ? Se connecter</a>
+        <a href="<?php echo $logincontroller ?>"> Déjà inscrit(e) ? Se connecter</a>
     </div>
 </div>

@@ -10,14 +10,14 @@ $inscription='Inscription';
 $inscriptioncontroller='../controller/formulaire_inscription.php';
 $inscriptioncss='../html/css/signup.css';
 $inscriptionview='../view/inscriptionview.php';
-$inscriptionmodel='../model/inscriptionmodel.php';
+$inscriptionmodel='../model/inscription_processing.php';
 
 
 $login='Login';
 $logincontroller='../controller/login.php';
 $logincss='../html/css/login.css';
 $loginview='../view/loginview.php';
-$loginmodel='../model/loginmodel.php';
+$loginmodel='../model/login_processing.php';
 
 $logout='Logout';
 $logoutcontroller='../controller/logout.php';
@@ -30,7 +30,7 @@ $myprofile='myprofile';
 $myprofilecontroller='../controller/account.php';
 $myprofilecss='../html/css/myprofile.css';
 $myprofileview='../view/accountview.php';
-$myprofilemodel='../model/myprofilemodel.php';
+$myprofilemodel='../model/account_processing.php';
 
 //$='';
 //$controller='../controller/.php';
@@ -39,9 +39,9 @@ $myprofilemodel='../model/myprofilemodel.php';
 //$model='../model/model.php';
 
 
-$data_processor='../model/data-processor.php';
-$login_processing='../model/login-processing.php';
-$account_processing='../model/myprofile.php';
+$data_processor='../model/inscription_processing.php';
+$login_processing='../model/login_processing.php';
+$account_processing='../model/account_processing.php';
 
 
 $fond='../html/images/fond.jpg';

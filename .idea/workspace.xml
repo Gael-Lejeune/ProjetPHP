@@ -3,15 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="227c4fe5-873d-4ee2-aaf3-461033efdf6b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/account.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/account.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/logout.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/logout.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/data-processor.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/data-processor.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/myprofile.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/account_processing.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/data-processor.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/inscription_processing.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/link.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/link.inc.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/login-processing.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/login-processing.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/accountview.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/accountview.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/indexview.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/indexview.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/loginview.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/loginview.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/login-processing.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/login_processing.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/inscriptionview.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/inscriptionview.php" afterDir="false" />
     </list>
     <list id="5504e2fa-2ce0-416c-a015-9e96628cc8cf" name="Revert &quot;Modification de l'index pour la prise en compte de la session actuelle.&quot;" comment="Revert &quot;Modification de l'index pour la prise en compte de la session actuelle.&quot;&#10;&#10;This reverts commit fbcc00a2" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -107,15 +104,15 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\IUT\ProjetPHP\view" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\IUT\ProjetPHP\model" />
       <recent name="D:\IUT\ProjetPHP\controller" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/html/images" />
       <recent name="$PROJECT_DIR$/html" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\IUT\ProjetPHP\view" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -171,7 +168,8 @@
       <workItem from="1570602320237" duration="12018000" />
       <workItem from="1570629074386" duration="5985000" />
       <workItem from="1570688334023" duration="1622000" />
-      <workItem from="1571158062659" duration="3930000" />
+      <workItem from="1571158062659" duration="3985000" />
+      <workItem from="1571206629361" duration="553000" />
     </task>
     <task id="LOCAL-00001" summary="Debut du projet">
       <created>1569846323677</created>
@@ -334,7 +332,14 @@
       <option name="project" value="LOCAL" />
       <updated>1570884802655</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Résolution des problèmes de liens dynamiques">
+      <created>1571162084059</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1571162084059</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -355,7 +360,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -381,6 +388,7 @@
     <MESSAGE value="creation du dossier view" />
     <MESSAGE value="Reorganisation du projet afin de respecter la strucure mvc" />
     <MESSAGE value="Résolution des problèmes de liens dynamiques en cours" />
-    <option name="LAST_COMMIT_MESSAGE" value="Résolution des problèmes de liens dynamiques en cours" />
+    <MESSAGE value="Résolution des problèmes de liens dynamiques" />
+    <option name="LAST_COMMIT_MESSAGE" value="Résolution des problèmes de liens dynamiques" />
   </component>
 </project>
