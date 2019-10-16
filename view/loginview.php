@@ -1,22 +1,10 @@
-<?php
-include "utils.inc.php";
-include "link.inc.php";
-include 'model/dtb.inc.php';
-
-
-start_page("login", $logincss, "stylesheet", "fonts.googleapis.com/css?family=Oswald&display=swap", "stylesheet");
-
-$step=$_GET['step'];
-echo $step, '<br/>';
-
-//Formulaire de login
-?>
-<a class="arrow" href="<?php echo $indexaddr ?>"><img src="https://img.icons8.com/nolan/50/000000/up-left.png" style="margin-top: -20px;"></a>
+<a class="arrow" href="<?php echo $indexcontroller ?>"><img src="https://img.icons8.com/nolan/50/000000/up-left.png" style="margin-top: -20px;"></a>
 
 <div class='Title' style="margin-top: 20px;">
     <div> <img alt="Logo" src="<?php echo $logo ?>"> </div>
-    <div class="FreeNote highlightTextIn"> <a alt="FreeNote" href="<?php echo $indexaddr ?>"> FreeNote </a> </div>
+    <div class="FreeNote highlightTextIn"> <a alt="FreeNote" href="<?php echo $indexcontroller ?>"> FreeNote </a> </div>
 </div>
+
 
 <h1> Se Connecter </h1>
 
@@ -33,12 +21,7 @@ echo $step, '<br/>';
         <input class="submit" type="submit" name="action" value="Se connecter"/>
     </form>
     <div class="connexion">
-        <a href="<?php echo $indexaddr ?>"> Mot de passe oublié ? S'inscrire</a>
+        <a href="<?php echo $indexcontroller ?>"> Mot de passe oublié ? S'inscrire</a>
     </div>
 </div>
-
-<?php
-
-end_page();
-?>
 

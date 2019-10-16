@@ -1,7 +1,6 @@
 <?php
 
-function start_page($title, $lien1, $rel1, $lien2, $rel2)
-{
+function start_page($title, $lien1, $rel1, $lien2, $rel2){
     echo'<!DOCTYPE html> 
 <html lang="fr">
 <head>
@@ -12,8 +11,7 @@ function start_page($title, $lien1, $rel1, $lien2, $rel2)
 <body>'.PHP_EOL;
 };
 
-function start_page1($title)
-{
+function start_page1($title){
     echo'<!DOCTYPE html> 
 <html lang="fr">
 <head>
@@ -22,7 +20,6 @@ function start_page1($title)
 <body>'.PHP_EOL;
 };
 
-function end_page()
-{
+function end_page(){
     echo'</body></html>';
 }
