@@ -10,13 +10,42 @@ $dbLink=dtbconnect();
 
 $action=$_POST['action'];
 
+//database: id_discussion / est_ouverte / test (a supprimer plus tard c'etait juste pour faire des test)
+//ouvrir une discussion :
 if ($action == 'discussion'){
-    $query="INSERT INTO discussion (test) VALUES (30)";
+    $query="INSERT INTO discussion(test) VALUES (90)";
     $dbResult = querycheck($dbLink, $query);
 
-    $dbRow=mysqli_fetch_assoc($dbResult);
-    echo $dbRow;
+    header("Location:$message_controller");
+
+    //database: id_msg / user_msg / id_discussion / est_ouvert / texte
+} elseif ($action == 'message') {
+    $user=$_SESSION['email'];
+    $texte = $_POST['texte'];
+    $id_discussion= $_POST['id'];
+
+    $query="SELECT texte,id_msg FROM message WHERE id_discussion=$id_discussion and est_ouvert=1";
+    $dbResult = mysqli_query($dbLink, $query);
+
+    $message = mysqli_fetch_assoc($dbResult);
+
+    if ($message == NULL) {
+        $query="INSERT INTO message(user_msg, id_discussion, texte) VALUES ('$user', '$id_discussion', '$texte')";
+
+    } else {
+        $texte = $message['texte'].' '.$texte;
+        $query="UPDATE message SET texte = '$texte' WHERE id_msg= ".$message['id_msg'];
+    }
+
+    $dbResult = querycheck($dbLink, $query);
+
+
+    header("Location:$message_controller");
 }
+
+//affichage d'une discussion ::
+
+
 
 //Recuperation des variables en post
 //$id_msg=($_POST['id_msg']);
@@ -39,13 +68,9 @@ if ($action == 'discussion'){
 
 //header("Location: $test_chat?step=ERROR_mdp");
 
-//database: id_msg / user_msg / id_discussion / est_ouvert / texte
 
 //Recuperation des variables
 //$texte=$_POST['texte'];
 
-//database: id_discussion / est_ouverte
-
-//ouvrir une discussion :
 
 ?>
