@@ -20,7 +20,6 @@
         <!-- On affiche les variables definies au dessus -->
         <p> Nom : <?php echo $name ?> </p></br>
         <p> email : <?php echo $email ?> </p></br>
-        <p> Civilité : <?php echo $civ ?> </p></br>
 
     </div>
 </div>

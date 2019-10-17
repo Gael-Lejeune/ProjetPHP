@@ -39,6 +39,6 @@ function loginckeck($email,$password)
 //Si le mot de passe et l'email correspondent
     if ($email != $dbRow['email'] || $password != $dbRow['password']) {
         //On demarre la session
-        header('Location:login.php?error=ERROR');
+        header("Location:../login.php?error=ERROR");
     }
 }

@@ -30,7 +30,7 @@ $myprofile='myprofile';
 $myprofilecontroller='../controller/account.php';
 $myprofilecss='../html/css/myprofile.css';
 $myprofileview='../view/accountview.php';
-$myprofilemodel='../model/account_processing.php';
+$myprofilemodel='../model/accountmodel.php';
 
 //$='';
 //$controller='../controller/.php';

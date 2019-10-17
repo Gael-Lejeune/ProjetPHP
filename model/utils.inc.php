@@ -21,5 +21,5 @@ function start_page1($title){
 };
 
 function end_page(){
-    echo'</body></html>';
+    echo'</body></htm    l>';
 }
