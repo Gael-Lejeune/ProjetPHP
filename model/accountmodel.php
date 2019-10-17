@@ -1,5 +1,4 @@
 <?php
-include "../model/dtb.inc.php";
 loginckeck($_SESSION['email'], $_SESSION['password']);
 $dbLink = dtbconnect();
 

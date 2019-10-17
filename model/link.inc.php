@@ -30,7 +30,12 @@ $myprofile='myprofile';
 $myprofilecontroller='../controller/account.php';
 $myprofilecss='../html/css/myprofile.css';
 $myprofileview='../view/accountview.php';
-$myprofilemodel='../model/accountmodel.php';
+$myprofilemodel='../model/account_processing.php';
+
+$mymdp='mymdp';
+$mymdpcontroller='../controller/mdpcontroller.php';
+$mymdpcss='../html/css/mdp.css';
+$mymdpview='../view/mdpview.php';
 
 //$='';
 //$controller='../controller/.php';
@@ -42,7 +47,7 @@ $myprofilemodel='../model/accountmodel.php';
 $data_processor='../model/inscription_processing.php';
 $login_processing='../model/login_processing.php';
 $account_processing='../model/account_processing.php';
-
+$mdp_processing='../model/mdp_processing';
 
 $fond='../html/images/fond.jpg';
 $logo='../html/images/login.png';

@@ -2,13 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="227c4fe5-873d-4ee2-aaf3-461033efdf6b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/model/mdp_processing.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/account.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/account.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controller/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/myprofile.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/account_processing.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/data-processor.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/inscription_processing.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/accountmodel.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/accountmodel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/dtb.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/dtb.inc.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/link.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/link.inc.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/login-processing.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/login_processing.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/inscriptionview.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/inscriptionview.php" afterDir="false" />
     </list>
     <list id="5504e2fa-2ce0-416c-a015-9e96628cc8cf" name="Revert &quot;Modification de l'index pour la prise en compte de la session actuelle.&quot;" comment="Revert &quot;Modification de l'index pour la prise en compte de la session actuelle.&quot;&#10;&#10;This reverts commit fbcc00a2" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -131,16 +131,7 @@
     <option name="allServicesViewState">
       <serviceView>
         <treeState>
-          <expand>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@969c6f71" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-            </path>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@378d709" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-            </path>
-          </expand>
+          <expand />
           <select />
         </treeState>
       </serviceView>
@@ -169,7 +160,8 @@
       <workItem from="1570629074386" duration="5985000" />
       <workItem from="1570688334023" duration="1622000" />
       <workItem from="1571158062659" duration="3985000" />
-      <workItem from="1571206629361" duration="553000" />
+      <workItem from="1571206629361" duration="3960000" />
+      <workItem from="1571293788985" duration="9096000" />
     </task>
     <task id="LOCAL-00001" summary="Debut du projet">
       <created>1569846323677</created>
@@ -339,7 +331,21 @@
       <option name="project" value="LOCAL" />
       <updated>1571162084059</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Résolution des problèmes de liens dynamiques et changement du nom de certains fichier pour adopter une meilleure logique">
+      <created>1571207462250</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1571207462250</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Résolution des problèmes de liens dynamiques et de traitement des formulaires d'inscription et de changement de mdp ou d'username">
+      <created>1571299091941</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1571299091941</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -389,6 +395,8 @@
     <MESSAGE value="Reorganisation du projet afin de respecter la strucure mvc" />
     <MESSAGE value="Résolution des problèmes de liens dynamiques en cours" />
     <MESSAGE value="Résolution des problèmes de liens dynamiques" />
-    <option name="LAST_COMMIT_MESSAGE" value="Résolution des problèmes de liens dynamiques" />
+    <MESSAGE value="Résolution des problèmes de liens dynamiques et changement du nom de certains fichier pour adopter une meilleure logique" />
+    <MESSAGE value="Résolution des problèmes de liens dynamiques et de traitement des formulaires d'inscription et de changement de mdp ou d'username" />
+    <option name="LAST_COMMIT_MESSAGE" value="Résolution des problèmes de liens dynamiques et de traitement des formulaires d'inscription et de changement de mdp ou d'username" />
   </component>
 </project>
