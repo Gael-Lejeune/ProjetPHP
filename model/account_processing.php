@@ -1,24 +1,14 @@
 <?php
+include "../model/dtb.inc.php";
 include "../model/utils.inc.php";
-include "../model/link.inc.php";
-include '../model/dtb.inc.php';
-
-
-
+include  "../model/link.inc.php";
 //Demarrage de la page
-
-start_page("login", "html/css/myprofile.css", "stylesheet", "fonts.googleapis.com/css?family=Oswald&display=swap", "stylesheet");
-
-session_start();
-
 $dbLink = dtbconnect();
-
 
 //Recuperation du mot de passe entrer dans le formulaire (pour confirmation de l'identite) et du mot de passe enregistre de l'utilisateur (que ce soit pour changer le nom ou le mot de passe
 
 $real_password=$_SESSION['password'];
 $enter_password=md5($_POST['Password']);
-
 
 //Si les deux mots de passe correspondent
 if($real_password == $enter_password) {
@@ -56,9 +46,7 @@ if($real_password == $enter_password) {
         $dbResult = querycheck($dbLink, $query);
 
     }
-    header('Location:account.php?error=ERROR');
-
     //Si les deux mots de passe ne correspondent pas
 } else {
-    header('Location:account.php?error=ERROR');
+    header("Location:$myprofilecontroller?error=ERROR");
 }

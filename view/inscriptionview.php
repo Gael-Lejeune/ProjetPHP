@@ -1,46 +1,33 @@
-<!-- Création de la flèche de retour à la page d'accueil -->
-<a class="arrow" href="<?php echo $indexcontroller ?>"><img src="<?php echo $arrow?>"></a>
+<!--<h3> FREENOTE </h3>-->
 
-<!-- Création du Titre du site avec le logo -->
-<div class='Title'>
-    <div> <img alt="Logo" src="<?php echo $logo ?>"> </div>
-    <div class="FreeNote highlightTextIn"> <a alt="FreeNote" href="<?php echo $indexcontroller?>"> FreeNote </a> </div>
+<div class="container-form-inscription">
+    <h1> Ha, te voila ! </h1>
+    <h2> Nous t'attendions depuis longtemps ! </h2>
+    <form class="form" action="<?php echo $data_processor ?>" method="post">
+        <p> Votre Nom </p>
+        <input class="bouton" type="text" name="name"/>
+        <p> E-mail </p>
+        <input class="bouton" type="text" name="email" required />
+        <p> Mot de Passe </p>
+        <input class="bouton" type="password" name="password" required/>
+        <p> Confirmation Mot de Passe </p>
+        <input class="bouton" type="password" name="password"/></br></br>
+        <div class="container-conditions">
+            <input class="conditions" type="checkbox" name="conditions"/>
+            <p> Conditions générales </p>
+        </div>
+        <input class ="submit" type="submit" name="action" value="Créer un compte"/>
+        <div class="a2"> <p> Un problème ? </p> <a href="<?php echo $mymdpcontroller ?>"> Mot de passe oublié ? </a> </div>
+        <div class="a2"> <p> Tu as oublié quelque chose ? </p> <a href="<?php echo $logincontroller ?>"> Tu as déjà un compte ? </a> </div>
+    </form>
 </div>
 
-<h1> Inscription </h1>
-
-<!-- Création du bloc qui contient le formulaire d'inscription -->
-<div class="container-form">
-    <form class="form" action="<?php echo $data_processor ?>" method="post">
-        <div>
-            <p> Votre Nom </p>
-            <input class="bouton" type="text" name="name"/>
-        </div>
-
-        <div>
-            <p> Civilité (sexe) </p>
-            <input type="radio" name="civilite" value="M"/> Homme <br/><br/>
-            <input type="radio" name="civilite" value="F"/> Femme <br/>
-        </div>
-
-        <div>
-            <p> Email </p>
-            <input class="bouton" type="text" name="email"/>
-        </div>
-        <div>
-            <p> Mot de Passe </p>
-            <input class="bouton" type="password" name="password"/>
-        </div>
-        <div>
-            <p> Confirmation Mot de Passe </p>
-            <input class="bouton" type="password" name="passwordconf"/></br></br>
-        </div>
-        <div>
-            <p>Conditions générales <input class="conditions" type="checkbox" value="ok" name="conditions"/></p>
-            <input class ="submit" type="submit" name="action" value="Créer un compte"/>
-        </div>
-    </form>
-    <div class="connexion">
-        <a href="<?php echo $logincontroller ?>"> Déjà inscrit(e) ? Se connecter</a>
+<div class="Backtohome">
+    <p> Back to home </p>
+    <div>
+        <a href="<?php echo $indexcontroller ?>"> <img src="https://img.icons8.com/carbon-copy/100/000000/arrow.png"> </a>
     </div>
 </div>
+
+</body>
+</html>

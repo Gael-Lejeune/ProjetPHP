@@ -5,7 +5,7 @@ include '../model/dtb.inc.php';
 
 
 //Demarrage de la page
-start_page("login", $inscriptioncss, "stylesheet", "fonts.googleapis.com/css?family=Oswald&display=swap", "stylesheet");
+start_page("login", $logincss, "stylesheet", "fonts.googleapis.com/css?family=Oswald&display=swap", "stylesheet");
 session_start();
 loginckeck($_SESSION['email'], $_SESSION['password']);
 $dbLink = dtbconnect();

@@ -32,6 +32,11 @@ $myprofilecss='../html/css/myprofile.css';
 $myprofileview='../view/accountview.php';
 $myprofilemodel='../model/account_processing.php';
 
+$mymdp='mymdp';
+$mymdpcontroller='../controller/mdpcontroller.php';
+$mymdpcss='../html/css/mdp.css';
+$mymdpview='../view/mdpview.php';
+
 //$='';
 //$controller='../controller/.php';
 //$css='../html/css/.css';
