@@ -37,6 +37,17 @@ $mymdpcontroller='../controller/mdpcontroller.php';
 $mymdpcss='../html/css/mdp.css';
 $mymdpview='../view/mdpview.php';
 
+$background1='indexb';
+$background2='loginb';
+$background3='signupb';
+$background4='myaccountb';
+$background5='mdpb';
+
+$color1 = '#080c1';
+$color2 = '#1a1a1a';
+$color3 = '##2461cc';
+$color4 = '#1a1a1a';
+
 //$='';
 //$controller='../controller/.php';
 //$css='../html/css/.css';

@@ -8,6 +8,37 @@ body{
     font-family: Bebas, sans-serif;
     font-size: 20px;
     color: white;
+}
+
+#indexb {
+    background:url("https://i.pinimg.com/originals/09/24/4c/09244c7f7dd4d17b0484370f32db6641.gif");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#loginb {
+    background:url("https://i.pinimg.com/originals/09/24/4c/09244c7f7dd4d17b0484370f32db6641.gif");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#signupb {
+    background:url("https://i.pinimg.com/originals/09/24/4c/09244c7f7dd4d17b0484370f32db6641.gif");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#myaccountb {
+    background:url("https://i.pinimg.com/originals/09/24/4c/09244c7f7dd4d17b0484370f32db6641.gif");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#mdpb {
     background:url("https://i.pinimg.com/originals/09/24/4c/09244c7f7dd4d17b0484370f32db6641.gif");
     background-attachment: fixed;
     background-repeat: no-repeat;

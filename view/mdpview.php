@@ -9,7 +9,7 @@
             <?php if ($_SESSION['login'])
                 echo '<div class="a2"> <p> Vous voulez retourner à votre compte client </p> <a class="a2a" href="'.$myprofilecontroller.'"> S\'inscrire </a> </div>';
             else
-                echo '<div class="a2"> <p> Besoin d\'un compte ? </p> <a class="a2a" href="'.$inscriptioncontroller.' style="color: #2461cc;"> S\'inscrire </a> </div>';
+                echo '<div class="a2"> <p> Besoin d\'un compte ? </p> <a class="a2a" href="'.$inscriptioncontroller.'" style="color: #2461cc;"> S\'inscrire </a> </div>';
             ?>
         </div>
     </form>
