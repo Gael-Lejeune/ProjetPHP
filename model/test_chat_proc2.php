@@ -30,7 +30,7 @@ if ($action == 'discussion'){
     $message = mysqli_fetch_assoc($dbResult);
 
     if ($message == NULL) {
-        $query="INSERT INTO message(user_msg, id_discussion, texte) VALUES ('$user', '$id_discussion', '$texte')";
+        $query="INSERT INTO message(user_name, id_discussion, texte) VALUES ('$user', '$id_discussion', '$texte')";
 
     } else {
         $texte = $message['texte'].' '.$texte;
@@ -41,6 +41,17 @@ if ($action == 'discussion'){
 
 
     header("Location:$message_controller");
+} elseif ($action == "fermer_message") {
+    $id_discussion= $_POST['id'];
+
+    $query="SELECT texte,id_msg FROM message WHERE id_discussion=$id_discussion and est_ouvert=1";
+    $dbResult = mysqli_query($dbLink, $query);
+
+    $message = querycheck($dbLink, $query);
+
+    $query = "UPDATE message SET est_ouvert = 0 WHERE id_msg=".$message['id_msg'];
+
+    querycheck($dbLink, $query);
 }
 
 //affichage d'une discussion ::

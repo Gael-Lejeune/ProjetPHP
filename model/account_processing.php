@@ -37,12 +37,12 @@ if($real_password == $enter_password) {
     elseif ($action == 'login') {
 
         //On recupere le nouveau nom et l'email
-        $new_name=$_POST['DoChangeLogin'];
-        $email=$_SESSION['email'];
+        $new_name = $_POST['DoChangeLogin'];
+        $email = $_SESSION['email'];
 
 
         //On update le name dans la table user
-        $query="UPDATE user SET user.name='$new_name' WHERE email='$email' and password='$real_password'";
+        $query = "UPDATE user SET user.name='$new_name' WHERE email='$email' and password='$real_password'";
 
 
         //Verification de la viabilité de la requete
