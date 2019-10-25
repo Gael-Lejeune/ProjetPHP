@@ -1,23 +1,20 @@
-<a class="arrow" href="<?php echo $indexcontroller ?>"><img src="https://img.icons8.com/nolan/50/000000/up-left.png" style="margin-top: -20px;"></a>
-
-<div class='Title' style="margin-top: 20px;">
-    <div> <img alt="Logo" src="<?php echo $logo ?>"> </div>
-    <div class="FreeNote highlightTextIn"> <a alt="FreeNote" href="<?php echo $indexcontroller ?>"> FreeNote </a> </div>
-</div>
-
-
-<h1> Se Connecter </h1>
-
-<div class="container-form">
+<div class="container-form-login">
+    <h1> Ha, te revoila ! </h1>
+    <h2> Nous sommes si heureux de te revoir ! </h2>
     <form class="form" action="<?php echo $login_processing ?>" method="post">
-        <p> Email </p>
+        <p> E-mail </p>
         <input class="bouton" type="text" name="email" required />
         <p> Mot de Passe </p>
-        <input class="bouton" type="password" name="password" title="password" autocomplete="off" maxlength="30" required"/>
-        <input class="submit" type="submit" name="action" value="Se connecter"/>
+        <input class="bouton" type="password" name="password" title="password" autocomplete="off" maxlength="30" required/>
+        <a class="a1" href="<?php echo $mymdpcontroller ?>"> Tu as oublie ton mot de passe ? </a>
+        <input class="submit2" type="submit" name="action" value="Se connecter"/>
+        <div class="a2"> <p> Besoin d'un compte ? </p> <a  class="a2a" href="<?php echo $inscriptioncontroller ?>"> S'inscrire </a> </div>
     </form>
-    <div class="connexion">
-        <a href="<?php echo $indexcontroller ?>"> Mot de passe oublié ? S'inscrire</a>
-    </div>
 </div>
 
+<div class="Backtohome">
+    <p> Back to home </p>
+    <div>
+        <a href="<?php echo $indexcontroller ?>"> <img src="https://img.icons8.com/carbon-copy/100/000000/arrow.png"> </a>
+    </div>
+</div>

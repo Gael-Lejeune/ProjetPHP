@@ -23,6 +23,7 @@
             <input class="bouton" autocomplete="off" autocapitalize="off" name="Password" type="password"/></br>
             <button class="submit1" type="submit" value="login" name="submit"> Changer mon Identifiant </button>
             <div class="a21"> <p> Un problème ? </p> <a href="<?php echo $myprofilecontroller ?>"> Mot de passe oublié ? </a> </div>
+
         </form>
     </div>
 
@@ -37,6 +38,7 @@
             <button class="submit1" type="submit" value="password" name="submit"> Changer mon Mot de passe </button>
             <div class="a21"> <p> Un problème ? </p> <a href="<?php echo $myprofilecontroller ?>"> Mot de passe oublié ? </a> </div>
 
+
         </form>
     </div>
 </div>
@@ -50,3 +52,4 @@
 
 </body>
 </html>
+

@@ -5,7 +5,8 @@ include '../model/dtb.inc.php';
 
 
 //Création de l'en tête et de l'include du css sur la page
-start_page("login", $inscriptioncss, "stylesheet", "fonts.googleapis.com/css?family=Oswald&display=swap", "stylesheet");
+start_page("login", $logincss, "stylesheet", "fonts.googleapis.com/css?family=Oswald&display=swap", "stylesheet", $background3);
+
 
 
 //Vérification du mot de passe et de la validation des conditions générales d'utilisation

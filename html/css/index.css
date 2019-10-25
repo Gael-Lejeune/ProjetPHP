@@ -5,17 +5,19 @@ body{
     width: 100%;
     margin: 0;
     padding: 0;
-    font-family: Agency FB, sans-serif;
+    font-family: Bebas, sans-serif;
     font-size: 20px;
     color: white;
     position: absolute;
     display: block;
-    background:url("../images/fond.jpg");
     height: 100%;
+}
+
+#indexb {
+    background:url("https://78.media.tumblr.com/c5f2e07ff18800ba5ba2d589adeb213e/tumblr_pcbwzrsv851rnbw6mo1_1280.gif");
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-size: cover
-
+    background-size: cover;
 }
 
 .overlay {
@@ -26,16 +28,9 @@ body{
     display: none;
 }
 
-/* Mise en page du background header */
-.background-header {
-    width: 100%;
-    height: 91px;
-    display: flex;
-    justify-content: space-between;
-    position: fixed;
-    z-index: 1000;
-    background-color: #282c34;
-    /*border: 1px solid white;*/
+input:focus {
+    outline: none;
+
 }
 
 /* Mise en page du header contenant l'en tête du site */
@@ -47,7 +42,7 @@ body{
     display: flex;
     top: 0;
     justify-content: space-between;
-    background-color: /*#1B1D22*/#282c34;
+    background-color: /*#1B1D22*/#101824;
     border-bottom: 1px solid white;
 }
 
@@ -59,7 +54,7 @@ body{
     margin-bottom: 10px;
     margin-left: 30px;
     display: flex;
-    /*border: 1px solid blue;*/
+    border: 1px solid blue;
 }
 
 /* Centrage verticale des div du bloc subtitle1 */
@@ -77,165 +72,11 @@ body{
 
 /* Changement de la couleur du lien au passage de la souris */
 .subtitle1 a:hover{
-    color: #7294E9;
+    color: #2461cc;
     transition: 0.6s;
 }
 
-/* Mise en place de l'animation des titres du site */
-.FreeNote a, .log-in-animation a {
-    color: white;
-    text-decoration: none;
-    padding: 10px 10px 10px 10px;
-    position: relative;
-    z-index: 0;
-    cursor: pointer;
-    font-family: Bebas, GeoSansLight;
-    font-size: 48px;
-    text-decoration: none;
-    transition: color 1.2s;
-}
-
-/* Mise en place des titres avant des blocs le passage de la souris */
-div.highlightTextIn a:before
-{
-    position: absolute;
-    color: white;
-    top: 0px;
-    left: 0px;
-    padding: 10px;
-    overflow: hidden;
-    content: attr(alt);
-    transition: all 1.2s;
-    transform: scale(1.2);
-    opacity: 0;
-}
-
-/* Mise en place des titres des blocs après le passage de la souris */
-div.highlightTextIn a:hover:after
-{
-    position: absolute;
-    color: white;
-    top: 0px;
-    left: 0px;
-    padding: 10px;
-    overflow: hidden;
-    content: attr(alt);
-    transition: all 1.2s;
-    transform: scale(1.2);
-    opacity: 0;
-}
-
-div.highlightTextIn a:hover:before
-{
-    transform: scale(1.08);
-    opacity: 1;
-}
-
-/* Highlight text in  */
-div.highlightTextIn a
-{
-    color: rgba(255, 255, 255, 1);
-}
-
-div.highlightTextIn a:before
-{
-    transform: scale(1.6);
-}
-
-.sign-up {
-    width: auto;
-    height: auto;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    display: flex;
-    /*border: 1px solid blue;*/
-}
-
-.sign-up div{
-    margin-top: auto;
-    margin-bottom: auto;
-    /*border: 1px solid blue;*/
-}
-
-.sign-up a{
-    margin-left: 10px;
-    color: white;
-}
-
-.sign-up a:hover{
-    color: #7294E9;
-    transition: 0.6s;
-}
-
-/*.navbar {
-    width: 40%;
-    height: 80px;
-    margin-top: auto;
-    margin-bottom: auto;
-    display: flex;
-    justify-content: space-around;
-    border-bottom: 1px solid white;
-    border: 1px solid red;
-}
-
-.navbar a {
-    width: auto;
-    height: auto;
-    margin: auto;
-    font-family: Bebas, GeosansLight, Agency FB;
-    font-size: 22px;
-    color: white;
-    text-decoration: none;
-    padding: 10px 10px 10px 10px;
-    position: relative;
-    z-index: 0;
-    cursor: pointer;
-    border: 1px solid red;
-}
-
-.navbar a:hover {
-    color: #7294E9;
-    transition: 0.5s;
-}
-
-
-.navbar div {
-    margin: auto;
-    list-style: none;
-    display: inline;
-}
-
-*/
-/*div.borderXwidth a:before, div.borderXwidth a:after
-{
-    position: absolute;
-    opacity: 0;
-    width: 0%;
-    height: 1px;
-    content: '';
-    background: black;
-    transition: all 0.5s;
-}
-
-div.borderXwidth a:before
-{
-    left: 0px;
-    top: 0px;
-}
-
-div.borderXwidth a:after
-{
-    right: 0px;
-    bottom: 0px;
-}
-
-div.borderXwidth a:hover:before, div.borderXwidth a:hover:after
-{
-    opacity: 1;
-    width: 100%;
-}*/
-
-.log-in {
+.contenu-navbar {
     width: auto;
     height: auto;
     margin-top: 10px;
@@ -245,64 +86,223 @@ div.borderXwidth a:hover:before, div.borderXwidth a:hover:after
     /*border: 1px solid blue;*/
 }
 
-.log-in div{
-    margin-top: auto;
-    margin-bottom: auto;
-    /*border: 1px solid blue;*/
-}
-
-.log-in a{
+.contenu-navbar a{
     margin-left: 10px;
     color: white;
 }
 
-.log-in a:hover{
-    color: #7294E9;
+.contenu-navbar a:hover{
+    color: #2461cc;
     transition: 0.6s;
 }
 
 .description {
-    width: 40%;
+    width: 500px;
     height: auto;
-    margin-top: 240px;
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
-    display: block;
-    z-index: 1;
-    background-color: #282c34;
-    /*box-shadow: 2px 2px 1px 1px rgba(255, 255, 255, 0.2);*/
-    border: 1px solid white;
+    margin-top: 300px;
+    margin-left: 10%;
+    background-color: #101824;
+    display: flex;
+    flex-direction: column;
+    /*border: 1px solid deeppink;*/
     border-radius: 5px;
 }
 
-.description-subtitle {
-    width: 240px;
+h1 {
+    padding-top: 20px;
+    margin-bottom: 30px;
     text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 30px;
-    font-family: Bebas;
-    padding-bottom: 6px;
-    border-bottom: 1px solid white;
+    font-size: 28px;
 }
-
 
 .description-FreeNote {
+    width: 90%;
+    height: auto;
+    margin-left: 5%;
+    margin-bottom: 40px;
+    font-family: calibri;
+    font-size: 18px;
+    color: white;
+    background-color: #080c10;
+    border: 1px solid #2461cc;
+    border-radius: 4px;
+}
+
+.description-FreeNote p{
+    text-align: justify;
+    margin-left: 20px;
+    margin-right: 20px;
+
+}
+
+/* The sidebar menu */
+.sidebar {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    right: 0;
+    background-color: #101824;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+}
+
+/* The sidebar links */
+.sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidebar a:hover {
+    color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* The button used to open the sidebar */
+.openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    margin-top: 11px;
+    margin-right: 10px;
+    background-color: #2461cc;
+    color: white;
+    padding: 5px 10px 5px 10px;
+    border: none;
+    border-radius: 4px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+    width: 200px;
+    height: 60px;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: absolute;
+    background-color: #101824;
+    border-radius: 4px;
+    transition: margin-right .5s; /* If you want a transition effect */
+}
+
+#main p {
+    width: auto;
+    height: 20px;
+    font-size: 18px;
+    margin-top: 18px;
+    margin-left: auto;
+    margin-right: auto;
+    /*border: 1px solid red;*/
+}
+
+.container-discussion {
+    width: 70%;
+    margin-top: 0px;
+    margin-left: 10%;
+    /*border: 1px solid deeppink;*/
+}
+
+.discussion {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /*border: 1px solid deeppink;*/
+}
+
+.discussion .description {
+    margin-top: 100px;
+    margin-left: 0px;
+}
+
+.Prevnext {
     width: auto;
     margin-top: 20px;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-bottom: 10px;
-    font-family: calibri;
-
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /*border: 1px solid deeppink;*/
 }
 
-.description-FreeNote > p {
-    margin-top: 60px;
-    padding-left: 10px;
-    padding-right: 10px;
-    text-align: justify;
-
+.Backtohome {
+    width: 100px;
+    height: 40px;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #101824;
+    border-radius: 4px;
 }
 
+.Backtohome div {
+    width: 40px;
+    height: 32px;
+    margin-top: 5px;
+    display: flex;
+    background-color: #2461cc;
+    border-radius: 4px;
+}
+
+.left {
+    margin-left: 5px;
+}
+
+.right {
+    margin-right: 5px;
+}
+
+.left1 {
+    margin-left: 3px;
+}
+
+.Backtohome img {
+    width: 32px;
+    height: 32px;
+}
+
+.Backtohome p {
+    width: auto;
+    height: 20px;
+    margin-top: 9px;
+    margin-left: auto;
+    margin-right: auto;
+    /*border: 1px solid red;*/
+}
+
+@media screen and (max-width: 768px) {
+    .description {
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    #main {
+        right: 5%;
+    }
+}
+
+@media screen and (max-width: 1429px) {
+    .Prevnext {
+        width: 90%;
+    }
+}

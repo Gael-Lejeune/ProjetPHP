@@ -11,7 +11,6 @@ session_start();
 $real_password=$_SESSION['password'];
 $enter_password=md5($_POST['Password']);
 
-
 //Si les deux mots de passe correspondent
 if($real_password == $enter_password) {
 
@@ -49,7 +48,6 @@ if($real_password == $enter_password) {
         $dbResult = querycheck($dbLink, $query);
 
         header("Location:$myprofilecontroller");
-
     }
     //Si les deux mots de passe ne correspondent pas
 } else {
