@@ -6,6 +6,7 @@ include '../model/dtb.inc.php';
 
 session_start();
 
+
 $dbLink=dtbconnect();
 
 $action=$_POST['action'];
@@ -85,6 +86,8 @@ if ($action == 'discussion'){
 //redirection HTTP vers test_chat.php
 
 //header("Location: $test_chat?step=ERROR_mdp");
+
+//database: id_msg / user_msg / id_discussion / est_ouvert / texte
 
 
 //Recuperation des variables

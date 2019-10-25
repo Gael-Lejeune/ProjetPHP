@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="227c4fe5-873d-4ee2-aaf3-461033efdf6b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/model/mdp_processing.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/account.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/account.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/accountmodel.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/accountmodel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/dtb.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/dtb.inc.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/link.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/link.inc.php" afterDir="false" />
+    </list>
+    <list id="5504e2fa-2ce0-416c-a015-9e96628cc8cf" name="Revert &quot;Modification de l'index pour la prise en compte de la session actuelle.&quot;" comment="Revert &quot;Modification de l'index pour la prise en compte de la session actuelle.&quot;&#10;&#10;This reverts commit fbcc00a2" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="MariaDB - PhpProjet" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="MariaDB - PhpProjet" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="MariaDB - PhpProjet" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="latableronde_dtb: schema" type="ebfa3cd1:MariaImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="MariaDB - PhpProjet" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="latableronde_dtb: schema" type="ebfa3cd1:MariaImplModel$Schema" />
+        <item name="discussion: table" type="dbc44a63:MariaImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="MariaDB - PhpProjet" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="latableronde_dtb: schema" type="ebfa3cd1:MariaImplModel$Schema" />
+        <item name="message: table" type="dbc44a63:MariaImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="MariaDB - PhpProjet" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="latableronde_dtb: schema" type="ebfa3cd1:MariaImplModel$Schema" />
+        <item name="user: table" type="dbc44a63:MariaImplModel$Table" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="structure" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectId" id="1SFSp9zIEu4tzBLgj1KUueu2iNF" />
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="db2&#10;mariadb" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/view" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\IUT\ProjetPHP\view" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\IUT\ProjetPHP\model" />
+      <recent name="D:\IUT\ProjetPHP\controller" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/html/images" />
+      <recent name="$PROJECT_DIR$/html" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="allServicesViewState">
+      <serviceView>
+        <treeState>
+          <expand />
+          <select />
+        </treeState>
+      </serviceView>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="227c4fe5-873d-4ee2-aaf3-461033efdf6b" name="Default Changelist" comment="" />
+      <created>1569845419542</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1569845419542</updated>
+      <workItem from="1569845423509" duration="14000" />
+      <workItem from="1569845733695" duration="4222000" />
+      <workItem from="1569997511159" duration="24000" />
+      <workItem from="1569997701504" duration="31000" />
+      <workItem from="1569997977733" duration="37000" />
+      <workItem from="1570091549064" duration="1022000" />
+      <workItem from="1570092581462" duration="3039000" />
+      <workItem from="1570105548476" duration="3381000" />
+      <workItem from="1570601607111" duration="614000" />
+      <workItem from="1570602320237" duration="12018000" />
+      <workItem from="1570629074386" duration="5985000" />
+      <workItem from="1570688334023" duration="1622000" />
+      <workItem from="1571158062659" duration="3985000" />
+      <workItem from="1571206629361" duration="3960000" />
+      <workItem from="1571293788985" duration="9096000" />
+    </task>
+    <task id="LOCAL-00001" summary="Debut du projet">
+      <created>1569846323677</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1569846323677</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Debut du projet">
+      <created>1569847663840</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1569847663840</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Debut du projet">
+      <created>1569848709115</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1569848709115</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Debut du projet et création des fichiers.">
+      <created>1569849746566</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1569849746566</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Debut du projet et création des fichiers.">
+      <created>1569849944099</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1569849944099</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Debut du projet et création des fichiers.">
+      <created>1569850039573</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1569850039573</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Modification de l'index pour la prise en compte de la session actuelle.">
+      <created>1570095165218</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1570095165218</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Modification de l'index pour la prise en compte de la session actuelle.">
+      <created>1570095426366</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1570095426366</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Accès à la base de donnée et création d'une session">
+      <created>1570095572033</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1570095572033</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Création du fichier gérant le login d'un utilisateur">
+      <created>1570095601523</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1570095601523</updated>
+    </task>
+    <task id="LOCAL-00011" summary="affichage message erreur en cas de mauvais valeurs des champs">
+      <created>1570108263327</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1570108263327</updated>
+    </task>
+    <task id="LOCAL-00012" summary="verification des erreurs en cas de mauvaise confirmation de mot de passe et en cas de non cochage des conditions d'utilisation">
+      <created>1570108319009</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1570108319009</updated>
+    </task>
+    <task id="LOCAL-00013" summary="affichage ok mais il faut faire la gestion des formulaires">
+      <created>1570616263983</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1570616263983</updated>
+    </task>
+    <task id="LOCAL-00014" summary="creation fonction start 1">
+      <created>1570616314567</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1570616314568</updated>
+    </task>
+    <task id="LOCAL-00015" summary="creation start 1&#10;css avance&#10;page profil : affichage ok mais il faut gerer les formulaires&#10;login/inscription et deconnexion ok&#10;ficher link avec toutes les adresses des fichiers&#10;index different en fonction de si on est connecte ou pas">
+      <created>1570616446888</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1570616446888</updated>
+    </task>
+    <task id="LOCAL-00016" summary="pleins de trucs qui marches plus, css complique et gestion des changements d'informations personnels qui marchent toujours pas">
+      <created>1570634969508</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1570634969508</updated>
+    </task>
+    <task id="LOCAL-00017" summary="commentaires du code">
+      <created>1570688795518</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1570688795518</updated>
+    </task>
+    <task id="LOCAL-00018" summary="commentaires du code (meme en html)">
+      <created>1570689230095</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1570689230095</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Creation du dossier controller">
+      <created>1570877754999</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1570877754999</updated>
+    </task>
+    <task id="LOCAL-00020" summary="creation du dossier model">
+      <created>1570877790949</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1570877790949</updated>
+    </task>
+    <task id="LOCAL-00021" summary="creation du dossier view">
+      <created>1570877808440</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1570877808440</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Reorganisation du projet afin de respecter la strucure mvc">
+      <created>1570883719111</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1570883719111</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Résolution des problèmes de liens dynamiques en cours">
+      <created>1570884802655</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1570884802655</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Résolution des problèmes de liens dynamiques">
+      <created>1571162084059</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1571162084059</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Résolution des problèmes de liens dynamiques et changement du nom de certains fichier pour adopter une meilleure logique">
+      <created>1571207462250</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1571207462250</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Résolution des problèmes de liens dynamiques et de traitement des formulaires d'inscription et de changement de mdp ou d'username">
+      <created>1571299091941</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1571299091941</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Debut du projet" />
+    <MESSAGE value="Debut du projet et création des fichiers." />
+    <MESSAGE value="Modification de l'index pour la prise en compte de la session actuelle." />
+    <MESSAGE value="Accès à la base de donnée et création d'une session" />
+    <MESSAGE value="Création du fichier gérant le login d'un utilisateur" />
+    <MESSAGE value="Ajout des liens de chaques pages" />
+    <MESSAGE value="affichage message erreur en cas de mauvais valeurs des champs" />
+    <MESSAGE value="verification des erreurs en cas de mauvaise confirmation de mot de passe et en cas de non cochage des conditions d'utilisation" />
+    <MESSAGE value="affichage ok mais il faut faire la gestion des formulaires" />
+    <MESSAGE value="creation fonction start 1" />
+    <MESSAGE value="creation start 1&#10;css avance&#10;page profil : affichage ok mais il faut gerer les formulaires&#10;login/inscription et deconnexion ok&#10;ficher link avec toutes les adresses des fichiers&#10;index different en fonction de si on est connecte ou pas" />
+    <MESSAGE value="pleins de trucs qui marches plus, css complique et gestion des changements d'informations personnels qui marchent toujours pas" />
+    <MESSAGE value="commentaires du code" />
+    <MESSAGE value="commentaires du code (meme en html)" />
+    <MESSAGE value="Creation du dossier controller" />
+    <MESSAGE value="creation du dossier model" />
+    <MESSAGE value="creation du dossier view" />
+    <MESSAGE value="Reorganisation du projet afin de respecter la strucure mvc" />
+    <MESSAGE value="Résolution des problèmes de liens dynamiques en cours" />
+    <MESSAGE value="Résolution des problèmes de liens dynamiques" />
+    <MESSAGE value="Résolution des problèmes de liens dynamiques et changement du nom de certains fichier pour adopter une meilleure logique" />
+    <MESSAGE value="Résolution des problèmes de liens dynamiques et de traitement des formulaires d'inscription et de changement de mdp ou d'username" />
+    <option name="LAST_COMMIT_MESSAGE" value="Résolution des problèmes de liens dynamiques et de traitement des formulaires d'inscription et de changement de mdp ou d'username" />
+  </component>
+</project>
+
