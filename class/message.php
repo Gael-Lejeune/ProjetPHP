@@ -1,21 +1,52 @@
 <?php
 
 
-class message
+class Message
 {
     private $id_msg;
     private $id_discussion;
-    private $eta;
+    private $state;
     private $owner;
+    private $texte;
 
-    public function setState($eta)
+    public function __construct ()
     {
-        $this->eta = $eta;
+
     }
 
-    public function getEta()
+    public function setState($state)
     {
-        return $this->eta;
+        $this->state = $state;
+    }
+
+    public function getState()
+    {
+        return $this->state;
+    }
+
+    public function getOwner()
+    {
+        return $this->owner;
+    }
+
+    public function getIdMessage()
+    {
+        return $this->id_msg;
+    }
+
+    public function getIdDiscussion()
+    {
+        return $this->id_discussion;
+    }
+
+    public function setTexte($newTexte)
+    {
+        $this->texte = $newTexte;
+    }
+
+    public function getTexte()
+    {
+        return $this->texte;
     }
 
 }
