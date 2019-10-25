@@ -11,7 +11,7 @@
 
 <!-- Création du bloc qui contient le formulaire d'inscription -->
 <div class="container-form">
-    <form class="form" action="<?php echo $data_processor ?>" method="post">
+    <form class="form" action="<?php echo $inscriptionmodel ?>" method="post">
         <div>
             <p> Votre Nom </p>
             <input class="bouton" type="text" name="name"/>

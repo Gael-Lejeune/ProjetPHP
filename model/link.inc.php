@@ -57,3 +57,9 @@ $message='message';
 $message_view='../view/test_view2.php';
 $message_proc='../model/test_chat_proc2.php';
 $message_controller='../controller/test_chat2.php';
+
+$background1='indexb';
+$background2='loginb';
+$background3='signupb';
+$background4='myaccountb';
+$background5='mdpb';
