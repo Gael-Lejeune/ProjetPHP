@@ -2,7 +2,7 @@
 
 body{
     width: 100%;
-    height: 100vh;
+    max-height: 100vh;
     margin: 0;
     padding: 0;
     font-family: Bebas, sans-serif;
@@ -10,36 +10,29 @@ body{
     color: white;
 }
 
-#indexb {
-    background:url("https://i.pinimg.com/originals/09/24/4c/09244c7f7dd4d17b0484370f32db6641.gif");
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
 #loginb {
-    background:url("https://i.pinimg.com/originals/09/24/4c/09244c7f7dd4d17b0484370f32db6641.gif");
+    background:url("https://i.pinimg.com/originals/5f/ee/8e/5fee8e4a9fea271529cfd8828dd990d5.gif");
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 #signupb {
-    background:url("https://i.pinimg.com/originals/09/24/4c/09244c7f7dd4d17b0484370f32db6641.gif");
+    background:url("https://i.gifer.com/CIbX.gif");
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 #myaccountb {
-    background:url("https://i.pinimg.com/originals/09/24/4c/09244c7f7dd4d17b0484370f32db6641.gif");
+    background:url("https://i.pinimg.com/originals/5f/ee/8e/5fee8e4a9fea271529cfd8828dd990d5.gif");
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 #mdpb {
-    background:url("https://i.pinimg.com/originals/09/24/4c/09244c7f7dd4d17b0484370f32db6641.gif");
+    background:url("https://i.gifer.com/CIbX.gif");
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -343,14 +336,13 @@ h4 {
         /*border: 1px solid white;*/
     }
 
-    .container-form-login {
+    .container-form-login, .container-form-inscription, .container-form-mdp {
         width: 90%;
         margin-left: 5%;
     }
 
-    .container-form-inscription {
-        width: 90%;
-        margin-left: 5%;
+    .container-form-mdp {
+        height: 370px;
     }
 
     .container-form-infopers {

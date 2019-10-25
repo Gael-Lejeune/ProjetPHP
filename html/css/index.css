@@ -10,12 +10,14 @@ body{
     color: white;
     position: absolute;
     display: block;
-    background:url("https://i.pinimg.com/originals/09/24/4c/09244c7f7dd4d17b0484370f32db6641.gif");
     height: 100%;
+}
+
+#indexb {
+    background:url("https://78.media.tumblr.com/c5f2e07ff18800ba5ba2d589adeb213e/tumblr_pcbwzrsv851rnbw6mo1_1280.gif");
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-size: cover
-
+    background-size: cover;
 }
 
 .overlay {
