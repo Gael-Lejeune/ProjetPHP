@@ -18,6 +18,7 @@ function querycheck($dbLink, $query)
         echo 'Erreur de requête<br/>';
         // type d'erreur
         echo 'Erreur : ' . mysqli_error($dbLink) . '<br/><br/>';
+        var_dump($dbLink);
         // requête envoyée
         echo 'Requête : ' . $query . '<br/>';
         exit();
