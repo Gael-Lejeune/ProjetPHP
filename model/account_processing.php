@@ -5,6 +5,7 @@ include  "../model/link.inc.php";
 //Demarrage de la page
 $dbLink = dtbconnect();
 
+
 //Recuperation du mot de passe entrer dans le formulaire (pour confirmation de l'identite) et du mot de passe enregistre de l'utilisateur (que ce soit pour changer le nom ou le mot de passe
 
 $real_password=$_SESSION['password'];
@@ -49,4 +50,5 @@ if($real_password == $enter_password) {
     //Si les deux mots de passe ne correspondent pas
 } else {
     header("Location:$myprofilecontroller?error=ERROR");
+
 }

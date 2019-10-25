@@ -8,6 +8,7 @@ include '../model/dtb.inc.php';
 start_page("login", $logincss, "stylesheet", "fonts.googleapis.com/css?family=Oswald&display=swap", "stylesheet", $background3);
 
 
+
 //Vérification du mot de passe et de la validation des conditions générales d'utilisation
 $step=$_GET['step'];
 if ($step == 'ERROR_mdp') {
