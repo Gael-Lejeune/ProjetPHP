@@ -30,7 +30,7 @@ $myprofile='myprofile';
 $myprofilecontroller='../controller/account.php';
 $myprofilecss='../html/css/myprofile.css';
 $myprofileview='../view/accountview.php';
-$myprofilemodel='../model/account_processing.php';
+$myprofilemodel='../model/accountmodel.php';
 
 $mymdp='mymdp';
 $mymdpcontroller='../controller/mdpcontroller.php';
@@ -66,5 +66,17 @@ $logo='../html/images/login.png';
 $arrow='https://img.icons8.com/nolan/50/000000/up-left.png';
 
 ////Pour un test
-//$test_chat-processing='test_chat-processing.php';
-//$test_chat='test_chat.php';
+$test_chat_processing='../model/test_chat-processing.php';
+$test_view='../view/testview.php';
+$test_chat='../test_chat.php';
+
+$message='message';
+$message_view='../view/test_view2.php';
+$message_proc='../model/test_chat_proc2.php';
+$message_controller='../controller/test_chat2.php';
+
+$background1='indexb';
+$background2='loginb';
+$background3='signupb';
+$background4='myaccountb';
+$background5='mdpb';
