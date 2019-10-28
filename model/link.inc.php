@@ -85,3 +85,8 @@ $background2='loginb';
 $background3='signupb';
 $background4='myaccountb';
 $background5='mdpb';
+
+$create_disc='Créer une discussion';
+$create_disc_controller='../controller/create_discussion.php';
+$create_disc_model='../controller/create_discussion_processing.php';
+$create_disc_view='../controller/create_discussion_view.php';

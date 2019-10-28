@@ -18,7 +18,6 @@ function querycheck($dbLink, $query)
         echo 'Erreur de requête<br/>';
         // type d'erreur
         echo 'Erreur : ' . mysqli_error($dbLink) . '<br/><br/>';
-        var_dump($dbLink);
         // requête envoyée
         echo 'Requête : ' . $query . '<br/>';
         exit();
@@ -42,4 +41,22 @@ function loginckeck($email,$password)
         //On ferme la session
         header("Location:../login.php?error=ERROR");
     }
+}
+
+function dtb_connect_PDO ()
+{
+    $db = new PDO('mysql:host=mysql-latableronde.alwaysdata.net;dbname=latableronde_dtb', 191121, 'tableronde');
+    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
+
+    return $db;
+}
+
+function include_classe ()
+{
+    function chargerClasse ($classname)
+    {
+        require '../class/'.$classname.'.php';
+    }
+
+    spl_autoload_register('chargerClasse');
 }

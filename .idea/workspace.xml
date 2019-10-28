@@ -2,13 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="227c4fe5-873d-4ee2-aaf3-461033efdf6b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/model/mdp_processing.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/class/Disc_Mess_Manager.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/class/Ecrivain.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controller/create_discussion.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/create_discussion_processing.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/create_discussion_view.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/account.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/account.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/accountmodel.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/accountmodel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/dtb.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/dtb.inc.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/class/UserManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/class/UserManager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/class/discussion.php" beforeDir="false" afterPath="$PROJECT_DIR$/class/Discussion.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/class/message.php" beforeDir="false" afterPath="$PROJECT_DIR$/class/Message.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/link.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/link.inc.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/indexview.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/indexview.php" afterDir="false" />
+
     </list>
     <list id="5504e2fa-2ce0-416c-a015-9e96628cc8cf" name="Revert &quot;Modification de l'index pour la prise en compte de la session actuelle.&quot;" comment="Revert &quot;Modification de l'index pour la prise en compte de la session actuelle.&quot;&#10;&#10;This reverts commit fbcc00a2" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -81,13 +86,15 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="structure" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="PhpDebugGeneral" listening_started="true" />
+
   <component name="ProjectId" id="1SFSp9zIEu4tzBLgj1KUueu2iNF" />
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="db2&#10;mariadb" />
@@ -100,6 +107,13 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/view" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -162,6 +176,8 @@
       <workItem from="1571158062659" duration="3985000" />
       <workItem from="1571206629361" duration="3960000" />
       <workItem from="1571293788985" duration="9096000" />
+      <workItem from="1572205560249" duration="20702000" />
+
     </task>
     <task id="LOCAL-00001" summary="Debut du projet">
       <created>1569846323677</created>
@@ -345,7 +361,15 @@
       <option name="project" value="LOCAL" />
       <updated>1571299091941</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Creation des classes User et UserManager + modification du code pour utiliser la POO et PDO">
+      <created>1572268254443</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1572268254443</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
+
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -397,7 +421,8 @@
     <MESSAGE value="Résolution des problèmes de liens dynamiques" />
     <MESSAGE value="Résolution des problèmes de liens dynamiques et changement du nom de certains fichier pour adopter une meilleure logique" />
     <MESSAGE value="Résolution des problèmes de liens dynamiques et de traitement des formulaires d'inscription et de changement de mdp ou d'username" />
-    <option name="LAST_COMMIT_MESSAGE" value="Résolution des problèmes de liens dynamiques et de traitement des formulaires d'inscription et de changement de mdp ou d'username" />
+    <MESSAGE value="Creation des classes User et UserManager + modification du code pour utiliser la POO et PDO" />
+    <option name="LAST_COMMIT_MESSAGE" value="Creation des classes User et UserManager + modification du code pour utiliser la POO et PDO" />
   </component>
 </project>
 

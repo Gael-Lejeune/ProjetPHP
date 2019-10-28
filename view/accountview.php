@@ -6,9 +6,9 @@
         <div class="form">
             <!-- On affiche les variables definies au dessus -->
             <p> Identifiant </p>
-            <div class="info-personnelles"> <p> <?php echo $name ?> </p></div>
+            <div class="info-personnelles"> <p> <?php echo $user->getName() ?> </p></div>
             <p> E-mail </p>
-            <div class="info-personnelles"> <p> <?php echo $email ?> </p></div>
+            <div class="info-personnelles"> <p> <?php echo $user->getEmail() ?> </p></div>
 
         </div>
     </div>
@@ -18,9 +18,9 @@
         <!--Formulaire pour changer le nom de l'utilisateur -->
         <form class="form" action="<?php echo $account_processing ?>" method="post">
             <p> Nouvel identifiant : </p>
-            <input class="bouton" autocomplete="off" name="DoChangeLogin" type="text"/></br>
+            <input class="bouton" autocomplete="off" name="new_login" type="text"/></br>
             <p> Mot de passe actuel: </p>
-            <input class="bouton" autocomplete="off" autocapitalize="off" name="Password" type="password"/></br>
+            <input class="bouton" autocomplete="off" autocapitalize="off" name="password" type="password"/></br>
             <button class="submit1" type="submit" value="login" name="submit"> Changer mon Identifiant </button>
             <div class="a21"> <p> Un problème ? </p> <a href="<?php echo $myprofilecontroller ?>"> Mot de passe oublié ? </a> </div>
 
@@ -32,9 +32,9 @@
         <!--Formulaire pour changer le mot de passe -->
         <form class="form" action="<?php echo $account_processing ?>" method="post">
             <p> Ancien Mot de passe: </p>
-            <input class="bouton" id="Password" autocomplete="off" autocapitalize="off" name="Password" type="password"/>
+            <input class="bouton" id="Password" autocomplete="off" autocapitalize="off" name="password" type="password"/>
             <p> Nouveau Mot de passe : </p>
-            <input class="bouton" id="DoChangePassword" autocomplete="off" name="DoChangePassword" type="text"/>
+            <input class="bouton" id="DoChangePassword" autocomplete="off" name="new_password" type="text"/>
             <button class="submit1" type="submit" value="password" name="submit"> Changer mon Mot de passe </button>
             <div class="a21"> <p> Un problème ? </p> <a href="<?php echo $myprofilecontroller ?>"> Mot de passe oublié ? </a> </div>
 

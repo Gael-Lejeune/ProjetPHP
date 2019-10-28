@@ -5,7 +5,7 @@
 <div class="container-form-inscription">
     <h1> Ha, te voila ! </h1>
     <h2> Nous t'attendions depuis longtemps ! </h2>
-    <form class="form" action="<?php echo $data_processor ?>" method="post">
+    <form class="form" action="<?php echo $inscriptionmodel ?>" method="post">
         <p> Votre Nom </p>
         <input class="bouton" type="text" name="name"/>
         <p> E-mail </p>
@@ -13,9 +13,9 @@
         <p> Mot de Passe </p>
         <input class="bouton" type="password" name="password" required/>
         <p> Confirmation Mot de Passe </p>
-        <input class="bouton" type="password" name="password"/></br></br>
+        <input class="bouton" type="password" name="passwordconf"/></br></br>
         <div class="container-conditions">
-            <input class="conditions" type="checkbox" name="conditions"/>
+            <input class="conditions" type="checkbox" name="conditions" value="ok"/>
             <p> Conditions générales </p>
         </div>
         <input class ="submit" type="submit" name="action" value="Créer un compte"/>

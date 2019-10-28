@@ -5,30 +5,29 @@ include '../model/dtb.inc.php';
 
 session_start();
 
-//ouverture connexion serveur BD
-$dbLink = dtbconnect();
+include_classe(); //inclusion des classes nécessaires
+$db = dtb_connect_PDO(); //connection a la base de donnée avec PDO
+$manager = new UserManager($db);
 
-//Recuperation des variables en post
-$email=$_POST['email'];
-$password=md5($_POST['password']);
-
-$query="SELECT email,password,connection_number FROM user WHERE email = '$email' AND password = '$password'";
-
-//Verification de la viabilité de la requete
-$dbResult = querycheck($dbLink, $query);
-
-$dbRow=mysqli_fetch_assoc($dbResult);
-
-//Si le mot de passe et l'email correspondent
-if ($email != $dbRow['email'] || $password != $dbRow['password']) {
-    //On demarre la session
-    header("Location:$logincontroller?error=ERROR");
+//Verification de l'existance des variables
+if (isset($_POST['email']) and isset($_POST['password']) and isset($_POST['action'])) {
+    $email = $_POST['email'];
+    $password = md5($_POST['password']);
+    $action = $_POST['action'];
+} else {
+    header ("location:$inscriptioncontroller?step=ERROR_incomplet");
 }
-else {
+
+//Si l'utilisateur existe
+if ($manager->exist($email, $password)) {
     //On demarre la session
     $_SESSION['login']=true;
     $_SESSION['email']=$email;
     $_SESSION['password']=$password;
 
+    //On retourne sur l'index
     header("Location:$indexcontroller");
+} else {
+    //On lui envoi un message d'erreur
+    header("Location:$logincontroller?error=ERROR");
 }
