@@ -1,13 +1,10 @@
 <?php
-
-
 class Message
 {
     private $id_msg; //auto-implement
     private $id_discussion; //NEED
-    private $state = 1 ; //default (1 = ouvert, 0 = fermer)
-    private $owner; //NEED
-    private $text = ''; //default
+    private $state; //default (1 = ouvert, 0 = fermer)
+    private $text; //default
 
     public function getIdDiscussion()
     {

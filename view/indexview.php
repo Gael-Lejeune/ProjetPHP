@@ -19,9 +19,15 @@
 
     <div class='contenu-navbar'>
         <?php if ($_SESSION['login'])
-            echo '<div> <a href="'.$myprofilecontroller.'"> My Profile </a> </div>';
+            echo '<div> <a href="' . $myprofilecontroller . '"> My Profile </a> </div>';
         else
             echo'<div> <a href="'.$inscriptioncontroller.'"> Sign up </a> </div>';
+        ?>
+    </div>
+
+    <div class="contenu-navbar">
+        <?php if ($_SESSION['login'])
+            echo '<div> <a href="' . $create_disc_controller . '"> Create a new discussion </a> </div>';
         ?>
     </div>
 
@@ -45,7 +51,7 @@
 <div class="description">
     <h1> Description du site  </h1>
     <div class="description-FreeNote">
-        <p>test (n'y faite pas gaffe)</p>
+        <p>Il faut écrire  ici une description qui explique le principe du site</p>
     </div>
 </div>
 

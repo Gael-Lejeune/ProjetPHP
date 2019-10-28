@@ -34,26 +34,20 @@ class UserManager
 
     public function updateName (User $user)
     {
-        $query = $this->db->prepare('UPDATE user SET user_name = :user_name WHERE email = :email');
-        $query->bindValue(':user_name', $user->getName(), PDO::PARAM_INT);
-        $query->bindValue(':email', $user->getEmail(), PDO::PARAM_INT);
-        $query->execute();
+        $query = $this->db->prepare('UPDATE user SET user_name = ? WHERE email = ?');
+        $query->execute([$user->getName(), $user->getEmail()]);
     }
 
     public function updatePassword (User $user)
     {
-        $query = $this->db->prepare('UPDATE user SET password = :password WHERE email = :email');
-        $query->bindValue(':password', $user->getPassword(), PDO::PARAM_INT);
-        $query->bindValue(':email', $user->getEmail(), PDO::PARAM_INT);
-        $query->execute();
+        $query = $this->db->prepare('UPDATE user SET password = ? WHERE email = ?');
+        $query->execute([$user->getPassword(), $user->getEmail()]);
     }
 
     public function updateRole (User $user)
     {
-        $query = $this->db->prepare('UPDATE user SET role = :role WHERE email = :email');
-        $query->bindValue(':role', $user->getRole(), PDO::PARAM_INT);
-        $query->bindValue(':email', $user->getEmail(), PDO::PARAM_INT);
-        $query->execute();
+        $query = $this->db->prepare('UPDATE user SET role = ? WHERE email = ?');
+        $query->execute([$user->getRole(), $user->getEmail()]);
     }
 
     public function exist ($email, $password)

@@ -1,11 +1,12 @@
 <?php
-
-
 class Discussion
 {
     private $id_discussion;
+    private $owner;
+    private $nb_mess_max;
     private $state; // 1 = ouvert, 0 = fermer
     private $nb_messages;
+    private $nb_like;
 
     public function getIdDiscussion()
     {
