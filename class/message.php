@@ -3,20 +3,15 @@
 
 class Message
 {
-    private $id_msg;
-    private $id_discussion;
-    private $state;
-    private $owner;
-    private $texte;
+    private $id_msg; //auto-implement
+    private $id_discussion; //NEED
+    private $state = 1 ; //default (1 = ouvert, 0 = fermer)
+    private $owner; //NEED
+    private $text = ''; //default
 
-    public function __construct ()
+    public function getIdDiscussion()
     {
-
-    }
-
-    public function setState($state)
-    {
-        $this->state = $state;
+        return $this->id_discussion;
     }
 
     public function getState()
@@ -24,29 +19,36 @@ class Message
         return $this->state;
     }
 
+    public function getIdMsg()
+    {
+        return $this->id_msg;
+    }
+
     public function getOwner()
     {
         return $this->owner;
     }
 
-    public function getIdMessage()
+    public function getText()
     {
-        return $this->id_msg;
+        return $this->text;
     }
 
-    public function getIdDiscussion()
+    public function setText($text)
     {
-        return $this->id_discussion;
+        $this->text = $text;
     }
 
-    public function setTexte($newTexte)
+    public function __construct($id_discussion, $id_msg, $owner)
     {
-        $this->texte = $newTexte;
+        $this->id_discussion = $id_discussion;
+        $this->id_msg = $id_msg;
+        $this->owner = $owner;
     }
 
-    public function getTexte()
+    public function concatenation ($text)
     {
-        return $this->texte;
+        $this->text += $text;
     }
 
 }

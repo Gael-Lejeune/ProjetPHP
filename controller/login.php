@@ -9,6 +9,11 @@ start_page($login, $logincss, "stylesheet", "fonts.googleapis.com/css?family=Osw
 if ($_GET['error'] == 'ERROR')
     echo 'ERREUR AUTHENTIFICATION';
 //Formulaire de login
+
+if ($step == 'ERROR_incomplet') {
+    echo 'Merci de bien remplir tous les champs du formulaire'.'<br/>';
+}
+
 require $loginview;
 
 end_page();

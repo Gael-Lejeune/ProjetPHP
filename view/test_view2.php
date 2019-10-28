@@ -5,6 +5,11 @@ $dbLink = dtbconnect();
 ?>
 
 <form class="form" action="<?php echo $message_proc ?>" method="post">
+    Ouvrir un message :
+    <input class="submit" type="submit" name="action" value="message"/>
+</form>
+
+<form class="form" action="<?php echo $message_proc ?>" method="post">
     <p>Numero de la discussion dans laquelle vous voulez ecrire : </p>
     <input class="buuton" type="number" name="id" required/>
 
@@ -14,7 +19,7 @@ $dbLink = dtbconnect();
     <input class="submit" type="submit" name="action" value="message"/>
     <input class="submit" type="submit" name="action" value="fermer_message"/>
 </form>
-
+<br><br><br><br>
 ouvrir une discussion :
 <form action="<?php echo $message_proc ?>" method="post">
     <input class="submit" type="submit" name="action" value="discussion"/>

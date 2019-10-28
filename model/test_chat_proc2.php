@@ -6,11 +6,22 @@ include '../model/dtb.inc.php';
 
 session_start();
 
-$dbLink=dtbconnect();
+include_classe();
+$db = dtb_connect_PDO();
+
+$manager = new UserManager($db);
+
+//$owner = new User($_SESSION['name'], $_SESSION['email'], $_SESSION['password']);
 
 $action=$_POST['action'];
 
-//database: id_discussion / est_ouverte / test (a supprimer plus tard c'etait juste pour faire des test)
+$id_discussion = 2;
+
+if ($action == 'message') {
+    $query = "INSERT INTO message VALUES ($id_discussion,)";
+}
+
+/*//database: id_discussion / est_ouverte / test (a supprimer plus tard c'etait juste pour faire des test)
 //ouvrir une discussion :
 if ($action == 'discussion'){
     $user=$_SESSION['email'];
@@ -57,38 +68,7 @@ if ($action == 'discussion'){
 
     querycheck($dbLink, $query);
 }
-
-//affichage d'une discussion ::
-
-
-
-
-
-
-//Recuperation des variables en post
-//$id_msg=($_POST['id_msg']);
-//$user_msg=($_POST['user_msg']);
-//$id_discussion=($_POST['id_discussion']);
-//$est_ouvert=($_POST['est_ouvert']);
-//$texte=($_POST['texte']);
-
-//Definition de la requete mySql
-//$query="INSERT INTO message (texte) VALUES ('$texte')";
-
-//Verification de la viabilité de la requete
-//$dbResult = querycheck($dbLink, $query, 'Requete viable');
-
-//lit le résultat de la requête dans un tableau associatif
-//$dbRow=mysqli_fetch_assoc($dbResult);
-//echo $dbRow;
-
-//redirection HTTP vers test_chat.php
-
-//header("Location: $test_chat?step=ERROR_mdp");
-
-
-//Recuperation des variables
-//$texte=$_POST['texte'];
+*/
 
 
 ?>

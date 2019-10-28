@@ -1,18 +1,41 @@
 <?php
 
 
-class discussion
+class Discussion
 {
     private $id_discussion;
-    private $eta;
+    private $state; // 1 = ouvert, 0 = fermer
+    private $nb_messages;
 
-    public function setState($eta)
+    public function getIdDiscussion()
     {
-        $this->eta = $eta;
+        return $this->id_discussion;
     }
 
-    public function getEta()
+    public function getNbMessages()
     {
-        return $this->eta;
+        return $this->nb_messages;
+    }
+
+    public function getState()
+    {
+        return $this->state;
+    }
+
+    public function __construct($id)
+    {
+        $this->nb_messages = 0;
+        $this->state = 1;
+        $this->id_discussion = $id;
+    }
+
+    public function incrMessage ()
+    {
+        $this->nb_messages += 1;
+    }
+
+    public function closeDiscussion ()
+    {
+        $this->state = 0;
     }
 }

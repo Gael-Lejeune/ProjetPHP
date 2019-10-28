@@ -42,3 +42,21 @@ function loginckeck($email,$password)
         header('Location:login.php?error=ERROR');
     }
 }
+
+function dtb_connect_PDO ()
+{
+    $db = new PDO('mysql:host=mysql-latableronde.alwaysdata.net;dbname=latableronde_dtb', 191121, 'tableronde');
+    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
+
+    return $db;
+}
+
+function include_classe ()
+{
+    function chargerClasse ($classname)
+    {
+        require '../class/'.$classname.'.php';
+    }
+
+    spl_autoload_register('chargerClasse');
+}
