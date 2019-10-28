@@ -1,6 +1,7 @@
 <div class="container-form-mdp">
     <h1> Ha, bah bravo ! </h1>
     <h2> T'as encore oublié ton Mot De Passe ! </h2>
+
     <form class="form" action="" method="post">
         <p> E-mail </p>
         <input class="bouton" type="email" name="email" required />

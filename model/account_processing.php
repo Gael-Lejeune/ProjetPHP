@@ -3,6 +3,7 @@ include "../model/dtb.inc.php";
 include "../model/utils.inc.php";
 include  "../model/link.inc.php";
 
+
 session_start();
 
 include_classe(); //inclusion des classes nécessaires
@@ -59,6 +60,7 @@ if($real_password == $enter_password) {
         $user->setUser_name($new_login);
 
         $manager->updateName($user);
+
 
         header("Location:$myprofilecontroller");
     }

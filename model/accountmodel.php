@@ -15,4 +15,5 @@ $user = $manager->getUser($email);
 //Si la personne n'est pas connecte
 } else {
 header("location:$myprofilecontroller?error=ERROR_auth");
+
 }

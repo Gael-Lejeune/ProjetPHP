@@ -38,8 +38,8 @@ function loginckeck($email,$password)
     $dbRow=mysqli_fetch_assoc($dbResult);
 //Si le mot de passe et l'email correspondent
     if ($email != $dbRow['email'] || $password != $dbRow['password']) {
-        //On demarre la session
-        header('Location:login.php?error=ERROR');
+        //On ferme la session
+        header("Location:../login.php?error=ERROR");
     }
 }
 
