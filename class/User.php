@@ -1,7 +1,7 @@
 <?php
 class User
 {
-    private $name;
+    private $user_name;
     private $email;
     private $password;
     private $role;
@@ -13,7 +13,7 @@ class User
 
     public function getName()
     {
-        return $this->name;
+        return $this->user_name;
     }
 
     public function getPassword()
@@ -37,7 +37,7 @@ class User
     public function setUser_name($name)
     {
         if (is_string($name)) {
-            $this->name = $name;
+            $this->user_name = $name;
         }
     }
 

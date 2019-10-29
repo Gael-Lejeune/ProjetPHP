@@ -33,7 +33,7 @@
 
     <div class="contenu-navbar">
         <?php if ($_SESSION['login'])
-            echo '<div> <a href="'.$logoutcontroller.'"> Log Out </a> </div>';
+            echo '<div> <a href="'.$logoutmodel.'"> Log Out </a> </div>';
         else
             echo '<div> <a href="'.$logincontroller.'"> Log In </a> </div>';
         ?>

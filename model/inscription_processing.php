@@ -25,7 +25,7 @@ if (isset($_POST['conditions']) and $_POST['conditions'] == 'ok') {
     //Si le mot de passe et le mot de passe de confirmation sont bien les memes
     if ($password == $passwordconf) {
         //insertion dans la base de donnée d'un nouvel user
-        $user = new User(['name' => $name, 'email' => $email, 'password' => $password, 'role' => 'member']);
+        $user = new User(['user_name' => $name, 'email' => $email, 'password' => $password, 'role' => 'member']);
         $manager->add($user);
         header("location:$indexcontroller");
 

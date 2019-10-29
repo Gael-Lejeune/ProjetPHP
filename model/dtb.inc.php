@@ -28,19 +28,9 @@ function querycheck($dbLink, $query)
 }
 
 
-function loginckeck($email,$password)
+function loginckeck($manager)
 {
-    $dbLink = dtbconnect();
-    $query="SELECT email,password,connection_number FROM user WHERE email = '$email' AND password = '$password'";
-
-//Verification de la viabilité de la requete
-    $dbResult = querycheck($dbLink, $query);
-    $dbRow=mysqli_fetch_assoc($dbResult);
-//Si le mot de passe et l'email correspondent
-    if ($email != $dbRow['email'] || $password != $dbRow['password']) {
-        //On demarre la session
-        header('Location:login.php?error=ERROR');
-    }
+    return ($manager->exist($_SESSION['email'], $_SESSION['password']) and $_SESSION['login']) ? true : false;
 }
 
 function dtb_connect_PDO ()

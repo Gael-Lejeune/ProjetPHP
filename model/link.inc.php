@@ -20,10 +20,7 @@ $loginview='../view/loginview.php';
 $loginmodel='../model/login_processing.php';
 
 $logout='Logout';
-$logoutcontroller='../controller/logout.php';
-$logoutcss='../html/css/logout.css';
-$logoutview='../view/logoutview.php';
-$logoutmodel='../model/logoutmodel.php';
+$logoutmodel='../model/logout_processing.php';
 
 
 $myprofile='myprofile';
