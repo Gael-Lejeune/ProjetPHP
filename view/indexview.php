@@ -58,14 +58,16 @@
 <div class="container-discussion">
     <div class="discussion">
         <div class="description">
-            <h1> Description du site  </h1>
+            <h1> <?php echo $result[0]['disc_name'] ?> </h1>
             <div class="description-FreeNote">
-                <p> Haec et huius modi quaedam innumerabilia ultrix facinorum impiorum bonorumque praemiatrix aliquotiens operatur Adrastia atque utinam semper quam vocabulo duplici etiam Nemesim appellamus: ius quoddam sublime numinis efficacis, humanarum mentium opinione lunari circulo superpositum, vel ut definiunt alii, substantialis tutela generali potentia partilibus praesidens fatis, quam theologi veteres fingentes Iustitiae filiam ex abdita quadam aeternitate tradunt omnia despectare terrena.</p>
+                <p><?php
+
+                    ?></p>
             </div>
         </div>
 
         <div class="description">
-            <h1> Description du site  </h1>
+            <h1> <?php echo $result[1]['disc_name']?> </h1>
             <div class="description-FreeNote">
                 <p> Haec et huius modi quaedam innumerabilia ultrix facinorum impiorum bonorumque praemiatrix aliquotiens operatur Adrastia atque utinam semper quam vocabulo duplici etiam Nemesim appellamus: ius quoddam sublime numinis efficacis, humanarum mentium opinione lunari circulo superpositum, vel ut definiunt alii, substantialis tutela generali potentia partilibus praesidens fatis, quam theologi veteres fingentes Iustitiae filiam ex abdita quadam aeternitate tradunt omnia despectare terrena.</p>
             </div>

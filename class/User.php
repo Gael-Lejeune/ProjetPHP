@@ -51,7 +51,7 @@ class User
         $this->role = $role;
     }
 
-    public function __construct($donnees)
+    public function __construct(array $donnees)
     {
         $this->hydrate($donnees);
     }
