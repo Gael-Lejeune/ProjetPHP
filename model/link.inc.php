@@ -47,6 +47,11 @@ $create_disc_controller='../controller/create_discussion.php';
 $create_disc_model='../model/create_discussion_processing.php';
 $create_disc_view='../view/create_discussion_view.php';
 
+$page_disc='Discussion';
+$page_disc_controller='../controller/page_discussion.php';
+$page_disc_processing='../model/page_disc_processing.php';
+$page_disc_model='../model/page_disc_model.php';
+$page_disc_view='../view/page_disc_view.php';
 // CSS //
 
 $background1='indexb';

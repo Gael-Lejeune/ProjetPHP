@@ -2,19 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="227c4fe5-873d-4ee2-aaf3-461033efdf6b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/model/indexmodel.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/class/Like.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controller/page_discussion.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/page_disc_model.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/page_disc_processing.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/page_disc_view.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/class/Disc_Mess_Manager.php" beforeDir="false" afterPath="$PROJECT_DIR$/class/Disc_Mess_Manager.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/class/Discussion.php" beforeDir="false" afterPath="$PROJECT_DIR$/class/Discussion.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/class/Ecrivain.php" beforeDir="false" afterPath="$PROJECT_DIR$/class/Ecrivain.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/class/Message.php" beforeDir="false" afterPath="$PROJECT_DIR$/class/Message.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/class/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/class/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/create_discussion_processing.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/create_discussion_processing.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/account.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/account.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/test_chat.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/test_chat2.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/indexmodel.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/indexmodel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/link.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/link.inc.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/create_discussion_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/create_discussion_view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/test_chat-processing.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/test_chat_proc2.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/view/indexview.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/indexview.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/loginview.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/loginview.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/test_view2.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/testview.php" beforeDir="false" />
     </list>
     <list id="5504e2fa-2ce0-416c-a015-9e96628cc8cf" name="Revert &quot;Modification de l'index pour la prise en compte de la session actuelle.&quot;" comment="Revert &quot;Modification de l'index pour la prise en compte de la session actuelle.&quot;&#10;&#10;This reverts commit fbcc00a2" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -175,7 +179,8 @@
       <workItem from="1571158062659" duration="3985000" />
       <workItem from="1571206629361" duration="3960000" />
       <workItem from="1571293788985" duration="9096000" />
-      <workItem from="1572205560249" duration="40865000" />
+      <workItem from="1572205560249" duration="41175000" />
+      <workItem from="1572366849569" duration="17415000" />
     </task>
     <task id="LOCAL-00001" summary="Debut du projet">
       <created>1569846323677</created>
@@ -380,7 +385,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572351860357</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Création des discussions opérationel, travail pour afficher les discussions sur l'index en cours">
+      <created>1572365429990</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1572365429990</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -410,7 +422,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Debut du projet" />
     <MESSAGE value="Debut du projet et création des fichiers." />
     <MESSAGE value="Modification de l'index pour la prise en compte de la session actuelle." />
     <MESSAGE value="Accès à la base de donnée et création d'une session" />
@@ -435,6 +446,7 @@
     <MESSAGE value="Creation des classes User et UserManager + modification du code pour utiliser la POO et PDO" />
     <MESSAGE value="Creation des classes Discussion et Message" />
     <MESSAGE value="Correction de problemes avec la classe User survenus durant la nuit et verification de la connexion de l'utilisateur pour acceder a la page &quot;mon profil&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Correction de problemes avec la classe User survenus durant la nuit et verification de la connexion de l'utilisateur pour acceder a la page &quot;mon profil&quot;" />
+    <MESSAGE value="Création des discussions opérationel, travail pour afficher les discussions sur l'index en cours" />
+    <option name="LAST_COMMIT_MESSAGE" value="Création des discussions opérationel, travail pour afficher les discussions sur l'index en cours" />
   </component>
 </project>

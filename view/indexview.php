@@ -58,19 +58,33 @@
 <div class="container-discussion">
     <div class="discussion">
         <div class="description">
-            <h1> <?php echo $result[0]['disc_name'] ?> </h1>
+            <h1> <?php echo $result[0]['discName'] ?> </h1>
             <div class="description-FreeNote">
                 <p><?php
-
+                        foreach ($msg_Disc1 as $value)
+                        {
+                            echo $value['text'].'<br>';
+                        }
                     ?></p>
             </div>
+            <form class="form" action="<?php echo $page_disc_controller ?>" method="post">
+                <button value="<?php echo $result[0]['idDiscussion']?>" class="bouton" name="discussion">Voir la discussion</button>
+            </form>
         </div>
 
         <div class="description">
-            <h1> <?php echo $result[1]['disc_name']?> </h1>
+            <h1> <?php echo $result[1]['discName'] ?> </h1>
             <div class="description-FreeNote">
-                <p> Haec et huius modi quaedam innumerabilia ultrix facinorum impiorum bonorumque praemiatrix aliquotiens operatur Adrastia atque utinam semper quam vocabulo duplici etiam Nemesim appellamus: ius quoddam sublime numinis efficacis, humanarum mentium opinione lunari circulo superpositum, vel ut definiunt alii, substantialis tutela generali potentia partilibus praesidens fatis, quam theologi veteres fingentes Iustitiae filiam ex abdita quadam aeternitate tradunt omnia despectare terrena.</p>
+                <p><?php
+                    foreach ($msg_Disc2 as $value)
+                    {
+                        echo $value['text'].'<br>';
+                    }
+                    ?></p>
             </div>
+            <form class="form" action="<?php echo $page_disc_controller ?>" method="post">
+                <button value="<?php echo $result[1]['idDiscussion']?>" class="bouton" name="discussion">Voir la discussion</button>
+            </form>
         </div>
     </div>
     <div class="Prevnext">
