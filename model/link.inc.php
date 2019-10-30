@@ -58,6 +58,11 @@ $see_disc_controller='../controller/see_disc.php';
 $see_disc_model='../model/see_disc_model.php';
 $see_disc_view='../view/see_disc_view.php';
 
+$admin='Administarteur page';
+$admin_controller='../controller/admin.php';
+$admin_processing='../model/admin_processing.php';
+$admin_view='../view/admin_view.php';
+
 // CSS //
 
 $background1='indexb';

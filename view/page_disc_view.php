@@ -1,7 +1,8 @@
 <h1>Page discussion</h1>
 
 <div class="description">
-    <h1> <?php echo $result['disc_name'] ?> </h1>
+    <h1> <?php echo $result['discName'] ?> </h1>
+    <h2> <?php echo 'Cette discussion vous est présentée par '.$user->getName() ?> </h2>
     <div class="description-FreeNote">
         <p><?php
             foreach ($messages as $value)

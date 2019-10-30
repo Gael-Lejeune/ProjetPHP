@@ -2,21 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="227c4fe5-873d-4ee2-aaf3-461033efdf6b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/controller/see_disc.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/see_disc_model.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/see_disc_view.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/class/Serveur.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/class/Serveur_Manager.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controller/admin.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/admin_view.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/class/Disc_Mess_Manager.php" beforeDir="false" afterPath="$PROJECT_DIR$/class/Disc_Mess_Manager.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/class/Discussion.php" beforeDir="false" afterPath="$PROJECT_DIR$/class/Discussion.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/class/UserManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/class/UserManager.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/page_discussion.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/page_discussion.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/myprofile.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/see_disc.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/see_disc.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/indexmodel.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/indexmodel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/link.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/link.inc.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/mdp_processing.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/mdp_processing.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/page_disc_processing.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/page_disc_processing.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/accountview.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/accountview.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/page_disc_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/page_disc_model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/see_disc_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/see_disc_model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/utils.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/utils.inc.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/indexview.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/indexview.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/mdpview.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/mdpview.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/page_disc_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/page_disc_view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/see_disc_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/see_disc_view.php" afterDir="false" />
     </list>
     <list id="5504e2fa-2ce0-416c-a015-9e96628cc8cf" name="Revert &quot;Modification de l'index pour la prise en compte de la session actuelle.&quot;" comment="Revert &quot;Modification de l'index pour la prise en compte de la session actuelle.&quot;&#10;&#10;This reverts commit fbcc00a2" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -179,7 +180,8 @@
       <workItem from="1571293788985" duration="9096000" />
       <workItem from="1572205560249" duration="41175000" />
       <workItem from="1572366849569" duration="18355000" />
-      <workItem from="1572430202874" duration="14641000" />
+      <workItem from="1572430202874" duration="15091000" />
+      <workItem from="1572458236313" duration="8728000" />
     </task>
     <task id="LOCAL-00001" summary="Debut du projet">
       <created>1569846323677</created>
@@ -398,7 +400,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572386607722</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Finission de la page sur les discussions et debut de la page pour voir ses propres discussions">
+      <created>1572448112436</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1572448112436</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -428,7 +437,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Modification de l'index pour la prise en compte de la session actuelle." />
     <MESSAGE value="Accès à la base de donnée et création d'une session" />
     <MESSAGE value="Création du fichier gérant le login d'un utilisateur" />
     <MESSAGE value="Ajout des liens de chaques pages" />
@@ -453,6 +461,7 @@
     <MESSAGE value="Correction de problemes avec la classe User survenus durant la nuit et verification de la connexion de l'utilisateur pour acceder a la page &quot;mon profil&quot;" />
     <MESSAGE value="Création des discussions opérationel, travail pour afficher les discussions sur l'index en cours" />
     <MESSAGE value="On peut creer des discussion, ecrire des messages, liker ... &#10;TODO : regler le probleme de message maximum et faire la pagination" />
-    <option name="LAST_COMMIT_MESSAGE" value="On peut creer des discussion, ecrire des messages, liker ... &#10;TODO : regler le probleme de message maximum et faire la pagination" />
+    <MESSAGE value="Finission de la page sur les discussions et debut de la page pour voir ses propres discussions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finission de la page sur les discussions et debut de la page pour voir ses propres discussions" />
   </component>
 </project>

@@ -9,10 +9,7 @@ if(isset($_POST['discussion'])) {
     $_SESSION['discussion'] = $_POST['discussion'];
 }
 
-var_dump($_SESSION);
-var_dump($_POST);
-
 $result = $manager->getDiscussion($_SESSION['discussion']);
-
+$user = $user_manager->getUser($manager->getOwner($_SESSION['discussion']));
 $messages = $manager->getMsgForIDDisc($_SESSION['discussion']);
 

@@ -38,6 +38,12 @@
     </div>
 
     <div class="contenu-navbar">
+        <?php if ($role=='admin')
+            echo '<div> <a href="' . $admin_controller . '"> Administrateur page </a> </div>';
+        ?>
+    </div>
+
+    <div class="contenu-navbar">
         <?php if ($_SESSION['login'])
             echo '<div> <a href="'.$logoutmodel.'"> Log Out </a> </div>';
         else
@@ -108,18 +114,42 @@
         </div>
     </div>
     <div class="Prevnext">
-        <div class="Backtohome">
-            <div class="left">
-                <a href="<?php echo $indexcontroller ?>"> <img class="left1" src="https://img.icons8.com/carbon-copy/100/000000/double-left.png"> </a>
+        <?php if ($_GET['page'] != 1)
+        {?>
+            <div class="Backtohome">
+                <div class="left">
+                    <a href="<?php echo $indexcontroller."?page=".($_GET['page']-1) ?>">
+                        <img class="left1" src="https://img.icons8.com/carbon-copy/100/000000/double-left.png">
+                    </a>
+                </div>
+                <p> Prev </p>
             </div>
-            <p> Prev </p>
-        </div>
-        <div class="Backtohome">
-            <p> Next </p>
-            <div class="right">
-                <a href="<?php echo $indexcontroller ?>"> <img class="left" src="https://img.icons8.com/carbon-copy/100/000000/double-right.png"> </a>
+        <?php } ?>
+        <?php
+        echo '<div class="checkbox">Page : '; //Pour l'affichage, on centre la liste des pages
+        for($i=1; $i<=$nombreDePages; $i++) //On fait notre boucle
+        {
+            //On va faire notre condition
+            if($i==$_GET['page']) //Si il s'agit de la page actuelle...
+            {
+                echo ' [ '.$i.' ] ';
+            }
+            else //Sinon...
+            {
+                echo ' <a href="'.$indexcontroller.'?page='.$i.'">'.$i.'</a> ';
+            }
+        }
+        echo '</div>';
+        if ($_GET['page'] != $nombreDePages){?>
+            <div class="Backtohome">
+                <p> Next </p>
+                <div class="right">
+                    <a href="<?php echo $indexcontroller."?page=".($_GET['page']+1) ?>">
+                        <img class="left" src="https://img.icons8.com/carbon-copy/100/000000/double-right.png">
+                    </a>
+                </div>
             </div>
-        </div>
+        <?php } ?>
     </div>
 </div>
 </body>

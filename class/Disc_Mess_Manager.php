@@ -66,9 +66,11 @@ class Disc_Mess_Manager
         return $result['id'];
     }
 
-    public function getDiscussionPagination ()
+    public function getDiscussionPagination ($limit1, $limit2)
     {
-        $query = $this->db->prepare('SELECT * FROM discussion ORDER BY nbLike DESC LIMIT 0,2');
+        $query = 'SELECT * FROM discussion ORDER BY nbLike DESC LIMIT ';
+        $query= $query."$limit1, $limit2";
+        $query = $this->db->prepare($query);
         $query->execute();
         $result = $query->fetchAll(PDO::FETCH_ASSOC);
         return $result;
@@ -206,5 +208,21 @@ class Disc_Mess_Manager
         return $result;
     }
 
+    public function getOwner ($id)
+    {
+        $query = $this->db->prepare('SELECT owner FROM discussion WHERE idDiscussion = ?');
+        $query->execute([$id]);
+        $owner = $query->fetch(PDO::FETCH_ASSOC);
+
+        return $owner['owner'];
+    }
+
+    public function getNbOpenDiscForUser ($email)
+    {
+        $query = $this->db->prepare('SELECT COUNT(*) as total FROM discussion WHERE owner = ? AND state = 1');
+        $query->execute([$email]);
+        $donnee = $query->fetch(PDO::FETCH_ASSOC);
+        return $donnee['total'];
+    }
 
 }
