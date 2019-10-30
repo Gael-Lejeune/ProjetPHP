@@ -1,19 +1,19 @@
 <?php
 
-$index='Index';
+$index='Freenote';
 $indexcontroller='../controller/index.php';
 $indexcss='../html/css/index.css';
 $indexview='../view/indexview.php';
 $indexmodel='../model/indexmodel.php';
 
-$inscription='Inscription';
+$inscription='Freenote : Inscription';
 $inscriptioncontroller='../controller/formulaire_inscription.php';
 $inscriptioncss='../html/css/signup.css';
 $inscriptionview='../view/inscriptionview.php';
 $inscriptionmodel='../model/inscription_processing.php';
 
 
-$login='Login';
+$login='Freenote : Connexion';
 $logincontroller='../controller/login.php';
 $logincss='../html/css/login.css';
 $loginview='../view/loginview.php';
@@ -26,7 +26,7 @@ $logoutview='../view/logoutview.php';
 $logoutmodel='../model/logoutmodel.php';
 
 
-$myprofile='myprofile';
+$myprofile='Freenote : mon Compte';
 $myprofilecontroller='../controller/account.php';
 $myprofilecss='../html/css/myprofile.css';
 $myprofileview='../view/accountview.php';
@@ -36,12 +36,6 @@ $mymdp='mymdp';
 $mymdpcontroller='../controller/mdpcontroller.php';
 $mymdpcss='../html/css/mdp.css';
 $mymdpview='../view/mdpview.php';
-
-$background1='indexb';
-$background2='loginb';
-$background3='signupb';
-$background4='myaccountb';
-$background5='mdpb';
 
 $color1 = '#080c1';
 $color2 = '#1a1a1a';
