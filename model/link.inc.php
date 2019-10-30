@@ -36,7 +36,7 @@ $mymdp='mymdp';
 $mymdpcontroller='../controller/mdpcontroller.php';
 $mymdpcss='../html/css/mdp.css';
 $mymdpview='../view/mdpview.php';
-$mdp_processing='../model/mdp_processing';
+$mdp_processing='../model/mdp_processing.php';
 
 // GESTION DISCUSSIONS //
 
@@ -52,6 +52,12 @@ $page_disc_controller='../controller/page_discussion.php';
 $page_disc_processing='../model/page_disc_processing.php';
 $page_disc_model='../model/page_disc_model.php';
 $page_disc_view='../view/page_disc_view.php';
+
+$see_disc='My Discussions';
+$see_disc_controller='../controller/see_disc.php';
+$see_disc_model='../model/see_disc_model.php';
+$see_disc_view='../view/see_disc_view.php';
+
 // CSS //
 
 $background1='indexb';

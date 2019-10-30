@@ -2,10 +2,10 @@
     <h1> Ha, bah bravo ! </h1>
     <h2> T'as encore oublié ton Mot De Passe ! </h2>
 
-    <form class="form" action="" method="post">
+    <form class="form" action="<?php echo $mdp_processing ?>" method="post">
         <p> E-mail </p>
         <input class="bouton" type="email" name="email" required />
-        <div class="a2" style="margin-top: 5px;"> <p>Veuillez renseigner </p> <p style="margin-left: 5px; color: #2461cc;"> l'adresse E-mail </p> <p style="margin-left: 5px"> correspondante à votre compte ! </p> </div>
+        <div class="a2" style="margin-top: 5px;"> <p>Veuillez renseigner l'adresse E-mail correspondante à votre compte ! </p> </div>
         <input class="submit2" type="submit" name="action" value="Réinitialiser votre Mot De Passe" style="margin-top: 30px;";/>
         <?php if ($_SESSION['login'])
             echo '<div class="a2"> <p> Vous voulez retourner à votre compte client ?</p> <a class="a2a" href="'.$myprofilecontroller.'"> Consulter mon profil </a> </div>';

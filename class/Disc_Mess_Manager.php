@@ -68,7 +68,7 @@ class Disc_Mess_Manager
 
     public function getDiscussionPagination ()
     {
-        $query = $this->db->prepare('SELECT * FROM discussion WHERE state = 1 LIMIT 0,2');
+        $query = $this->db->prepare('SELECT * FROM discussion ORDER BY nbLike DESC LIMIT 0,2');
         $query->execute();
         $result = $query->fetchAll(PDO::FETCH_ASSOC);
         return $result;
@@ -80,6 +80,14 @@ class Disc_Mess_Manager
         $query->execute([$id]);
         $result = $query->fetch(PDO::FETCH_ASSOC);
         return $result;
+    }
+
+    public function getNbDiscussion ()
+    {
+        $query = $this->db->prepare('SELECT COUNT(*) as total FROM discussion');
+        $query->execute();
+        $donnee = $query->fetch(PDO::FETCH_ASSOC);
+        return $donnee['total'];
     }
 
     public function getMsgForIDDisc ($id_discussion)
@@ -132,6 +140,19 @@ class Disc_Mess_Manager
 
         return new Message($msg_array);
     }
+    
+    public function isOpenDisc ($id)
+    {
+        $query = $this->db->prepare('SELECT state FROM discussion WHERE idDiscussion = ?');
+        $query->execute([$id]);
+        $state = $query->fetch(PDO::FETCH_ASSOC);
+
+        if ($state['state'] == 1) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 
     public function closeDisc ($id)
     {
@@ -147,7 +168,8 @@ class Disc_Mess_Manager
 
         $disc_array = $this->getDiscussion($message->getIdDiscussion());
         $discussion = new Discussion($disc_array);
-        if ($discussion->getNbMessages() >= $discussion->getNbMessMax()) {
+
+        if ($discussion->getNbMessage() >= $discussion->getNbMessMax()) {
             $this->closeDisc($discussion->getIdDiscussion());
         } else {
             $new_message = new Message(['idDiscussion' => $discussion->getIdDiscussion(),'text' => '']);
@@ -173,6 +195,15 @@ class Disc_Mess_Manager
         $msg = $query->fetch(PDO::FETCH_ASSOC);
 
         return $msg['text'];
+    }
+
+    public function getUserDiscussion ($email)
+    {
+        $query = $this->db->prepare('SELECT * FROM discussion WHERE owner = ?');
+        $query->execute([$email]);
+        $result = $query->fetchAll(PDO::FETCH_ASSOC);
+
+        return $result;
     }
 
 

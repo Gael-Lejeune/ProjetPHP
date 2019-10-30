@@ -33,6 +33,12 @@
 
     <div class="contenu-navbar">
         <?php if ($_SESSION['login'])
+            echo '<div> <a href="' . $see_disc_controller . '"> My discussions </a> </div>';
+        ?>
+    </div>
+
+    <div class="contenu-navbar">
+        <?php if ($_SESSION['login'])
             echo '<div> <a href="'.$logoutmodel.'"> Log Out </a> </div>';
         else
             echo '<div> <a href="'.$logincontroller.'"> Log In </a> </div>';
@@ -67,6 +73,13 @@
                         }
                     ?></p>
             </div>
+            <p>State :
+                <?php if ($result[0]['state'] == 1)
+                    echo 'Open';
+                else if ($result[0]['state'] == 0)
+                    echo 'Close';
+                ?>
+            </p>
             <form class="form" action="<?php echo $page_disc_controller ?>" method="post">
                 <button value="<?php echo $result[0]['idDiscussion']?>" class="bouton" name="discussion">Voir la discussion</button>
             </form>
@@ -82,6 +95,13 @@
                     }
                     ?></p>
             </div>
+            <p>State :
+                <?php if ($result[1]['state'] == 1)
+                    echo 'Open';
+                else if ($result[1]['state'] == 0)
+                    echo 'Close';
+                ?>
+            </p>
             <form class="form" action="<?php echo $page_disc_controller ?>" method="post">
                 <button value="<?php echo $result[1]['idDiscussion']?>" class="bouton" name="discussion">Voir la discussion</button>
             </form>

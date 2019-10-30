@@ -6,7 +6,7 @@ class Discussion
     private $owner;
     private $nbMessMax;
     private $state; // 1 = ouvert, 0 = fermer
-    private $nbMessages;
+    private $nbMessage;
     private $nbLike;
 
     public function getOwner()
@@ -29,9 +29,9 @@ class Discussion
         return $this->idDiscussion;
     }
 
-    public function getNbMessages()
+    public function getNbMessage()
     {
-        return $this->nbMessages;
+        return $this->nbMessage;
     }
 
     public function getNbLike()
@@ -51,8 +51,8 @@ class Discussion
 
     public function incrNbMess()
     {
-        $this->nbMessages += 1;
-        if ($this->nbMessages >= $this->nbMessMax) {
+        $this->nbMessage += 1;
+        if ($this->nbMessage >= $this->nbMessMax) {
             $this->closeDisc();
         }
     }
@@ -94,9 +94,9 @@ class Discussion
         $this->idDiscussion = $id_discussion;
     }
 
-    public function setNbMessages($nb_messages)
+    public function setNbMessage($nb_messages)
     {
-        $this->nbMessages = $nb_messages;
+        $this->nbMessage = $nb_messages;
     }
 
     public function setState($state)

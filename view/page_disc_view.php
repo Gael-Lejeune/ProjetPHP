@@ -11,7 +11,8 @@
             ?></p>
     </div>
 
-    <?php if ($result['state']==1)
+    <?php if (isset($_SESSION['login'])) {
+    if ($result['state']==1)
     { ?>
         <form class="form" action="<?php echo $page_disc_processing ?>" method="post">
         <p> Ecrivez votre commentaire : </p>
@@ -31,10 +32,19 @@
             <input class ="submit" type="submit" name="action" value="Like"/>
         </form>
     </div>
+    <?php } ?>
 
     <h3>Nombre de messages dans la discussion : </h3>
     <p><?php echo $result['nbMessage'].' / '.$result['nbMessMax'] ?></p>
 
 </div>
+
+<div class="Backtohome">
+    <p> Back to home </p>
+    <div>
+        <a href="<?php echo $indexcontroller ?>"> <img src="https://img.icons8.com/carbon-copy/100/000000/arrow.png"> </a>
+    </div>
+</div>
+
 </body>
 </html>

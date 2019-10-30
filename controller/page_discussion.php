@@ -11,6 +11,8 @@ session_start();
 $step=$_GET['error'];
 if ($step == 'ERROR_write') {
     echo 'Vous ne pouvez écrire qu\'une seule fois dans le même message'.'<br/>';
+} else if ($step == 'ERROR_tolong') {
+    echo 'Le message que vous voulez écrire est trop long'.'<br>';
 }
 
 require '../model/page_disc_model.php';

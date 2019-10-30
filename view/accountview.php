@@ -22,7 +22,7 @@
             <p> Mot de passe actuel: </p>
             <input class="bouton" autocomplete="off" autocapitalize="off" name="password" type="password"/></br>
             <button class="submit1" type="submit" value="login" name="submit"> Changer mon Identifiant </button>
-            <div class="a21"> <p> Un problème ? </p> <a href="<?php echo $myprofilecontroller ?>"> Mot de passe oublié ? </a> </div>
+            <div class="a21"> <p> Un problème ? </p> <a href="<?php echo $mymdpcontroller ?>"> Mot de passe oublié ? </a> </div>
 
         </form>
     </div>
@@ -36,7 +36,7 @@
             <p> Nouveau Mot de passe : </p>
             <input class="bouton" id="DoChangePassword" autocomplete="off" name="new_password" type="text"/>
             <button class="submit1" type="submit" value="password" name="submit"> Changer mon Mot de passe </button>
-            <div class="a21"> <p> Un problème ? </p> <a href="<?php echo $myprofilecontroller ?>"> Mot de passe oublié ? </a> </div>
+            <div class="a21"> <p> Un problème ? </p> <a href="<?php echo $mymdpcontroller ?>"> Mot de passe oublié ? </a> </div>
 
 
 

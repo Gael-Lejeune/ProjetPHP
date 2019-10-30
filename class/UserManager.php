@@ -23,10 +23,10 @@ class UserManager
         $query->execute();
     }
 
-    public function getUser($info)
+    public function getUser($email)
     {
         $query = $this->db->prepare('SELECT * FROM Users WHERE email =?');
-        $query->execute([$info]);
+        $query->execute([$email]);
         $result = $query->fetch(PDO::FETCH_ASSOC);
 
         return new User($result);
@@ -57,5 +57,26 @@ class UserManager
         $result = $query->fetch(PDO::FETCH_ASSOC);
 
         return !$result ? false : true;
+    }
+
+    public function email_exist ($email)
+    {
+        $query = $this->db->prepare('SELECT user_name FROM Users WHERE email = :email');
+        $query->execute(array(':email' => $email));
+        $result = $query->fetch(PDO::FETCH_ASSOC);
+
+        return isset($result['user_name']) ? true : false;
+    }
+
+    public function password()
+    {
+        $caracteres = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        $longueurMax = strlen($caracteres);
+        $chaineAleatoire = '';
+        for ($i = 0; $i < 15; $i++)
+        {
+            $chaineAleatoire .= $caracteres[rand(0, $longueurMax - 1)];
+        }
+        return $chaineAleatoire;
     }
 }

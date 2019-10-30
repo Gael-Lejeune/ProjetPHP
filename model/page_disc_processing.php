@@ -15,13 +15,18 @@ $discussion = new Discussion($disc_array);
 
 if ($action == 'Ajouter mon message')
 {
-    $message = $manager->getOpenMsg($discussion->getIdDiscussion());
+    if ($discussion->getState() == 1) {
+        $message = $manager->getOpenMsg($discussion->getIdDiscussion());
 
-    if ($manager->canWrite($_SESSION['email'], $discussion->getIdDiscussion(), $message->getIdMsg())) {
-        $msg = $_POST['texte'];
-        $manager->concatenation($message, $msg);
-    } else {
-        header("location:$page_disc_controller?error=ERROR_write");
+        if ($manager->canWrite($_SESSION['email'], $discussion->getIdDiscussion(), $message->getIdMsg())) {
+            $msg = $_POST['texte'];
+            if (preg_match('/^[^\s]+\s?[^\s]*$/', $msg))
+                $manager->concatenation($message, $msg);
+            else
+                header("location:$page_disc_controller?error=ERROR_tolong");
+        } else {
+            header("location:$page_disc_controller?error=ERROR_write");
+        }
     }
 
     header("location:$page_disc_controller");
@@ -29,8 +34,11 @@ if ($action == 'Ajouter mon message')
 {
     $message = $manager->getOpenMsg($discussion->getIdDiscussion());
 
-    if ($manager->getTexte($message->getIdMsg()) != '')
-        $manager->closeMsg($message);
+    if (!$manager->canWrite($_SESSION['email'], $discussion->getIdDiscussion(), $message->getIdMsg())) {
+        if ($manager->getTexte($message->getIdMsg()) != '')
+            $manager->closeMsg($message);
+    }
+
 
     header("location:$page_disc_controller");
 } else if ($action == 'Like')
