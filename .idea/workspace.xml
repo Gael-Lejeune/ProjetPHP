@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="394d6aa1-3445-40aa-85a5-e353a8e0f4cd" name="Default Changelist" comment="">
+fault="true" id="394d6aa1-3445-40aa-85a5-e353a8e0f4cd" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/controller/indexpagination.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/model/indexmodel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
@@ -19,9 +19,16 @@
       <change beforePath="$PROJECT_DIR$/class/Message.php" beforeDir="false" afterPath="$PROJECT_DIR$/class/Message.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/class/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/class/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/class/UserManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/class/UserManager.php" afterDir="false" />
+
       <change beforePath="$PROJECT_DIR$/controller/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/link.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/link.inc.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/mdp_processing.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/mdp_processing.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/test_chat_proc2.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/test_chat_proc2.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/utils.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/utils.inc.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/accountview.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/accountview.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/create_discussion_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/create_discussion_view.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/indexview.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/indexview.php" afterDir="false" />
+
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -96,6 +103,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -119,6 +128,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/view" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -194,6 +204,7 @@
       <workItem from="1571206629361" duration="3960000" />
       <workItem from="1571293788985" duration="9096000" />
       <workItem from="1572205560249" duration="20702000" />
+
       <workItem from="1572275404892" duration="103000" />
       <workItem from="1572275516193" duration="1202000" />
       <workItem from="1572276777642" duration="27000" />

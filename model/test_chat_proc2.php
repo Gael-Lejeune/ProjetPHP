@@ -13,7 +13,6 @@ $manager = new UserManager($db);
 
 //$owner = new User($_SESSION['name'], $_SESSION['email'], $_SESSION['password']);
 
-
 $action=$_POST['action'];
 
 $id_discussion = 2;
@@ -70,7 +69,6 @@ if ($action == 'discussion'){
     querycheck($dbLink, $query);
 }
 */
-
 
 
 ?>

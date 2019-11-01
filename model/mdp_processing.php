@@ -1,29 +1,38 @@
 <?php
 
-$dblink=dtbconnect();
+include "../model/utils.inc.php";
+include "../model/link.inc.php";
+include '../model/dtb.inc.php';
 
-$email=$_POST['email'];
+include_classe(); //inclusion des classes nécessaires
+$db = dtb_connect_PDO(); //connection a la base de donnée avec PDO
+$manager = new UserManager($db);
 
-$query="SELECT email FROM user WHERE email='$email'";
+if (isset($_POST['email']))
+    $email=$_POST['email'];
 
-var_dump($email);
-exit;
+if ($manager->email_exist($email)) {
+    $user = $manager->getUser($email);
+    $new_password_user = $manager->password();
+    $new_password_bdd = md5($new_password_user);
 
-if (($dbResult = mysqli_query($dbLink, $query))) {
+    $user->setPassword($new_password_bdd);
+    $manager->updatePassword($user);
 
-    $aleatoire=rand(0,100000);
+    $message = 'Voici votre nouveau mot de passe : '.$new_password_user.'<br>';
+    $message .= 'Vous pourrez le changer dans votre page \'My profile\'';
 
-    $new_password = md5($aleatoire);
+    mail($user->getEmail(), 'Réinitialisation de votre mot de passe FreeNote', $message);
 
-    $message = "Voici votre nouveau mot de passe : ".$new_password."\nVous pourrez le modifier dans la section myProfile";
-    mail($email, 'Réinitialisation de votre mot de passe Free Note', $message);
-
-    $query = "UPDATE user SET password=md5($new_password) WHERE email='$email'";
-    $dbResult = querycheck($dblink, $query);
-
-    header("Location:$logincontroller");
-
-} else {
-    header("Location:$logincontroller");
+    if ($_SESSION['login']) {
+        header("location:$myprofilecontroller");
+    } else {
+        header("location:$logincontroller");
+    }
 }
+
+
+
+
+
 

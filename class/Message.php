@@ -1,10 +1,17 @@
 <?php
 class Message
 {
-    private $idMsg; //auto-implement
-    private $idDiscussion; //NEED
-    private $state; //default (1 = ouvert, 0 = fermer)
-    private $text; //default
+    private $idMsg; // id du message (unique et auto-implement)
+    private $idDiscussion; // id de la discussion dans lequel le message est écrit
+    private $state; // 1 = message ouvert, 0 = message fermé
+    private $text; // texte contenu dans le message
+
+    //getteurs
+    public function getIdMsg()
+    {
+        return $this->idMsg;
+    }
+
 
     public function getIdMsg()
     {
@@ -25,6 +32,8 @@ class Message
     {
         return $this->text;
     }
+
+    //setteurs
 
     public function setIdMsg($id_msg)
     {
@@ -49,24 +58,17 @@ class Message
         $this->text = $text;
     }
 
-    public function closeMsg ()
-    {
-        $this->state = 0;
-    }
-
-    public function concatenation ($text)
-    {
-        $text = (string) $text;
-        $this->text .= ' '.$text;
-    }
-
+    //constructeur -> appelle la fonction hydrate
     public function __construct(array $donnees)
     {
         $this->hydrate($donnees);
+
     }
 
+    // fonction hydrate -> appelle les setteurs necessaires à la création de la discussion en fonction des valeurs du tableau qui lui est passé en paramètre
     public function hydrate(array $donnees)
     {
+
         foreach ($donnees as $key => $value)
         {
             $method = 'set'.ucfirst($key);

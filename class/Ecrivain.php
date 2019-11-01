@@ -1,10 +1,13 @@
 <?php
+
+// sert à savoir qui à écrit dans quel message
 class Ecrivain
 {
-    private $writer;
-    private $idMsg;
-    private $idDiscussion;
+    private $writer; // email de la personne
+    private $idMsg; // id du message dans lequel l'utilisateur à écrit
+    private $idDiscussion; // id de la discussion dans laquelle se trouve le message
 
+    //getteurs
     public function getIdDiscussion()
     {
         return $this->idDiscussion;
@@ -20,6 +23,7 @@ class Ecrivain
         return $this->writer;
     }
 
+    //setteurs
     public function setIdDiscussion($id_discussion)
     {
         $this->idDiscussion = $id_discussion;
@@ -38,10 +42,13 @@ class Ecrivain
         }
     }
 
+    //constructeur -> appelle la fonction hydrate
     public function __construct(array $donnees)
     {
         $this->hydrate($donnees);
     }
+
+    // fonction hydrate -> appelle les setteurs necessaires à la création de la discussion en fonction des valeurs du tableau qui lui est passé en paramètre
 
     public function hydrate(array $donnees)
     {

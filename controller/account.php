@@ -6,6 +6,7 @@ include '../model/dtb.inc.php';
 //Demarrage de la page
 start_page("myprofile", $logincss, "stylesheet", "fonts.googleapis.com/css?family=Oswald&display=swap", "stylesheet", $background4);
 
+
 //Demarrage de la session
 session_start();
 
