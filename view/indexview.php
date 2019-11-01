@@ -4,8 +4,6 @@
 require $navbar;
 ?>
 
-
-
 <!-- Création du bloc contenant la description et le titre description -->
 <div class="description">
     <h1> Description du site  </h1>
@@ -40,11 +38,11 @@ require $navbar;
         <?php } ?></p>
     </div>
     <div class="Prevnext">
-        <?php if ($_GET['page'] != 1)
+        <?php if ($pageActuelle > 1)
         {?>
             <div class="Backtohome">
                 <div class="left">
-                    <a href="<?php echo $indexcontroller."?page=".($_GET['page']-1) ?>">
+                    <a href="<?php echo $indexcontroller."?page=".($pageActuelle-1) ?>">
                         <img class="left1" src="https://img.icons8.com/carbon-copy/100/000000/double-left.png">
                     </a>
                 </div>
@@ -56,7 +54,7 @@ require $navbar;
         for($i=1; $i<=$nombreDePages; $i++) //On fait notre boucle
         {
             //On va faire notre condition
-            if($i==$_GET['page']) //Si il s'agit de la page actuelle...
+            if($i==$pageActuelle) //Si il s'agit de la page actuelle...
             {
                 echo ' [ '.$i.' ] ';
             }
@@ -66,11 +64,11 @@ require $navbar;
             }
         }
         echo '</div>';
-        if ($_GET['page'] != $nombreDePages){?>
+        if ($pageActuelle < $nombreDePages){?>
             <div class="Backtohome">
                 <p> Next </p>
                 <div class="right">
-                    <a href="<?php echo $indexcontroller."?page=".($_GET['page']+1) ?>">
+                    <a href="<?php echo $indexcontroller."?page=".($pageActuelle+1) ?>">
                         <img class="left" src="https://img.icons8.com/carbon-copy/100/000000/double-right.png">
                     </a>
                 </div>
@@ -80,3 +78,4 @@ require $navbar;
 </div>
 </body>
 </html>
+

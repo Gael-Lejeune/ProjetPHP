@@ -26,7 +26,7 @@ function include_classe () // Charge uniquement les classes necessaire au fichie
 }
 ?>
 <?php
-require "../toolclass/function.inc.php";
+//require "../toolclass/function.inc.php";
 
 // Connexion à la base de données
 try

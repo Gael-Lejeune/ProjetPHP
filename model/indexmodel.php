@@ -4,7 +4,9 @@ include_classe(); //inclusion des classes nécessaires
 $db = dtb_connect_PDO(); //connection a la base de donnée avec PDO
 $manager = new Disc_Mess_Manager($db);
 
-$messagesParPage = 2;
+
+$messagesParPage = file("../ParamsAdmin.txt");
+$messagesParPage = $messagesParPage[0];
 
 //Une connexion SQL doit être ouverte avant cette ligne...
 $total=$manager->getNbDiscussion(); //Nous récupérons le contenu de la requête dans $retour_total
@@ -33,6 +35,11 @@ else // Sinon
 $premiereEntree=($pageActuelle-1)*$messagesParPage; // On calcul la première entrée à lire
 
 $result = $manager->getDiscussionPagination($premiereEntree,$messagesParPage); // On récupère le nombre de discussion necessaire
+
+for( $i = 0 ; $i < $messagesParPage ; $i++ )
+{
+    $msg_Disc1 = $manager->getMsgForIDDisc($result[$i]['idDiscussion']);
+}
 
 // Gestion des onglets presents dans la barre de navigation
 if ($_SESSION['login']) // si la personne est connecte

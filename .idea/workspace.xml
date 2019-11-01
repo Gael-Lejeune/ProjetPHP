@@ -1,35 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-fault="true" id="394d6aa1-3445-40aa-85a5-e353a8e0f4cd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/controller/indexpagination.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/indexmodel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/ProjetPHP.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/webServers.xml" beforeDir="false" />
+    <list default="true" id="394d6aa1-3445-40aa-85a5-e353a8e0f4cd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/class/Disc_Mess_Manager.php" beforeDir="false" afterPath="$PROJECT_DIR$/class/Disc_Mess_Manager.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/class/Discussion.php" beforeDir="false" afterPath="$PROJECT_DIR$/class/Discussion.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/class/Ecrivain.php" beforeDir="false" afterPath="$PROJECT_DIR$/class/Ecrivain.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/class/Message.php" beforeDir="false" afterPath="$PROJECT_DIR$/class/Message.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/class/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/class/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/class/UserManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/class/UserManager.php" afterDir="false" />
-
-      <change beforePath="$PROJECT_DIR$/controller/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/link.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/link.inc.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/mdp_processing.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/mdp_processing.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/test_chat_proc2.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/test_chat_proc2.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/utils.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/utils.inc.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/accountview.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/accountview.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/create_discussion_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/create_discussion_view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/admin_processing.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/admin_processing.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/dtb.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/dtb.inc.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/indexmodel.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/indexmodel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/indexview.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/indexview.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/page_disc_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/page_disc_view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/see_disc_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/see_disc_view.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -56,46 +34,18 @@ fault="true" id="394d6aa1-3445-40aa-85a5-e353a8e0f4cd" name="Default Changelist"
     <expand>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="LTRDTB" type="feb32156:DbDataSourceImpl" />
+        <item name="php" type="feb32156:DbDataSourceImpl" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="LTRDTB" type="feb32156:DbDataSourceImpl" />
+        <item name="php" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="LTRDTB" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="latableronde_dtb: schema" type="ebfa3cd1:MariaImplModel$Schema" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="LTRDTB" type="feb32156:DbDataSourceImpl" />
+        <item name="php" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="latableronde_dtb: schema" type="ebfa3cd1:MariaImplModel$Schema" />
-        <item name="discussion: table" type="dbc44a63:MariaImplModel$Table" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="LTRDTB" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="latableronde_dtb: schema" type="ebfa3cd1:MariaImplModel$Schema" />
-        <item name="ecrivain: table" type="dbc44a63:MariaImplModel$Table" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="LTRDTB" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="latableronde_dtb: schema" type="ebfa3cd1:MariaImplModel$Schema" />
-        <item name="message: table" type="dbc44a63:MariaImplModel$Table" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="LTRDTB" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="latableronde_dtb: schema" type="ebfa3cd1:MariaImplModel$Schema" />
-        <item name="Users: table" type="dbc44a63:MariaImplModel$Table" />
       </path>
     </expand>
     <select />
@@ -104,8 +54,6 @@ fault="true" id="394d6aa1-3445-40aa-85a5-e353a8e0f4cd" name="Default Changelist"
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="JavaScript File" />
-        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -129,7 +77,6 @@ fault="true" id="394d6aa1-3445-40aa-85a5-e353a8e0f4cd" name="Default Changelist"
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/view" />
-    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -140,15 +87,15 @@ fault="true" id="394d6aa1-3445-40aa-85a5-e353a8e0f4cd" name="Default Changelist"
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\IUT\ProjetPHP\view" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Laetitia\PhpstormProjects\ProjetPHP\model" />
       <recent name="D:\IUT\ProjetPHP\model" />
       <recent name="D:\IUT\ProjetPHP\controller" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/html/images" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\IUT\ProjetPHP\view" />
+      <recent name="$PROJECT_DIR$/html" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -170,7 +117,7 @@ fault="true" id="394d6aa1-3445-40aa-85a5-e353a8e0f4cd" name="Default Changelist"
           <expand>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@e2670915" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@a0192620" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
           </expand>
           <select />
@@ -205,7 +152,6 @@ fault="true" id="394d6aa1-3445-40aa-85a5-e353a8e0f4cd" name="Default Changelist"
       <workItem from="1571206629361" duration="3960000" />
       <workItem from="1571293788985" duration="9096000" />
       <workItem from="1572205560249" duration="20702000" />
-
       <workItem from="1572275404892" duration="103000" />
       <workItem from="1572275516193" duration="1202000" />
       <workItem from="1572276777642" duration="27000" />
@@ -214,6 +160,8 @@ fault="true" id="394d6aa1-3445-40aa-85a5-e353a8e0f4cd" name="Default Changelist"
       <workItem from="1572366641754" duration="1638000" />
       <workItem from="1572440610188" duration="6317000" />
       <workItem from="1572448216476" duration="3977000" />
+      <workItem from="1572646009351" duration="67000" />
+      <workItem from="1572646141890" duration="1419000" />
     </task>
     <task id="LOCAL-00001" summary="Debut du projet">
       <created>1569846323677</created>
@@ -404,56 +352,7 @@ fault="true" id="394d6aa1-3445-40aa-85a5-e353a8e0f4cd" name="Default Changelist"
       <option name="project" value="LOCAL" />
       <updated>1572268254443</updated>
     </task>
-    <task id="LOCAL-00028" summary="Creation des classes Discussion et Message">
-      <created>1572271530436</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1572271530596</updated>
-    </task>
-    <task id="LOCAL-00029" summary="Correction de problemes avec la classe User survenus durant la nuit et verification de la connexion de l'utilisateur pour acceder a la page &quot;mon profil&quot;">
-      <created>1572351860347</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1572351860357</updated>
-    </task>
-    <task id="LOCAL-00030" summary="Création des discussions opérationel, travail pour afficher les discussions sur l'index en cours">
-      <created>1572365429990</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1572365429990</updated>
-    </task>
-    <task id="LOCAL-00031" summary="On peut creer des discussion, ecrire des messages, liker ... &#10;TODO : regler le probleme de message maximum et faire la pagination">
-      <created>1572386607697</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1572386607722</updated>
-    </task>
-    <task id="LOCAL-00032" summary="Finission de la page sur les discussions et debut de la page pour voir ses propres discussions">
-      <created>1572448112436</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1572448112436</updated>
-    </task>
-    <task id="LOCAL-00033" summary="Début de la gestion du super utilisateur avec création d'une page dédiée pour pouvoir modifier des choses sur le site ou modifier les informations des utilisateurs. &#10;&#10;TODO : faire le admin_processing / trouver un moyen de stocker les variables serveur en dehors de la base de donnée.">
-      <created>1572476526811</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1572476526851</updated>
-    </task>
-    <task id="LOCAL-00034" summary="commentaire du code sur toutes les classes et les fichiers du dossier model">
-      <created>1572624096989</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1572624097004</updated>
-    </task>
-    <option name="localTasksCounter" value="35" />
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -483,6 +382,11 @@ fault="true" id="394d6aa1-3445-40aa-85a5-e353a8e0f4cd" name="Default Changelist"
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <MESSAGE value="Debut du projet" />
+    <MESSAGE value="Debut du projet et création des fichiers." />
+    <MESSAGE value="Modification de l'index pour la prise en compte de la session actuelle." />
+    <MESSAGE value="Accès à la base de donnée et création d'une session" />
+    <MESSAGE value="Création du fichier gérant le login d'un utilisateur" />
     <MESSAGE value="Ajout des liens de chaques pages" />
     <MESSAGE value="affichage message erreur en cas de mauvais valeurs des champs" />
     <MESSAGE value="verification des erreurs en cas de mauvaise confirmation de mot de passe et en cas de non cochage des conditions d'utilisation" />
@@ -501,13 +405,6 @@ fault="true" id="394d6aa1-3445-40aa-85a5-e353a8e0f4cd" name="Default Changelist"
     <MESSAGE value="Résolution des problèmes de liens dynamiques et changement du nom de certains fichier pour adopter une meilleure logique" />
     <MESSAGE value="Résolution des problèmes de liens dynamiques et de traitement des formulaires d'inscription et de changement de mdp ou d'username" />
     <MESSAGE value="Creation des classes User et UserManager + modification du code pour utiliser la POO et PDO" />
-    <MESSAGE value="Creation des classes Discussion et Message" />
-    <MESSAGE value="Correction de problemes avec la classe User survenus durant la nuit et verification de la connexion de l'utilisateur pour acceder a la page &quot;mon profil&quot;" />
-    <MESSAGE value="Création des discussions opérationel, travail pour afficher les discussions sur l'index en cours" />
-    <MESSAGE value="On peut creer des discussion, ecrire des messages, liker ... &#10;TODO : regler le probleme de message maximum et faire la pagination" />
-    <MESSAGE value="Finission de la page sur les discussions et debut de la page pour voir ses propres discussions" />
-    <MESSAGE value="Début de la gestion du super utilisateur avec création d'une page dédiée pour pouvoir modifier des choses sur le site ou modifier les informations des utilisateurs. &#10;&#10;TODO : faire le admin_processing / trouver un moyen de stocker les variables serveur en dehors de la base de donnée." />
-    <MESSAGE value="commentaire du code sur toutes les classes et les fichiers du dossier model" />
-    <option name="LAST_COMMIT_MESSAGE" value="commentaire du code sur toutes les classes et les fichiers du dossier model" />
+    <option name="LAST_COMMIT_MESSAGE" value="Creation des classes User et UserManager + modification du code pour utiliser la POO et PDO" />
   </component>
 </project>
