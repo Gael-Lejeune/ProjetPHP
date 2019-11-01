@@ -3,7 +3,15 @@
 
 class Serveur_Manager
 {
+    /**
+     * @var PDO
+     */
     private $db;
+
+    public function setDb($db)
+    {
+        $this->db = $db;
+    }
 
     public function __construct($db)
     {

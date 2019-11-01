@@ -40,8 +40,6 @@ $mdp_processing='../model/mdp_processing.php';
 
 // GESTION DISCUSSIONS //
 
-$pagination = 2;
-
 $create_disc='Créer une discussion';
 $create_disc_controller='../controller/create_discussion.php';
 $create_disc_model='../model/create_discussion_processing.php';

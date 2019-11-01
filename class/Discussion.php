@@ -1,14 +1,17 @@
 <?php
+
+// réunit toutes les informations d'un discussion
 class Discussion
 {
-    private $idDiscussion;
-    private $discName;
-    private $owner;
-    private $nbMessMax;
-    private $state; // 1 = ouvert, 0 = fermer
-    private $nbMessage;
-    private $nbLike;
+    private $idDiscussion; // id de la discussion (unique et auto-increment)
+    private $discName; // nom de la discussion
+    private $owner; // email de l'utilisateur qui créé la discussion
+    private $nbMessMax; // nombre de message maximum autorisé dans la discussion (entre 0 et  30)
+    private $state; // 1 = discussion ouverte, 0 = discussion fermée
+    private $nbMessage; // nombre de message actuel dans la discussion (valeur par défault = 0)
+    private $nbLike; // nombre de fois ou la discussion a été liké (valeur par default = 0)
 
+    // getteurs
     public function getOwner()
     {
         return $this->owner;
@@ -44,24 +47,7 @@ class Discussion
         return $this->nbMessMax;
     }
 
-    public function closeDisc()
-    {
-        $this->state = 0;
-    }
-
-    public function incrNbMess()
-    {
-        $this->nbMessage += 1;
-        if ($this->nbMessage >= $this->nbMessMax) {
-            $this->closeDisc();
-        }
-    }
-
-    public function incrNbLike()
-    {
-        $this->nbLike += 1;
-    }
-
+    //setteurs
     public function setNbMessMax($nb_mess_max)
     {
         if ($nb_mess_max > 0 and $nb_mess_max <= 30) {
@@ -106,11 +92,13 @@ class Discussion
         }
     }
 
+    //constructeur -> appelle la fonction hydrate
     public function __construct(array $donnees)
     {
         $this->hydrate($donnees);
     }
 
+    // fonction hydrate -> appelle les setteurs necessaires à la création de la discussion en fonction des valeurs du tableau qui lui est passé en paramètre
     public function hydrate(array $donnees)
     {
         foreach ($donnees as $key => $value)
@@ -122,5 +110,4 @@ class Discussion
             }
         }
     }
-
 }

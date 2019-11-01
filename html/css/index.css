@@ -195,7 +195,7 @@ h1 {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    position: absolute;
+    position: fixed; /* Stay in place */
     background-color: #101824;
     border-radius: 4px;
     transition: margin-right .5s; /* If you want a transition effect */

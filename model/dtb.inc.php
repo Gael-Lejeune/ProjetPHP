@@ -1,39 +1,13 @@
 <?php
 
-function dtbconnect(){
-//ouverture connexion serveur BD
-    $dbLink = mysqli_connect('mysql-latableronde.alwaysdata.net', '191121', 'tableronde')
-    or die('Erreur de connexion au serveur : ' . mysqli_connect_error());
-//sélection BD
-    mysqli_select_db($dbLink, 'latableronde_dtb')
-    or die('Erreur dans la sélection de la base : ' . mysqli_error($dbLink));
-    return $dbLink;
-}
+// Contient les fonction de base en rapport avec la base de donnée et la POO
 
-
-function querycheck($dbLink, $query)
-{
-//Verification de la viabilite de la requete
-    if (!($dbResult = mysqli_query($dbLink, $query))) {
-        echo 'Erreur de requête<br/>';
-        // type d'erreur
-        echo 'Erreur : ' . mysqli_error($dbLink) . '<br/><br/>';
-        // requête envoyée
-        echo 'Requête : ' . $query . '<br/>';
-        exit();
-    }
-    else {
-        return $dbResult;
-    }
-}
-
-
-function loginckeck($manager)
+function loginckeck($manager) // renvoi vrai si la personne est bien connecté (en verifiant les variables SESSION) et faux dans l'autre cas
 {
     return ($manager->exist($_SESSION['email'], $_SESSION['password']) and $_SESSION['login']) ? true : false;
 }
 
-function dtb_connect_PDO ()
+function dtb_connect_PDO () // Connection avec la base de donnée avec PDO
 {
     $db = new PDO('mysql:host=mysql-latableronde.alwaysdata.net;dbname=latableronde_dtb', 191121, 'tableronde');
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
@@ -41,7 +15,7 @@ function dtb_connect_PDO ()
     return $db;
 }
 
-function include_classe ()
+function include_classe () // Charge uniquement les classes necessaire au fichier dans laquelle la fonction est appellé
 {
     function chargerClasse ($classname)
     {

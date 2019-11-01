@@ -1,19 +1,38 @@
 <?php
+
+// Classe Manager permettant de modifier la table User à partir de requêtes SQL
 class UserManager
 {
+    // ***************************** Creation classe *************************************
+
+    /**
+     * @var PDO
+     */
     private $db; // instance de PDO
 
-    public function __construct($db)
+    /**
+     * UserManager constructor.
+     * @param $db
+     */
+    public function __construct($db) // Constructeur
     {
         $this->setDB($db);
     }
 
+    /**
+     * @param PDO $db
+     */
     public function setDb(PDO $db)
     {
         $this->db = $db;
     }
 
-    public function add(User $user)
+    // ***************************** Fonctions *************************************
+
+    /**
+     * @param User $user
+     */
+    public function add(User $user) // permet d'ajouter un utilisateur dans la table user
     {
         $query = $this->db->prepare('INSERT INTO Users(user_name, email, password, role) VALUES (:user_name, :email, :password, :role)');
         $query->bindValue(':user_name', $user->getName());
@@ -23,7 +42,11 @@ class UserManager
         $query->execute();
     }
 
-    public function getUser($email)
+    /**
+     * @param string $email
+     * @return User
+     */
+    public function getUser($email) // permet de recuperer un objet de type User contenant toutes les informations de l'utilisateur qui a pour email celui passé en paramètre
     {
         $query = $this->db->prepare('SELECT * FROM Users WHERE email =?');
         $query->execute([$email]);
@@ -32,25 +55,39 @@ class UserManager
         return new User($result);
     }
 
-    public function updateName (User $user)
+    /**
+     * @param User $user
+     */
+    public function updateName (User $user) // modifie le nom de l'utilisateur passé en paramètre à partir du nom contenu dans ce même parmaètre
     {
         $query = $this->db->prepare('UPDATE Users SET user_name = ? WHERE email = ?');
         $query->execute([$user->getName(), $user->getEmail()]);
     }
 
-    public function updatePassword (User $user)
+    /**
+     * @param User $user
+     */
+    public function updatePassword (User $user) // modifie le mot de passe de l'utilisateur passé en paramètre à partir du mot de passe contenu dans ce même parmaètre
     {
         $query = $this->db->prepare('UPDATE Users SET password = ? WHERE email = ?');
         $query->execute([$user->getPassword(), $user->getEmail()]);
     }
 
-    public function updateRole (User $user)
+    /**
+     * @param User $user
+     */
+    public function updateRole (User $user) // modifie le role de l'utilisateur passé en paramètre à partir du role contenu dans ce même parmaètre
     {
         $query = $this->db->prepare('UPDATE Users SET role = ? WHERE email = ?');
         $query->execute([$user->getRole(), $user->getEmail()]);
     }
 
-    public function exist ($email, $password)
+    /**
+     * @param string $email
+     * @param md5(string) $password
+     * @return bool
+     */
+    public function exist ($email, $password) // renvoi vrai si l'utilisateur est bien entrer dans la base de donnée et que le mot de passe correspond, faux dans l'autre cas
     {
         $query = $this->db->prepare('SELECT user_name FROM Users WHERE email = :email AND password = :password');
         $query->execute(array(':email' => $email, ':password' => $password));
@@ -59,7 +96,11 @@ class UserManager
         return !$result ? false : true;
     }
 
-    public function email_exist ($email)
+    /**
+     * @param $email
+     * @return bool
+     */
+    public function email_exist ($email) // renvoi vrai si l'utilisateur est bien entrer dans la base de donnée, faux dans l'autre cas
     {
         $query = $this->db->prepare('SELECT user_name FROM Users WHERE email = :email');
         $query->execute(array(':email' => $email));
@@ -68,7 +109,10 @@ class UserManager
         return isset($result['user_name']) ? true : false;
     }
 
-    public function password()
+    /**
+     * @return string
+     */
+    public function password() // renvoi une chaine de 15 caractères aléatoire, qui correspondra à un nouveau mot de passe aléatoire.
     {
         $caracteres = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
         $longueurMax = strlen($caracteres);

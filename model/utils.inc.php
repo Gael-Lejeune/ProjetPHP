@@ -1,6 +1,6 @@
 <?php
 
-function start_page($title, $lien1, $rel1, $lien2, $rel2, $background){
+function start_page($title, $lien1, $rel1, $lien2, $rel2, $background){ // fonction qui affiche tout le debut de la partie html
 
     echo'<!DOCTYPE html> 
 <html lang="fr">
@@ -13,6 +13,6 @@ function start_page($title, $lien1, $rel1, $lien2, $rel2, $background){
 
 };
 
-function end_page(){
+function end_page(){ // fonction qui affiche la fin de la partie html
     echo'</body></html>';
 }
