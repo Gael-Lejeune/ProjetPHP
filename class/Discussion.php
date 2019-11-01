@@ -1,21 +1,22 @@
 <?php
 class Discussion
 {
-    private $id_discussion;
+    private $idDiscussion;
+    private $discName;
     private $owner;
-    private $nb_mess_max;
+    private $nbMessMax;
     private $state; // 1 = ouvert, 0 = fermer
-    private $nb_messages;
-    private $nb_like;
+    private $nbMessages;
+    private $nbLike;
 
-    public function getIdDiscussion()
+    public function getOwner()
     {
-        return $this->id_discussion;
+        return $this->owner;
     }
 
-    public function getNbMessages()
+    public function getDiscName()
     {
-        return $this->nb_messages;
+        return $this->discName;
     }
 
     public function getState()
@@ -23,20 +24,103 @@ class Discussion
         return $this->state;
     }
 
-    public function __construct($id)
+    public function getIdDiscussion()
     {
-        $this->nb_messages = 0;
-        $this->state = 1;
-        $this->id_discussion = $id;
+        return $this->idDiscussion;
     }
 
-    public function incrMessage ()
+    public function getNbMessages()
     {
-        $this->nb_messages += 1;
+        return $this->nbMessages;
     }
 
-    public function closeDiscussion ()
+    public function getNbLike()
+    {
+        return $this->nbLike;
+    }
+
+    public function getNbMessMax()
+    {
+        return $this->nbMessMax;
+    }
+
+    public function closeDisc()
     {
         $this->state = 0;
     }
+
+    public function incrNbMess()
+    {
+        $this->nbMessages += 1;
+        if ($this->nbMessages >= $this->nbMessMax) {
+            $this->closeDisc();
+        }
+    }
+
+    public function incrNbLike()
+    {
+        $this->nbLike += 1;
+    }
+
+    public function setNbMessMax($nb_mess_max)
+    {
+        if ($nb_mess_max > 0 and $nb_mess_max <= 30) {
+            $this->nbMessMax = $nb_mess_max;
+        }
+    }
+
+    public function setOwner($owner)
+    {
+        $owner = (string) $owner;
+        if (preg_match('/^[a-z0-9._-]+@[a-z0-9._-]{2,}\.[a-z]{2,4}$/', $owner)) {
+            $this->owner = $owner;
+        }
+    }
+
+    public function setDiscName($disc_name)
+    {
+        $disc_name = (string) $disc_name;
+        $this->discName = $disc_name;
+    }
+
+    public function setNbLike($nb_like)
+    {
+        $nb_like = (int) $nb_like;
+        $this->nbLike = $nb_like;
+    }
+
+    public function setIdDiscussion($id_discussion)
+    {
+        $this->idDiscussion = $id_discussion;
+    }
+
+    public function setNbMessages($nb_messages)
+    {
+        $this->nbMessages = $nb_messages;
+    }
+
+    public function setState($state)
+    {
+        if ($state == 0 or $state == 1) {
+            $this->state = $state;
+        }
+    }
+
+    public function __construct(array $donnees)
+    {
+        $this->hydrate($donnees);
+    }
+
+    public function hydrate(array $donnees)
+    {
+        foreach ($donnees as $key => $value)
+        {
+            $method = 'set'.ucfirst($key);
+            if (method_exists($this, $method))
+            {
+                $this->$method($value);
+            }
+        }
+    }
+
 }
