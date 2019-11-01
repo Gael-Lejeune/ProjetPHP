@@ -6,10 +6,10 @@ include '../model/dtb.inc.php';
 
 include_classe(); //inclusion des classes nécessaires
 $db = dtb_connect_PDO(); //connection a la base de donnée avec PDO
-$user_manager = new UserManager($db);
-$disc_manager = new Disc_Mess_Manager($db);
+$user_manager = new UserManager($db); // Création du manager pour les utilisateurs
+$disc_manager = new Disc_Mess_Manager($db); // Création du manger pour les messages et les discussions
 
-session_start();
+session_start(); // On demarre la session
 
 //Si la personne est connecte
 if (loginckeck($user_manager)){
@@ -20,21 +20,22 @@ if (loginckeck($user_manager)){
         $msg = $_POST['message'];
         $nb_msg_max = $_POST['nb_msg_max'];
     } else {
-        header ("location:$create_disc_controller?step=ERROR_incomplet");
+        header ("location:$create_disc_controller?step=ERROR_incomplet"); // Si le formulaire est incomplet on renvoi une erreur
     }
 
     $discussion = new Discussion(['discName' => $name_disc,'owner' => $_SESSION['email'], 'nbMessMax' => $nb_msg_max]);
-    $disc_manager->add_disc($discussion);
+    $disc_manager->add_disc($discussion); // On créer une nouvelle discussion
 
     $message = new Message(['idDiscussion' => $disc_manager->getIDLastDisc(),'text' => $msg]);
-    $disc_manager->add_msg($message);
+    $disc_manager->add_msg($message); // On créer le premier message de la discussion
 
     $ecrivain = new Ecrivain(['writer' => $_SESSION['email'],'idMsg' =>$disc_manager->getIDLastMsg(), 'idDiscussion' => $disc_manager->getIDLastDisc()]);
-    $disc_manager->add_ecrv($ecrivain);
+    $disc_manager->add_ecrv($ecrivain); // On ajoute un tuple dans ecrivain pour indiquer que l'utilisateur a bien ecrit dans le message
 
-    header("location:$indexcontroller");
+    header("location:$indexcontroller"); // On revient sur l'index
 
+// Si la personne n'est pas connecté
 }  else {
     session_destroy();
-    header("location:$indexcontroller?error=ERROR_auth");
+    header("location:$indexcontroller?error=ERROR_auth"); // on revient sur l'index en renvoyant une erreur
 }

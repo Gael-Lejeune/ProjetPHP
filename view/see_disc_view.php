@@ -10,25 +10,24 @@ require $navbar;
 <h2> Vous pouvez encore en ouvrir <?php echo $nbDiscRestantes ?> </h2>
 
 <div class="container-discussion">
-    <div class="pipi">
-    <?php foreach ($disc_liste as $key_disc => $disc_array) {
-        $discussion = new Discussion ($disc_array); ?>
-        <form action="<?php echo $page_disc_controller ?>" method="post">
-            <button class="merde" value="<?php echo $discussion->getIdDiscussion() ?>"
-                    name="discussion"> <?php echo $discussion->getDiscName() ?></button>
-        </form>
-
-        <div class="contenu-discussion">
-            <p><?php
-                $mess_liste = $disc_manager->getMsgForIDDisc($discussion->getIdDiscussion());
-                foreach ($mess_liste as $key_mess => $mess_array) {
-                    $message = new Message($mess_array);
-                    echo $message->getText() . '<br>';
-                }
-                ?></p>
-        </div>
-        <div class="state">
-            <p>Etat :
+    <div class="discussion">
+        <div class="description">
+            <?php foreach ($disc_liste as $key_disc => $disc_array) {
+            $discussion = new Discussion ($disc_array); ?>
+            <form class="" action="<?php echo $page_disc_controller ?>" method="post">
+                <button value="<?php echo $discussion->getIdDiscussion() ?>" class="bouton"
+                    name="discussion"> <?php echo htmlspecialchars($discussion->getDiscName()) ?></button>
+            </form>
+            <div class="description-FreeNote">
+                <p><?php
+                    $mess_liste = $disc_manager->getMsgForIDDisc($discussion->getIdDiscussion());
+                    foreach ($mess_liste as $key_mess => $mess_array) {
+                        $message = new Message($mess_array);
+                        echo htmlspecialchars($message->getText()) . '<br>';
+                    }
+                    ?></p>
+            </div>
+            <p>State :
                 <?php if ($discussion->getState() == 1)
                     echo 'Open';
                 else if ($discussion->getState() == 0)

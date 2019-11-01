@@ -12,9 +12,9 @@ require $navbar;
         <div class="form">
             <!-- On affiche les variables definies au dessus -->
             <p> Identifiant </p>
-            <div class="info-personnelles"> <p> <?php echo $user->getName() ?> </p></div>
+            <div class="info-personnelles"> <p> <?php echo htmlspecialchars($user->getName()) ?> </p></div>
             <p> E-mail </p>
-            <div class="info-personnelles"> <p> <?php echo $user->getEmail() ?> </p></div>
+            <div class="info-personnelles"> <p> <?php echo htmlspecialchars($user->getEmail()) ?> </p></div>
 
         </div>
     </div>

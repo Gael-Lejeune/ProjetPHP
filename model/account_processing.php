@@ -3,11 +3,11 @@ include "../model/dtb.inc.php";
 include "../model/utils.inc.php";
 include  "../model/link.inc.php";
 
-session_start();
+session_start(); // on demarre la session
 
 include_classe(); //inclusion des classes nécessaires
 $db = dtb_connect_PDO(); //connection a la base de donnée avec PDO
-$manager = new UserManager($db);
+$manager = new UserManager($db); // création du manager
 
 //Si la personne est bien connecté
 if(loginckeck($manager)) {
@@ -15,9 +15,9 @@ if(loginckeck($manager)) {
     //Récupération des mot de passe
     $real_password = $_SESSION['password'];
     if (isset($_POST['password'])) {
-        $enter_password = md5($_POST['password']);
+        $enter_password = md5($_POST['password']); // on crypte le mot de passe
     } else {
-        header("location:$myprofilecontroller?step=ERROR_incomplet");
+        header("location:$myprofilecontroller?step=ERROR_incomplet"); // si le mot de passe n'a pas été entrer dans le formulaire
     }
 
     //Si les deux mots de passe correspondent
@@ -34,10 +34,10 @@ if(loginckeck($manager)) {
 
             $user = $manager->getUser($_SESSION['email']);
             $user->setPassword($new_password);
-            $manager->updatePassword($user);
+            $manager->updatePassword($user); // On met à jour le mot de passe dans la base de donnée
 
-            $_SESSION['password'] = $new_password;
-            header("Location:$myprofilecontroller");
+            $_SESSION['password'] = $new_password; // On met à jour la variable $_SESSION pour eviter les erreurs de connection
+            header("Location:$myprofilecontroller"); // On revient sur la même page
 
         // L'utilisateur veut changer son nom
         } elseif ($action == 'login') {
@@ -47,16 +47,17 @@ if(loginckeck($manager)) {
 
             $user = $manager->getUser($_SESSION['email']);
             $user->setUser_name($new_login);
-            $manager->updateName($user);
+            $manager->updateName($user); // On met à jour le pseudo dans la base de donnée
 
-            header("Location:$myprofilecontroller");
+            header("Location:$myprofilecontroller"); // On revient sur la même page
 
         }
     //Si les deux mots de passe ne correspondent pas
     } else {
-        header("Location:$myprofilecontroller?error=ERROR_mdp");
+        header("Location:$myprofilecontroller?error=ERROR_mdp"); // On revient sur la page en renvoyant une erreur
     }
+// si la personne n'est pas connecté
 } else {
     session_destroy();
-    header("location:$indexcontroller?error=ERROR_auth");
+    header("location:$indexcontroller?error=ERROR_auth"); // On revient sur l'index
 }

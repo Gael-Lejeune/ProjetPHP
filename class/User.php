@@ -6,7 +6,6 @@ class User
     private $password; // mot de passe de l'utilisateur (crypté et enregistré en MD)
     private $role; // membre ou administrateur
 
-
     //getteurs
     public function getEmail()
     {
@@ -55,7 +54,6 @@ class User
     }
 
     //constructeur -> appelle la fonction hydrate
-
     public function __construct(array $donnees)
     {
         $this->hydrate($donnees);

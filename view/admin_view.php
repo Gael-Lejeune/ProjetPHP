@@ -22,7 +22,7 @@
         <p>Si vous ne souhaitez pas modifier certaines informations, laissez la zone vide</p>
         <form class="form" action="<?php echo $admin_processing ?>" method="post">
             <p> Email de l'utilisateur dont vous souhaiter modifier les informations : </p>
-            <input class="bouton"autocomplete="off" name="email" type="text"/>
+            <input class="bouton" autocomplete="off" name="email" type="text" required/>
 
             <h4>Modifications : </h4>
 
@@ -37,7 +37,7 @@
             Member : <input class="bouton"autocomplete="off" name="role" type="checkbox" value="member"/>
             Admin : <input class="bouton"autocomplete="off" name="role" type="checkbox" value="admin"/>
 
-            <button class="submit1" type="submit" value="nbDisc" name="submit"> Mise à jour </button>
+            <button class="submit1" type="submit" value="user" name="submit"> Mise à jour </button>
         </form>
     </div>
 

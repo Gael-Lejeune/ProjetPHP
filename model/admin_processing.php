@@ -9,7 +9,6 @@ session_start();
 include_classe(); //inclusion des classes nécessaires
 $db = dtb_connect_PDO(); //connection a la base de donnée avec PDO
 $manager = new UserManager($db);
-$file = fopen("../ParamsAdmin.txt", "r+");
 
 //Si la personne est bien connecté
 if(loginckeck($manager)) {
@@ -22,19 +21,12 @@ if(loginckeck($manager)) {
 
         // Si l'utilisateur veux changer la pagination du site
         if ($action == 'pagination') {
-        fseek($file,0);
-        $contenu = file("../ParamsAdmin.txt");
-        $contenu[0] = $_POST['new_pagination'];
-        $params = $contenu[0].PHP_EOL.$contenu[1];
-        fputs($file,$params);
+
+
 
         // Si l'utilisateur veux changer le nombre de discussion ouvertes maximum autorisé
         } else if ($action == 'nbDisc') {
-            fseek($file,0);
-            $contenu = file("../ParamsAdmin.txt");
-            $contenu[1] = $_POST['new_nbDiscMax'];
-            $params = $contenu[0].$contenu[1];
-            fputs($file,$params);
+
 
 
         // Si l'administrateur veux modifier les informations d'un utilisateur

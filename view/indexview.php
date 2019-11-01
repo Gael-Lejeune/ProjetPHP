@@ -5,6 +5,7 @@ require $navbar;
 ?>
 
 
+
 <!-- Création du bloc contenant la description et le titre description -->
 <div class="description">
     <h1> Description du site  </h1>
@@ -15,48 +16,28 @@ require $navbar;
 
 <div class="container-discussion">
     <div class="discussion">
-        <div class="discussion1">
-            <h1> <?php echo $result[0]['discName'] ?> </h1>
-            <div class="discussion1-FreeNote">
-
-                <p><?php
-                        foreach ($msg_Disc1 as $value)
-                        {
-                            echo $value['text'].'<br>';
-                        }
-                    ?></p>
+        <?php foreach ($result as $key_disc => $disc_array) {
+            $discussion = new Discussion ($disc_array); ?>
+            <div class="description">
+                <h1><?php echo htmlspecialchars($discussion->getDiscName()) ?></h1>
+                <div class="description-FreeNote">
+                    <p><?php
+                        $mess_liste = $manager->getMsgForIDDisc($discussion->getIdDiscussion());
+                        foreach ($mess_liste as $key_mess => $mess_array) {
+                            $message = new Message($mess_array);
+                            echo htmlspecialchars($message->getText()) . '<br>';
+                        } ?></p>
+                </div>
+                <p>State :
+                    <?php if ($discussion->getState() == 1)
+                        echo 'Open';
+                    else if ($discussion->getState() == 0)
+                        echo 'Close'; ?>
+                <form class="form" action="<?php echo $page_disc_controller ?>" method="post">
+                    <button value="<?php echo $discussion->getIdDiscussion()?>" class="bouton" name="discussion">Voir la discussion</button>
+                </form>
             </div>
-                <?php if ($result[0]['state'] == 1)
-                    echo '<div class="rondvert"> </div>';
-                else if ($result[0]['state'] == 0)
-                    echo '<div class="rondrouge"> </div>';
-                ?>
-            <form class="form" action="<?php echo $page_disc_controller ?>" method="post">
-                <button class="submit" value="<?php echo $result[0]['idDiscussion']?>" name="discussion">Voir la discussion</button>
-            </form>
-        </div>
-
-        <div class="discussion2">
-            <h1> <?php echo $result[1]['discName'] ?> </h1>
-            <div class="discussion2-FreeNote">
-
-                <p><?php
-                    foreach ($msg_Disc2 as $value)
-                    {
-                        echo $value['text'].'<br>';
-                    }
-                    ?></p>
-            </div>
-                <?php if ($result[1]['state'] == 1)
-                    echo '<div class="rondvert"> </div>';
-                else if ($result[1]['state'] == 0)
-                    echo '<div class="rondrouge"> </div>';
-                ?>
-            <form class="form" action="<?php echo $page_disc_controller ?>" method="post">
-                <button class="submit" value="<?php echo $result[1]['idDiscussion']?>" name="discussion">Voir la discussion</button>
-
-            </form>
-        </div>
+        <?php } ?></p>
     </div>
     <div class="Prevnext">
         <?php if ($_GET['page'] != 1)
@@ -90,7 +71,6 @@ require $navbar;
                 <p> Next </p>
                 <div class="right">
                     <a href="<?php echo $indexcontroller."?page=".($_GET['page']+1) ?>">
-
                         <img class="left" src="https://img.icons8.com/carbon-copy/100/000000/double-right.png">
                     </a>
                 </div>
@@ -100,4 +80,3 @@ require $navbar;
 </div>
 </body>
 </html>
-

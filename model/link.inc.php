@@ -40,8 +40,6 @@ $mdp_processing='../model/mdp_processing.php';
 
 // GESTION DISCUSSIONS //
 
-$pagination = 2;
-
 $create_disc='Créer une discussion';
 $create_disc_controller='../controller/create_discussion.php';
 $create_disc_model='../model/create_discussion_processing.php';
@@ -83,10 +81,3 @@ $logo='../html/images/login.png';
 $arrow='https://img.icons8.com/nolan/50/000000/up-left.png';
 
 $navbar='../model/navbar.php';
-
-
-
-
-
-
-

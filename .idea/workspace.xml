@@ -28,7 +28,8 @@ fault="true" id="394d6aa1-3445-40aa-85a5-e353a8e0f4cd" name="Default Changelist"
       <change beforePath="$PROJECT_DIR$/view/accountview.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/accountview.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/create_discussion_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/create_discussion_view.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/indexview.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/indexview.php" afterDir="false" />
-
+      <change beforePath="$PROJECT_DIR$/view/page_disc_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/page_disc_view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/see_disc_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/see_disc_view.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -139,15 +140,15 @@ fault="true" id="394d6aa1-3445-40aa-85a5-e353a8e0f4cd" name="Default Changelist"
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\IUT\ProjetPHP\view" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Laetitia\PhpstormProjects\ProjetPHP\model" />
       <recent name="D:\IUT\ProjetPHP\model" />
       <recent name="D:\IUT\ProjetPHP\controller" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/html/images" />
-      <recent name="$PROJECT_DIR$/html" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\IUT\ProjetPHP\view" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -403,7 +404,56 @@ fault="true" id="394d6aa1-3445-40aa-85a5-e353a8e0f4cd" name="Default Changelist"
       <option name="project" value="LOCAL" />
       <updated>1572268254443</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Creation des classes Discussion et Message">
+      <created>1572271530436</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1572271530596</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Correction de problemes avec la classe User survenus durant la nuit et verification de la connexion de l'utilisateur pour acceder a la page &quot;mon profil&quot;">
+      <created>1572351860347</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1572351860357</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Création des discussions opérationel, travail pour afficher les discussions sur l'index en cours">
+      <created>1572365429990</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1572365429990</updated>
+    </task>
+    <task id="LOCAL-00031" summary="On peut creer des discussion, ecrire des messages, liker ... &#10;TODO : regler le probleme de message maximum et faire la pagination">
+      <created>1572386607697</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1572386607722</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Finission de la page sur les discussions et debut de la page pour voir ses propres discussions">
+      <created>1572448112436</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1572448112436</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Début de la gestion du super utilisateur avec création d'une page dédiée pour pouvoir modifier des choses sur le site ou modifier les informations des utilisateurs. &#10;&#10;TODO : faire le admin_processing / trouver un moyen de stocker les variables serveur en dehors de la base de donnée.">
+      <created>1572476526811</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1572476526851</updated>
+    </task>
+    <task id="LOCAL-00034" summary="commentaire du code sur toutes les classes et les fichiers du dossier model">
+      <created>1572624096989</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1572624097004</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -433,11 +483,6 @@ fault="true" id="394d6aa1-3445-40aa-85a5-e353a8e0f4cd" name="Default Changelist"
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Debut du projet" />
-    <MESSAGE value="Debut du projet et création des fichiers." />
-    <MESSAGE value="Modification de l'index pour la prise en compte de la session actuelle." />
-    <MESSAGE value="Accès à la base de donnée et création d'une session" />
-    <MESSAGE value="Création du fichier gérant le login d'un utilisateur" />
     <MESSAGE value="Ajout des liens de chaques pages" />
     <MESSAGE value="affichage message erreur en cas de mauvais valeurs des champs" />
     <MESSAGE value="verification des erreurs en cas de mauvaise confirmation de mot de passe et en cas de non cochage des conditions d'utilisation" />
@@ -456,6 +501,13 @@ fault="true" id="394d6aa1-3445-40aa-85a5-e353a8e0f4cd" name="Default Changelist"
     <MESSAGE value="Résolution des problèmes de liens dynamiques et changement du nom de certains fichier pour adopter une meilleure logique" />
     <MESSAGE value="Résolution des problèmes de liens dynamiques et de traitement des formulaires d'inscription et de changement de mdp ou d'username" />
     <MESSAGE value="Creation des classes User et UserManager + modification du code pour utiliser la POO et PDO" />
-    <option name="LAST_COMMIT_MESSAGE" value="Creation des classes User et UserManager + modification du code pour utiliser la POO et PDO" />
+    <MESSAGE value="Creation des classes Discussion et Message" />
+    <MESSAGE value="Correction de problemes avec la classe User survenus durant la nuit et verification de la connexion de l'utilisateur pour acceder a la page &quot;mon profil&quot;" />
+    <MESSAGE value="Création des discussions opérationel, travail pour afficher les discussions sur l'index en cours" />
+    <MESSAGE value="On peut creer des discussion, ecrire des messages, liker ... &#10;TODO : regler le probleme de message maximum et faire la pagination" />
+    <MESSAGE value="Finission de la page sur les discussions et debut de la page pour voir ses propres discussions" />
+    <MESSAGE value="Début de la gestion du super utilisateur avec création d'une page dédiée pour pouvoir modifier des choses sur le site ou modifier les informations des utilisateurs. &#10;&#10;TODO : faire le admin_processing / trouver un moyen de stocker les variables serveur en dehors de la base de donnée." />
+    <MESSAGE value="commentaire du code sur toutes les classes et les fichiers du dossier model" />
+    <option name="LAST_COMMIT_MESSAGE" value="commentaire du code sur toutes les classes et les fichiers du dossier model" />
   </component>
 </project>

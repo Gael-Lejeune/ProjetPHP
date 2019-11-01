@@ -1,17 +1,13 @@
-<script type="text/javascript" src="../java/navbar.js"></script>
+<h1>Page discussion</h1>
 
-<?php
-require $navbar;
-?>
-
-<div class="container-chat-global">
-    <h1> <?php echo $result['discName'] ?> </h1>
-    <h2> <?php echo 'Cette discussion vous est présentée par '.$user->getName() ?> </h2>
-    <div class="container-chat">
+<div class="description">
+    <h1> <?php echo htmlspecialchars($result['discName']) ?> </h1>
+    <h2> <?php echo 'Cette discussion vous est présentée par '.htmlspecialchars($user->getName()) ?> </h2>
+    <div class="description-FreeNote">
         <p><?php
             foreach ($messages as $value)
             {
-                echo $value['text'].'<br>';
+                echo htmlspecialchars($value['text']).'<br>';
             }
             ?></p>
     </div>
@@ -31,18 +27,25 @@ require $navbar;
         <form class="form" action="<?php echo $page_disc_processing ?>" method="post">
         <p> Ecrivez votre commentaire : </p>
         <input class="bouton" type="text" name="texte"/>
-        <div class="ajouter-fermer">
-            <input class ="submit" type="submit" name="action" value="Ajouter mon message"/>
-            <input class ="submit" type="submit" name="action" value="Fermer le message"/>
-        </div>
+
+        <input class ="submit" type="submit" name="action" value="Ajouter mon message"/>
+        <input class ="submit" type="submit" name="action" value="Fermer le message"/>
     </form>
     <?php } ?>
 
+    <div>
+        <div>
+            <h3>Like : </h3>
+            <p><?php echo $result['nbLike']?></p>
+        </div>
+        <form class="form" action="<?php echo $page_disc_processing ?>" method="post">
+            <input class ="submit" type="submit" name="action" value="Like"/>
+        </form>
+    </div>
     <?php } ?>
 
-    <div class="nb-messages">
-        <p> Nombre de messages dans la discussion :  <?php echo $result['nbMessage'].' / '.$result['nbMessMax'] ?></p>
-    </div>
+    <h3>Nombre de messages dans la discussion : </h3>
+    <p><?php echo $result['nbMessage'].' / '.$result['nbMessMax'] ?></p>
 
 </div>
 

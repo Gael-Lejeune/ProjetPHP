@@ -12,12 +12,6 @@ class Message
         return $this->idMsg;
     }
 
-
-    public function getIdMsg()
-    {
-        return $this->idMsg;
-    }
-
     public function getIdDiscussion()
     {
         return $this->idDiscussion;
@@ -34,7 +28,6 @@ class Message
     }
 
     //setteurs
-
     public function setIdMsg($id_msg)
     {
         $this->idMsg = $id_msg;
@@ -62,13 +55,11 @@ class Message
     public function __construct(array $donnees)
     {
         $this->hydrate($donnees);
-
     }
 
     // fonction hydrate -> appelle les setteurs necessaires à la création de la discussion en fonction des valeurs du tableau qui lui est passé en paramètre
     public function hydrate(array $donnees)
     {
-
         foreach ($donnees as $key => $value)
         {
             $method = 'set'.ucfirst($key);
