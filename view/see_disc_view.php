@@ -10,14 +10,14 @@
             $discussion = new Discussion ($disc_array); ?>
             <form class="" action="<?php echo $page_disc_controller ?>" method="post">
                 <button value="<?php echo $discussion->getIdDiscussion() ?>" class="bouton"
-                    name="discussion"> <?php echo $discussion->getDiscName() ?></button>
+                    name="discussion"> <?php echo htmlspecialchars($discussion->getDiscName()) ?></button>
             </form>
             <div class="description-FreeNote">
                 <p><?php
                     $mess_liste = $disc_manager->getMsgForIDDisc($discussion->getIdDiscussion());
                     foreach ($mess_liste as $key_mess => $mess_array) {
                         $message = new Message($mess_array);
-                        echo $message->getText() . '<br>';
+                        echo htmlspecialchars($message->getText()) . '<br>';
                     }
                     ?></p>
             </div>
@@ -26,7 +26,7 @@
                     echo 'Open';
                 else if ($discussion->getState() == 0)
                     echo 'Close';
-            }   ?></p>
+            } ?></p>
         </div>
     </div>
 </div>

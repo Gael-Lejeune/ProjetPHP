@@ -72,13 +72,13 @@
         <?php foreach ($result as $key_disc => $disc_array) {
             $discussion = new Discussion ($disc_array); ?>
             <div class="description">
-                <h1><?php echo $discussion->getDiscName() ?></h1>
+                <h1><?php echo htmlspecialchars($discussion->getDiscName()) ?></h1>
                 <div class="description-FreeNote">
                     <p><?php
                         $mess_liste = $manager->getMsgForIDDisc($discussion->getIdDiscussion());
                         foreach ($mess_liste as $key_mess => $mess_array) {
                             $message = new Message($mess_array);
-                            echo $message->getText() . '<br>';
+                            echo htmlspecialchars($message->getText()) . '<br>';
                         } ?></p>
                 </div>
                 <p>State :

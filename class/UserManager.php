@@ -123,4 +123,12 @@ class UserManager
         }
         return $chaineAleatoire;
     }
+
+    /**
+     * @param string $email
+     */
+    public function delete ($email) { // permet de supprimer un utilisateur de la table
+        $query = $this->db->prepare('DELETE FROM user WHERE email=?');
+        $query->execute([$email]);
+    }
 }

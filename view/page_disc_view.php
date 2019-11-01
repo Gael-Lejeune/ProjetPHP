@@ -1,13 +1,13 @@
 <h1>Page discussion</h1>
 
 <div class="description">
-    <h1> <?php echo $result['discName'] ?> </h1>
-    <h2> <?php echo 'Cette discussion vous est présentée par '.$user->getName() ?> </h2>
+    <h1> <?php echo htmlspecialchars($result['discName']) ?> </h1>
+    <h2> <?php echo 'Cette discussion vous est présentée par '.htmlspecialchars($user->getName()) ?> </h2>
     <div class="description-FreeNote">
         <p><?php
             foreach ($messages as $value)
             {
-                echo $value['text'].'<br>';
+                echo htmlspecialchars($value['text']).'<br>';
             }
             ?></p>
     </div>

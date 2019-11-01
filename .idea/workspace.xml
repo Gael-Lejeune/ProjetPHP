@@ -2,34 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="227c4fe5-873d-4ee2-aaf3-461033efdf6b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/admin_processing.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controller/testLucas.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/class/Disc_Mess_Manager.php" beforeDir="false" afterPath="$PROJECT_DIR$/class/Disc_Mess_Manager.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/class/Discussion.php" beforeDir="false" afterPath="$PROJECT_DIR$/class/Discussion.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/class/Ecrivain.php" beforeDir="false" afterPath="$PROJECT_DIR$/class/Ecrivain.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/class/Like.php" beforeDir="false" afterPath="$PROJECT_DIR$/class/Like.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/class/Message.php" beforeDir="false" afterPath="$PROJECT_DIR$/class/Message.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/class/Serveur_Manager.php" beforeDir="false" afterPath="$PROJECT_DIR$/class/Serveur_Manager.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/class/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/class/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/class/UserManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/class/UserManager.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/html/css/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/account_processing.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/account_processing.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/accountmodel.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/accountmodel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/create_discussion_processing.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/create_discussion_processing.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/data-processor.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/admin_processing.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/admin_processing.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/dtb.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/dtb.inc.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/indexmodel.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/indexmodel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/inscription_processing.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/inscription_processing.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/link.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/link.inc.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/login-processing.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/login_processing.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/login_processing.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/mdp_processing.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/mdp_processing.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/page_disc_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/page_disc_model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/page_disc_processing.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/page_disc_processing.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/see_disc_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/see_disc_model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/utils.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/utils.inc.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/accountview.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/accountview.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/admin_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/admin_view.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/indexview.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/indexview.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/page_disc_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/page_disc_view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/see_disc_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/see_disc_view.php" afterDir="false" />
     </list>
     <list id="5504e2fa-2ce0-416c-a015-9e96628cc8cf" name="Revert &quot;Modification de l'index pour la prise en compte de la session actuelle.&quot;" comment="Revert &quot;Modification de l'index pour la prise en compte de la session actuelle.&quot;&#10;&#10;This reverts commit fbcc00a2" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -194,7 +176,7 @@
       <workItem from="1572366849569" duration="18355000" />
       <workItem from="1572430202874" duration="15091000" />
       <workItem from="1572458236313" duration="9115000" />
-      <workItem from="1572609565507" duration="12957000" />
+      <workItem from="1572609565507" duration="22438000" />
     </task>
     <task id="LOCAL-00001" summary="Debut du projet">
       <created>1569846323677</created>
@@ -427,7 +409,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572476526851</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="commentaire du code sur toutes les classes et les fichiers du dossier model">
+      <created>1572624096989</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1572624097004</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -457,7 +446,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Création du fichier gérant le login d'un utilisateur" />
     <MESSAGE value="Ajout des liens de chaques pages" />
     <MESSAGE value="affichage message erreur en cas de mauvais valeurs des champs" />
     <MESSAGE value="verification des erreurs en cas de mauvaise confirmation de mot de passe et en cas de non cochage des conditions d'utilisation" />
@@ -482,6 +470,7 @@
     <MESSAGE value="On peut creer des discussion, ecrire des messages, liker ... &#10;TODO : regler le probleme de message maximum et faire la pagination" />
     <MESSAGE value="Finission de la page sur les discussions et debut de la page pour voir ses propres discussions" />
     <MESSAGE value="Début de la gestion du super utilisateur avec création d'une page dédiée pour pouvoir modifier des choses sur le site ou modifier les informations des utilisateurs. &#10;&#10;TODO : faire le admin_processing / trouver un moyen de stocker les variables serveur en dehors de la base de donnée." />
-    <option name="LAST_COMMIT_MESSAGE" value="Début de la gestion du super utilisateur avec création d'une page dédiée pour pouvoir modifier des choses sur le site ou modifier les informations des utilisateurs. &#10;&#10;TODO : faire le admin_processing / trouver un moyen de stocker les variables serveur en dehors de la base de donnée." />
+    <MESSAGE value="commentaire du code sur toutes les classes et les fichiers du dossier model" />
+    <option name="LAST_COMMIT_MESSAGE" value="commentaire du code sur toutes les classes et les fichiers du dossier model" />
   </component>
 </project>
