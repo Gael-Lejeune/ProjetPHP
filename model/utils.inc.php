@@ -14,5 +14,5 @@ function start_page($title, $lien1, $rel1, $lien2, $rel2, $background){
 };
 
 function end_page(){
-    echo'</body></htm    l>';
+    echo'</body></html>';
 }

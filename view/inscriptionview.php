@@ -1,6 +1,8 @@
-<!--<h3> FREENOTE </h3>-->
+<script type="text/javascript" src="../java/navbar.js"></script>
 
-
+<?php
+require $navbar;
+?>
 
 <div class="container-form-inscription">
     <h1> Ha, te voila ! </h1>

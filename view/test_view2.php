@@ -1,3 +1,8 @@
+<script type="text/javascript" src="../java/navbar.js"></script>
+
+<?php
+require $navbar;
+?>
 
 <?php
 

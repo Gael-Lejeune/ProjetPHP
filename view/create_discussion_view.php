@@ -1,7 +1,13 @@
+<script type="text/javascript" src="../java/navbar.js"></script>
+
+<?php
+require $navbar;
+?>
+
 <div class="container-form-inscription">
     <h1> Tu veux créer une discussion ? </h1>
     <h2> Tu es au bon endroit ! </h2>
-    <form class="form" action="<?php echo $inscriptionmodel ?>" method="post">
+    <form class="form" action="<?php echo $create_disc_model ?>" method="post">
         <p> Nom de la discussion </p>
         <input class="bouton" type="text" name="name_disc" required/>
         <p> Entre ici ton premier message  </p>
