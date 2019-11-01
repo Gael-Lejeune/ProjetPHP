@@ -12,6 +12,7 @@ class Discussion
     private $nbLike; // nombre de fois ou la discussion a été liké (valeur par default = 0)
 
     // getteurs
+
     public function getOwner()
     {
         return $this->owner;
@@ -100,6 +101,7 @@ class Discussion
 
     // fonction hydrate -> appelle les setteurs necessaires à la création de la discussion en fonction des valeurs du tableau qui lui est passé en paramètre
     public function hydrate(array $donnees)
+
     {
         foreach ($donnees as $key => $value)
         {
@@ -110,4 +112,79 @@ class Discussion
             }
         }
     }
+
+    public function incrNbMess()
+    {
+        $this->nbMessages += 1;
+        if ($this->nbMessages >= $this->nbMessMax) {
+            $this->closeDisc();
+        }
+    }
+
+    public function incrNbLike()
+    {
+        $this->nbLike += 1;
+    }
+
+    public function setNbMessMax($nb_mess_max)
+    {
+        if ($nb_mess_max > 0 and $nb_mess_max <= 30) {
+            $this->nbMessMax = $nb_mess_max;
+        }
+    }
+
+    public function setOwner($owner)
+    {
+        $owner = (string) $owner;
+        if (preg_match('/^[a-z0-9._-]+@[a-z0-9._-]{2,}\.[a-z]{2,4}$/', $owner)) {
+            $this->owner = $owner;
+        }
+    }
+
+    public function setDiscName($disc_name)
+    {
+        $disc_name = (string) $disc_name;
+        $this->discName = $disc_name;
+    }
+
+    public function setNbLike($nb_like)
+    {
+        $nb_like = (int) $nb_like;
+        $this->nbLike = $nb_like;
+    }
+
+    public function setIdDiscussion($id_discussion)
+    {
+        $this->idDiscussion = $id_discussion;
+    }
+
+    public function setNbMessages($nb_messages)
+    {
+        $this->nbMessages = $nb_messages;
+    }
+
+    public function setState($state)
+    {
+        if ($state == 0 or $state == 1) {
+            $this->state = $state;
+        }
+    }
+
+    public function __construct(array $donnees)
+    {
+        $this->hydrate($donnees);
+    }
+
+    public function hydrate(array $donnees)
+    {
+        foreach ($donnees as $key => $value)
+        {
+            $method = 'set'.ucfirst($key);
+            if (method_exists($this, $method))
+            {
+                $this->$method($value);
+            }
+        }
+    }
+
 }

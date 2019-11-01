@@ -49,6 +49,7 @@ class Ecrivain
     }
 
     // fonction hydrate -> appelle les setteurs necessaires à la création de la discussion en fonction des valeurs du tableau qui lui est passé en paramètre
+
     public function hydrate(array $donnees)
     {
         foreach ($donnees as $key => $value)

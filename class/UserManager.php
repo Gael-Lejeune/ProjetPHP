@@ -50,6 +50,7 @@ class UserManager
     {
         $query = $this->db->prepare('SELECT * FROM Users WHERE email =?');
         $query->execute([$email]);
+
         $result = $query->fetch(PDO::FETCH_ASSOC);
 
         return new User($result);
@@ -122,5 +123,6 @@ class UserManager
             $chaineAleatoire .= $caracteres[rand(0, $longueurMax - 1)];
         }
         return $chaineAleatoire;
+
     }
 }

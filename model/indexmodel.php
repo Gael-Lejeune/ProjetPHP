@@ -6,6 +6,7 @@ $manager = new Disc_Mess_Manager($db);
 
 $messagesParPage = 2;
 
+
 //Une connexion SQL doit être ouverte avant cette ligne...
 $total=$manager->getNbDiscussion(); //Nous récupérons le contenu de la requête dans $retour_total
 
@@ -15,9 +16,15 @@ if(isset($_GET['page'])) // Si la variable $_GET['page'] existe...
 {
     $pageActuelle=$_GET['page'];
 
+
     if($pageActuelle>$nombreDePages) // Si la valeur de $pageActuelle (le numéro de la page) est plus grande que $nombreDePages...
     {
         $pageActuelle=$nombreDePages;
+    }
+
+    elseif ($pageActuelle<1)
+    {
+        $pageActuelle=1;
     }
 }
 else // Sinon
@@ -28,14 +35,5 @@ else // Sinon
 $premiereEntree=($pageActuelle-1)*$messagesParPage; // On calcul la première entrée à lire
 
 $result = $manager->getDiscussionPagination($premiereEntree,$messagesParPage);
-$msg_Disc1 = $manager->getMsgForIDDisc($result[0]['idDiscussion']);
-$msg_Disc2 = $manager->getMsgForIDDisc($result[1]['idDiscussion']);
 
-if ($_SESSION['login'])
-{
-    $user_manager = new UserManager($db);
-    $user = $user_manager->getUser($_SESSION['email']);
-    $role = $user->getRole();
-} else {
-    $role = 'visiteur';
 }

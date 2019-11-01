@@ -1,26 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="227c4fe5-873d-4ee2-aaf3-461033efdf6b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/class/Like.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/class/Serveur.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/class/Serveur_Manager.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controller/admin.php" afterDir="false" />
+fault="true" id="394d6aa1-3445-40aa-85a5-e353a8e0f4cd" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/controller/indexpagination.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controller/page_discussion.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controller/see_disc.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/css/discussions.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/css/profile.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java/navbar.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/model/indexmodel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/logout_processing.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/navbar.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/page_disc_model.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/page_disc_processing.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/see_disc_model.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/admin_view.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/page_disc_view.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/see_disc_view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/ProjetPHP.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/webServers.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/class/Disc_Mess_Manager.php" beforeDir="false" afterPath="$PROJECT_DIR$/class/Disc_Mess_Manager.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/class/Discussion.php" beforeDir="false" afterPath="$PROJECT_DIR$/class/Discussion.php" afterDir="false" />
@@ -28,18 +19,8 @@
       <change beforePath="$PROJECT_DIR$/class/Message.php" beforeDir="false" afterPath="$PROJECT_DIR$/class/Message.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/class/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/class/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/class/UserManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/class/UserManager.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/account.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/account.php" afterDir="false" />
+
       <change beforePath="$PROJECT_DIR$/controller/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/myprofile.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/myprofile.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/html/css/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/html/css/login.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/css/myprofile.css" beforeDir="false" afterPath="$PROJECT_DIR$/html/css/myprofile.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/css/signup.css" beforeDir="false" afterPath="$PROJECT_DIR$/html/css/signup.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/account_processing.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/account_processing.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/accountmodel.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/accountmodel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/create_discussion_processing.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/create_discussion_processing.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/dtb.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/dtb.inc.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/inscription_processing.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/inscription_processing.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/link.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/link.inc.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/mdp_processing.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/mdp_processing.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/test_chat_proc2.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/test_chat_proc2.php" afterDir="false" />
@@ -47,13 +28,8 @@
       <change beforePath="$PROJECT_DIR$/view/accountview.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/accountview.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/create_discussion_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/create_discussion_view.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/indexview.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/indexview.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/inscriptionview.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/inscriptionview.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/loginview.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/loginview.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/mdpview.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/mdpview.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/test_view2.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/test_view2.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/testview.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/testview.php" afterDir="false" />
+
     </list>
-    <list id="5504e2fa-2ce0-416c-a015-9e96628cc8cf" name="Revert &quot;Modification de l'index pour la prise en compte de la session actuelle.&quot;" comment="Revert &quot;Modification de l'index pour la prise en compte de la session actuelle.&quot;&#10;&#10;This reverts commit fbcc00a2" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,39 +55,46 @@
     <expand>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="MariaDB - PhpProjet" type="feb32156:DbDataSourceImpl" />
+        <item name="LTRDTB" type="feb32156:DbDataSourceImpl" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="MariaDB - PhpProjet" type="feb32156:DbDataSourceImpl" />
+        <item name="LTRDTB" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="MariaDB - PhpProjet" type="feb32156:DbDataSourceImpl" />
+        <item name="LTRDTB" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="latableronde_dtb: schema" type="ebfa3cd1:MariaImplModel$Schema" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="MariaDB - PhpProjet" type="feb32156:DbDataSourceImpl" />
+        <item name="LTRDTB" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="latableronde_dtb: schema" type="ebfa3cd1:MariaImplModel$Schema" />
         <item name="discussion: table" type="dbc44a63:MariaImplModel$Table" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="MariaDB - PhpProjet" type="feb32156:DbDataSourceImpl" />
+        <item name="LTRDTB" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="latableronde_dtb: schema" type="ebfa3cd1:MariaImplModel$Schema" />
+        <item name="ecrivain: table" type="dbc44a63:MariaImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="LTRDTB" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="latableronde_dtb: schema" type="ebfa3cd1:MariaImplModel$Schema" />
         <item name="message: table" type="dbc44a63:MariaImplModel$Table" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="MariaDB - PhpProjet" type="feb32156:DbDataSourceImpl" />
+        <item name="LTRDTB" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="latableronde_dtb: schema" type="ebfa3cd1:MariaImplModel$Schema" />
-        <item name="user: table" type="dbc44a63:MariaImplModel$Table" />
+        <item name="Users: table" type="dbc44a63:MariaImplModel$Table" />
       </path>
     </expand>
     <select />
@@ -128,7 +111,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="error" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -138,7 +121,6 @@
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="db2&#10;mariadb" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
@@ -184,18 +166,24 @@
     <option name="allServicesViewState">
       <serviceView>
         <treeState>
-          <expand />
+          <expand>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@e2670915" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+          </expand>
           <select />
         </treeState>
       </serviceView>
     </option>
+    <option name="showServicesTree" value="false" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="227c4fe5-873d-4ee2-aaf3-461033efdf6b" name="Default Changelist" comment="" />
+      <changelist id="394d6aa1-3445-40aa-85a5-e353a8e0f4cd" name="Default Changelist" comment="" />
       <created>1569845419542</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -216,7 +204,15 @@
       <workItem from="1571206629361" duration="3960000" />
       <workItem from="1571293788985" duration="9096000" />
       <workItem from="1572205560249" duration="20702000" />
-      <workItem from="1572615714672" duration="18962000" />
+
+      <workItem from="1572275404892" duration="103000" />
+      <workItem from="1572275516193" duration="1202000" />
+      <workItem from="1572276777642" duration="27000" />
+      <workItem from="1572285012190" duration="60000" />
+      <workItem from="1572361483356" duration="1551000" />
+      <workItem from="1572366641754" duration="1638000" />
+      <workItem from="1572440610188" duration="6317000" />
+      <workItem from="1572448216476" duration="3977000" />
     </task>
     <task id="LOCAL-00001" summary="Debut du projet">
       <created>1569846323677</created>

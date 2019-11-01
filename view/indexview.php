@@ -4,6 +4,7 @@
 require $navbar;
 ?>
 
+
 <!-- Création du bloc contenant la description et le titre description -->
 <div class="description">
     <h1> Description du site  </h1>
@@ -17,6 +18,7 @@ require $navbar;
         <div class="discussion1">
             <h1> <?php echo $result[0]['discName'] ?> </h1>
             <div class="discussion1-FreeNote">
+
                 <p><?php
                         foreach ($msg_Disc1 as $value)
                         {
@@ -37,6 +39,7 @@ require $navbar;
         <div class="discussion2">
             <h1> <?php echo $result[1]['discName'] ?> </h1>
             <div class="discussion2-FreeNote">
+
                 <p><?php
                     foreach ($msg_Disc2 as $value)
                     {
@@ -51,6 +54,7 @@ require $navbar;
                 ?>
             <form class="form" action="<?php echo $page_disc_controller ?>" method="post">
                 <button class="submit" value="<?php echo $result[1]['idDiscussion']?>" name="discussion">Voir la discussion</button>
+
             </form>
         </div>
     </div>
@@ -86,6 +90,7 @@ require $navbar;
                 <p> Next </p>
                 <div class="right">
                     <a href="<?php echo $indexcontroller."?page=".($_GET['page']+1) ?>">
+
                         <img class="left" src="https://img.icons8.com/carbon-copy/100/000000/double-right.png">
                     </a>
                 </div>
