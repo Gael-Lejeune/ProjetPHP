@@ -1,16 +1,4 @@
-<script>
-    /* Set the width of the sidebar to 250px and the left margin of the page content to 250px */
-    function openNav() {
-        document.getElementById("mySidebar").style.width = "250px";
-        document.getElementById("main").style.marginRight = "250px";
-    }
-
-    /* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
-    function closeNav() {
-        document.getElementById("mySidebar").style.width = "0";
-        document.getElementById("main").style.marginRight = "0";
-    }
-</script>
+<script type="text/javascript" src="../java/navbar.js"></script>
 
 <div id="mySidebar" class="sidebar">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -108,11 +96,11 @@
         </div>
     </div>
     <div class="Prevnext">
-        <?php if ($_GET['page'] != 1)
+        <?php if ($pageActuelle > 1)
         {?>
             <div class="Backtohome">
                 <div class="left">
-                    <a href="<?php echo $indexcontroller."?page=".($_GET['page']-1) ?>">
+                    <a href="<?php echo $indexcontroller."?page=".($pageActuelle-1) ?>">
                         <img class="left1" src="https://img.icons8.com/carbon-copy/100/000000/double-left.png">
                     </a>
                 </div>
@@ -124,7 +112,7 @@
             for($i=1; $i<=$nombreDePages; $i++) //On fait notre boucle
             {
                 //On va faire notre condition
-                if($i==$_GET['page']) //Si il s'agit de la page actuelle...
+                if($i==$pageActuelle) //Si il s'agit de la page actuelle...
                 {
                     echo ' [ '.$i.' ] ';
                 }
@@ -134,11 +122,11 @@
                 }
             }
             echo '</div>';
-        if ($_GET['page'] != $nombreDePages){?>
+        if ($pageActuelle < $nombreDePages){?>
             <div class="Backtohome">
                 <p> Next </p>
                 <div class="right">
-                    <a href="<?php echo $indexcontroller."?page=".($_GET['page']+1) ?>">
+                    <a href="<?php echo $indexcontroller."?page=".($pageActuelle+1) ?>">
                         <img class="left" src="https://img.icons8.com/carbon-copy/100/000000/double-right.png">
                     </a>
                 </div>

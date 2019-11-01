@@ -4,19 +4,25 @@ include_classe(); //inclusion des classes nécessaires
 $db = dtb_connect_PDO(); //connection a la base de donnée avec PDO
 $manager = new Disc_Mess_Manager($db);
 
-$messagesParPage = 2;
+$messagesParPage = file("../ParamsAdmin.txt");
+$messagesParPage = $messagesParPage[0];
+
 //Une connexion SQL doit être ouverte avant cette ligne...
 $total=$manager->getNbDiscussion(); //Nous récupérons le contenu de la requête dans $retour_total
 
 $nombreDePages=ceil($total/$messagesParPage);
+$pageActuelle=$_GET['page'];
 
 if(isset($_GET['page'])) // Si la variable $_GET['page'] existe...
 {
-    $pageActuelle=$_GET['page'];
 
     if($pageActuelle>$nombreDePages) // Si la valeur de $pageActuelle (le numéro de la page) est plus grande que $nombreDePages...
     {
         $pageActuelle=$nombreDePages;
+    }
+    elseif ($pageActuelle<1)
+    {
+        $pageActuelle=1;
     }
 }
 else // Sinon
@@ -28,6 +34,7 @@ $premiereEntree=($pageActuelle-1)*$messagesParPage; // On calcul la première en
 
 $result = $manager->getDiscussionPagination($premiereEntree,$messagesParPage);
 
-
-$msg_Disc1 = $manager->getMsgForIDDisc($result[0]['idDiscussion']);
-$msg_Disc2 = $manager->getMsgForIDDisc($result[1]['idDiscussion']);
+for( $i = 0 ; $i < $messagesParPage ; $i++ )
+{
+    $msg_Disc1 = $manager->getMsgForIDDisc($result[$i]['idDiscussion']);
+}
