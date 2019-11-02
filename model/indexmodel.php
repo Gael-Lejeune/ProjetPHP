@@ -12,6 +12,7 @@ $messagesParPage = $messagesParPage[0];
 $total=$manager->getNbDiscussion(); //Nous récupérons le contenu de la requête dans $retour_total
 
 $nombreDePages=ceil($total/$messagesParPage); // Nombre de page necessaire à l'affichage de toutes les discussions en fonction de la pagination
+$pageActuelle=$_GET['page'];
 
 if(isset($_GET['page'])) // Si la variable $_GET['page'] existe...
 {
