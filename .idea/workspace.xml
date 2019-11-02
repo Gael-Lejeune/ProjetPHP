@@ -1,14 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="394d6aa1-3445-40aa-85a5-e353a8e0f4cd" name="Default Changelist" comment="">
+    <list default="true" id="227c4fe5-873d-4ee2-aaf3-461033efdf6b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/class/Discussion.php" beforeDir="false" afterPath="$PROJECT_DIR$/class/Discussion.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/admin_processing.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/admin_processing.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/dtb.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/dtb.inc.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/indexmodel.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/indexmodel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/css/discussions.css" beforeDir="false" afterPath="$PROJECT_DIR$/html/css/discussions.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/html/css/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/html/css/login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/java/navbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/accountview.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/accountview.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/admin_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/admin_view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/create_discussion_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/create_discussion_view.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/indexview.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/indexview.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/inscriptionview.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/inscriptionview.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/loginview.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/loginview.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/mdpview.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/mdpview.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/page_disc_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/page_disc_view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/see_disc_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/see_disc_view.php" afterDir="false" />
     </list>
+    <list id="5504e2fa-2ce0-416c-a015-9e96628cc8cf" name="Revert &quot;Modification de l'index pour la prise en compte de la session actuelle.&quot;" comment="Revert &quot;Modification de l'index pour la prise en compte de la session actuelle.&quot;&#10;&#10;This reverts commit fbcc00a2" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,18 +43,39 @@
     <expand>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="php" type="feb32156:DbDataSourceImpl" />
+        <item name="MariaDB - PhpProjet" type="feb32156:DbDataSourceImpl" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="php" type="feb32156:DbDataSourceImpl" />
+        <item name="MariaDB - PhpProjet" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="php" type="feb32156:DbDataSourceImpl" />
+        <item name="MariaDB - PhpProjet" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="latableronde_dtb: schema" type="ebfa3cd1:MariaImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="MariaDB - PhpProjet" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="latableronde_dtb: schema" type="ebfa3cd1:MariaImplModel$Schema" />
+        <item name="discussion: table" type="dbc44a63:MariaImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="MariaDB - PhpProjet" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="latableronde_dtb: schema" type="ebfa3cd1:MariaImplModel$Schema" />
+        <item name="message: table" type="dbc44a63:MariaImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="MariaDB - PhpProjet" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="latableronde_dtb: schema" type="ebfa3cd1:MariaImplModel$Schema" />
+        <item name="user: table" type="dbc44a63:MariaImplModel$Table" />
       </path>
     </expand>
     <select />
@@ -60,7 +90,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="error" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -70,6 +100,7 @@
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="db2&#10;mariadb" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
@@ -87,15 +118,15 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\IUT\ProjetPHP\view" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\IUT\ProjetPHP\model" />
       <recent name="D:\IUT\ProjetPHP\controller" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/html/images" />
       <recent name="$PROJECT_DIR$/html" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\IUT\ProjetPHP\view" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -124,14 +155,13 @@
         </treeState>
       </serviceView>
     </option>
-    <option name="showServicesTree" value="false" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="394d6aa1-3445-40aa-85a5-e353a8e0f4cd" name="Default Changelist" comment="" />
+      <changelist id="227c4fe5-873d-4ee2-aaf3-461033efdf6b" name="Default Changelist" comment="" />
       <created>1569845419542</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -152,16 +182,8 @@
       <workItem from="1571206629361" duration="3960000" />
       <workItem from="1571293788985" duration="9096000" />
       <workItem from="1572205560249" duration="20702000" />
-      <workItem from="1572275404892" duration="103000" />
-      <workItem from="1572275516193" duration="1202000" />
-      <workItem from="1572276777642" duration="27000" />
-      <workItem from="1572285012190" duration="60000" />
-      <workItem from="1572361483356" duration="1551000" />
-      <workItem from="1572366641754" duration="1638000" />
-      <workItem from="1572440610188" duration="6317000" />
-      <workItem from="1572448216476" duration="3977000" />
-      <workItem from="1572646009351" duration="67000" />
-      <workItem from="1572646141890" duration="1419000" />
+      <workItem from="1572615714672" duration="20322000" />
+      <workItem from="1572692560377" duration="7004000" />
     </task>
     <task id="LOCAL-00001" summary="Debut du projet">
       <created>1569846323677</created>
@@ -352,7 +374,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572268254443</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="CSS du site.">
+      <created>1572643888294</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1572643888294</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -405,6 +434,7 @@
     <MESSAGE value="Résolution des problèmes de liens dynamiques et changement du nom de certains fichier pour adopter une meilleure logique" />
     <MESSAGE value="Résolution des problèmes de liens dynamiques et de traitement des formulaires d'inscription et de changement de mdp ou d'username" />
     <MESSAGE value="Creation des classes User et UserManager + modification du code pour utiliser la POO et PDO" />
-    <option name="LAST_COMMIT_MESSAGE" value="Creation des classes User et UserManager + modification du code pour utiliser la POO et PDO" />
+    <MESSAGE value="CSS du site." />
+    <option name="LAST_COMMIT_MESSAGE" value="CSS du site." />
   </component>
 </project>
