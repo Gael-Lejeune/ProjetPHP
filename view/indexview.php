@@ -67,7 +67,8 @@ require $navbar;
             </div>
         <?php } ?>
         <?php
-        echo '<div class="checkbox">Page : '; //Pour l'affichage, on centre la liste des pages
+        echo '<div class="lespages"> Page : '; //Pour l'affichage, on centre la liste des pages
+        echo '<div class="right">';
         for($i=1; $i<=$nombreDePages; $i++) //On fait notre boucle
         {
             //On va faire notre condition
@@ -80,6 +81,7 @@ require $navbar;
                 echo ' <a href="'.$indexcontroller.'?page='.$i.'">'.$i.'</a> ';
             }
         }
+        echo '</div>';
         echo '</div>';
         if ($_GET['page'] != $nombreDePages){?>
             <div class="Backtohome">

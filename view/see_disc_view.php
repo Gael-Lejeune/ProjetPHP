@@ -4,21 +4,21 @@
 require $navbar;
 ?>
 
-<h1>Mes discussions</h1>
-
-<h2> Vous avez <?php echo $nbDiscUser ?> discussions d'ouvertes </h2>
-<h2> Vous pouvez encore en ouvrir <?php echo $nbDiscRestantes ?> </h2>
 
 <div class="container-discussion">
-    <div class="pipi">
+    <div class="container-all">
+        <h3>Mes discussions</h3>
+
+        <h4> Vous avez <?php echo $nbDiscUser ?> discussions d'ouvertes </h4>
+        <h5> Vous pouvez encore en ouvrir <?php echo $nbDiscRestantes ?> </h5>
     <?php foreach ($disc_liste as $key_disc => $disc_array) {
-        $discussion = new Discussion ($disc_array); ?>
+    $discussion = new Discussion ($disc_array); ?>
         <form action="<?php echo $page_disc_controller ?>" method="post">
-            <button class="merde" value="<?php echo $discussion->getIdDiscussion() ?>"
+            <button class="nom-discussion" value="<?php echo $discussion->getIdDiscussion() ?>"
                     name="discussion"> <?php echo $discussion->getDiscName() ?></button>
         </form>
 
-        <div class="contenu-discussion">
+        <div class="container-chat">
             <p><?php
                 $mess_liste = $disc_manager->getMsgForIDDisc($discussion->getIdDiscussion());
                 foreach ($mess_liste as $key_mess => $mess_array) {
@@ -28,18 +28,18 @@ require $navbar;
                 ?></p>
         </div>
         <div class="state">
-            <p>Etat :
+            <p>
                 <?php if ($discussion->getState() == 1)
-                    echo 'Open';
+                    echo '<div class="rondvert"> </div>';
                 else if ($discussion->getState() == 0)
-                    echo 'Close';
-                }   ?>
+                    echo '<div class="rondrouge"> </div>';
+                } ?>
             </p>
         </div>
     </div>
 </div>
 
-<div class="Backtohome">
+<div id="Backtohome">
     <p> Back to home </p>
     <div>
         <a href="<?php echo $indexcontroller ?>"> <img src="https://img.icons8.com/carbon-copy/100/000000/arrow.png"> </a>
