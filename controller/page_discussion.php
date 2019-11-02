@@ -4,7 +4,7 @@ include "../model/link.inc.php";
 include '../model/dtb.inc.php';
 
 //Demarrage de la page
-start_page("myprofile", $discussioncss, "stylesheet", "fonts.googleapis.com/css?family=Oswald&display=swap", "stylesheet", $background4);
+start_page($discussion, $discussioncss, $background4);
 
 session_start();
 
@@ -15,6 +15,9 @@ if ($step == 'ERROR_write') {
     echo 'Le message que vous voulez écrire est trop long'.'<br>';
 }
 
-require '../model/page_disc_model.php';
-require '../view/page_disc_view.php';
+//Appel du model
+require $page_disc_model;
+
+//Affichage de la page
+require $page_disc_view;
 end_page();

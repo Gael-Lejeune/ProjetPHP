@@ -34,7 +34,6 @@ else // Sinon
 }
 
 $premiereEntree=($pageActuelle-1)*$messagesParPage; // On calcul la première entrée à lire
-
 $result = $manager->getDiscussionPagination($premiereEntree,$messagesParPage); // On récupère le nombre de discussion necessaire
 
 for( $i = 0 ; $i < $messagesParPage ; $i++ )
@@ -48,6 +47,8 @@ if ($_SESSION['login']) // si la personne est connecte
     $user_manager = new UserManager($db);
     $user = $user_manager->getUser($_SESSION['email']);
     $role = $user->getRole(); // On recupere son role
-} else {
+}
+else
+    {
     $role = 'visiteur'; // Sinon il est simplement visiteur
 }

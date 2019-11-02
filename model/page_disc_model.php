@@ -6,7 +6,8 @@ $user_manager = new UserManager($db);
 $manager = new Disc_Mess_Manager($db);
 
 // On recupere l'id de la discussion à afficher
-if(isset($_POST['discussion'])) {
+if(isset($_POST['discussion']))
+{
     $_SESSION['discussion'] = $_POST['discussion'];
 }
 
