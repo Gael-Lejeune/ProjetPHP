@@ -5,7 +5,7 @@ body{
     max-height: 100vh;
     margin: 0;
     padding: 0;
-    font-family: Bebas, sans-serif;
+    font-family: 'Staatliches', cursive;
     font-size: 20px;
     color: white;
 }
@@ -62,6 +62,7 @@ input:focus {
     background-color: #101824;
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 60px; /* Place content 60px from the top */
+    border-left: 1px solid #2461cc;
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
 }
 
@@ -114,6 +115,7 @@ input:focus {
     position: absolute;
     background-color: #101824;
     border-radius: 4px;
+    border: 1px solid #2461cc;
     transition: margin-right .5s; /* If you want a transition effect */
 }
 
@@ -140,9 +142,10 @@ input:focus {
 
 .container-form-login {
     width: 500px;
-    height: 430px;
+    height: auto;
     margin-top: 15%;
     margin-left: 10%;
+    padding-bottom: 30px;
     background-color: #101824;
     display: flex;
     flex-direction: column;
@@ -152,9 +155,10 @@ input:focus {
 
 .container-form-mdp {
     width: 500px;
-    height: 350px;
+    height: auto;
     margin-top: 15%;
     margin-left: 10%;
+    padding-bottom: 30px;
     background-color: #101824;
     display: flex;
     flex-direction: column;
@@ -167,19 +171,19 @@ input:focus {
     height: auto;
     margin-top: 8%;
     margin-left: 10%;
+    padding-bottom: 30px;
     display: flex;
     flex-direction: column;
     background-color: #101824;
     /*border: 1px solid deeppink;*/
-    padding-bottom: 30px;
     border-radius: 5px;
 }
 
 .container-form-infopers {
     width: 30%;
-    height: 460px;
-    display: flex;
+    height: auto;
     margin-top: 15%;
+    display: flex;
     flex-direction: column;
     background-color: #101824;
     /*border: 1px solid #1c2041;*/
@@ -188,13 +192,53 @@ input:focus {
 
 .container-form-infopers1 {
     width: 30%;
-    height: 350px;
-    display: flex;
+    height: 335px;
     margin-top: 15%;
+    display: flex;
     flex-direction: column;
     background-color: #101824;
     /*border: 1px solid #1c2041;*/
     border-radius: 5px;
+}
+
+.container-admin {
+    width: 90%;
+    height: auto;
+    margin-left: 5%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /*border: 1px solid white;*/
+}
+
+.container-form-admin1, .container-form-admin2, .container-form-admin3 {
+    width: 500px;
+    margin-top: 125px;
+    background-color: #101824;
+    display: flex;
+    flex-direction: column;
+    /*border: 1px solid deeppink;*/
+    border-radius: 5px;
+}
+
+.container-form-admin1 {
+    height: 330px;
+}
+
+.container-form-admin2 {
+    height: 365px;
+}
+
+.container-form-admin3 {
+    height: auto;
+    padding-bottom: 30px;
+}
+
+.titre {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 28px;
 }
 
 .container-form-infopers .submit, .container-form-infopers1 .submit {
@@ -207,20 +251,20 @@ h1 {
     font-size: 28px;
 }
 
-.form {
+.form, .info {
     width: 90%;
     margin-left: 5%;
     /*border: 1px solid #1c2041;*/
 }
 
-form a {
+form a, .info a {
     color: #2461cc;
     font-size: 16px;
     text-decoration: none;
     /*border: 1px solid #1c2041;*/
 }
 
-.form p {
+.form p, .info p {
     font-size: 16px;
     color: #818283;
 }
@@ -282,15 +326,12 @@ form a {
 }
 
 input[type=checkbox] {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    -ms-appearance: none;
-    border-radius: 4px;
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
+    margin-top: 13px;
     background: #080c10;
     border: 1px solid #1a1a1a;
-    border-radius: 4px;
+    border-radius: 5px;
 }
 
 input[type=checkbox]:checked {
@@ -316,7 +357,7 @@ input:focus {
     width: 99%;
     height: 40px;
     /*margin-top: 10px;*/
-    font-family: Bebas;
+    font-family: 'Staatliches', cursive;
     font-size: 18px;
     color: white;
     background-color: #2461cc;
@@ -328,7 +369,7 @@ input:focus {
     width: 99%;
     height: 40px;
     margin-top: 50px;
-    font-family: Bebas;
+    font-family: 'Staatliches', cursive;
     font-size: 18px;
     color: white;
     background-color: #2461cc;
@@ -340,7 +381,7 @@ input:focus {
     width: 99%;
     height: 40px;
     margin-top: 20px;
-    font-family: Bebas;
+    font-family: 'Staatliches', cursive;
     font-size: 18px;
     color: white;
     background-color: #2461cc;
@@ -356,7 +397,8 @@ h2 {
 }
 
 h4 {
-    margin-top: 20px;
+    margin-top: 40px;
+    margin-bottom: -10px;
     text-align: center;
     font-size: 28px;
 }
@@ -364,11 +406,11 @@ h4 {
 .info-personnelles {
     width: 100%;
     height: 35px;
-    font-family: Bebas;
+    font-family: 'Staatliches', cursive;
     font-size: 18px;
     color: white;
     background-color: #080c10;
-    border: 1px solid #1a1a1a;
+    border: 1px solid #2a8e6c;
     border-radius: 4px;
 }
 
@@ -381,7 +423,15 @@ h4 {
     /*border: 1px solid white;*/
 }
 
-.Backtohome {
+.info-admin {
+    width: auto;
+    float: right;
+    margin-top: 5px;
+    margin-right: 3px;
+    /*border: 1px solid white;*/
+}
+
+#Backtohome {
     width: 200px;
     height: 60px;
     right: 20px;
@@ -393,9 +443,10 @@ h4 {
     background-color: #101824;
     border: 1px solid #2461cc;
     border-radius: 4px;
+    transition: margin-right .5s; /* If you want a transition effect */
 }
 
-.Backtohome div {
+#Backtohome div {
     width: 50px;
     height: 40px;
     margin-top: 10px;
@@ -405,13 +456,13 @@ h4 {
     border-radius: 4px;
 }
 
-.Backtohome img {
+#Backtohome img {
     width: 40px;
     height: 40px;
     margin-left: 5px;
 }
 
-.Backtohome p {
+#Backtohome p {
     width: auto;
     height: 20px;
     margin-top: 18px;
@@ -445,11 +496,18 @@ h4 {
 
     }
 
-    .Backtohome {
+    #Backtohome {
         right: 5%;
     }
 
     #main {
         right: 5%;
+    }
+}
+
+@media screen and (max-width: 1110px) {
+    .container-admin {
+        margin-bottom: 100px;
+        /*border: 1px solid white;*/
     }
 }

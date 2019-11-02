@@ -5,7 +5,7 @@ body{
     width: 100%;
     margin: 0;
     padding: 0;
-    font-family: Bebas, sans-serif;
+    font-family: 'Staatliches', cursive;
     font-size: 20px;
     color: white;
     position: absolute;
@@ -83,6 +83,7 @@ h1 {
     background-color: #101824;
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 60px; /* Place content 60px from the top */
+    border-left: 1px solid #2461cc;
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
 }
 
@@ -134,6 +135,7 @@ h1 {
     justify-content: space-between;
     position: fixed; /* Stay in place */
     background-color: #101824;
+    border: 1px solid #2461cc;
     border-radius: 4px;
     transition: margin-right .5s; /* If you want a transition effect */
 }
@@ -161,35 +163,61 @@ h2 {
     margin-top: -10px;
 }
 
+h3 {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 28px;
+}
+
+h4 {
+    text-align: center;
+    color: #818283;
+    font-size: 18px;
+    margin-top: -20px;
+}
+
+h5 {
+    text-align: center;
+    color: #818283;
+    font-size: 18px;
+    margin-top: -20px;
+    margin-bottom: 30px;
+}
+
 .container-discussion {
     width: 500px;
     height: auto;
+    margin-top: 100px;
     margin-left: calc(50% - 250px);
+    margin-bottom: 50px;
     display: flex;
-    border: 1px solid white;
+    border-radius: 5px;
+    /*border: 1px solid white;*/
 }
 
-.merde {
+.nom-discussion {
     width: 100%;
-    background: none;
-    font-family: Bebas, sans-serif;
+    background-color: #2461cc;
+    font-family: 'Staatliches', cursive, sans-serif;
     color: white;
     text-align: center;
-    margin-top: 100px;
     margin-bottom: 20px;
     font-size: 24px;
-    border: 1px solid red;
+    border: none;
 }
 
-.pipi {
+.container-all {
     width: 500px;
+    background-color: #101824;
+    border-radius: 5px;
+    margin-bottom: 50px;
+    /*border: 1px solid yellow;*/
 }
 
 .discussion {
     width: auto;
     height: auto;
     display: flex;
-    padding-top: 100px;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -198,9 +226,8 @@ h2 {
 }
 
 .contenu-discussion {
-    width: 90%;
+    width: 100%;
     height: auto;
-    margin-left: 5%;
     font-family: calibri;
     font-size: 18px;
     color: white;
@@ -210,8 +237,27 @@ h2 {
 }
 
 .state {
-    float: right;
-    border: 1px solid yellow;
+    /*border: 1px solid yellow;*/
+}
+
+.rondvert {
+    width: 20px;
+    height: 20px;
+    margin-top: -20px;
+    margin-left: calc(95% - 20px);
+    margin-bottom: 40px;
+    border-radius: 50%;
+    background-color: green;
+}
+
+.rondrouge {
+    width: 20px;
+    height: 20px;
+    margin-top: -20px;
+    margin-left: calc(95% - 20px);
+    margin-bottom: 40px;
+    border-radius: 50%;
+    background-color: red;
 }
 
 .contenu-discussion p{
@@ -227,6 +273,7 @@ h2 {
     margin-top: 10%;
     margin-left: 10%;
     margin-bottom: 30px;
+    padding-bottom: 10px;
     background-color: #101824;
     display: flex;
     flex-direction: column;
@@ -252,6 +299,7 @@ h2 {
     text-align: justify;
     margin-left: 20px;
     margin-right: 20px;
+    /*border: 1px solid purple;*/
 }
 
 h1 {
@@ -288,21 +336,83 @@ h2 {
     /*border: 1px solid #1c2041;*/
 }
 
-.like-paraf {
-    display: flex;
-    flex-direction: row;
-    /*border: 1px solid #1c2041;*/
-}
-
-.submit1 {
-    width: 100%;
+.submit {
+    width: 40%;
     height: 40px;
-    font-family: Bebas;
+    margin-top: 20px;
+    font-family: 'Staatliches', cursive;
     font-size: 18px;
     color: white;
     background-color: #2461cc;
     border: none;
     border-radius: 4px;
+}
+
+.submit1, .submit2 {
+    height: 40px;
+    font-family: 'Staatliches', cursive;
+    font-size: 18px;
+    color: white;
+    background-color: #2461cc;
+    border: none;
+    border-radius: 4px;
+}
+
+.submit1 {
+    width: 100%;
+    margin-top: -20px;
+}
+
+.submit2 {
+    width: 90%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 5%;
+}
+
+.container-chat > div {
+    margin-bottom: -20px;
+}
+
+.messages {
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    /*border: 1px solid red;*/
+}
+
+.messages p {
+    margin-top: 5px;
+    /*border: 1px solid red;*/
+}
+
+.messages-option {
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+    /*border: 1px solid green;*/
+}
+
+.delete, .modify {
+    width: auto;
+    height: 30px;
+    font-family: 'Staatliches', cursive;
+    font-size: 18px;
+    color: white;
+    background-color: #2461cc;
+    border: none;
+    border-radius: 4px;
+    /*border: 1px solid yellow;*/
+}
+
+.delete {
+    margin-right: 10px;
+}
+
+.like-paraf {
+    display: flex;
+    flex-direction: row;
+    /*border: 1px solid #1c2041;*/
 }
 
 .form {
@@ -357,31 +467,7 @@ form a {
     text-decoration: none;
 }
 
-.submit {
-    width: 40%;
-    height: 40px;
-    margin-top: 20px;
-    font-family: Bebas;
-    font-size: 18px;
-    color: white;
-    background-color: #2461cc;
-    border: none;
-    border-radius: 4px;
-}
-
-.Backtohome {
-    width: 100px;
-    height: 40px;
-    bottom: 20px;
-    right: 20px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    background-color: #101824;
-    border-radius: 4px;
-}
-
-.Backtohome div {
+#Backtohome div {
     width: 40px;
     height: 32px;
     margin-top: 5px;
@@ -390,7 +476,7 @@ form a {
     border-radius: 4px;
 }
 
-.Backtohome {
+#Backtohome {
     width: 200px;
     height: 60px;
     right: 20px;
@@ -402,9 +488,10 @@ form a {
     background-color: #101824;
     border: 1px solid #2461cc;
     border-radius: 4px;
+    transition: margin-right .5s; /* If you want a transition effect */
 }
 
-.Backtohome div {
+#Backtohome div {
     width: 50px;
     height: 40px;
     margin-top: 10px;
@@ -414,13 +501,13 @@ form a {
     border-radius: 4px;
 }
 
-.Backtohome img {
+#Backtohome img {
     width: 40px;
     height: 40px;
     margin-left: 5px;
 }
 
-.Backtohome p {
+#Backtohome p {
     width: auto;
     height: 20px;
     margin-top: 18px;
@@ -437,5 +524,21 @@ form a {
     .container-chat-global {
         width: 90%;
         margin-left: 5%;
+    }
+
+    .container-discussion {
+        width: 90%;
+        margin-left: 5%;
+    }
+    .container-all {
+        width: 100%;
+    }
+
+    #Backtohome {
+        right: 5%;
+    }
+
+    #main {
+        right: 5%;
     }
 }

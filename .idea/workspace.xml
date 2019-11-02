@@ -1,14 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="394d6aa1-3445-40aa-85a5-e353a8e0f4cd" name="Default Changelist" comment="">
+    <list default="true" id="227c4fe5-873d-4ee2-aaf3-461033efdf6b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/html/images/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/images/favicon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/logoFreeNote.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/class/Discussion.php" beforeDir="false" afterPath="$PROJECT_DIR$/class/Discussion.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/admin_processing.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/admin_processing.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/dtb.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/dtb.inc.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/indexmodel.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/indexmodel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/account.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/account.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/create_discussion.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/create_discussion.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/formulaire_inscription.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/formulaire_inscription.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/mdpcontroller.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/mdpcontroller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/page_discussion.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/page_discussion.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/see_disc.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/see_disc.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/css/discussions.css" beforeDir="false" afterPath="$PROJECT_DIR$/html/css/discussions.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/html/css/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/html/css/login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/java/navbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/link.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/link.inc.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/navbar.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/navbar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/utils.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/utils.inc.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/accountview.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/accountview.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/admin_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/admin_view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/create_discussion_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/create_discussion_view.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/indexview.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/indexview.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/inscriptionview.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/inscriptionview.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/loginview.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/loginview.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/mdpview.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/mdpview.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/page_disc_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/page_disc_view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/see_disc_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/see_disc_view.php" afterDir="false" />
     </list>
+    <list id="5504e2fa-2ce0-416c-a015-9e96628cc8cf" name="Revert &quot;Modification de l'index pour la prise en compte de la session actuelle.&quot;" comment="Revert &quot;Modification de l'index pour la prise en compte de la session actuelle.&quot;&#10;&#10;This reverts commit fbcc00a2" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +84,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="error" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -76,7 +100,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/view" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/html/images" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -87,15 +111,16 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\IUT\ProjetPHP\view" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Floroux\PhpstormProjects\ProjetPHP\model" />
+      <recent name="C:\Users\Floroux\PhpstormProjects\ProjetPHP\html\images" />
+      <recent name="C:\Users\Floroux\PhpstormProjects\ProjetPHP\html" />
+      <recent name="C:\Users\Floroux\PhpstormProjects\ProjetPHP\view" />
       <recent name="D:\IUT\ProjetPHP\model" />
-      <recent name="D:\IUT\ProjetPHP\controller" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/html/images" />
-      <recent name="$PROJECT_DIR$/html" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Floroux\PhpstormProjects\ProjetPHP\html\images" />
+      <recent name="D:\IUT\ProjetPHP\view" />
     </key>
   </component>
   <component name="RunDashboard">

@@ -44,3 +44,5 @@
         <button class="openbtn" onclick="openNav()">&#9776;</button>
     </div>
 </div>
+
+<a href="<?php echo $indexcontroller ?>"><img style="width: 128px; position: fixed; top: 20px; left: 20px;" alt="logodusite" src="https://zupimages.net/up/19/44/8mnk.png"></a>
