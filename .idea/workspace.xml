@@ -1,25 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="227c4fe5-873d-4ee2-aaf3-461033efdf6b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ParamsAdmin.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ParamsAdmin.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/class/Disc_Mess_Manager.php" beforeDir="false" afterPath="$PROJECT_DIR$/class/Disc_Mess_Manager.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/class/Discussion.php" beforeDir="false" afterPath="$PROJECT_DIR$/class/Discussion.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/class/UserManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/class/UserManager.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/logout.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/logout.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/admin_processing.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/admin_processing.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/create_discussion_processing.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/create_discussion_processing.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/data-processor.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/login-processing.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/page_disc_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/page_disc_model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/page_disc_processing.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/page_disc_processing.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/see_disc_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/see_disc_model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/admin_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/admin_view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/indexview.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/indexview.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/page_disc_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/page_disc_view.php" afterDir="false" />
-    </list>
+    <list default="true" id="227c4fe5-873d-4ee2-aaf3-461033efdf6b" name="Default Changelist" comment="" />
     <list id="5504e2fa-2ce0-416c-a015-9e96628cc8cf" name="Revert &quot;Modification de l'index pour la prise en compte de la session actuelle.&quot;" comment="Revert &quot;Modification de l'index pour la prise en compte de la session actuelle.&quot;&#10;&#10;This reverts commit fbcc00a2" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -93,7 +75,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="POO" />
+        <entry key="$PROJECT_DIR$" value="ModifDiscussions" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -377,7 +359,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572697627594</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="travail sur le processing de admin et debut du travail de modification des messages et de discussion">
+      <created>1572714329325</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1572714329325</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -431,6 +420,7 @@
     <MESSAGE value="Résolution des problèmes de liens dynamiques et de traitement des formulaires d'inscription et de changement de mdp ou d'username" />
     <MESSAGE value="Creation des classes User et UserManager + modification du code pour utiliser la POO et PDO" />
     <MESSAGE value="Recuperation de la nouvelle branche" />
-    <option name="LAST_COMMIT_MESSAGE" value="Recuperation de la nouvelle branche" />
+    <MESSAGE value="travail sur le processing de admin et debut du travail de modification des messages et de discussion" />
+    <option name="LAST_COMMIT_MESSAGE" value="travail sur le processing de admin et debut du travail de modification des messages et de discussion" />
   </component>
 </project>
