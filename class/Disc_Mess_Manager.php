@@ -22,6 +22,7 @@ class Disc_Mess_Manager
     /**
      * @param PDO $db
      */
+
     public function setDb($db)
     {
         $this->db = $db;
@@ -33,6 +34,7 @@ class Disc_Mess_Manager
      * @param Discussion $discussion
      */
     public function add_disc (Discussion $discussion) // ajout d'une nouvelle discussion dans la table discussion
+
     {
         $query = $this->db->prepare('INSERT INTO discussion (discName, owner, nbMessMax) VALUES (:disc_name, :owner, :nb_mess_max)');
         $query->bindValue(':disc_name', $discussion->getDiscName());
@@ -45,6 +47,7 @@ class Disc_Mess_Manager
      * @param Message $message
      */
     public function add_msg (Message $message) // ajout d'un nouveau message dans la table message
+
     {
         $query = $this->db->prepare('INSERT INTO message (idDiscussion, text) VALUES (:id, :text)');
         $query->bindValue(':id', $message->getIdDiscussion());
@@ -59,6 +62,7 @@ class Disc_Mess_Manager
      * @param Ecrivain $ecrivain
      */
     public function add_ecrv (Ecrivain $ecrivain) // ajout d'un nouveau tuple dans la table ecrivain
+
     {
         $query = $this->db->prepare('INSERT INTO ecrivain (writer, idMsg, idDiscussion) VALUES (:writer, :id_msg, :id_disc)');
         $query->bindValue(':writer', $ecrivain->getWriter());
@@ -71,6 +75,7 @@ class Disc_Mess_Manager
      * @param Like $like
      */
     public function add_liker (Like $like) // ajout d'un nouveau tuple dans la table like_user
+
     {
         $query = $this->db->prepare('INSERT INTO like_user (liker, idDiscussion) VALUES (:liker, :id_disc)');
         $query->bindValue(':liker', $like->getLiker());
@@ -84,6 +89,7 @@ class Disc_Mess_Manager
      * @return int idDiscussion
      */
     public function getIDLastDisc () // retourne l'id de la dernière discussion créer
+
     {
         $query = $this->db->prepare('SELECT MAX(idDiscussion) as id FROM discussion');
         $query->execute();
@@ -97,6 +103,7 @@ class Disc_Mess_Manager
      * @return array
      */
     public function getDiscussionPagination ($limit1, $limit2) // retourne de la limit1 à la limit2 discsussion les plus likés
+
     {
         $query = 'SELECT * FROM discussion ORDER BY nbLike DESC LIMIT ';
         $query= $query."$limit1, $limit2";
@@ -111,6 +118,7 @@ class Disc_Mess_Manager
      * @return array
      */
     public function getDiscussion ($id) // renvoi un tableau contenant toutes les informations de la discussion avec l'id donnée en parametre
+
     {
         $query = $this->db->prepare('SELECT * FROM discussion WHERE idDiscussion = ?');
         $query->execute([$id]);
@@ -122,6 +130,7 @@ class Disc_Mess_Manager
      * @return int total
      */
     public function getNbDiscussion () // retourne le nombre total de discussion differentes enregistrés dans la base de donnée
+
     {
         $query = $this->db->prepare('SELECT COUNT(*) as total FROM discussion');
         $query->execute();
@@ -149,6 +158,7 @@ class Disc_Mess_Manager
     {
         $query = $this->db->prepare('SELECT * FROM discussion WHERE owner = ?');
         $query->execute([$email]);
+
         $result = $query->fetchAll(PDO::FETCH_ASSOC);
 
         return $result;
@@ -220,6 +230,7 @@ class Disc_Mess_Manager
      * @return Message
      */
     public function getOpenMsg ($id) // renvoi le message ouvert de la discussion donnée en paramètre
+
     {
         $query = $this->db->prepare('SELECT * FROM message WHERE idDiscussion = ? AND state = 1');
         $query->execute([$id]);
@@ -314,5 +325,6 @@ class Disc_Mess_Manager
 
         return !isset($canLike[0]);
     }
+
 
 }
