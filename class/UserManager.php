@@ -38,7 +38,7 @@ class UserManager
         $query->bindValue(':user_name', $user->getName());
         $query->bindValue(':email', $user->getEmail());
         $query->bindValue(':password', $user->getPassword());
-        $query->bindValue(':role', 'member');
+        $query->bindValue(':role', $user->getRole());
         $query->execute();
     }
 
@@ -53,6 +53,17 @@ class UserManager
         $result = $query->fetch(PDO::FETCH_ASSOC);
 
         return new User($result);
+    }
+
+    /**
+     * @return array (liste de tous les mails enregistres dans la base de données)
+     */
+    public function getMails()  {
+        $query = $this->db->prepare('SELECT email FROM Users');
+        $query->execute();
+        $result = $query->fetchAll(PDO::FETCH_ASSOC);
+
+        return $result;
     }
 
     /**
@@ -84,7 +95,7 @@ class UserManager
 
     /**
      * @param string $email
-     * @param md5(string) $password
+     * @param string $password (crypte en md5)
      * @return bool
      */
     public function exist ($email, $password) // renvoi vrai si l'utilisateur est bien entrer dans la base de donnée et que le mot de passe correspond, faux dans l'autre cas
@@ -128,7 +139,7 @@ class UserManager
      * @param string $email
      */
     public function delete ($email) { // permet de supprimer un utilisateur de la table
-        $query = $this->db->prepare('DELETE FROM user WHERE email=?');
+        $query = $this->db->prepare('DELETE FROM Users WHERE email=?');
         $query->execute([$email]);
     }
 }

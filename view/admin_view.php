@@ -1,6 +1,8 @@
 <div class="container">
     <div class="container-form-infopers">
         <h4> Modifier la pagination </h4>
+        <?php $file = file('../ParamsAdmin.txt');
+        echo $file[0]; ?>
         <form class="form" action="<?php echo $admin_processing ?>" method="post">
             <p> Nouvelle pagination : </p>
             <input class="bouton" autocomplete="off" name="new_pagination" type="number"/></br>
@@ -10,6 +12,8 @@
 
     <div class="container-form-infopers">
         <h4> Changer le nombre de discussion maximum par utilisateur </h4>
+        <?php $file = file('../ParamsAdmin.txt');
+        echo $file[1]; ?>
         <form class="form" action="<?php echo $admin_processing ?>" method="post">
             <p> Nouveau nombre de discussion max : </p>
             <input class="bouton"autocomplete="off" name="new_nbDiscMax" type="number"/>

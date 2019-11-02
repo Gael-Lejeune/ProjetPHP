@@ -11,21 +11,38 @@ require $navbar;
         <p><?php
             foreach ($messages as $value)
             {
-                echo $value['text'].'<br>';
+                echo $value['text']; ?>
+
+                <form class="form-like" action="<?php echo $page_disc_processing ?>" method="post">
+                    <input class ="submit1" type="submit" name="action" value="X"/>
+                </form>
+
+                <form class="form-like" action="<?php echo $page_disc_processing ?>" method="post">
+                    <input class ="submit1" type="submit" name="action" value="Edit"/>
+                </form>
+
+        <?php   echo '<br>';
             }
             ?></p>
     </div>
 
-    <div class="like">
-        <form class="form-like" action="<?php echo $page_disc_processing ?>" method="post">
-            <input class ="submit1" type="submit" name="action" value="Like"/>
-        </form>
-        <div class="like-paraf">
-            <p> Like : <?php echo $result['nbLike']?> </p>
-        </div>
-    </div>
+    <?php if (isset($_SESSION['login'])) { ?>
 
-    <?php if (isset($_SESSION['login'])) {
+        <div class="like">
+            <form class="form-like" action="<?php echo $page_disc_processing.'?discussion='.$_GET['discussion'] ?>" method="get">
+                <input class ="submit1" type="submit" name="action" value="Like"/>
+            </form>
+            <div class="like-paraf">
+                <p> Like : <?php echo $result['nbLike']?> </p>
+            </div>
+        </div>
+
+    <?php
+        if ($user->getRole() == 'admin') { ?>
+            <form class="form-like" action="<?php echo $page_disc_processing ?>" method="post">
+                <input class ="submit1" type="submit" name="action" value="Supprimer la discussion"/>
+            </form>
+        <?php }
     if ($result['state']==1)
     { ?>
         <form class="form" action="<?php echo $page_disc_processing ?>" method="post">

@@ -155,6 +155,19 @@ class Disc_Mess_Manager
     }
 
     /**
+     * @param $nbre_disc_a_recuperer
+     * @return array (liste des id des discussions les plus anciennes)
+     */
+    public function getOldDisc($nbre_disc_a_recuperer, $owner) { // renvoi la liste des discussions les plus anciennes de l'utilisateur
+        $query = 'SELECT idDiscussion FROM discussion WHERE owner = ? AND state = 1 ORDER BY idDiscussion LIMIT ';
+        $query= $query."0, $nbre_disc_a_recuperer";
+        $query = $this->db->prepare($query);
+        $query->execute([$owner]);
+        $result = $query->fetchAll(PDO::FETCH_ASSOC);
+        return $result;
+    }
+
+    /**
      * @param int $id
      * @return string owner
      */

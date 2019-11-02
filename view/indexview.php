@@ -8,96 +8,41 @@ require $navbar;
 <div class="description">
     <h1> Description du site  </h1>
     <div class="description-FreeNote">
-        <p>Il faut écrire  ici une description qui explique le principe du site</p>
+        <p>Réseau social d’un nouveau genre, FreeNote consiste à créer des fils de discussions comprenant
+            des messages participatifs au sein desquels chaque utilisateur ne peut ajouter qu’un ou deux mots.</p>
     </div>
 </div>
 
 <div class="container-discussion">
     <div class="discussion">
-        <div class="discussion1">
-            <h1> <?php echo $result[0]['discName'] ?> </h1>
-            <div class="discussion1-FreeNote">
-                <p><?php
-                        foreach ($msg_Disc1 as $value)
-                        {
-                            echo $value['text'].'<br>';
-                        }
-                    ?></p>
+        <?php foreach ($result as $key_disc => $disc_array) {
+            $discussion = new Discussion ($disc_array); ?>
+            <div class="discussion1">
+                <h1><?php echo htmlspecialchars($discussion->getDiscName()) ?></h1>
+                <div class="discussion1-FreeNote">
+                    <p><?php
+                        $mess_liste = $manager->getMsgForIDDisc($discussion->getIdDiscussion());
+                        foreach ($mess_liste as $key_mess => $mess_array) {
+                            $message = new Message($mess_array);
+                            echo htmlspecialchars($message->getText()) . '<br>';
+                        } ?></p>
+                </div>
+                    <?php if ($discussion->getState() == 1)
+                        echo '<div class="rondvert"> </div>';
+                    else if ($discussion->getState() == 0)
+                        echo '<div class="rondrouge"> </div>'; ?>
+                <form class="form" action="<?php echo $page_disc_controller ?>" method="get">
+                    <button class="submit" value="<?php echo $discussion->getIdDiscussion()?>" name="discussion">Voir la discussion</button>
+                </form>
             </div>
-                <?php if ($result[0]['state'] == 1)
-                    echo '<div class="rondvert"> </div>';
-                else if ($result[0]['state'] == 0)
-                    echo '<div class="rondrouge"> </div>';
-                ?>
-            <form class="form" action="<?php echo $page_disc_controller ?>" method="post">
-                <button class="submit" value="<?php echo $result[0]['idDiscussion']?>" name="discussion">Voir la discussion</button>
-            </form>
-        </div>
-
-        <div class="discussion2">
-            <h1> <?php echo $result[1]['discName'] ?> </h1>
-            <div class="discussion2-FreeNote">
-                <p><?php
-                    foreach ($msg_Disc2 as $value)
-                    {
-                        echo $value['text'].'<br>';
-                    }
-                    ?></p>
-            </div>
-                <?php if ($result[1]['state'] == 1)
-                    echo '<div class="rondvert"> </div>';
-                else if ($result[1]['state'] == 0)
-                    echo '<div class="rondrouge"> </div>';
-                ?>
-            <form class="form" action="<?php echo $page_disc_controller ?>" method="post">
-                <button class="submit" value="<?php echo $result[1]['idDiscussion']?>" name="discussion">Voir la discussion</button>
-            </form>
-        </div>
-        <div class="discussion2">
-            <h1> <?php echo $result[2]['discName'] ?> </h1>
-            <div class="discussion2-FreeNote">
-                <p><?php
-                    foreach ($msg_Disc2 as $value)
-                    {
-                        echo $value['text'].'<br>';
-                    }
-                    ?></p>
-            </div>
-            <?php if ($result[1]['state'] == 1)
-                echo '<div class="rondvert"> </div>';
-            else if ($result[1]['state'] == 0)
-                echo '<div class="rondrouge"> </div>';
-            ?>
-            <form class="form" action="<?php echo $page_disc_controller ?>" method="post">
-                <button class="submit" value="<?php echo $result[1]['idDiscussion']?>" name="discussion">Voir la discussion</button>
-            </form>
-        </div>
-        <div class="discussion2">
-            <h1> <?php echo $result[3]['discName'] ?> </h1>
-            <div class="discussion2-FreeNote">
-                <p><?php
-                    foreach ($msg_Disc2 as $value)
-                    {
-                        echo $value['text'].'<br>';
-                    }
-                    ?></p>
-            </div>
-            <?php if ($result[1]['state'] == 1)
-                echo '<div class="rondvert"> </div>';
-            else if ($result[1]['state'] == 0)
-                echo '<div class="rondrouge"> </div>';
-            ?>
-            <form class="form" action="<?php echo $page_disc_controller ?>" method="post">
-                <button class="submit" value="<?php echo $result[1]['idDiscussion']?>" name="discussion">Voir la discussion</button>
-            </form>
-        </div>
+        <?php } ?>
     </div>
     <div class="Prevnext">
-        <?php if ($_GET['page'] != 1)
+        <?php if ($pageActuelle > 1)
         {?>
             <div class="Backtohome">
                 <div class="left">
-                    <a href="<?php echo $indexcontroller."?page=".($_GET['page']-1) ?>">
+                    <a href="<?php echo $indexcontroller."?page=".($pageActuelle-1) ?>">
                         <img class="left1" src="https://img.icons8.com/carbon-copy/100/000000/double-left.png">
                     </a>
                 </div>
@@ -105,25 +50,35 @@ require $navbar;
             </div>
         <?php } ?>
         <?php
-        echo '<div class="checkbox">Page : '; //Pour l'affichage, on centre la liste des pages
+        echo '<div class="lespages">';//Pour l'affichage, on centre la liste des pages
+            echo '<p> Page </p>';
         for($i=1; $i<=$nombreDePages; $i++) //On fait notre boucle
         {
-            //On va faire notre condition
-            if($i==$_GET['page']) //Si il s'agit de la page actuelle...
-            {
-                echo ' [ '.$i.' ] ';
-            }
-            else //Sinon...
-            {
-                echo ' <a href="'.$indexcontroller.'?page='.$i.'">'.$i.'</a> ';
+            if ($i == 1 || (($pageActuelle - 2) < $i && $i < ($pageActuelle + 2)) || $i == $nombreDePages) {
+                echo '<div class="right">';
+                if ($i == $nombreDePages && $pageActuelle < ($nombreDePages - 2)) {
+                    echo '...' . '&nbsp';
+                }
+                //On va faire notre condition
+                if ($i == $pageActuelle) //Si il s'agit de la page actuelle...
+                {
+                    echo ' [ ' . $i . ' ] ';
+                } else //Sinon...
+                {
+                    echo ' <a href="' . $indexcontroller . '?page=' . $i . '">' . $i . '</a> ';
+                }
+                if ($i == 1 && $pageActuelle > 3) {
+                    echo '...' . '&nbsp';
+                }
+                echo '</div>';
             }
         }
         echo '</div>';
-        if ($_GET['page'] != $nombreDePages){?>
+        if ($pageActuelle < $nombreDePages){?>
             <div class="Backtohome">
                 <p> Next </p>
                 <div class="right">
-                    <a href="<?php echo $indexcontroller."?page=".($_GET['page']+1) ?>">
+                    <a href="<?php echo $indexcontroller."?page=".($pageActuelle+1) ?>">
                         <img class="left" src="https://img.icons8.com/carbon-copy/100/000000/double-right.png">
                     </a>
                 </div>

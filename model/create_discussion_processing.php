@@ -23,16 +23,23 @@ if (loginckeck($user_manager)){
         header ("location:$create_disc_controller?step=ERROR_incomplet"); // Si le formulaire est incomplet on renvoi une erreur
     }
 
-    $discussion = new Discussion(['discName' => $name_disc,'owner' => $_SESSION['email'], 'nbMessMax' => $nb_msg_max]);
-    $disc_manager->add_disc($discussion); // On créer une nouvelle discussion
+    $file = file ('../ParamsAdmin.txt');
 
-    $message = new Message(['idDiscussion' => $disc_manager->getIDLastDisc(),'text' => $msg]);
-    $disc_manager->add_msg($message); // On créer le premier message de la discussion
+    if ($disc_manager->getNbOpenDiscForUser($_SESSION['email']) >= $file['1'])
+    {
+        header("location:$indexcontroller?error=ERROR_tooMuchDiscussions");
+    } else {
+        $discussion = new Discussion(['discName' => $name_disc,'owner' => $_SESSION['email'], 'nbMessMax' => $nb_msg_max]);
+        $disc_manager->add_disc($discussion); // On créer une nouvelle discussion
 
-    $ecrivain = new Ecrivain(['writer' => $_SESSION['email'],'idMsg' =>$disc_manager->getIDLastMsg(), 'idDiscussion' => $disc_manager->getIDLastDisc()]);
-    $disc_manager->add_ecrv($ecrivain); // On ajoute un tuple dans ecrivain pour indiquer que l'utilisateur a bien ecrit dans le message
+        $message = new Message(['idDiscussion' => $disc_manager->getIDLastDisc(),'text' => $msg]);
+        $disc_manager->add_msg($message); // On créer le premier message de la discussion
 
-    header("location:$indexcontroller"); // On revient sur l'index
+        $ecrivain = new Ecrivain(['writer' => $_SESSION['email'],'idMsg' =>$disc_manager->getIDLastMsg(), 'idDiscussion' => $disc_manager->getIDLastDisc()]);
+        $disc_manager->add_ecrv($ecrivain); // On ajoute un tuple dans ecrivain pour indiquer que l'utilisateur a bien ecrit dans le message
+
+        header("location:$indexcontroller"); // On revient sur l'index
+    }
 
 // Si la personne n'est pas connecté
 }  else {
