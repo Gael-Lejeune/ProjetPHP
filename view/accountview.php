@@ -14,7 +14,7 @@ if (isset($_GET['error']) && $_GET['error']) {
     <div class="container-form-infopers1">
         <h4> Informations <br/> Personnelles </h4>
         <!--Affichage des informations de l'utilisateur -->
-        <div class="form">
+        <div class="info">
             <!-- On affiche les variables definies au dessus -->
             <p> Identifiant </p>
             <div class="info-personnelles"> <p> <?php echo htmlspecialchars($user->getName()) ?> </p></div>
@@ -31,7 +31,12 @@ if (isset($_GET['error']) && $_GET['error']) {
             <p> Nouvel identifiant : </p>
             <input class="bouton" autocomplete="off" name="new_login" type="text" required/></br>
             <p> Mot de passe actuel: </p>
-            <input class="bouton" autocomplete="off" autocapitalize="off" name="password" type="password" required/></br>
+            <input class="bouton" autocomplete="off" autocapitalize="off" name="password" type="password"/></br>
+            <?php
+            if (isset($_GET['error']) && $_GET['error']) {
+                echo "Mot de passe incorrect";
+            }
+            ?>
             <button class="submit1" type="submit" value="login" name="submit"> Changer mon Identifiant </button>
             <div class="a21"> <p> Un problème ? </p> <a href="<?php echo $mymdpcontroller ?>"> Mot de passe oublié ? </a> </div>
 
@@ -48,9 +53,6 @@ if (isset($_GET['error']) && $_GET['error']) {
             <input class="bouton" id="DoChangePassword" autocomplete="off" name="new_password" type="text" required/>
             <button class="submit1" type="submit" value="password" name="submit"> Changer mon Mot de passe </button>
             <div class="a21"> <p> Un problème ? </p> <a href="<?php echo $mymdpcontroller ?>"> Mot de passe oublié ? </a> </div>
-
-
-
         </form>
     </div>
 </div>
@@ -64,4 +66,3 @@ if (isset($_GET['error']) && $_GET['error']) {
 
 </body>
 </html>
-

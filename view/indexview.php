@@ -33,6 +33,9 @@ require $navbar;
                         echo '<div class="rondrouge"> </div>'; ?>
                 <form class="form" action="<?php echo $page_disc_controller ?>" method="post">
                     <button class="submit" value="<?php echo $discussion->getIdDiscussion()?>" name="discussion">Voir la discussion</button>
+                    <div class="like">
+                        <p> Like : <?php echo $discussion->getNbLike()?> </p>
+                    </div>
                 </form>
             </div>
         <?php } ?>
@@ -88,4 +91,3 @@ require $navbar;
 </div>
 </body>
 </html>
-

@@ -14,5 +14,3 @@ session_start();
 require $mymdpview;
 
 end_page();
-
-

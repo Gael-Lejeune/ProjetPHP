@@ -6,10 +6,11 @@ function start_page($title, $lien1, $background) // fonction qui affiche tout le
 <html lang="fr">
 <head>
 <title>'.PHP_EOL.$title.'</title>
-<link href="'.PHP_EOL.$lien1.'" rel="stylesheet">
-<link href="http://fr.allfont.net/allfont.css?fonts=bebas" rel="stylesheet" type="text/css">
+<link href="'.PHP_EOL.$lien1. '" rel="stylesheet">
+<link rel="icon" type="image/png" href="https://zupimages.net/up/19/44/i76f.png" />
+<link href="https://fonts.googleapis.com/css?family=Staatliches&display=swap" rel="stylesheet">
 </head>
-<body id="'.$background.'">'.PHP_EOL;
+<body id="' .$background.'">'.PHP_EOL;
 
 };
 
