@@ -10,7 +10,16 @@ start_page($myprofile, $logincss, $background4);
 //Demarrage de la session
 session_start();
 
-//Appel du model
+
+
+if ($step == 'ERROR_auth') {
+    echo 'Vous n\'ête pas connecté'.'<br/>';
+} else if ($step == 'ERROR_mdp') {
+    echo 'La confirmation de mot de passe est incorrecte'.'<br/>';
+} else if ($step == 'ERROR_incomplet') {
+    echo 'Merci de bien remplir tous les champs du formulaire'.'<br/>';
+}
+
 require $myprofilemodel;
 
 //Affichage de la page

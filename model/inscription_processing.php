@@ -47,6 +47,3 @@ else
     {
     header ("location:$inscriptioncontroller?step=ERROR_cond"); // On revient sur la page en renvoyant une erreur
 }
-
-
-

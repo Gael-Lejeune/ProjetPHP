@@ -77,8 +77,12 @@ else if ($action == 'Like')
     }
 
     header("location:$page_disc_controller"); // on revient sur la page
-}
-else
-    {
+} else if ($action == 'X') {
+
+} else if ($action == 'Supprimer la discussion') {
+    $manager->deleteDisc($_SESSION['discussion']);
+    $_SESSION['discussion'] = NULL;
+    header("location:$indexcontroller");
+} else {
     header("location:$page_disc_controller?error=ERROR_processing"); // si l'action n,'xiste pas, on renvoit un message d'erreur
 }

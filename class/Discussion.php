@@ -111,14 +111,6 @@ class Discussion
         }
     }
 
-    public function incrNbMess()
-    {
-        $this->nbMessages += 1;
-        if ($this->nbMessages >= $this->nbMessMax) {
-            $this->closeDisc();
-        }
-    }
-
     public function incrNbLike()
     {
         $this->nbLike += 1;

@@ -10,7 +10,8 @@ $user = $user_manager->getUser($_SESSION['email']);
 $disc_liste = $disc_manager->getUserDiscussion($user->getEmail());
 
 // on recupere le nombre de discussion ouverte de l'utilisateur
-$nbDiscMax = 5;
+$file = file('../ParamsAdmin.txt');
+$nbDiscMax = $file['1'];
 $nbDiscUser = $disc_manager->getNbOpenDiscForUser($user->getEmail());
 
 // on calcul le nombre de discussions restantes
