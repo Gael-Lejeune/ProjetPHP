@@ -1,7 +1,13 @@
+<script type="text/javascript" src="../java/navbar.js"></script>
+
+<?php
+require $navbar;
+?>
+
 <div class="container-form-login">
     <h1> Ha, te revoila ! </h1>
     <h2> Nous sommes si heureux de te revoir ! </h2>
-    <form class="form" action="<?php echo $login_processing ?>" method="post">
+    <form class="form" action="<?php echo $loginmodel ?>" method="post">
         <p> E-mail </p>
         <input class="bouton" type="text" name="email" required />
         <p> Mot de Passe </p>

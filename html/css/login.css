@@ -38,6 +38,95 @@ body{
     background-size: cover;
 }
 
+.overlay {
+    display: none;
+}
+
+.span {
+    display: none;
+}
+
+input:focus {
+    outline: none;
+
+}
+
+/* The sidebar menu */
+.sidebar {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    right: 0;
+    background-color: #101824;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+}
+
+/* The sidebar links */
+.sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidebar a:hover {
+    color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* The button used to open the sidebar */
+.openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    margin-top: 11px;
+    margin-right: 10px;
+    background-color: #2461cc;
+    color: white;
+    padding: 5px 10px 5px 10px;
+    border: none;
+    border-radius: 4px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+    width: 200px;
+    height: 60px;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: absolute;
+    background-color: #101824;
+    border-radius: 4px;
+    transition: margin-right .5s; /* If you want a transition effect */
+}
+
+#main p {
+    width: auto;
+    height: 20px;
+    font-size: 18px;
+    margin-top: 18px;
+    margin-left: auto;
+    margin-right: auto;
+    /*border: 1px solid red;*/
+}
+
 .container {
     width: 90%;
     height: auto;
@@ -75,13 +164,14 @@ body{
 
 .container-form-inscription {
     width: 500px;
-    height: 670px;
+    height: auto;
     margin-top: 8%;
     margin-left: 10%;
     display: flex;
     flex-direction: column;
     background-color: #101824;
     /*border: 1px solid deeppink;*/
+    padding-bottom: 30px;
     border-radius: 5px;
 }
 
@@ -358,11 +448,8 @@ h4 {
     .Backtohome {
         right: 5%;
     }
-}
 
-@media handheld and (min-width: 0px){
-
-    body {
-        background-size: 300%;
+    #main {
+        right: 5%;
     }
 }

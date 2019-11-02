@@ -1,7 +1,34 @@
-L'équipe de la Table Ronde
+--- L'équipe de la Table Ronde ---
 
 BOURGES Laetitia
 CARESSA Audrey
-LEJEUNE Gael
 HOCQUET Florian
+LEJEUNE Gael
 
+--- Notre projet ---
+
+En ce qui concerne notre projet, nous avons dû réaliser un réseau social que nous avons choisi d’appeler FreeNote.
+Il permet notamment de créer des discussions interactives où chaque utilisateur ne peut envoyer qu’un ou deux mots maximum par message.
+Notre site est composé d'une page d'accueil sur laquelle nous pouvons accéder à différentes discussions. 
+Cependant pour cela, il est nécessaire de se créé un compte afin de pouvoir consulter son profil ou poster des messages.
+Des options sont possibles pour pouvoir modifier son login ou son mot de passe.
+Il existe différents rôles liés à notre site, qui sont les suivants : administrateur, membre FreeNote et public.
+L'administrateur possède tous les droits, le membre FreeNote dispose d'un compte et de privilèges limités et public peut seulement lire les discussions mais ne pas les modifier.
+
+--- Nos choix techniques ---
+
+Pour la réalisation de notre site, nous avons utilisé PHP, mySQL, HTML et CSS.
+//à finir
+
+-- Configuration logicielle minimale conseillée --
+
+//à finir
+
+-- Les identifiants de connexion -- 
+
+Pour le site d'hébergement (AlwaysData) => courriel : gael@lejeune.pl et mot de passe : tableronde
+Pour l'accès à la base de donnée (phpMyAdmin) => 
+Pour le compte test de notre site => 
+Pour le compte administrateur de notre site =>
+Pour le compte du système de version => 
+//à compléter

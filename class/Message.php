@@ -1,14 +1,20 @@
 <?php
 class Message
 {
-    private $id_msg; //auto-implement
-    private $id_discussion; //NEED
-    private $state; //default (1 = ouvert, 0 = fermer)
-    private $text; //default
+    private $idMsg; // id du message (unique et auto-implement)
+    private $idDiscussion; // id de la discussion dans lequel le message est écrit
+    private $state; // 1 = message ouvert, 0 = message fermé
+    private $text; // texte contenu dans le message
+
+    //getteurs
+    public function getIdMsg()
+    {
+        return $this->idMsg;
+    }
 
     public function getIdDiscussion()
     {
-        return $this->id_discussion;
+        return $this->idDiscussion;
     }
 
     public function getState()
@@ -16,36 +22,52 @@ class Message
         return $this->state;
     }
 
-    public function getIdMsg()
-    {
-        return $this->id_msg;
-    }
-
-    public function getOwner()
-    {
-        return $this->owner;
-    }
-
     public function getText()
     {
         return $this->text;
     }
 
+    //setteurs
+    public function setIdMsg($id_msg)
+    {
+        $this->idMsg = $id_msg;
+    }
+
+    public function setIdDiscussion($id_discussion)
+    {
+        $this->idDiscussion = $id_discussion;
+    }
+
+    public function setState($state)
+    {
+        if ($state == 0 or $state == 1) {
+            $this->state = $state;
+        }
+    }
+
     public function setText($text)
     {
+        $text = (string) $text;
         $this->text = $text;
     }
 
-    public function __construct($id_discussion, $id_msg, $owner)
+    //constructeur -> appelle la fonction hydrate
+    public function __construct(array $donnees)
     {
-        $this->id_discussion = $id_discussion;
-        $this->id_msg = $id_msg;
-        $this->owner = $owner;
+        $this->hydrate($donnees);
     }
 
-    public function concatenation ($text)
+    // fonction hydrate -> appelle les setteurs necessaires à la création de la discussion en fonction des valeurs du tableau qui lui est passé en paramètre
+    public function hydrate(array $donnees)
     {
-        $this->text += $text;
+        foreach ($donnees as $key => $value)
+        {
+            $method = 'set'.ucfirst($key);
+            if (method_exists($this, $method))
+            {
+                $this->$method($value);
+            }
+        }
     }
 
 }

@@ -7,7 +7,9 @@ include '../model/dtb.inc.php';
 start_page("myprofile", $logincss, "stylesheet", "fonts.googleapis.com/css?family=Oswald&display=swap", "stylesheet", $background4);
 
 
+//Demarrage de la session
 session_start();
+
 
 if ($step == 'ERROR_auth') {
     echo 'Vous n\'ête pas connecté'.'<br/>';

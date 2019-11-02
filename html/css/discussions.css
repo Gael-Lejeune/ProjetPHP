@@ -1,0 +1,483 @@
+@import "compass/css3";
+
+/* Mise en page du fond du site */
+body{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Bebas, sans-serif;
+    font-size: 20px;
+    color: white;
+    position: absolute;
+    display: block;
+    height: 100%;
+}
+
+#myaccountb {
+    background:url("https://i.pinimg.com/originals/5f/ee/8e/5fee8e4a9fea271529cfd8828dd990d5.gif");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.overlay {
+    display: none;
+}
+
+.span {
+    display: none;
+}
+
+input:focus {
+    outline: none;
+
+}
+
+.contenu-navbar {
+    width: auto;
+    height: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 30px;
+    display: flex;
+    /*border: 1px solid blue;*/
+}
+
+.contenu-navbar a{
+    margin-left: 10px;
+    color: white;
+}
+
+.contenu-navbar a:hover{
+    color: #2461cc;
+    transition: 0.6s;
+}
+
+.description {
+    width: 500px;
+    height: auto;
+    margin-top: 300px;
+    margin-left: 10%;
+    background-color: #101824;
+    display: flex;
+    flex-direction: column;
+    /*border: 1px solid deeppink;*/
+    border-radius: 5px;
+}
+
+h1 {
+    padding-top: 20px;
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 28px;
+}
+
+/* The sidebar menu */
+.sidebar {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    right: 0;
+    background-color: #101824;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+}
+
+/* The sidebar links */
+.sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidebar a:hover {
+    color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* The button used to open the sidebar */
+.openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    margin-top: 11px;
+    margin-right: 10px;
+    background-color: #2461cc;
+    color: white;
+    padding: 5px 10px 5px 10px;
+    border: none;
+    border-radius: 4px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+    width: 200px;
+    height: 60px;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed; /* Stay in place */
+    background-color: #101824;
+    border-radius: 4px;
+    transition: margin-right .5s; /* If you want a transition effect */
+}
+
+#main p {
+    width: auto;
+    height: 20px;
+    font-size: 18px;
+    margin-top: 18px;
+    margin-left: auto;
+    margin-right: auto;
+    /*border: 1px solid red;*/
+}
+
+h1 {
+    padding-top: 20px;
+    text-align: center;
+    font-size: 28px;
+}
+
+h2 {
+    text-align: center;
+    color: #818283;
+    font-size: 18px;
+    margin-top: -10px;
+}
+
+h3 {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 28px;
+}
+
+h4 {
+    text-align: center;
+    color: #818283;
+    font-size: 18px;
+    margin-top: -20px;
+}
+
+h5 {
+    text-align: center;
+    color: #818283;
+    font-size: 18px;
+    margin-top: -20px;
+    margin-bottom: 30px;
+}
+
+.container-discussion {
+    width: 500px;
+    height: auto;
+    margin-top: 3%;
+    margin-left: calc(50% - 250px);
+    display: flex;
+    border-radius: 5px;
+    /*border: 1px solid white;*/
+}
+
+.nom-discussion {
+    width: 500px;
+    background-color: #2461cc;
+    font-family: Bebas, sans-serif;
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    border: none;
+}
+
+.pipi {
+    width: 500px;
+    background-color: #101824;
+    border-radius: 5px;
+    margin-bottom: 50px;
+}
+
+.discussion {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #1a1a1a;
+    border-radius: 5px;
+}
+
+.contenu-discussion {
+    width: 100%;
+    height: auto;
+    font-family: calibri;
+    font-size: 18px;
+    color: white;
+    background-color: #080c10;
+    border: 1px solid #2461cc;
+    border-radius: 4px;
+}
+
+.state {
+    /*border: 1px solid yellow;*/
+}
+
+.rondvert {
+    width: 20px;
+    height: 20px;
+    margin-top: -20px;
+    margin-left: calc(95% - 20px);
+    margin-bottom: 40px;
+    border-radius: 50%;
+    background-color: green;
+}
+
+.rondrouge {
+    width: 20px;
+    height: 20px;
+    margin-top: -20px;
+    margin-left: calc(95% - 20px);
+    margin-bottom: 40px;
+    border-radius: 50%;
+    background-color: red;
+}
+
+.contenu-discussion p{
+    text-align: justify;
+    margin-left: 20px;
+    margin-right: 20px;
+
+}
+
+.container-chat-global {
+    width: 500px;
+    height: auto;
+    margin-top: 10%;
+    margin-left: 10%;
+    margin-bottom: 30px;
+    background-color: #101824;
+    display: flex;
+    flex-direction: column;
+    /*border: 1px solid deeppink;*/
+    border-radius: 5px;
+}
+
+.container-chat {
+    width: 90%;
+    height: auto;
+    margin-top: 20px;
+    margin-left: 5%;
+    margin-bottom: 30px;
+    font-family: calibri;
+    font-size: 16px;
+    color: white;
+    background-color: #080c10;
+    border: 1px solid #2461cc;
+    border-radius: 4px;
+}
+
+.container-chat p{
+    text-align: justify;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+h1 {
+    padding-top: 20px;
+    text-align: center;
+    font-size: 28px;
+}
+
+h2 {
+    text-align: center;
+    color: #818283;
+    font-size: 18px;
+    margin-top: -20px;
+}
+
+.like {
+    width: 40%;
+    margin-left: 55%;
+    height: auto;
+    /*border: 1px solid blue;*/
+}
+
+.like p {
+    width: auto;
+    margin-left: auto;
+    margin-top: 2px;
+    font-size: 16px;
+    color: #818283;
+    /*border: 1px solid blue;*/
+}
+
+.form-like {
+    width: auto;
+    /*border: 1px solid #1c2041;*/
+}
+
+.like-paraf {
+    display: flex;
+    flex-direction: row;
+    /*border: 1px solid #1c2041;*/
+}
+
+.submit1 {
+    width: 100%;
+    height: 40px;
+    font-family: Bebas;
+    font-size: 18px;
+    color: white;
+    background-color: #2461cc;
+    border: none;
+    border-radius: 4px;
+}
+
+.form {
+    width: 90%;
+    height: auto;
+    margin-left: 5%;
+    /*border: 1px solid #1c2041;*/
+}
+
+form a {
+    color: #2461cc;
+    font-size: 16px;
+    text-decoration: none;
+    /*border: 1px solid #1c2041;*/
+}
+
+.form p {
+    font-size: 16px;
+    color: #818283;
+}
+
+.form div {
+    width: 100%;
+    height: auto;
+    margin-top: -10px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    border-color: #2461cc;
+}
+
+.nb-messages {
+    width: auto;
+    height: auto;
+    margin-top: 40px;
+    margin-left: 5%;
+    text-align: center;
+    color: #818283;
+    font-size: 18px;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.bouton {
+    width: 99%;
+    height: 35px;
+    color: white;
+    margin-top: -20px;
+    background-color: #080c10;
+    border: 1px solid #2461cc;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.submit {
+    width: 40%;
+    height: 40px;
+    margin-top: 20px;
+    font-family: Bebas;
+    font-size: 18px;
+    color: white;
+    background-color: #2461cc;
+    border: none;
+    border-radius: 4px;
+}
+
+.Backtohome {
+    width: 100px;
+    height: 40px;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #101824;
+    border-radius: 4px;
+}
+
+.Backtohome div {
+    width: 40px;
+    height: 32px;
+    margin-top: 5px;
+    display: flex;
+    background-color: #2461cc;
+    border-radius: 4px;
+}
+
+.Backtohome {
+    width: 200px;
+    height: 60px;
+    right: 20px;
+    bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;
+    background-color: #101824;
+    border: 1px solid #2461cc;
+    border-radius: 4px;
+}
+
+.Backtohome div {
+    width: 50px;
+    height: 40px;
+    margin-top: 10px;
+    margin-right: 10px;
+    display: flex;
+    background-color: #2461cc;
+    border-radius: 4px;
+}
+
+.Backtohome img {
+    width: 40px;
+    height: 40px;
+    margin-left: 5px;
+}
+
+.Backtohome p {
+    width: auto;
+    height: 20px;
+    margin-top: 18px;
+    margin-left: auto;
+    margin-right: auto;
+    /*border: 1px solid red;*/
+}
+
+@media screen and (max-width: 1024px) {
+    #main {
+        right: 5%;
+    }
+
+    .container-chat-global {
+        width: 90%;
+        margin-left: 5%;
+    }
+}
