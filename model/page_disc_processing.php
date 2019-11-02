@@ -10,12 +10,11 @@ $db = dtb_connect_PDO(); //connection a la base de donnée avec PDO
 $manager = new Disc_Mess_Manager($db);
 
 // On recupere la variable action
-$action = $_GET['action'];
-
+$action = $_POST['action'];
 // On recupere la discussion sue laquelle on va devoir faire des modifications
-$disc_array=$manager->getDiscussion($_GET['discussion']);
-$discussion = new Discussion($disc_array);
+$disc_array=$manager->getDiscussion($_SESSION['discussion']);
 
+$discussion = new Discussion($disc_array);
 // si on veux ajouter un essage
 if ($action == 'Ajouter mon message')
 {
@@ -23,7 +22,6 @@ if ($action == 'Ajouter mon message')
     if ($discussion->getState() == 1) {
         // on recupere le message ouvert de cette discussion
         $message = $manager->getOpenMsg($discussion->getIdDiscussion());
-
         // si l'utilisateur n'a pas encore ecrit dans ce message
         if ($manager->canWrite($_SESSION['email'], $discussion->getIdDiscussion(), $message->getIdMsg())) {
             // On recupere le texte qu'il veux ecrire
@@ -62,14 +60,16 @@ if ($action == 'Ajouter mon message')
         // on augmente le nombre de like
         $manager->incrLike($discussion->getIdDiscussion());
     } else {
-        header("location:$page_disc_controller?error=ERROR_canNotLike?discussion=".$_GET['discussion']); // si la personne a deja like on renvoi un message d'erreur
+        header("location:$page_disc_controller?error=ERROR_canNotLike"); // si la personne a deja like on renvoi un message d'erreur
     }
 
-    header("location:$page_disc_controller?discussion=".$_GET['discussion']); // on revient sur la page
+    header("location:$page_disc_controller"); // on revient sur la page
 } else if ($action == 'X') {
 
 } else if ($action == 'Supprimer la discussion') {
-
+    $manager->deleteDisc($_SESSION['discussion']);
+    $_SESSION['discussion'] = NULL;
+    header("location:$indexcontroller");
 } else {
     header("location:$page_disc_controller?error=ERROR_processing"); // si l'action n,'xiste pas, on renvoit un message d'erreur
 }

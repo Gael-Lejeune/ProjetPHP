@@ -11,25 +11,32 @@ require $navbar;
         <p><?php
             foreach ($messages as $value)
             {
-                echo $value['text']; ?>
+            echo '<div class="messages">';
+            echo '<p>' .$value['text']. '</p>'; ?>
+            <?php
+            if ($_SESSION['login']) {
+            if ($auth->getRole() == 'admin') {
+            echo '<div class="messages-option">'; ?>
+        <form class="form-like" action="../model/delete_message_processing.php" method="post">
+            <button class="delete" type="submit" name="id" value="<?php echo $value['idMsg'] ?>"> X</button>
+        </form>
 
-                <form class="form-like" action="<?php echo $page_disc_processing ?>" method="post">
-                    <input class ="submit1" type="submit" name="action" value="X"/>
-                </form>
-
-                <form class="form-like" action="<?php echo $page_disc_processing ?>" method="post">
-                    <input class ="submit1" type="submit" name="action" value="Edit"/>
-                </form>
-
+        <form class="form-like" action="../controller/update_message_controller.php" method="post">
+            <button class ="modify" type="submit" name="id" value="<?php echo $value['idMsg']?>"> Edit </button>
+        </form>
+        <?php
+        echo '</div>';
+        }
+        echo '</div>';
+        ?>
         <?php   echo '<br>';
-            }
-            ?></p>
+        }
+        } ?></p>
     </div>
-
-    <?php if (isset($_SESSION['login'])) { ?>
+    <?php if ($_SESSION['login']) { ?>
 
         <div class="like">
-            <form class="form-like" action="<?php echo $page_disc_processing.'?discussion='.$_GET['discussion'] ?>" method="get">
+            <form class="form-like" action="<?php echo $page_disc_processing ?>" method="post">
                 <input class ="submit1" type="submit" name="action" value="Like"/>
             </form>
             <div class="like-paraf">
@@ -40,7 +47,7 @@ require $navbar;
     <?php
         if ($user->getRole() == 'admin') { ?>
             <form class="form-like" action="<?php echo $page_disc_processing ?>" method="post">
-                <input class ="submit1" type="submit" name="action" value="Supprimer la discussion"/>
+                <input class ="submit2" type="submit" name="action" value="Supprimer la discussion"/>
             </form>
         <?php }
     if ($result['state']==1)
@@ -63,7 +70,7 @@ require $navbar;
 
 </div>
 
-<div class="Backtohome">
+<div id="Backtohome">
     <p> Back to home </p>
     <div>
         <a href="<?php echo $indexcontroller ?>"> <img src="https://img.icons8.com/carbon-copy/100/000000/arrow.png"> </a>

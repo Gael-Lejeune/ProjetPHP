@@ -201,7 +201,31 @@ class Disc_Mess_Manager
         $query->execute([$id]);
     }
 
+    public function deleteDisc ($id)
+    {
+        $query = $this->db->prepare('DELETE FROM discussion WHERE idDiscussion = ?');
+        $query->execute([$id]);
+
+        $query = $this->db->prepare('DELETE FROM message WHERE idDiscussion = ?');
+        $query->execute([$id]);
+
+        $query = $this->db->prepare('DELETE FROM ecrivain WHERE idDiscussion = ?');
+        $query->execute([$id]);
+
+        $query = $this->db->prepare('DELETE FROM like_user WHERE idDiscussion = ?');
+        $query->execute([$id]);
+    }
+
     // ***************************** Fonction contenant des requetes avec la table Message *************************************
+
+    public function getMessage ($id)
+    {
+        $query = $this->db->prepare('SELECT * FROM message WHERE idMsg = ?');
+        $query->execute([$id]);
+        $msg_array = $query->fetch(PDO::FETCH_ASSOC);
+
+        return new Message($msg_array);
+    }
 
     /**
      * @return int idMessage
@@ -269,6 +293,12 @@ class Disc_Mess_Manager
         $this->add_ecrv($ecrivain); // On indique dans ecrivain que cette personne a bien écrit dans ce message
     }
 
+    public function setTexte ($id, $texte)
+    {
+        $query = $this->db->prepare('UPDATE message SET text = ? WHERE idMsg = ?');
+        $query->execute([$texte, $id]);
+    }
+
     /**
      * @param Message $message
      */
@@ -288,6 +318,18 @@ class Disc_Mess_Manager
             $new_message = new Message(['idDiscussion' => $discussion->getIdDiscussion(),'text' => '']);
             $this->add_msg($new_message); // On ouvre un nouveau message vide
         }
+    }
+
+    public function deleteMess ($id)
+    {
+        $query = $this->db->prepare('DELETE FROM message WHERE idMsg = ?');
+        $query->execute([$id]);
+
+        $query = $this->db->prepare('DELETE FROM ecrivain WHERE idMsg = ?');
+        $query->execute([$id]);
+
+        $message = new Message(['idDiscussion' => $_SESSION['discussion'],'text' => '']);
+        $this->add_msg($message);
     }
 
     // ***************************** Fonction contenant des requetes avec la table Ecrivain *************************************

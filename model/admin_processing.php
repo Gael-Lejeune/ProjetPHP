@@ -54,42 +54,44 @@ if(loginckeck($manager)) {
         } else if ($action == 'user') {
             // On recupere l'utilisateur dont on va modifier les informations
             $user_modif = $manager->getUser($_POST['email']);
-            if ($manager->email_exist($user_modif->getEmail()))
-            if ($user_modif->getRole() == 'member') {
-                // Si on veux modifier l'email : il va faloir creer un nouvel utilisateur et supprimer l'ancien car l'email est cle primaire
-                if (isset($_POST['new_email']) and $_POST['new_email'] != '') {
-                    // On modifie le nom de l'utilisateur si c'est demande
-                    if (isset($_POST['name']) and $_POST['name'] != '') {
-                        $user_modif->setUser_name($_POST['name']);
-                    }
-                    // On modifie le role de l'utilisateur si c'est demande
-                    if (isset($_POST['role'])) {
-                        $user_modif->setRole($_POST['role']);
-                    }
-                    // On creer et ajoute le nouvel utilisateur dans la base de donnee
-                    $new_user = new User (['user_name' => $user_modif->getName(), 'email' => $_POST['new_email'], 'password' => $user_modif->getPassword(), 'role' => $user_modif->getRole()]);
-                    $manager->add($new_user);
-                    // On supprime l'ancien utilisateur
-                    $manager->delete($_POST['email']);
-                    header("location:$admin_controller");
+            if ($manager->email_exist($user_modif->getEmail())) {
+                if ($user_modif->getRole() == 'member') {
+                    // Si on veux modifier l'email : il va faloir creer un nouvel utilisateur et supprimer l'ancien car l'email est cle primaire
+                    if (isset($_POST['new_email']) and $_POST['new_email'] != '') {
+                        // On modifie le nom de l'utilisateur si c'est demande
+                        if (isset($_POST['name']) and $_POST['name'] != '') {
+                            $user_modif->setUser_name($_POST['name']);
+                        }
+                        // On modifie le role de l'utilisateur si c'est demande
+                        if (isset($_POST['role'])) {
+                            $user_modif->setRole($_POST['role']);
+                        }
+                        // On creer et ajoute le nouvel utilisateur dans la base de donnee
+                        $new_user = new User (['user_name' => $user_modif->getName(), 'email' => $_POST['new_email'], 'password' => $user_modif->getPassword(), 'role' => $user_modif->getRole()]);
+                        $manager->add($new_user);
+                        // On supprime l'ancien utilisateur
+                        $manager->delete($_POST['email']);
+                        header("location:$admin_controller");
 
-                    // Sinon on va juste update les informations de l'utilisateur
+                        // Sinon on va juste update les informations de l'utilisateur
+                    } else {
+                        // On modifie le nom si c'est demande et on met a jour la base de donnee
+                        if (isset($_POST['name']) and $_POST['name'] != '') {
+                            $user_modif->setUser_name($_POST['name']);
+                            $manager->updateName($user_modif);
+                        }
+                        // On modifie le role si c'est demande et on met a jour la base de donnee
+                        if (isset($_POST['role'])) {
+                            $user_modif->setRole($_POST['role']);
+                            $manager->updateRole($user_modif);
+                        }
+                        header("location:$admin_controller");
+                    }
                 } else {
-                    // On modifie le nom si c'est demande et on met a jour la base de donnee
-                    if (isset($_POST['name']) and $_POST['name'] != '') {
-                        $user_modif->setUser_name($_POST['name']);
-                        $manager->updateName($user_modif);
-                    }
-                    // On modifie le role si c'est demande et on met a jour la base de donnee
-                    if (isset($_POST['role'])) {
-                        $user_modif->setRole($_POST['role']);
-                        $manager->updateRole($user_modif);
-                    }
-                    header("location:$admin_controller");
+                    header("location:$admin_controller?error=ERROR_notmember");
                 }
-            } else {
-                header("location:$admin_controller?error=ERROR_notmember");
             }
+
         }
     } else {
         header("location:$admin_controller?error=ERROR_youAreNotAdmin");

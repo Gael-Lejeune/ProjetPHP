@@ -31,7 +31,12 @@ require $navbar;
                         echo '<div class="rondvert"> </div>';
                     else if ($discussion->getState() == 0)
                         echo '<div class="rondrouge"> </div>'; ?>
-                <form class="form" action="<?php echo $page_disc_controller ?>" method="get">
+                <div class="like">
+                    <div class="like-paraf">
+                        <p> Like : <?php echo $discussion->getNbLike()?> </p>
+                    </div>
+                </div>
+                <form class="form" action="<?php echo $page_disc_controller ?>" method="post">
                     <button class="submit" value="<?php echo $discussion->getIdDiscussion()?>" name="discussion">Voir la discussion</button>
                 </form>
             </div>
