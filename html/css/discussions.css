@@ -5,7 +5,7 @@ body{
     width: 100%;
     margin: 0;
     padding: 0;
-    font-family: Bebas, sans-serif;
+    font-family: 'Staatliches', cursive;
     font-size: 20px;
     color: white;
     position: absolute;
@@ -187,7 +187,7 @@ h5 {
 .container-discussion {
     width: 500px;
     height: auto;
-    margin-top: 100px;
+    margin-top: 200px;
     margin-left: calc(50% - 250px);
     margin-bottom: 50px;
     display: flex;
@@ -198,7 +198,7 @@ h5 {
 .nom-discussion {
     width: 100%;
     background-color: #2461cc;
-    font-family: Bebas, sans-serif;
+    font-family: 'Staatliches', cursive, sans-serif;
     color: white;
     text-align: center;
     margin-bottom: 20px;
@@ -270,9 +270,10 @@ h5 {
 .container-chat-global {
     width: 500px;
     height: auto;
-    margin-top: 10%;
+    margin-top: 200px;
     margin-left: 10%;
     margin-bottom: 30px;
+    padding-bottom: 10px;
     background-color: #101824;
     display: flex;
     flex-direction: column;
@@ -298,6 +299,7 @@ h5 {
     text-align: justify;
     margin-left: 20px;
     margin-right: 20px;
+    /*border: 1px solid purple;*/
 }
 
 h1 {
@@ -334,21 +336,83 @@ h2 {
     /*border: 1px solid #1c2041;*/
 }
 
-.like-paraf {
-    display: flex;
-    flex-direction: row;
-    /*border: 1px solid #1c2041;*/
-}
-
-.submit1 {
-    width: 100%;
+.submit {
+    width: 40%;
     height: 40px;
-    font-family: Bebas;
+    margin-top: 20px;
+    font-family: 'Staatliches', cursive;
     font-size: 18px;
     color: white;
     background-color: #2461cc;
     border: none;
     border-radius: 4px;
+}
+
+.submit1, .submit2 {
+    height: 40px;
+    font-family: 'Staatliches', cursive;
+    font-size: 18px;
+    color: white;
+    background-color: #2461cc;
+    border: none;
+    border-radius: 4px;
+}
+
+.submit1 {
+    width: 100%;
+    margin-top: -20px;
+}
+
+.submit2 {
+    width: 90%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 5%;
+}
+
+.container-chat > div {
+    margin-bottom: -20px;
+}
+
+.messages {
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    /*border: 1px solid red;*/
+}
+
+.messages p {
+    margin-top: 5px;
+    /*border: 1px solid red;*/
+}
+
+.messages-option {
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+    /*border: 1px solid green;*/
+}
+
+.delete, .modify {
+    width: auto;
+    height: 30px;
+    font-family: 'Staatliches', cursive;
+    font-size: 18px;
+    color: white;
+    background-color: #2461cc;
+    border: none;
+    border-radius: 4px;
+    /*border: 1px solid yellow;*/
+}
+
+.delete {
+    margin-right: 10px;
+}
+
+.like-paraf {
+    display: flex;
+    flex-direction: row;
+    /*border: 1px solid #1c2041;*/
 }
 
 .form {
@@ -401,18 +465,6 @@ form a {
     border: 1px solid #2461cc;
     border-radius: 4px;
     text-decoration: none;
-}
-
-.submit {
-    width: 40%;
-    height: 40px;
-    margin-top: 20px;
-    font-family: Bebas;
-    font-size: 18px;
-    color: white;
-    background-color: #2461cc;
-    border: none;
-    border-radius: 4px;
 }
 
 #Backtohome div {
@@ -478,6 +530,11 @@ form a {
         width: 90%;
         margin-left: 5%;
     }
+
+    .container-chat-global, .container-discussion {
+        margin-top: 125px;
+    }
+
     .container-all {
         width: 100%;
     }

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="455e9b91-e07c-4d77-9f0d-385bf8ddd8ce" name="alwaysdataphp" url="http://ssh-latableronde.alwaysdata.net">
+        <fileTransfer host="ssh-latableronde.alwaysdata.net" port="22" rootFolder="/home/latableronde" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

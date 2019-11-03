@@ -1,3 +1,20 @@
+<?php
+$db = dtb_connect_PDO(); //connection a la base de donnée avec PDO
+
+
+// Gestion des onglets presents dans la barre de navigation
+if ($_SESSION['login']) // si la personne est connecte
+{
+    $user_manager = new UserManager($db);
+    $user = $user_manager->getUser($_SESSION['email']);
+    $role = $user->getRole(); // On recupere son role
+} else {
+    $role = 'visiteur'; // Sinon il est simplement visiteur
+}
+?>
+
+<script src="../java/navbar.js"></script>
+
 <div id="mySidebar" class="sidebar">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 
@@ -44,3 +61,5 @@
         <button class="openbtn" onclick="openNav()">&#9776;</button>
     </div>
 </div>
+
+<a href="<?php echo $indexcontroller ?>"><img style="width: 128px; position: fixed; top: 20px; left: 20px;" alt="logodusite" src="https://zupimages.net/up/19/44/8mnk.png"></a>

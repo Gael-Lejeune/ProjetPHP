@@ -43,6 +43,17 @@ class UserManager
     }
 
     /**
+     * @return array (liste de tous les mails enregistres dans la base de données)
+     */
+    public function getMails()
+    {
+        $query = $this->db->prepare('SELECT email FROM Users');
+        $query->execute();
+        $result = $query->fetchAll(PDO::FETCH_ASSOC);
+        return $result;
+    }
+
+        /**
      * @param string $email
      * @return User
      */

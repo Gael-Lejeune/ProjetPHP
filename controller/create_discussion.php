@@ -4,9 +4,10 @@ include "../model/link.inc.php";
 include '../model/dtb.inc.php';
 
 //Création de l'en tête et de l'include du css sur la page
-start_page("Créer une discussion", $logincss, "stylesheet", "fonts.googleapis.com/css?family=Oswald&display=swap", "stylesheet", $background3);
+start_page($create_disc, $logincss, $background3);
 
 session_start();
+include_classe();
 
 require "../view/create_discussion_view.php";
 

@@ -14,3 +14,4 @@ if(isset($_POST['discussion'])) {
 $result = $manager->getDiscussion($_SESSION['discussion']);
 $user = $user_manager->getUser($manager->getOwner($_SESSION['discussion']));
 $messages = $manager->getMsgForIDDisc($_SESSION['discussion']);
+$auth = $user_manager->getUser($_SESSION['email']);

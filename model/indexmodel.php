@@ -12,7 +12,6 @@ $messagesParPage = $messagesParPage[0];
 $total=$manager->getNbDiscussion(); //Nous récupérons le contenu de la requête dans $retour_total
 
 $nombreDePages=ceil($total/$messagesParPage); // Nombre de page necessaire à l'affichage de toutes les discussions en fonction de la pagination
-$pageActuelle=$_GET['page'];
 
 if(isset($_GET['page'])) // Si la variable $_GET['page'] existe...
 {
@@ -40,14 +39,4 @@ $result = $manager->getDiscussionPagination($premiereEntree,$messagesParPage); /
 for( $i = 0 ; $i < $messagesParPage ; $i++ )
 {
     $msg_Disc1 = $manager->getMsgForIDDisc($result[$i]['idDiscussion']);
-}
-
-// Gestion des onglets presents dans la barre de navigation
-if ($_SESSION['login']) // si la personne est connecte
-{
-    $user_manager = new UserManager($db);
-    $user = $user_manager->getUser($_SESSION['email']);
-    $role = $user->getRole(); // On recupere son role
-} else {
-    $role = 'visiteur'; // Sinon il est simplement visiteur
 }

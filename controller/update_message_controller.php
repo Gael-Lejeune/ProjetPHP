@@ -5,11 +5,10 @@ include "../model/link.inc.php";
 include '../model/dtb.inc.php';
 
 //Demarrage de la page
-start_page($myprofile, $logincss, $background4);
+start_page("myprofile", $discussioncss, $background4);
 
 session_start();
-include_classe();
 
-require '../view/admin_view.php';
-
+require '../model/update_message_model.php';
+require '../view/update_message_view.php';
 end_page();
