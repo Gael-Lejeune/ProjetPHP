@@ -320,16 +320,28 @@ class Disc_Mess_Manager
         }
     }
 
-    public function deleteMess ($id)
+    public function deleteMess (Message $msg)
     {
         $query = $this->db->prepare('DELETE FROM message WHERE idMsg = ?');
-        $query->execute([$id]);
+        $query->execute([$msg->getIdMsg()]);
 
         $query = $this->db->prepare('DELETE FROM ecrivain WHERE idMsg = ?');
-        $query->execute([$id]);
+        $query->execute([$msg->getIdMsg()]);
 
-        $message = new Message(['idDiscussion' => $_SESSION['discussion'],'text' => '']);
-        $this->add_msg($message);
+        $query = $this->db->prepare('UPDATE discussion SET nbMessage = nbMessage - 1 WHERE idDiscussion = ?');
+        $query->execute($msg->getIdDiscussion());
+
+        $disc = $this->getDiscussion($msg->getIdDiscussion());
+        if ($disc['state'] == 0) {
+            $query = $this->db->prepare('UPDATE discussion SET nbMessMax = nbMessMax - 1 WHERE idDiscussion = ?');
+            $query->execute($msg->getIdDiscussion());
+        }
+
+        if ($msg->getState() == 1) {
+            $message = new Message(['idDiscussion' => $_SESSION['discussion'],'text' => '']);
+            $this->add_msg($message);
+        }
+
     }
 
     // ***************************** Fonction contenant des requetes avec la table Ecrivain *************************************

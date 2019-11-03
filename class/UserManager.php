@@ -67,17 +67,6 @@ class UserManager
     }
 
     /**
-     * @return array (liste de tous les mails enregistres dans la base de données)
-     */
-    public function getMails()  {
-        $query = $this->db->prepare('SELECT email FROM Users');
-        $query->execute();
-        $result = $query->fetchAll(PDO::FETCH_ASSOC);
-
-        return $result;
-    }
-
-    /**
      * @param User $user
      */
     public function updateName (User $user) // modifie le nom de l'utilisateur passé en paramètre à partir du nom contenu dans ce même parmaètre
