@@ -39,5 +39,5 @@ Pour l'accès à la base de donnée (phpMyAdmin) => utilisateur MySQL : 191121 e
 Pour le compte test de notre site => courriel : kmaeleon@laposte.net et mot de passe : projetphp
 Pour le compte administrateur de notre site => courriel : freenoteadmin@laposte.net et mot de passe : sypherforever
 Le compte mail de l'administrateur (si il veut vérifier l'envoi de mails) => courriel : freenoteadmin@laposte.net et mot de passe : Freenote.admin26
-Pour le compte du système de version => 
+Pour le compte du système de version => Gael-Lejeune
 //à compléter
