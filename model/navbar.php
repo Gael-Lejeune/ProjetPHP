@@ -18,7 +18,6 @@ if ($_SESSION['login']) // si la personne est connecte
 <div id="mySidebar" class="sidebar">
 
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <div class="contenu-navbar"> <a href="<?php echo $indexcontroller ?>"> FreeNote </a> </div>
 
     <div class='contenu-navbar'>
         <?php if ($_SESSION['login'])
@@ -56,10 +55,17 @@ if ($_SESSION['login']) // si la personne est connecte
 </div>
 
 <div id="main">
-    <p> Open the navbar </p>
+    <p> Ouvrir le Menu </p>
     <div>
         <button class="openbtn" onclick="openNav()">&#9776;</button>
     </div>
 </div>
 
 <a href="<?php echo $indexcontroller ?>"><img style="width: 128px; position: fixed; top: 20px; left: 20px;" alt="logodusite" src="https://zupimages.net/up/19/44/8mnk.png"></a>
+
+<div id="Backtohome">
+    <p> Accueuil </p>
+    <div>
+        <a href="<?php echo $indexcontroller ?>"> <img alt="Retour à l'accueuil" src="https://img.icons8.com/carbon-copy/100/000000/arrow.png"> </a>
+    </div>
+</div>

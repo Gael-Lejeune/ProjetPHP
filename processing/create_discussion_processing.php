@@ -42,5 +42,5 @@ if (loginckeck($user_manager))
 else
     {
     session_destroy();
-    header("location:$indexcontroller?error=ERROR_auth"); // on revient sur l'index en renvoyant une erreur
+    header("location:$logincontroller?error=ERROR_auth"); // on revient sur l'index en renvoyant une erreur
 }

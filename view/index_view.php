@@ -1,13 +1,31 @@
 <?php
 require $navbar;
+
+
+
 ?>
+
+
+
 
 <!-- Création du bloc contenant la description et le titre description -->
 <div class="description">
     <h1> Description du site  </h1>
     <div class="description-FreeNote">
-        <p>Réseau social d’un nouveau genre, FreeNote consiste à créer des fils de discussions comprenant
-            des messages participatifs au sein desquels chaque utilisateur ne peut ajouter qu’un ou deux mots.</p>
+        <p>Réseau social d’un nouveau genre,
+            <br>
+                FreeNote consiste  à  créer  des  fils  de  discussions  comprenant des messages participatifs au sein desquels chaque utilisateur ne peut ajouter qu’un ou deuxmots.
+            <br>
+                Exemple :
+            <br>
+            L'utilisateur 1 créé une discussion via l'onglet dédié, il entre son premier morceau de message "je" .
+            <br>
+            L’utilisateur 2 entre "n’ai". Le message se complète et est ainsi devenu : «Je n’ai».
+            <br>
+            L’utilisateur 3 ajoute: «rien compris». Le message devient «Je n’ai rien compris».Etc.
+            <br>
+            Jusqu'a ce qu'un utilisateur ferme le message, et on passe au suivant.
+        </p>
     </div>
 </div>
 
@@ -87,6 +105,5 @@ require $navbar;
         <?php } ?>
     </div>
 </div>
-</body>
-</html>
+
 

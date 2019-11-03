@@ -1,8 +1,5 @@
 <?php
 require $navbar;
-if ($_GET['error'] == 'ERROR')
-    echo 'Erreur : le mot de pass ou le mail rentré ne correspondent pas.';
-//Formulaire de login
 ?>
 
 <div class="container-form-login">
@@ -17,11 +14,18 @@ if ($_GET['error'] == 'ERROR')
         <input class="submit2" type="submit" name="action" value="Se connecter"/>
         <div class="a2"> <p> Besoin d'un compte ? </p> <a  class="a2a" href="<?php echo $inscriptioncontroller ?>"> S'inscrire </a> </div>
     </form>
+    <?php
+    if ($_GET['error'] == 'ERROR')
+        echo '<p class="error-mdp"> Erreur : le mot de passe ou le mail rentré ne correspondent pas. </p>';
+    //Formulaire de login
+
+    if ($_GET['error'] == 'ERROR_auth')
+    {
+        echo '<p class="error-mdp"> Vous devez être connecté pour acceder à cette page. </p>';
+    }
+    //Formulaire de login
+    ?>
 </div>
 
-<div id="Backtohome">
-    <p> Back to home </p>
-    <div>
-        <a href="<?php echo $indexcontroller ?>"> <img src="https://img.icons8.com/carbon-copy/100/000000/arrow.png"> </a>
-    </div>
-</div>
+
+

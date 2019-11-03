@@ -2,49 +2,55 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="394d6aa1-3445-40aa-85a5-e353a8e0f4cd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/ProjetPHP1.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/webServers.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controller/update_message_controller.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/delete_message_processing.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/update_message_model.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/update_message_processing.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/update_message_view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ParamsAdmin.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ParamsAdmin.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/class/Disc_Mess_Manager.php" beforeDir="false" afterPath="$PROJECT_DIR$/class/Disc_Mess_Manager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/class/Serveur.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/class/Serveur_Manager.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/class/UserManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/class/UserManager.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controller/account.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/account.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/admin.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controller/create_discussion.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/create_discussion.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/formulaire_inscription.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/formulaire_inscription.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controller/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/mdpcontroller.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/mdpcontroller.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/page_discussion.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/page_discussion.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/see_disc.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/see_disc.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/css/discussions.css" beforeDir="false" afterPath="$PROJECT_DIR$/html/css/discussions.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/css/account.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/html/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/html/css/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/html/css/login.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/indexmodel.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/indexmodel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/css/myprofile.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/css/profile.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/css/signup.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/formulaire.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/images/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/images/fond.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/images/login.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/java/navbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/account_processing.php" beforeDir="false" afterPath="$PROJECT_DIR$/processing/account_processing.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/accountmodel.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/account_model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/admin_processing.php" beforeDir="false" afterPath="$PROJECT_DIR$/processing/admin_processing.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/create_discussion_processing.php" beforeDir="false" afterPath="$PROJECT_DIR$/processing/create_discussion_processing.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/delete_message_processing.php" beforeDir="false" afterPath="$PROJECT_DIR$/processing/delete_message_processing.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/indexmodel.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/index_model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/inscription_processing.php" beforeDir="false" afterPath="$PROJECT_DIR$/processing/inscription_processing.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/link.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/link.inc.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/login_processing.php" beforeDir="false" afterPath="$PROJECT_DIR$/processing/login_processing.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/logoFreeNote.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/logout_processing.php" beforeDir="false" afterPath="$PROJECT_DIR$/processing/logout_processing.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/mdp_processing.php" beforeDir="false" afterPath="$PROJECT_DIR$/processing/mdp_processing.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/navbar.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/navbar.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/page_disc_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/page_disc_model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/utils.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/utils.inc.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/accountview.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/accountview.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/page_disc_processing.php" beforeDir="false" afterPath="$PROJECT_DIR$/processing/page_disc_processing.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/see_disc_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/see_disc_model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/update_message_processing.php" beforeDir="false" afterPath="$PROJECT_DIR$/processing/update_message_processing.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/accountview.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/account_view.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/admin_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/admin_view.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/create_discussion_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/create_discussion_view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/indexview.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/indexview.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/inscriptionview.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/inscriptionview.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/loginview.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/loginview.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/mdpview.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/mdpview.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/indexview.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/index_view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/inscriptionview.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/inscription_view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/loginview.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/login_view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/mdpview.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/mdp_view.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/page_disc_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/page_disc_view.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/see_disc_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/see_disc_view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/update_message_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/update_message_view.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -114,15 +120,15 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\IUT\ProjetPHP\view" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\IUT\ProjetPHP1\processing" />
       <recent name="D:\IUT\ProjetPHP\model" />
       <recent name="D:\IUT\ProjetPHP\controller" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/html/images" />
-      <recent name="$PROJECT_DIR$/html" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\IUT\ProjetPHP\view" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -180,7 +186,7 @@
       <workItem from="1572205560249" duration="20702000" />
       <workItem from="1572615714672" duration="20322000" />
       <workItem from="1572692560377" duration="7004000" />
-      <workItem from="1572769596388" duration="5044000" />
+      <workItem from="1572769596388" duration="11262000" />
     </task>
     <task id="LOCAL-00001" summary="Debut du projet">
       <created>1569846323677</created>
@@ -378,7 +384,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572643888294</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Résolution des problèmes causés par le merge">
+      <created>1572776083848</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1572776083849</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -432,6 +445,7 @@
     <MESSAGE value="Résolution des problèmes de liens dynamiques et de traitement des formulaires d'inscription et de changement de mdp ou d'username" />
     <MESSAGE value="Creation des classes User et UserManager + modification du code pour utiliser la POO et PDO" />
     <MESSAGE value="CSS du site." />
-    <option name="LAST_COMMIT_MESSAGE" value="CSS du site." />
+    <MESSAGE value="Résolution des problèmes causés par le merge" />
+    <option name="LAST_COMMIT_MESSAGE" value="Résolution des problèmes causés par le merge" />
   </component>
 </project>

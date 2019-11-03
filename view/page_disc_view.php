@@ -15,7 +15,7 @@ require $navbar;
                         if ($_SESSION['login']) {
                             if ($auth->getRole() == 'admin') {
                             echo '<div class="messages-option">'; ?>
-                        <form class="form-like" action="../model/delete_message_processing.php" method="post">
+                        <form class="form-like" action="../processing/delete_message_processing.php" method="post">
                             <button class="delete" type="submit" name="id" value="<?php echo $value['idMsg'] ?>"> X</button>
                         </form>
 
@@ -65,11 +65,4 @@ require $navbar;
         <p> Nombre de messages dans la discussion :  <?php echo $result['nbMessage'].' / '.$result['nbMessMax'] ?></p>
     </div>
 
-</div>
-
-<div id="Backtohome">
-    <p> Back to home </p>
-    <div>
-        <a href="<?php echo $indexcontroller ?>"> <img src="https://img.icons8.com/carbon-copy/100/000000/arrow.png"> </a>
-    </div>
 </div>

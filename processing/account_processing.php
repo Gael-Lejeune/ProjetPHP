@@ -1,7 +1,7 @@
 <?php
 include "../model/dtb.inc.php";
 include "../model/utils.inc.php";
-include  "../model/link.inc.php";
+include "../model/link.inc.php";
 
 session_start(); // on demarre la session
 
@@ -69,5 +69,5 @@ if(loginckeck($manager)) {
 else
     {
     session_destroy();
-    header("location:$indexcontroller?error=ERROR_auth"); // On revient sur l'index
+    header("location:$logincontroller?error=ERROR_auth"); // On revient sur l'index
 }

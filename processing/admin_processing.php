@@ -1,7 +1,7 @@
 <?php
 include "../model/dtb.inc.php";
 include "../model/utils.inc.php";
-include  "../model/link.inc.php";
+include "../model/link.inc.php";
 session_start();
 include_classe(); //inclusion des classes nécessaires
 $db = dtb_connect_PDO(); //connection a la base de donnée avec PDO
@@ -31,7 +31,7 @@ if(loginckeck($manager)) {
             $contenu = file("../ParamsAdmin.txt");
             $ancien_nb = $contenu[1];
             $contenu[1] = $_POST['new_nbDiscMax'];
-            $params = $contenu[0].$contenu[1];
+            $params = $contenu[0].$contenu[1].PHP_EOL;
             fputs($file,$params);
 
             if ($contenu[1] < $ancien_nb) {
@@ -97,5 +97,5 @@ if(loginckeck($manager)) {
         header("location:$admin_controller?error=ERROR_youAreNotAdmin");
     }
 } else {
-    header("location:$admin_controller?error=ERROR_auth");
+    header("location:$logincontroller?error=ERROR_auth");
 }
