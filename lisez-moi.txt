@@ -5,6 +5,10 @@ CARESSA Audrey
 HOCQUET Florian
 LEJEUNE Gael
 
+-- URL du site WEB --
+
+http://latableronde.alwaysdata.net/projetphp/controller/index.php
+
 --- Notre projet ---
 
 En ce qui concerne notre projet, nous avons dû réaliser un réseau social que nous avons choisi d’appeler FreeNote.
@@ -18,17 +22,22 @@ L'administrateur possède tous les droits, le membre FreeNote dispose d'un compt
 --- Nos choix techniques ---
 
 Pour la réalisation de notre site, nous avons utilisé PHP, mySQL, HTML et CSS.
-//à finir
+//à finir, PDO, modèle MVC
 
 -- Configuration logicielle minimale conseillée --
+
+//à finir
+
+-- Mesures de sécurité mises en oeuvre --
 
 //à finir
 
 -- Les identifiants de connexion -- 
 
 Pour le site d'hébergement (AlwaysData) => courriel : gael@lejeune.pl et mot de passe : tableronde
-Pour l'accès à la base de donnée (phpMyAdmin) => 
-Pour le compte test de notre site => 
-Pour le compte administrateur de notre site =>
+Pour l'accès à la base de donnée (phpMyAdmin) => utilisateur MySQL : 191121 et mot de passe : tableronde
+Pour le compte test de notre site => courriel : kmaeleon@laposte.net et mot de passe : projetphp
+Pour le compte administrateur de notre site => courriel : freenoteadmin@laposte.net et mot de passe : sypherforever
+Le compte mail de l'administrateur (si il veut vérifier l'envoi de mails) => courriel : freenoteadmin@laposte.net et mot de passe : Freenote.admin26
 Pour le compte du système de version => 
 //à compléter
