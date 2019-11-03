@@ -25,4 +25,3 @@ function include_classe () // Charge uniquement les classes necessaire au fichie
     spl_autoload_register('chargerClasse');
 }
 ?>
-

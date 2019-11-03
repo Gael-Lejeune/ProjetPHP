@@ -5,10 +5,13 @@ include "../model/link.inc.php";
 include '../model/dtb.inc.php';
 
 //Demarrage de la page
-start_page("login", $logincss, "stylesheet", "fonts.googleapis.com/css?family=Oswald&display=swap", "stylesheet", $background4);
+start_page($myprofile, $logincss, $background4);
 
+//Demarrage de la session
 session_start();
+include_classe();
 
-require '../view/admin_view.php';
+//Affichage de la page
+require $admin_view;
 
 end_page();

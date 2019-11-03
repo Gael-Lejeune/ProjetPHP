@@ -143,7 +143,7 @@ input:focus {
 .container-form-login {
     width: 500px;
     height: auto;
-    margin-top: 15%;
+    margin-top: 200px;
     margin-left: 10%;
     padding-bottom: 30px;
     background-color: #101824;
@@ -156,7 +156,7 @@ input:focus {
 .container-form-mdp {
     width: 500px;
     height: auto;
-    margin-top: 15%;
+    margin-top: 200px;
     margin-left: 10%;
     padding-bottom: 30px;
     background-color: #101824;
@@ -166,10 +166,10 @@ input:focus {
     border-radius: 5px;
 }
 
-.container-form-inscription {
+.container-form-inscription{
     width: 500px;
     height: auto;
-    margin-top: 8%;
+    margin-top: 200px;
     margin-left: 10%;
     padding-bottom: 30px;
     display: flex;
@@ -182,7 +182,7 @@ input:focus {
 .container-form-infopers {
     width: 30%;
     height: auto;
-    margin-top: 15%;
+    margin-top: 200px;
     display: flex;
     flex-direction: column;
     background-color: #101824;
@@ -193,7 +193,7 @@ input:focus {
 .container-form-infopers1 {
     width: 30%;
     height: 335px;
-    margin-top: 15%;
+    margin-top: 200px;
     display: flex;
     flex-direction: column;
     background-color: #101824;
@@ -214,7 +214,7 @@ input:focus {
 
 .container-form-admin1, .container-form-admin2, .container-form-admin3 {
     width: 500px;
-    margin-top: 125px;
+    margin-top: 200px;
     background-color: #101824;
     display: flex;
     flex-direction: column;
@@ -509,5 +509,11 @@ h4 {
     .container-admin {
         margin-bottom: 100px;
         /*border: 1px solid white;*/
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .container-form-infopers, .container-info-pers1, .container-form-login, .container-form-mdp, .container-form-inscription, .container-form-admin1, .container-form-admin2, .container-form-admin3 {
+        margin-top: 100px;
     }
 }

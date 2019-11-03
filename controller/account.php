@@ -4,11 +4,12 @@ include "../model/link.inc.php";
 include '../model/dtb.inc.php';
 
 //Demarrage de la page
-start_page("myprofile", $logincss, "stylesheet", "fonts.googleapis.com/css?family=Oswald&display=swap", "stylesheet", $background4);
+start_page($myprofile, $logincss, $background4);
 
 
 //Demarrage de la session
 session_start();
+
 
 
 if ($step == 'ERROR_auth') {
@@ -21,6 +22,7 @@ if ($step == 'ERROR_auth') {
 
 require $myprofilemodel;
 
+//Affichage de la page
 require $myprofileview;
 
 end_page();

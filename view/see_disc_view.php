@@ -1,19 +1,17 @@
-<script type="text/javascript" src="../java/navbar.js"></script>
-
 <?php
 require $navbar;
 ?>
 
 
 <div class="container-discussion">
-    <div class="pipi">
+    <div class="container-all">
         <h3>Mes discussions</h3>
 
         <h4> Vous avez <?php echo $nbDiscUser ?> discussions d'ouvertes </h4>
         <h5> Vous pouvez encore en ouvrir <?php echo $nbDiscRestantes ?> </h5>
-    <?php foreach ($disc_liste as $key_disc => $disc_array) {
-    $discussion = new Discussion ($disc_array); ?>
-        <form action="<?php echo $page_disc_controller ?>" method="get">
+        <?php foreach ($disc_liste as $key_disc => $disc_array) {
+        $discussion = new Discussion ($disc_array); ?>
+        <form action="<?php echo $page_disc_controller ?>" method="post">
             <button class="nom-discussion" value="<?php echo $discussion->getIdDiscussion() ?>"
                     name="discussion"> <?php echo $discussion->getDiscName() ?></button>
         </form>
@@ -39,7 +37,7 @@ require $navbar;
     </div>
 </div>
 
-<div class="Backtohome">
+<div id="Backtohome">
     <p> Back to home </p>
     <div>
         <a href="<?php echo $indexcontroller ?>"> <img src="https://img.icons8.com/carbon-copy/100/000000/arrow.png"> </a>

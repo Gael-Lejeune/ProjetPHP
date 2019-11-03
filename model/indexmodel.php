@@ -40,13 +40,3 @@ for( $i = 0 ; $i < $messagesParPage ; $i++ )
 {
     $msg_Disc1 = $manager->getMsgForIDDisc($result[$i]['idDiscussion']);
 }
-
-// Gestion des onglets presents dans la barre de navigation
-if ($_SESSION['login']) // si la personne est connecte
-{
-    $user_manager = new UserManager($db);
-    $user = $user_manager->getUser($_SESSION['email']);
-    $role = $user->getRole(); // On recupere son role
-} else {
-    $role = 'visiteur'; // Sinon il est simplement visiteur
-}

@@ -1,5 +1,3 @@
-<script type="text/javascript" src="../java/navbar.js"></script>
-
 <?php
 require $navbar;
 ?>
@@ -10,28 +8,28 @@ require $navbar;
     <div class="container-chat">
         <p><?php
             foreach ($messages as $value)
-            {
-            echo '<div class="messages">';
-            echo '<p>' .$value['text']. '</p>'; ?>
-            <?php
-            if ($_SESSION['login']) {
-            if ($auth->getRole() == 'admin') {
-            echo '<div class="messages-option">'; ?>
-        <form class="form-like" action="../model/delete_message_processing.php" method="post">
-            <button class="delete" type="submit" name="id" value="<?php echo $value['idMsg'] ?>"> X</button>
-        </form>
+                {
+                    echo '<div class="messages">';
+                    echo '<p>' .$value['text']. '</p>'; ?>
+                    <?php
+                        if ($_SESSION['login']) {
+                            if ($auth->getRole() == 'admin') {
+                            echo '<div class="messages-option">'; ?>
+                        <form class="form-like" action="../model/delete_message_processing.php" method="post">
+                            <button class="delete" type="submit" name="id" value="<?php echo $value['idMsg'] ?>"> X</button>
+                        </form>
 
-        <form class="form-like" action="../controller/update_message_controller.php" method="post">
-            <button class ="modify" type="submit" name="id" value="<?php echo $value['idMsg']?>"> Edit </button>
-        </form>
-        <?php
-        echo '</div>';
-        }
-        echo '</div>';
-        ?>
-        <?php   echo '<br>';
-        }
-        } ?></p>
+                        <form class="form-like" action="../controller/update_message_controller.php" method="post">
+                            <button class ="modify" type="submit" name="id" value="<?php echo $value['idMsg']?>"> Edit </button>
+                        </form>
+                        <?php
+                            echo '</div>';
+                            }
+                        echo '</div>';
+                        ?>
+                    <?php   echo '<br>';
+                    }
+                } ?></p>
     </div>
     <?php if ($_SESSION['login']) { ?>
 
@@ -54,15 +52,14 @@ require $navbar;
     { ?>
         <form class="form" action="<?php echo $page_disc_processing ?>" method="post">
         <p> Ecrivez votre commentaire : </p>
-        <input class="bouton" type="text" name="texte"/>
+        <input class="bouton" type="text" name="texte" maxlength="20" placeholder="Entrer un message de deux mots maximum" pattern="^([A-Za-z0-9'éèàùâêîôûëïç]*-?[A-Za-z0-9'éèàùâêîôûëïç]*-?[A-Za-z0-9'éèàùâêîôûëïç]* [A-Za-z0-9'éèàùâêîôûëïç]*-?[A-Za-z0-9'éèàùâêîôûëïç]*-?[A-Za-z0-9'éèàùâêîôûëïç]*)$|^([A-Za-z0-9'éèàùâêîôûëïç]*-?[A-Za-z0-9'éèàùâêîôûëïç]*-?[A-Za-z0-9'éèàùâêîôûëïç]*)$"/>
         <div class="ajouter-fermer">
             <input class ="submit" type="submit" name="action" value="Ajouter mon message"/>
             <input class ="submit" type="submit" name="action" value="Fermer le message"/>
         </div>
     </form>
-    <?php } ?>
-
-    <?php } ?>
+    <?php }
+    } ?>
 
     <div class="nb-messages">
         <p> Nombre de messages dans la discussion :  <?php echo $result['nbMessage'].' / '.$result['nbMessMax'] ?></p>
@@ -76,6 +73,3 @@ require $navbar;
         <a href="<?php echo $indexcontroller ?>"> <img src="https://img.icons8.com/carbon-copy/100/000000/arrow.png"> </a>
     </div>
 </div>
-
-</body>
-</html>

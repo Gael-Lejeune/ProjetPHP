@@ -1,5 +1,3 @@
-<script type="text/javascript" src="../java/navbar.js"></script>
-
 <?php
 require $navbar;
 ?>
@@ -9,17 +7,17 @@ require $navbar;
     <h2> Tu es au bon endroit ! </h2>
     <form class="form" action="<?php echo $create_disc_model ?>" method="post">
         <p> Nom de la discussion </p>
-        <input class="bouton" type="text" name="name_disc" required/>
+        <input class="bouton" type="text" name="name_disc" maxlength="30" required/>
         <p> Entre ici ton premier message  </p>
-        <input class="bouton" type="text" name="message" required />
+        <input class="bouton" type="text" name="message" maxlength="20" placeholder="Entrer un message de deux mots maximum" required pattern="^([A-Za-z0-9'éèàùâêîôûëïç]*-?[A-Za-z0-9'éèàùâêîôûëïç]*-?[A-Za-z0-9'éèàùâêîôûëïç]* [A-Za-z0-9'éèàùâêîôûëïç]*-?[A-Za-z0-9'éèàùâêîôûëïç]*-?[A-Za-z0-9'éèàùâêîôûëïç]*)$|^([A-Za-z0-9'éèàùâêîôûëïç]*-?[A-Za-z0-9'éèàùâêîôûëïç]*-?[A-Za-z0-9'éèàùâêîôûëïç]*)$"/>
         <p> Nombre de message autorisés dans la discussion (max = 30) </p>
-        <input class="bouton" type="number" max="30" min="0" required name="nb_msg_max"/>
+        <input class="bouton" type="number" max="30" min="1" required name="nb_msg_max"/>
         <br><br>
         <input class ="submit" type="submit" name="action" value="Créer ma discussion"/>
     </form>
 </div>
 
-<div class="Backtohome">
+<div id="Backtohome">
     <p> Back to home </p>
     <div>
         <a href="<?php echo $indexcontroller ?>"> <img src="https://img.icons8.com/carbon-copy/100/000000/arrow.png"> </a>

@@ -31,7 +31,7 @@ if(loginckeck($manager)) {
             $contenu = file("../ParamsAdmin.txt");
             $ancien_nb = $contenu[1];
             $contenu[1] = $_POST['new_nbDiscMax'];
-            $params = $contenu[0].$contenu[1];
+            $params = $contenu[0].$contenu[1].PHP_EOL;
             fputs($file,$params);
 
             if ($contenu[1] < $ancien_nb) {

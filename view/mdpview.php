@@ -1,5 +1,3 @@
-<script type="text/javascript" src="../java/navbar.js"></script>
-
 <?php
 require $navbar;
 ?>
@@ -22,7 +20,7 @@ require $navbar;
     </form>
 </div>
 
-<div class="Backtohome">
+<div id="Backtohome">
     <p> Back to home </p>
     <div>
         <a href="<?php echo $indexcontroller ?>"> <img src="https://img.icons8.com/carbon-copy/100/000000/arrow.png"> </a>

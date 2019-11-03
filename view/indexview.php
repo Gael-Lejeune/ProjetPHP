@@ -1,5 +1,3 @@
-<script type="text/javascript" src="../java/navbar.js"></script>
-
 <?php
 require $navbar;
 ?>
@@ -9,7 +7,10 @@ require $navbar;
     <h1> Description du site  </h1>
     <div class="description-FreeNote">
         <p>Réseau social d’un nouveau genre, FreeNote consiste à créer des fils de discussions comprenant
-            des messages participatifs au sein desquels chaque utilisateur ne peut ajouter qu’un ou deux mots.</p>
+            des messages participatifs au sein desquels chaque utilisateur ne peut ajouter qu’un ou deux mots.
+
+
+        </p>
     </div>
 </div>
 
@@ -27,17 +28,15 @@ require $navbar;
                             echo htmlspecialchars($message->getText()) . '<br>';
                         } ?></p>
                 </div>
-                    <?php if ($discussion->getState() == 1)
-                        echo '<div class="rondvert"> </div>';
-                    else if ($discussion->getState() == 0)
-                        echo '<div class="rondrouge"> </div>'; ?>
-                <div class="like">
-                    <div class="like-paraf">
-                        <p> Like : <?php echo $discussion->getNbLike()?> </p>
-                    </div>
-                </div>
+                <?php if ($discussion->getState() == 1)
+                    echo '<div class="rondvert"> </div>';
+                else if ($discussion->getState() == 0)
+                    echo '<div class="rondrouge"> </div>'; ?>
                 <form class="form" action="<?php echo $page_disc_controller ?>" method="post">
                     <button class="submit" value="<?php echo $discussion->getIdDiscussion()?>" name="discussion">Voir la discussion</button>
+                    <div class="like">
+                        <p> Like : <?php echo $discussion->getNbLike()?> </p>
+                    </div>
                 </form>
             </div>
         <?php } ?>
@@ -56,7 +55,7 @@ require $navbar;
         <?php } ?>
         <?php
         echo '<div class="lespages">';//Pour l'affichage, on centre la liste des pages
-            echo '<p> Page </p>';
+        echo '<p> Page </p>';
         for($i=1; $i<=$nombreDePages; $i++) //On fait notre boucle
         {
             if ($i == 1 || (($pageActuelle - 2) < $i && $i < ($pageActuelle + 2)) || $i == $nombreDePages) {

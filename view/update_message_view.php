@@ -9,7 +9,7 @@ require $navbar;
 
     <form class="form" action="../model/update_message_processing.php" method="post">
         <p> Texte </p>
-        <input class="bouton" type="text" name="text" value="<?php echo $message->getText() ?>" required />
+        <input class="bouton" type="text" name="text" value="<?php echo $message->getText() ?>" maxlength="20" placeholder="Entrer un message de deux mots maximum" pattern="^([A-Za-z0-9'éèàùâêîôûëïç]*-?[A-Za-z0-9'éèàùâêîôûëïç]*-?[A-Za-z0-9'éèàùâêîôûëïç]* [A-Za-z0-9'éèàùâêîôûëïç]*-?[A-Za-z0-9'éèàùâêîôûëïç]*-?[A-Za-z0-9'éèàùâêîôûëïç]*)$|^([A-Za-z0-9'éèàùâêîôûëïç]*-?[A-Za-z0-9'éèàùâêîôûëïç]*-?[A-Za-z0-9'éèàùâêîôûëïç]*)$"/>
         <button class="submit2" type="submit" name="id" value="<?php echo $message->getIdMsg() ?>"> Modifier le message </button>
     </form>
 </div>

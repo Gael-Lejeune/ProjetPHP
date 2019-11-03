@@ -13,7 +13,8 @@ $user_manager = new UserManager($db);
 $user = $user_manager->getUser($_SESSION['email']);
 
 if ($user->getRole() == 'admin') {
-    $manager->deleteMess($_POST['id']);
+    $message = $manager->getMessage($_POST['id']);
+    $manager->deleteMess($message);
 }
 
 header("location:$page_disc_controller");

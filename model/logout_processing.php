@@ -7,7 +7,8 @@ include '../model/dtb.inc.php';
 session_start();
 
 //Si la session est ouverte
-if ($_SESSION['login']) {
+if ($_SESSION['login'])
+{
     //On la ferme
     session_destroy();
     //On revient sur l'index qui devrait changer vu qu'on est deconnecte
