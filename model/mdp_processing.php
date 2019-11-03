@@ -13,7 +13,8 @@ if (isset($_POST['email']))
     $email=$_POST['email'];
 
 // Si le mail est bien enregistré dans la base de donnée
-if ($manager->email_exist($email)) {
+if ($manager->email_exist($email))
+{
     // On récupère l'utilisateur correspondant
     $user = $manager->getUser($email);
     // On lui affecte un nouveau mot de passe aleatoire
@@ -31,10 +32,13 @@ if ($manager->email_exist($email)) {
     mail($user->getEmail(), 'Réinitialisation de votre mot de passe FreeNote', $message);
 
     // Si la personne est connecte -> on la renvoi sur la page my profile
-    if ($_SESSION['login']) {
+    if ($_SESSION['login'])
+    {
         header("location:$myprofilecontroller");
+    }
     // sinon on la renvoi sur la page de connexion
-    } else {
+    else
+        {
         header("location:$logincontroller");
     }
 }

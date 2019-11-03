@@ -16,8 +16,8 @@ if ($_SESSION['login']) // si la personne est connecte
 <script src="../java/navbar.js"></script>
 
 <div id="mySidebar" class="sidebar">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <div class="contenu-navbar"> <a href="<?php echo $indexcontroller ?>"> FreeNote </a> </div>
 
     <div class='contenu-navbar'>

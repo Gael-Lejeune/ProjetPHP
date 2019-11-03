@@ -16,7 +16,8 @@ if ($step == 'ERROR_mdp') {
     echo 'Merci de bien remplir tous les champs du formulaire'.'<br/>';
 }
 
-require "../view/inscriptionview.php";
+//Affichage de la page
+require $inscriptionview;
 
 end_page();
 

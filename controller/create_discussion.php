@@ -6,9 +6,11 @@ include '../model/dtb.inc.php';
 //Création de l'en tête et de l'include du css sur la page
 start_page($create_disc, $logincss, $background3);
 
+//Demarrage de la session
 session_start();
 include_classe();
 
-require "../view/create_discussion_view.php";
+//Affichage de la page
+require $create_disc_view;
 
 end_page();

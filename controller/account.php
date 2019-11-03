@@ -11,6 +11,7 @@ start_page($myprofile, $logincss, $background4);
 session_start();
 
 
+
 if ($step == 'ERROR_auth') {
     echo 'Vous n\'ête pas connecté'.'<br/>';
 } else if ($step == 'ERROR_mdp') {
@@ -21,6 +22,7 @@ if ($step == 'ERROR_auth') {
 
 require $myprofilemodel;
 
+//Affichage de la page
 require $myprofileview;
 
 end_page();

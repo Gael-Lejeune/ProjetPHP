@@ -9,8 +9,8 @@ require $navbar;
 
         <h4> Vous avez <?php echo $nbDiscUser ?> discussions d'ouvertes </h4>
         <h5> Vous pouvez encore en ouvrir <?php echo $nbDiscRestantes ?> </h5>
-    <?php foreach ($disc_liste as $key_disc => $disc_array) {
-    $discussion = new Discussion ($disc_array); ?>
+        <?php foreach ($disc_liste as $key_disc => $disc_array) {
+        $discussion = new Discussion ($disc_array); ?>
         <form action="<?php echo $page_disc_controller ?>" method="post">
             <button class="nom-discussion" value="<?php echo $discussion->getIdDiscussion() ?>"
                     name="discussion"> <?php echo $discussion->getDiscName() ?></button>

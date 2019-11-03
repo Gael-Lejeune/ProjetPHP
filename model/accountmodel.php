@@ -7,8 +7,11 @@ $manager = new UserManager($db);
 //Si la personne est connecte
 if (loginckeck($manager)){
     $user = $manager->getUser($_SESSION['email']); // On récupère ses informations
+
+}
 //Si la personne n'est pas connecte
-} else {
+else
+    {
     session_destroy();
     header("location:$indexcontroller?error=ERROR_auth"); // On revient sur l'index
 }

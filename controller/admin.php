@@ -7,9 +7,11 @@ include '../model/dtb.inc.php';
 //Demarrage de la page
 start_page($myprofile, $logincss, $background4);
 
+//Demarrage de la session
 session_start();
 include_classe();
 
-require '../view/admin_view.php';
+//Affichage de la page
+require $admin_view;
 
 end_page();
