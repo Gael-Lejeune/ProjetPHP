@@ -12,9 +12,14 @@ $user_manager = new UserManager($db);
 
 $user = $user_manager->getUser($_SESSION['email']);
 
+// Si l'utilisateur est bien admin
 if ($user->getRole() == 'admin') {
+
+    // On recupere le message a supprimer
     $message = $manager->getMessage($_POST['id']);
+
+    // On le supprime
     $manager->deleteMess($message);
 }
 
-header("location:$page_disc_controller");
+header("location:$page_disc_controller"); // On revient sur la page de la discussion

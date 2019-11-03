@@ -58,8 +58,17 @@ $see_disc_view='../view/see_disc_view.php';
 
 $admin='Freenote : Page Admin';
 $admin_controller='../controller/admin.php';
+$admin_model='../model/admin_model.php';
 $admin_processing='../processing/admin_processing.php';
 $admin_view='../view/admin_view.php';
+
+$update='Freenote : Page Update';
+$update_controller='../controller/update_message_controller.php';
+$update_model='../model/update_message_model.php';
+$update_processing='../processing/update_message_processing.php';
+$update_view='../view/update_message_processing.php';
+
+$delete='../processing/delete_message_processing';
 
 $discussioncss='../html/css/discussions.css';
 

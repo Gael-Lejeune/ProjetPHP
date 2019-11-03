@@ -1,7 +1,6 @@
 <?php
 
 function start_page($title, $lien1, $background){ // fonction qui affiche tout le debut de la partie html
-
     echo'<!DOCTYPE html>
 <html lang="fr">
 <head>

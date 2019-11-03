@@ -1,7 +1,6 @@
 <?php
 $db = dtb_connect_PDO(); //connection a la base de donnée avec PDO
 
-
 // Gestion des onglets presents dans la barre de navigation
 if ($_SESSION['login']) // si la personne est connecte
 {
@@ -21,51 +20,51 @@ if ($_SESSION['login']) // si la personne est connecte
 
     <div class='contenu-navbar'>
         <?php if ($_SESSION['login'])
-            echo '<div> <a href="' . $myprofilecontroller . '"> My Profile </a> </div>';
+            echo '<div> <a href="' . $myprofilecontroller . '"> Mon Profile </a> </div>';
         else
-            echo'<div> <a href="'.$inscriptioncontroller.'"> Sign up </a> </div>';
+            echo'<div> <a href="'.$inscriptioncontroller.'"> S\'inscrire </a> </div>';
         ?>
     </div>
 
     <div class="contenu-navbar">
         <?php if ($_SESSION['login'])
-            echo '<div> <a href="' . $create_disc_controller . '"> Create a new discussion </a> </div>';
+            echo '<div> <a href="' . $create_disc_controller . '"> Créer une discussion </a> </div>';
         ?>
     </div>
 
     <div class="contenu-navbar">
         <?php if ($_SESSION['login'])
-            echo '<div> <a href="' . $see_disc_controller . '"> My discussions </a> </div>';
+            echo '<div> <a href="' . $see_disc_controller . '"> Mes Discussions </a> </div>';
         ?>
     </div>
 
     <div class="contenu-navbar">
         <?php if ($role=='admin')
-            echo '<div> <a href="' . $admin_controller . '"> Administrateur page </a> </div>';
+            echo '<div> <a href="' . $admin_controller . '"> Page Administrateur </a> </div>';
         ?>
     </div>
 
     <div class="contenu-navbar">
         <?php if ($_SESSION['login'])
-            echo '<div> <a href="'.$logoutmodel.'"> Log Out </a> </div>';
+            echo '<div> <a href="'.$logoutmodel.'"> Se Déconnecter </a> </div>';
         else
-            echo '<div> <a href="'.$logincontroller.'"> Log In </a> </div>';
+            echo '<div> <a href="'.$logincontroller.'"> Se Connecter </a> </div>';
         ?>
     </div>
 </div>
 
 <div id="main">
-    <p> Ouvrir le Menu </p>
+    <p> Ouvrir Le Menu </p>
     <div>
         <button class="openbtn" onclick="openNav()">&#9776;</button>
     </div>
 </div>
 
-<a href="<?php echo $indexcontroller ?>"><img style="width: 128px; position: fixed; top: 20px; left: 20px;" alt="logodusite" src="https://zupimages.net/up/19/44/8mnk.png"></a>
-
 <div id="Backtohome">
-    <p> Accueuil </p>
+    <p> Accueil </p>
     <div>
-        <a href="<?php echo $indexcontroller ?>"> <img alt="Retour à l'accueuil" src="https://img.icons8.com/carbon-copy/100/000000/arrow.png"> </a>
+        <a href="<?php echo $indexcontroller ?>"> <img alt="Retour à la page d'accueil" src="https://img.icons8.com/carbon-copy/100/000000/arrow.png"> </a>
     </div>
 </div>
+
+<a href="<?php echo $indexcontroller ?>"><img style="width: 192px; position: fixed; top: 20px; left: 20px;" alt="logodusite" src="https://zupimages.net/up/19/44/8mnk.png"></a>

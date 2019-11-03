@@ -130,7 +130,7 @@ input:focus {
 
 .container-discussion {
     width: 70%;
-    margin-top: 0;
+    margin-top: 0px;
     margin-left: 10%;
     margin-bottom: 50px;
     /*border: 1px solid deeppink;*/
@@ -148,7 +148,7 @@ input:focus {
 
 .discussion .description {
     margin-top: 100px;
-    margin-left: 0;
+    margin-left: 0px;
 }
 
 
@@ -297,7 +297,7 @@ h1 {
     /*border: 1px solid deeppink;*/
 }
 
-.Backtohome1 {
+.Pagination {
     width: 100px;
     height: 44px;
     bottom: 20px;
@@ -309,7 +309,7 @@ h1 {
     border-radius: 4px;
 }
 
-.Backtohome1 div, .lespages div {
+.Pagination div, .lespages div {
     width: 40px;
     height: 32px;
     margin-top: 6px;
@@ -366,12 +366,12 @@ h1 {
     /*border: 1px solid red;*/
 }
 
-.Backtohome1 img {
+.Pagination img {
     width: 32px;
     height: 32px;
 }
 
-.Backtohome1 p {
+.Pagination p {
     width: auto;
     height: 20px;
     margin-top: 9px;

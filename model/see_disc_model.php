@@ -2,15 +2,14 @@
 
 include_classe(); //inclusion des classes nécessaires
 $db = dtb_connect_PDO(); //connection a la base de donnée avec PDO
-$user_manager = new UserManager($db);
+$user_manager = new UserManager($db);//Definition des managers
 $disc_manager = new Disc_Mess_Manager($db);
 
 //Si la personne est connecte
 if (loginckeck($user_manager)){
     $user = $user_manager->getUser($_SESSION['email']); // On récupère ses informations
 }
-//Si la personne n'est pas connecte
-else
+else//Si la personne n'est pas connecte
 {
     session_destroy();
     header("location:$logincontroller?error=ERROR_auth"); // On revient sur l'index

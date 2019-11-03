@@ -201,7 +201,10 @@ class Disc_Mess_Manager
         $query->execute([$id]);
     }
 
-    public function deleteDisc ($id)
+    /**
+     * @param $id
+     */
+    public function deleteDisc ($id) // Supprime la discussion donne en parametre et met a jour les autres tables en fonction
     {
         $query = $this->db->prepare('DELETE FROM discussion WHERE idDiscussion = ?');
         $query->execute([$id]);
@@ -218,7 +221,11 @@ class Disc_Mess_Manager
 
     // ***************************** Fonction contenant des requetes avec la table Message *************************************
 
-    public function getMessage ($id)
+    /**
+     * @param $id
+     * @return Message
+     */
+    public function getMessage ($id) // Renvoi le message correspondant à l'identifiant donné en paramètre
     {
         $query = $this->db->prepare('SELECT * FROM message WHERE idMsg = ?');
         $query->execute([$id]);
@@ -293,7 +300,11 @@ class Disc_Mess_Manager
         $this->add_ecrv($ecrivain); // On indique dans ecrivain que cette personne a bien écrit dans ce message
     }
 
-    public function setTexte ($id, $texte)
+    /**
+     * @param $id
+     * @param $texte
+     */
+    public function setTexte ($id, $texte) // met à jour le texte du message passé en paramètre
     {
         $query = $this->db->prepare('UPDATE message SET text = ? WHERE idMsg = ?');
         $query->execute([$texte, $id]);
@@ -320,7 +331,10 @@ class Disc_Mess_Manager
         }
     }
 
-    public function deleteMess (Message $msg)
+    /**
+     * @param Message $msg
+     */
+    public function deleteMess (Message $msg) // Supprime le message donné en argument et met à jour les autres tables en fonction
     {
         $query = $this->db->prepare('DELETE FROM message WHERE idMsg = ?');
         $query->execute([$msg->getIdMsg()]);
@@ -329,12 +343,12 @@ class Disc_Mess_Manager
         $query->execute([$msg->getIdMsg()]);
 
         $query = $this->db->prepare('UPDATE discussion SET nbMessage = nbMessage - 1 WHERE idDiscussion = ?');
-        $query->execute($msg->getIdDiscussion());
+        $query->execute([$msg->getIdDiscussion()]);
 
         $disc = $this->getDiscussion($msg->getIdDiscussion());
         if ($disc['state'] == 0) {
             $query = $this->db->prepare('UPDATE discussion SET nbMessMax = nbMessMax - 1 WHERE idDiscussion = ?');
-            $query->execute($msg->getIdDiscussion());
+            $query->execute([$msg->getIdDiscussion()]);
         }
 
         if ($msg->getState() == 1) {

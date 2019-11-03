@@ -1,6 +1,5 @@
 <?php
-
-// Contient les fonction de base en rapport avec la base de donnée et la POO
+// Contient les fonction de base en rapport avec la base de donnée et la PDO
 
 function loginckeck($manager) // renvoi vrai si la personne est bien connecté (en verifiant les variables SESSION) et faux dans l'autre cas
 {

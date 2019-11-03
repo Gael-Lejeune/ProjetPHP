@@ -3,21 +3,18 @@ include "../model/utils.inc.php";
 include "../model/link.inc.php";
 include '../model/dtb.inc.php';
 
-//Demarrage de la page
+//Création de l'en tête et de l'include du css sur la page
 start_page($myprofile, $logincss, $background4);
-
 
 //Demarrage de la session
 session_start();
 
-
-
+//Si le mot de passe ne correspond pas à la confirmation de mot de passe
 if ($step == 'ERROR_mdp') {
     echo 'La confirmation de mot de passe est incorrecte'.'<br/>';
-} else if ($step == 'ERROR_incomplet') {
-    echo 'Merci de bien remplir tous les champs du formulaire'.'<br/>';
 }
 
+//Appel du model
 require $myprofilemodel;
 
 //Affichage de la page

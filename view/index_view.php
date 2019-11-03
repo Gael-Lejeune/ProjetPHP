@@ -1,12 +1,6 @@
 <?php
 require $navbar;
-
-
-
 ?>
-
-
-
 
 <!-- Création du bloc contenant la description et le titre description -->
 <div class="description">
@@ -29,6 +23,7 @@ require $navbar;
     </div>
 </div>
 
+<!-- Création du bloc qui contient les discussions trier dans l'ordre des plus likés au moins likés à raison de 2 discussions par page de pagination -->
 <div class="container-discussion">
     <div class="discussion">
         <?php foreach ($result as $key_disc => $disc_array) {
@@ -59,7 +54,7 @@ require $navbar;
     <div class="Prevnext">
         <?php if ($pageActuelle > 1)
         {?>
-            <div class="Backtohome">
+            <div class="Pagination">
                 <div class="left">
                     <a href="<?php echo $indexcontroller."?page=".($pageActuelle-1) ?>">
                         <img class="left1" src="https://img.icons8.com/carbon-copy/100/000000/double-left.png">
@@ -94,7 +89,7 @@ require $navbar;
         }
         echo '</div>';
         if ($pageActuelle < $nombreDePages){?>
-            <div class="Backtohome">
+            <div class="Pagination">
                 <p> Next </p>
                 <div class="right">
                     <a href="<?php echo $indexcontroller."?page=".($pageActuelle+1) ?>">

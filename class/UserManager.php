@@ -53,7 +53,7 @@ class UserManager
         return $result;
     }
 
-        /**
+    /**
      * @param string $email
      * @return User
      */

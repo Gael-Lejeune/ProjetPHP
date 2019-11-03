@@ -8,8 +8,11 @@ start_page($create_disc, $logincss, $background3);
 
 //Demarrage de la session
 session_start();
+//Inclusion des classes
 include_classe();
 
+$db = new PDO('mysql:host=mysql-latableronde.alwaysdata.net;dbname=latableronde_dtb', 191121, 'tableronde');
+$user_manager = new UserManager($db);
 //Si la personne est connecte
 if (loginckeck($user_manager)){
     $user = $user_manager->getUser($_SESSION['email']); // On récupère ses informations
@@ -18,7 +21,7 @@ if (loginckeck($user_manager)){
 else
 {
     session_destroy();
-    header("location:$logincontroller?error=ERROR_auth"); // On revient sur l'index
+    header("location:$logincontroller?error=ERROR_auth"); // On revient sur la page de connexion
 }
 
 

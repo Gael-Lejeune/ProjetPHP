@@ -110,16 +110,4 @@ class Discussion
             }
         }
     }
-
-    public function incrNbLike()
-    {
-        $this->nbLike += 1;
-    }
-
-    public function setNbMessages($nb_messages)
-    {
-        $this->nbMessages = $nb_messages;
-    }
-
-
 }
