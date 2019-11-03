@@ -59,10 +59,22 @@ Aussi, nous avons utilisé la fonction htmlentities afin d'eviter les injections
 
 -- Les identifiants de connexion -- 
 
-Pour le site d'hébergement (AlwaysData) => courriel : gael@lejeune.pl et mot de passe : tableronde
-Pour l'accès à la base de donnée (phpMyAdmin) => utilisateur MySQL : 191121 et mot de passe : tableronde
-Pour le compte test de notre site => courriel : kmaeleon@laposte.net et mot de passe : projetphp
-Pour le compte administrateur de notre site => courriel : freenoteadmin@laposte.net et mot de passe : sypherforever
-Le compte mail de l'administrateur (si il veut vérifier l'envoi de mails) => courriel : freenoteadmin@laposte.net et mot de passe : Freenote.admin26
-Pour le compte du système de version => Gael-Lejeune
-https://github.com/Gael-Lejeune/ProjetPHP
+Pour le site d'hébergement (AlwaysData) =>  
+        courriel : gael@lejeune.pl
+        mot de passe : tableronde
+Pour l'accès à la base de donnée (phpMyAdmin) =>
+        Hôte  : mysql-latableronde.alwaysdata.net
+        utilisateur MySQL : 191121
+        mot de passe : tableronde
+Pour le compte test de notre site =>
+        courriel : kmaeleon@laposte.net 
+        mot de passe : projetphp
+Pour le compte administrateur de notre site =>
+        courriel : freenoteadmin@laposte.net
+        mot de passe : sypherforever
+Le compte mail de l'administrateur (si il veut vérifier l'envoi de mails) =>
+        courriel : freenoteadmin@laposte.net
+        mot de passe : Freenote.admin26
+Pour le compte du système de version =>
+        Gael-Lejeune
+        https://github.com/Gael-Lejeune/ProjetPHP
