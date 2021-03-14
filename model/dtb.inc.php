@@ -8,7 +8,7 @@ function loginckeck($manager) // renvoi vrai si la personne est bien connecté (
 
 function dtb_connect_PDO () // Connection avec la base de donnée avec PDO
 {
-    $db = new PDO('mysql:host=mysql-latableronde.alwaysdata.net;dbname=latableronde_dtb', 191121, 'tableronde');
+    $db = new PDO('mysql:host='put_host';dbname='put_database_name', put_port, 'put_database_password');
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
 
     return $db;
