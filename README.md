@@ -57,14 +57,3 @@ Conseillé : Les dernières versions de Google Chrome et Firefox
 
 Nous avons d'abord encodé les mdp d'utilisateurs en md5 dans la base de donnée afin de les stocker cryptés, ainsi, lorsqu'un utilisateur à besoin d'un nouveau mdp, celui ci est généré aléatoirement et lui est envoyé par mail.
 Aussi, nous avons utilisé la fonction htmlentities afin d'eviter les injections via les formulaires du site.
-
-
--- Les identifiants de connexion -- 
-
-Pour le site d'hébergement (AlwaysData) => courriel : gael@lejeune.pl et mot de passe : tableronde
-Pour l'accès à la base de donnée (phpMyAdmin) => utilisateur MySQL : 191121 et mot de passe : tableronde
-Pour le compte test de notre site => courriel : kmaeleon@laposte.net et mot de passe : projetphp
-Pour le compte administrateur de notre site => courriel : freenoteadmin@laposte.net et mot de passe : sypherforever
-Le compte mail de l'administrateur (si il veut vérifier l'envoi de mails) => courriel : freenoteadmin@laposte.net et mot de passe : Freenote.admin26
-Pour le compte du système de version => Gael-Lejeune
-https://github.com/Gael-Lejeune/ProjetPHP
